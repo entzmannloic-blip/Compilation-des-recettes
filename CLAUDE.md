@@ -21,4 +21,4 @@ Méthode `superpowers:subagent-driven-development` : un assistant neuf par tâch
 - Test sur mobile (375 px) et ordinateur, console sans erreur, avant de dire « c'est fait ».
 - Serveur local pour les tests visuels : `python -m http.server 8080` (via `.claude/launch.json`).
 - Photos d'iPhone (HEIC) : conversion avec les outils Windows (script prévu en tâche 7).
-- Estimation en tokens et en points de la limite de 5 heures avant tout gros chantier, et compte rendu après, comme demandé dans les préférences globales. Coût observé : environ 3,5 points par tâche en mode B.
+- Estimation en tokens, en points de la limite de 5 heures et en durée (min:s, colonne ajoutée à la demande de Loïc le 8 octobre 2026 ; heure relevée avec `date` à chaque étape pour mesurer la dérive) avant tout gros chantier, et compte rendu après, comme demandé dans les préférences globales. Coût observé : environ 3,5 points par tâche en mode B.

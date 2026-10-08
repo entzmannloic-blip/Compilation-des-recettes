@@ -1,5 +1,5 @@
 export const SAISONS = ["printemps", "été", "automne", "hiver"];
-export const CATEGORIES = ["entrée", "plat"];
+export const CATEGORIES = ["entrée", "plat", "dessert"];
 export const RAYONS = [
   "Légumes", "Fruits", "Herbes", "Crèmerie", "Boucherie",
   "Poissonnerie", "Épicerie", "Boulangerie", "Surgelés", "Autre",

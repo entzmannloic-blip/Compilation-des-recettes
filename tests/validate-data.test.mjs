@@ -91,7 +91,7 @@ test("un rayon inconnu est refusé", () => {
 });
 
 test("une catégorie inconnue est refusée", () => {
-  const erreurs = messages((j) => { j.recettes[0].categorie = "dessert"; });
+  const erreurs = messages((j) => { j.recettes[0].categorie = "apéritif"; });
   assert.equal(erreurs.length, 1, erreurs.join("\n"));
 });
 

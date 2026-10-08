@@ -812,5 +812,531 @@
       "Astuces : N'hésitez pas à utiliser des poireaux surgelés. S'il vous reste un peu de risotto, réalisez des arancinis le lendemain ! Il vous suffit de prélever des boules de risotto et de les paner : rouler les boules dans la farine, puis un œuf battu et enfin dans un peu de chapelure. Cuire ensuite les arancinis 5 min dans une poêle remplie d'un fond d'huile de cuisson (environ 1 cm de hauteur). Veillez à bien les retourner pendant la cuisson afin de cuire chacune des faces."
     ],
     "photo": "photos/risotto-four-poireaux-citron-chevre.jpg"
+  },
+  {
+    "id": "gratin-ravioles-poireaux-comte",
+    "titre": "Gratin de ravioles aux poireaux et au comté",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 44 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 40 },
+    "ingredients": [
+      { "ingredient": "ravioles-du-dauphine", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "poireau", "quantite": 500, "unite": "g", "precision": "surgelés" },
+      { "ingredient": "comte", "quantite": 100, "unite": "g", "precision": "râpé" },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "creme-liquide", "quantite": 35, "unite": "cl", "precision": null },
+      { "ingredient": "curry", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Éplucher et émincer l'oignon puis le faire revenir quelques minutes dans une poêle avec de l'huile d'olive.",
+      "Ajouter les poireaux, le sel, le curry et le poivre. Laisser cuire pendant 10 min, jusqu'à ce que l'eau des poireaux s'évapore.",
+      "Dans un plat à gratin, dresser un peu de poireaux, une plaque de ravioles, de la crème, du comté râpé, saler, poivrer et renouveler l'opération jusqu'à épuisement des ingrédients en terminant par le comté râpé.",
+      "Enfourner pour 30 min à 180 °C jusqu'à ce que le gratin soit bien doré."
+    ],
+    "notes": [],
+    "photo": "photos/gratin-ravioles-poireaux-comte.jpg"
+  },
+  {
+    "id": "tarte-filo-betterave-chevre-noisettes",
+    "titre": "Tarte filo à la betterave, fromage de chèvre et noisettes",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 47 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 40 },
+    "ingredients": [
+      { "ingredient": "pate-filo", "quantite": 8, "unite": "pièce", "precision": "feuilles" },
+      { "ingredient": "betterave", "quantite": 3, "unite": "pièce", "precision": "cuites" },
+      { "ingredient": "fromage-de-chevre", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "noisettes", "quantite": 2, "unite": "c. à soupe", "precision": "concassées" },
+      { "ingredient": "oignon-blanc", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "beurre", "quantite": 40, "unite": "g", "precision": null },
+      { "ingredient": "sucre-en-poudre", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "estragon", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "orange", "quantite": 1, "unite": "pièce", "precision": "zeste, bio" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Éplucher et émincer les oignons puis les faire revenir dans une poêle avec un peu d'huile d'olive, du sel et du poivre. Ajouter le sucre et laisser cuire les oignons jusqu'à ce qu'ils soient compotés. Réserver.",
+      "Ciseler la moitié de l'estragon, réserver le reste.",
+      "Mélanger le fromage de chèvre avec un filet d'huile d'olive, un peu de zeste d'orange, l'estragon ciselé, du sel et du poivre.",
+      "Couper les betteraves en quartiers puis concasser les noisettes.",
+      "Faire fondre le beurre. Déposer une feuille de pâte filo sur une plaque à four recouverte de papier sulfurisé. Badigeonner la pâte de beurre fondu et couvrir d'une autre feuille. Recommencer l'opération avec le reste de pâte filo.",
+      "Ajouter le mélange de fromage de chèvre sur la pâte, les oignons et les betteraves. Ajouter les noisettes, arroser d'huile d'olive, saler, poivrer et enfourner pour 30 min à 180 °C.",
+      "Au moment de servir, ajouter les pickles d'oignon rouge."
+    ],
+    "notes": [
+      "Topping : 1 c. à soupe de pickles d'oignon rouge (p. 15)."
+    ],
+    "photo": "photos/tarte-filo-betterave-chevre-noisettes.jpg"
+  },
+  {
+    "id": "crumble-poires-noisettes",
+    "titre": "Crumble poires et noisettes",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 48 },
+    "saisons": ["hiver"],
+    "categorie": "dessert",
+    "type": "au four",
+    "personnes": 6,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 40 },
+    "ingredients": [
+      { "ingredient": "poire", "quantite": 6, "unite": "pièce", "precision": null },
+      { "ingredient": "noisettes", "quantite": 100, "unite": "g", "precision": "en poudre" },
+      { "ingredient": "vanille", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "beurre", "quantite": 90, "unite": "g", "precision": "salé, dont 10 g pour les poires" },
+      { "ingredient": "farine", "quantite": 100, "unite": "g", "precision": "T55" },
+      { "ingredient": "sucre-roux", "quantite": 80, "unite": "g", "precision": "en poudre" }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Laver et couper les poires en dés.",
+      "Fendre la gousse de vanille en 2 et gratter les grains.",
+      "Faire fondre 10 g de beurre dans une poêle. Ajouter les poires avec la gousse et les graines de vanille et faire cuire pendant 5 min.",
+      "Dans un saladier, mélanger le beurre restant, la farine, le sucre et les noisettes en poudre jusqu'à obtenir un sablage.",
+      "Dans un plat à gratin, déposer les poires puis émietter le crumble.",
+      "Enfourner pour 35 min à 180 °C.",
+      "Déguster tiède accompagné de glace à la vanille pour les plus gourmands."
+    ],
+    "notes": [
+      "Astuces : Vous pouvez réaliser ce dessert avec des pommes ou d'autres fruits surgelés. Si vous n'avez pas de noisettes en poudre, vous pouvez utiliser des amandes en poudre à la place, ou encore la réaliser vous-même avec des noisettes entières qu'il vous suffira de mixer finement."
+    ],
+    "photo": "photos/crumble-poires-noisettes.jpg"
+  },
+  {
+    "id": "gateau-chocolat-tres-fondant",
+    "titre": "Gâteau au chocolat très fondant",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 51 },
+    "saisons": ["hiver"],
+    "categorie": "dessert",
+    "type": "au four",
+    "personnes": 6,
+    "personnes_texte": null,
+    "temps": { "preparation": 5, "cuisson": 8 },
+    "ingredients": [
+      { "ingredient": "chocolat", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "beurre", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "oeufs", "quantite": 5, "unite": "pièce", "precision": null },
+      { "ingredient": "sucre-en-poudre", "quantite": 100, "unite": "g", "precision": null },
+      { "ingredient": "farine", "quantite": 65, "unite": "g", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 220 °C. Faire fondre le beurre et le chocolat au bain-marie.",
+      "Hors du feu, ajouter les œufs un à un. Bien mélanger. Ajouter le sucre puis la farine.",
+      "Mélanger à nouveau. Verser dans un moule beurré et fariné.",
+      "Enfourner pour 6-8 min. Il faut que le gâteau soit encore coulant, mais pas trop. Il va durcir à l'air libre.",
+      "Laisser refroidir et déguster avec un peu de granola en topping."
+    ],
+    "notes": [
+      "Topping : du granola choco-noisette (p. 17)."
+    ],
+    "photo": "photos/gateau-chocolat-tres-fondant.jpg"
+  },
+  {
+    "id": "mousse-chocolat-express",
+    "titre": "Mousse au chocolat express",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 51 },
+    "saisons": ["hiver"],
+    "categorie": "dessert",
+    "type": "au frais",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 5, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "aquafaba", "quantite": 150, "unite": "ml", "precision": "eau de pois chiches" },
+      { "ingredient": "sucre-roux", "quantite": 60, "unite": "g", "precision": "en poudre" },
+      { "ingredient": "chocolat", "quantite": 150, "unite": "g", "precision": "noir, fondu" },
+      { "ingredient": "cardamome", "quantite": null, "unite": null, "precision": "moulue, facultatif" },
+      { "ingredient": "vanille", "quantite": null, "unite": null, "precision": "en poudre, facultatif" }
+    ],
+    "etapes": [
+      "Fouetter l'aquafaba au batteur.",
+      "Une fois que le mélange est mousseux, ajouter le sucre roux. Battre quelques minutes le mélange et terminer en ajoutant le chocolat noir fondu.",
+      "Mélanger délicatement à l'aide d'une maryse.",
+      "Réserver au frais pendant 3 h avant de déguster."
+    ],
+    "notes": [
+      "Repos : 3 h au frais.",
+      "Astuce : J'adore le mélange cardamome-chocolat : vous pouvez ajouter un peu de cardamome en poudre au moment d'incorporer le chocolat, ou même de la vanille en poudre, à vous de choisir !"
+    ],
+    "photo": null
+  },
+  {
+    "id": "terrine-courgettes",
+    "titre": "Terrine de courgettes",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 55 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 6,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 55 },
+    "ingredients": [
+      { "ingredient": "courgette", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "oeufs", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "creme-liquide", "quantite": 25, "unite": "cl", "precision": null },
+      { "ingredient": "parmesan", "quantite": 80, "unite": "g", "precision": "râpé" },
+      { "ingredient": "huile-d-olive", "quantite": 3, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "menthe", "quantite": null, "unite": null, "precision": "quelques feuilles ciselées" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Éplucher et hacher les gousses d'ail. Laver les courgettes et les couper en fines rondelles puis les faire revenir dans une poêle avec un peu d'huile d'olive et l'ail haché. Saler, poivrer.",
+      "Laisser cuire pendant 10 min.",
+      "Battre les œufs avec la crème et le parmesan.",
+      "Ajouter les courgettes, la menthe, du sel et du poivre.",
+      "Verser la préparation dans un moule à cake recouvert de papier sulfurisé.",
+      "Cuire au bain-marie au four pendant 45 min à 180 °C.",
+      "Laisser refroidir puis démouler.",
+      "Déguster tiède ou froid, accompagné de coulis de tomates et de granola salé."
+    ],
+    "notes": [
+      "Topping : du granola salé, du coulis de tomates.",
+      "Astuce : Vous pouvez la conserver pendant 3 jours au frigo."
+    ],
+    "photo": "photos/terrine-courgettes.jpg"
+  },
+  {
+    "id": "taboule-fraises-petits-pois-feta",
+    "titre": "Taboulé fraises, petits pois et feta",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 56 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "salade",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "semoule", "quantite": 250, "unite": "g", "precision": null },
+      { "ingredient": "petits-pois", "quantite": 250, "unite": "g", "precision": "surgelés, pour éviter la corvée" },
+      { "ingredient": "fraise", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "oignon-rouge", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "feta", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "roquette", "quantite": 2, "unite": "bouquet", "precision": "2 poignées" },
+      { "ingredient": "menthe", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Placer la semoule dans un saladier, saler et recouvrir d'eau bouillante. Couvrir et laisser gonfler. Au bout de 5 min, égrainer à la fourchette puis laisser refroidir.",
+      "Cuire les petits pois dans un grand volume d'eau salée pendant 5 min. Égoutter et réserver.",
+      "Rincer les fraises et les couper en 2.",
+      "Émietter la feta.",
+      "Éplucher et émincer l'oignon rouge et ciseler la menthe.",
+      "Mélanger tous les ingrédients avec la vinaigrette dans un saladier et servir bien frais."
+    ],
+    "notes": [
+      "Vinaigrette : 5 c. à soupe de vinaigrette au citron (p. 18)."
+    ],
+    "photo": "photos/taboule-fraises-petits-pois-feta.jpg"
+  },
+  {
+    "id": "salade-pommes-de-terre-tapees-asperges-feta",
+    "titre": "Salade de pommes de terre tapées, asperges et feta",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 58 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "salade",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 50 },
+    "ingredients": [
+      { "ingredient": "pomme-de-terre", "quantite": 650, "unite": "g", "precision": null },
+      { "ingredient": "asperge", "quantite": 0.5, "unite": "bouquet", "precision": "botte" },
+      { "ingredient": "feta", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "roquette", "quantite": 2, "unite": "bouquet", "precision": "2 poignées" },
+      { "ingredient": "pignons-de-pin", "quantite": 2, "unite": "c. à soupe", "precision": "torréfiés" },
+      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 220 °C.",
+      "Porter à ébullition une casserole d'eau salée et y faire cuire les pommes de terre pendant 15 min.",
+      "Égoutter les pommes de terre avant de les disposer sur une plaque à four recouverte de papier sulfurisé. À l'aide d'une fourchette, les écraser grossièrement puis les arroser d'huile d'olive, saler et poivrer. Enfourner pour 35 min à 220 °C.",
+      "Pendant ce temps, laver les asperges, couper le pied et les faire revenir pendant 10 min dans une poêle avec un peu d'huile d'olive, du sel et du poivre. Réserver.",
+      "Mélanger les pommes de terre avec les asperges, la feta émiettée, la roquette, les pignons de pin et les pickles d'oignon rouge.",
+      "Ajouter la sauce au yaourt, mélanger et déguster."
+    ],
+    "notes": [
+      "Vinaigrette : 3 c. à soupe de sauce au yaourt et herbes (p. 19).",
+      "Topping : 2 c. à soupe de pickles d'oignon rouge (p. 15)."
+    ],
+    "photo": "photos/salade-pommes-de-terre-tapees-asperges-feta.jpg"
+  },
+  {
+    "id": "salade-soba-miso",
+    "titre": "Salade de soba au miso",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 61 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "salade",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "nouilles-soba", "quantite": 250, "unite": "g", "precision": null },
+      { "ingredient": "radis", "quantite": 1, "unite": "bouquet", "precision": "1 poignée, roses" },
+      { "ingredient": "concombre", "quantite": 0.5, "unite": "pièce", "precision": null },
+      { "ingredient": "oeufs", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": "épluché" },
+      { "ingredient": "avocat", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "coriandre", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "graines-de-sesame", "quantite": 1, "unite": "c. à café", "precision": null }
+    ],
+    "etapes": [
+      "Cuire les soba dans une casserole d'eau bouillante pendant 4 min, puis les égoutter et les passer sous l'eau froide. Réserver.",
+      "Cuire les œufs pendant 6 min dans une casserole d'eau bouillante. Égoutter puis écaler les œufs.",
+      "Émincer finement le concombre, les radis et l'oignon.",
+      "Ciseler la coriandre.",
+      "Couper l'avocat en morceaux.",
+      "Mélanger les nouilles avec les œufs, le concombre, l'avocat, les radis, l'oignon, les pickles d'oignon rouge et la coriandre.",
+      "Ajouter la vinaigrette au miso et bien mélanger, puis saupoudrer de graines de sésame et déguster aussitôt."
+    ],
+    "notes": [
+      "Vinaigrette : 3 c. à soupe de vinaigrette au miso (p. 18).",
+      "Topping : 2 c. à soupe de pickles d'oignon rouge (p. 15)."
+    ],
+    "photo": "photos/salade-soba-miso.jpg"
+  },
+  {
+    "id": "polenta-cremeuse-carottes-roties-pesto",
+    "titre": "Polenta crémeuse, carottes rôties et pesto",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 62 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 40 },
+    "ingredients": [
+      { "ingredient": "polenta", "quantite": 125, "unite": "g", "precision": null },
+      { "ingredient": "carotte", "quantite": 1, "unite": "bouquet", "precision": "botte, fanes" },
+      { "ingredient": "sirop-d-erable", "quantite": null, "unite": null, "precision": "1 filet" },
+      { "ingredient": "oeufs", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "lait", "quantite": 500, "unite": "ml", "precision": null },
+      { "ingredient": "beurre", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "parmesan", "quantite": 120, "unite": "g", "precision": "râpé" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Laver les carottes. Les placer sur une plaque à four recouverte de papier sulfurisé. Arroser d'huile d'olive et d'un filet de sirop d'érable. Saler, poivrer et enfourner pour 30 min à 180 °C, jusqu'à ce qu'elles soient bien dorées.",
+      "Cuire les œufs dans une casserole d'eau bouillante salée pendant 6 min. Passer les œufs sous l'eau froide et les écaler. Réserver.",
+      "10 min avant la fin de la cuisson des carottes, dans une casserole, porter l'eau, le lait, du sel et du poivre à ébullition.",
+      "Baisser à feu doux, verser la polenta en pluie fine tout en fouettant, afin d'éviter la formation de grumeaux.",
+      "Cuire pendant 5 min en mélangeant régulièrement à l'aide d'une cuillère en bois, jusqu'à l'obtention d'une texture souple. Ajouter le lait restant petit à petit, bien mélanger.",
+      "Retirer du feu, ajouter le beurre et le parmesan, assaisonner au goût et mélanger.",
+      "Servir la polenta avec quelques carottes grillées, un œuf mollet coupé en 2 et un peu de pesto."
+    ],
+    "notes": [
+      "Eau : 250 ml.",
+      "Topping : 3 c. à soupe de pesto maison (p. 14)."
+    ],
+    "photo": "photos/polenta-cremeuse-carottes-roties-pesto.jpg"
+  },
+  {
+    "id": "veloute-petits-pois-citron",
+    "titre": "Velouté de petits pois au citron",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 65 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "soupe",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "petits-pois", "quantite": 450, "unite": "g", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": "bio" },
+      { "ingredient": "echalote", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "fromage-frais", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "pièce", "precision": "cube" },
+      { "ingredient": "menthe", "quantite": null, "unite": null, "precision": "quelques feuilles" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Éplucher et ciseler l'échalote.",
+      "Prélever le zeste du citron.",
+      "Dans une sauteuse, faire revenir l'échalote et le zeste de citron dans un peu d'huile d'olive. Laisser mijoter quelques minutes. Ajouter les petits pois, du sel, du poivre et le bouillon de légumes, puis couvrir d'eau à hauteur. Laisser cuire 12 min.",
+      "Hors du feu, ajouter le fromage frais et les feuilles de menthe. Mixer puis passer au chinois.",
+      "Servir avec un peu de granola salé. Déguster chaud ou froid, selon votre convenance."
+    ],
+    "notes": [
+      "Topping : du granola salé (p. 15).",
+      "Astuces : Utilisez des petits pois surgelés pour gagner du temps en préparation. Vous pouvez accompagner ce velouté d'un avocado toast ou d'un œuf au plat pour un repas complet !"
+    ],
+    "photo": "photos/veloute-petits-pois-citron.jpg"
+  },
+  {
+    "id": "chakchouka-rapide-pois-chiches",
+    "titre": "Chakchouka rapide aux pois chiches croustillants",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 67 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "œufs",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 35 },
+    "ingredients": [
+      { "ingredient": "tomates-pelees", "quantite": 800, "unite": "g", "precision": "en conserve" },
+      { "ingredient": "poivron-rouge", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "cumin", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "paprika", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "feta", "quantite": 100, "unite": "g", "precision": null },
+      { "ingredient": "oeufs", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "herbes-fraiches", "quantite": null, "unite": null, "precision": "au choix : persil, coriandre, menthe…" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Éplucher l'oignon et l'ail puis les émincer.",
+      "Retirer le pédoncule et les graines des poivrons puis les couper en fines lamelles.",
+      "Faire revenir l'oignon et l'ail dans une sauteuse avec un filet d'huile d'olive.",
+      "Ajouter les poivrons, les tomates pelées, du sel, du poivre et les épices.",
+      "Laisser mijoter pendant 20 min en remuant de temps en temps.",
+      "Faire 4 trous dans la sauteuse pour y casser les œufs. Saler, poivrer puis baisser sur feu doux et laisser cuire pendant 10 min supplémentaires.",
+      "Servir avec des herbes fraîches ciselées, la feta émiettée et les pois chiches croustillants."
+    ],
+    "notes": [
+      "Topping : 2 c. à soupe de pois chiches croustillants (p. 14).",
+      "Astuce : Vous pouvez aussi accompagner la chakchouka de pain plat."
+    ],
+    "photo": "photos/chakchouka-rapide-pois-chiches.jpg"
+  },
+  {
+    "id": "one-pot-orzo-fenouil-tomates-sechees",
+    "titre": "One pot orzo, fenouil et tomates séchées",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 68 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "orzo", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "fenouil", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": "zeste, bio" },
+      { "ingredient": "tomates-sechees", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "parmesan", "quantite": 60, "unite": "g", "precision": "râpé" },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "pièce", "precision": "cube" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Éplucher et émincer l'oignon.",
+      "Couper les fenouils en quartiers.",
+      "Émincer les tomates séchées.",
+      "Faire revenir l'oignon et le fenouil dans une sauteuse avec de l'huile d'olive pendant 5 min.",
+      "Ajouter l'orzo, l'eau, le bouillon de légumes et le zeste de citron. Saler, poivrer et laisser cuire pendant 20 min à feu moyen.",
+      "Ajouter les tomates séchées et le parmesan.",
+      "Mélanger et servir aussitôt."
+    ],
+    "notes": [
+      "Eau : 700 ml.",
+      "Astuce : Le one pot se conserve très bien au frigo pendant 3 jours ou au congélateur jusqu'à 3 mois."
+    ],
+    "photo": "photos/one-pot-orzo-fenouil-tomates-sechees.jpg"
+  },
+  {
+    "id": "clafoutis-sale-asperges-petits-pois-ricotta",
+    "titre": "Clafoutis salé asperges, petits pois et ricotta",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 71 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 6,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "asperge", "quantite": 0.5, "unite": "bouquet", "precision": "botte, vertes" },
+      { "ingredient": "petits-pois", "quantite": 200, "unite": "g", "precision": "surgelés" },
+      { "ingredient": "ricotta", "quantite": 250, "unite": "g", "precision": null },
+      { "ingredient": "oeufs", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "lait", "quantite": 15, "unite": "cl", "precision": null },
+      { "ingredient": "basilic", "quantite": 0.5, "unite": "bouquet", "precision": "ciselé" },
+      { "ingredient": "menthe", "quantite": 0.5, "unite": "bouquet", "precision": "ciselé" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Laver les asperges, couper les pieds et les éplucher. Couper les têtes dans le sens de la longueur et les faire revenir à la poêle quelques minutes dans un peu d'huile d'olive. Saler, poivrer.",
+      "Faire cuire les petits pois dans une grande casserole d'eau bouillante pendant 4 min. Égoutter et réserver.",
+      "Dans un saladier, mélanger les œufs, le lait, du sel et du poivre. Ajouter la moitié des asperges, la moitié des petits pois, le basilic et la menthe. Ajouter les ¾ de la ricotta, mélanger.",
+      "Verser la préparation dans un plat allant au four et cuire pendant 25 min à 180 °C, jusqu'à ce que le clafoutis soit bien doré.",
+      "Dresser le clafoutis avec le reste des asperges, des petits pois et de la ricotta, un filet d'huile d'olive et quelques feuilles de basilic.",
+      "Déguster tiède ou froid, accompagné de salade verte."
+    ],
+    "notes": [
+      "Topping : du pesto maison (p. 14).",
+      "Astuce : Utiliser des petits pois surgelés pour gagner du temps en préparation."
+    ],
+    "photo": "photos/clafoutis-sale-asperges-petits-pois-ricotta.jpg"
+  },
+  {
+    "id": "gratin-gnocchis-tomate-mozza",
+    "titre": "Gratin de gnocchis tomate-mozza",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 73 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "tomates-pelees", "quantite": 600, "unite": "g", "precision": "en conserve" },
+      { "ingredient": "mozzarella", "quantite": 250, "unite": "g", "precision": null },
+      { "ingredient": "gnocchis", "quantite": 800, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "concentre-de-tomates", "quantite": 1, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "bouquet-garni", "quantite": 1, "unite": "pièce", "precision": "thym et laurier" },
+      { "ingredient": "sucre-en-poudre", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "parmesan", "quantite": 100, "unite": "g", "precision": "râpé" },
+      { "ingredient": "basilic", "quantite": null, "unite": null, "precision": "quelques feuilles" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Commencer par préparer la sauce : éplucher et ciseler l'oignon et l'ail, puis les faire revenir dans une casserole avec un peu d'huile d'olive.",
+      "Ajouter les tomates et le concentré, ainsi que le bouquet garni. Saler, poivrer, ajouter la pincée de sucre et un filet d'huile d'olive. Ajouter un peu de parmesan râpé. Laisser mijoter à feu doux pendant 20 min. Rectifier l'assaisonnement si besoin puis réserver.",
+      "Préchauffer le four à 200 °C.",
+      "Dans une autre casserole, porter à ébullition une grande quantité d'eau salée. Plonger les gnocchis et les cuire quelques minutes jusqu'à ce qu'ils remontent tous à la surface. Bien égoutter et réserver dans un saladier avec la sauce tomate.",
+      "Couper la mozzarella en dés.",
+      "Verser les gnocchis dans un plat à gratin avec la sauce tomate. Ajouter la mozzarella, puis le reste de parmesan râpé. Faire gratiner au four quelques minutes, jusqu'à ce que le dessus soit bien doré.",
+      "Au moment de servir, ajouter quelques feuilles de basilic. Déguster bien chaud, accompagné de salade verte."
+    ],
+    "notes": [
+      "Astuces : Utilisez des tomates pelées en conserve pour réaliser une sauce tomate en seulement quelques minutes. Je réalise toujours ce gratin en grosse quantité, il se congèle très bien et se conserve jusqu'à 3 mois."
+    ],
+    "photo": "photos/gratin-gnocchis-tomate-mozza.jpg"
   }
 ]

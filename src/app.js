@@ -196,7 +196,7 @@ function ecranSaison() {
     panneau.replaceChildren(...[
       groupe("Saison", puce("saison", "auto", "De saison"), puce("saison", "", "Toutes"),
         ...SAISONS_PUCES.map((x) => puce("saison", x, majuscule(x)))),
-      groupe("Catégorie", puce("categorie", "", "Toutes"), puce("categorie", "entrée", "Entrée"), puce("categorie", "plat", "Plat")),
+      groupe("Catégorie", puce("categorie", "", "Toutes"), puce("categorie", "entrée", "Entrée"), puce("categorie", "plat", "Plat"), puce("categorie", "dessert", "Dessert")),
       sources.length > 1 ? groupe("Livre", puce("livre", "", "Tous"), ...sources.map((x) => puce("livre", x.id, x.titre))) : null,
       types.length > 1 ? groupe("Type", puce("type", "", "Tous"), ...types.map((x) => puce("type", x, majuscule(x)))) : null,
       groupe("Temps (préparation + cuisson)", puce("temps", 0, "Tous"), ...TEMPS_PUCES.map((x) => puce("temps", x.minutes, x.libelle))),
