@@ -2,7 +2,7 @@
 // createElement / textContent (jamais innerHTML avec des données).
 import {
   filtrerRecettes, typesDisponibles, saisonDuMois, facteur, quantiteAjustee, formaterQuantite,
-  sourcesDisponibles, personnesDisponibles, ingredientsDisponibles,
+  sourcesDisponibles, recettesWebParSite, personnesDisponibles, ingredientsDisponibles,
 } from "./lib.js";
 import { chargerSemaine, sauverSemaine, basculer, definirPersonnes } from "./semaine.js";
 import { lireRoute } from "./routes.js";
@@ -511,7 +511,7 @@ function ecranRecette(idBrut) {
           ligneInfo("Portions",
             `${personnes} personne${personnes > 1 ? "s" : ""}`,
             h("small", { class: "note-livre" },
-              `Recette du livre pour ${recette.personnes} personne${recette.personnes > 1 ? "s" : ""}`,
+              `Recette ${o.type === "livre" ? "du livre" : "d'origine"} pour ${recette.personnes} personne${recette.personnes > 1 ? "s" : ""}`,
               recette.personnes_texte ? ` (${recette.personnes_texte})` : "")),
           t && t.preparation ? ligneInfo("Préparation", `${t.preparation} min`) : null,
           t && t.cuisson ? ligneInfo("Cuisson", `${t.cuisson} min`) : null),
@@ -793,14 +793,13 @@ function ecranLivres() {
                 h("span", {}, r.titre), h("span", { class: "qte" }, `p. ${r.origine.page}`)))
           : h("div", { class: "ou" }, "Aucune recette pour le moment.")));
   });
-  const web = recettes.filter((r) => r.origine.type === "web");
-  if (web.length) {
+  const sites = recettesWebParSite(recettes);
+  if (sites.length) {
     cartes.push(h("section", { class: "card" },
-      h("h2", {}, "Recettes d'internet"),
-      h("div", { style: "margin-top:8px" },
-        web.map((r) =>
-          h("a", { class: "livre-ligne", href: lienRecette(r.id) },
-            h("span", {}, r.titre), h("span", { class: "tag web" }, r.origine.source || "Internet"))))));
+      h("h2", {}, "Internet"),
+      sites.map((s) => h("div", { class: "site-web" },
+        h("h3", {}, s.site),
+        s.recettes.map((r) => h("a", { class: "livre-ligne", href: lienRecette(r.id) }, h("span", {}, r.titre)))))));
   }
   return h("div", {},
     h("h1", {}, "Livres"),

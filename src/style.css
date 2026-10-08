@@ -111,6 +111,8 @@ input[type=search]::placeholder { color: var(--ink2); }
 .livre-ligne { display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 44px; padding: 6px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
 .livre-ligne:last-child { border: 0; }
 .livre-ligne:hover span:first-child { color: var(--accent); }
+.site-web { margin-top: 10px; }
+.site-web h3 { font-size: .93rem; font-weight: 600; margin: 0; color: var(--ink2); }
 .qte { font-variant-numeric: tabular-nums; color: var(--ink2); white-space: nowrap; font-weight: 500; }
 
 /* Fiche : photo en tête, titre dessous sur fond blanc */

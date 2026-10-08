@@ -83,6 +83,21 @@ export function sourcesDisponibles(recettes, livres) {
   return sources;
 }
 
+/** Recettes d'internet rangées par site (ordre alphabétique), titres triés dans chaque site. */
+export function recettesWebParSite(recettes) {
+  const parSite = new Map();
+  for (const r of recettes) {
+    if (r.origine?.type !== "web") continue;
+    const site = r.origine.source || "Internet";
+    if (!parSite.has(site)) parSite.set(site, []);
+    parSite.get(site).push(r);
+  }
+  const tri = (a, b) => normaliser(a).localeCompare(normaliser(b), "fr");
+  return [...parSite.entries()]
+    .sort(([a], [b]) => tri(a, b))
+    .map(([site, liste]) => ({ site, recettes: liste.sort((a, b) => tri(a.titre, b.titre)) }));
+}
+
 /** Nombres de personnes présents dans les recettes, sans doublon, croissants. */
 export function personnesDisponibles(recettes) {
   return [...new Set(recettes.map((r) => r.personnes))].sort((a, b) => a - b);

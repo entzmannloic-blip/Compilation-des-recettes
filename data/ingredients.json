@@ -176,5 +176,6 @@
   { "id": "fecule-de-mais", "nom": "fécule de maïs", "rayon": "Épicerie", "saisons": [] },
   { "id": "kumquat", "nom": "kumquat", "rayon": "Fruits", "saisons": [] },
   { "id": "kiwi", "nom": "kiwi", "rayon": "Fruits", "saisons": [] },
-  { "id": "vinaigre-blanc", "nom": "vinaigre blanc", "rayon": "Épicerie", "saisons": [] }
+  { "id": "vinaigre-blanc", "nom": "vinaigre blanc", "rayon": "Épicerie", "saisons": [] },
+  { "id": "courge-butternut", "nom": "courge butternut", "rayon": "Légumes", "saisons": ["automne", "hiver"] }
 ]

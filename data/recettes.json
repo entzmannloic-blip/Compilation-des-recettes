@@ -2569,5 +2569,41 @@
       "Astuce : Si vous n'aimez pas la fleur d'oranger ou voulez varier les plaisirs, vous pouvez la remplacer par de la vanille ou de l'eau de rose."
     ],
     "photo": "photos/mouhalabieh-fleur-oranger.jpg"
+  },
+  {
+    "id": "soupe-champignons-butternut",
+    "titre": "Soupe de champignons et butternut",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/01/soupe-de-champignons-et-butternut-veloutee-et-pleine-de-gout.html/" },
+    "saisons": ["automne", "hiver"],
+    "categorie": "entrée",
+    "type": "soupe",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "champignon", "quantite": 600, "unite": "g", "precision": "de Paris, émincés" },
+      { "ingredient": "courge-butternut", "quantite": 175, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "beurre", "quantite": 10, "unite": "g", "precision": null },
+      { "ingredient": "miso", "quantite": 1, "unite": "c. à café", "precision": "rase, blanc ou blond (facultatif)" },
+      { "ingredient": "lait", "quantite": 250, "unite": "ml", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1.1, "unite": "l", "precision": null },
+      { "ingredient": "poivre", "quantite": 4, "unite": "pincée", "precision": null },
+      { "ingredient": "thym", "quantite": 1, "unite": "c. à soupe", "precision": "feuilles de thym frais" }
+    ],
+    "etapes": [
+      "Faire cuire les champignons à sec, sans sel, à feu vif pendant 7 à 10 minutes, jusqu'à ce que toute leur eau soit partie. Les cuire en deux fois si la poêle est trop petite.",
+      "Ajouter le beurre et poursuivre la cuisson environ 3 minutes, jusqu'à ce que les champignons colorent.",
+      "Ajouter l'oignon épluché et émincé et le laisser fondre 3 à 5 minutes à feu moyen.",
+      "Ajouter la butternut coupée en petits dés et le bouillon. Porter à ébullition, puis laisser mijoter environ 20 minutes, jusqu'à ce que la courge soit tendre.",
+      "Mixer la soupe avec la moitié du lait, puis ajouter le reste selon la texture voulue.",
+      "Délayer le miso dans une petite louche de soupe chaude et l'incorporer hors du feu.",
+      "Goûter avant de saler, poivrer, parsemer de thym et servir bien chaud, avec des copeaux de parmesan si on veut."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Le miso est facultatif : il renforce le goût sans en changer la nature."
+    ],
+    "photo": "photos/soupe-champignons-butternut.jpg"
   }
 ]

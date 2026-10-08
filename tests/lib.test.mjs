@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import {
   normaliser, saisonDuMois, saisonsDeduites, filtrerRecettes,
   typesDisponibles, facteur, quantiteAjustee, formaterQuantite,
-  tempsTotalMinutes, sourcesDisponibles, personnesDisponibles, ingredientsDisponibles,
+  tempsTotalMinutes, sourcesDisponibles, recettesWebParSite, personnesDisponibles, ingredientsDisponibles,
 } from "../src/lib.js";
 import { SAISONS } from "../src/schema.js";
 
@@ -130,6 +130,15 @@ test("sourcesDisponibles : livres avec recettes, plus Internet", () => {
     { id: "a", titre: "Livre A" }, { id: "b", titre: "Livre B" }, { id: "web", titre: "Internet" },
   ]);
   assert.deepEqual(sourcesDisponibles([], livres), []);
+});
+
+test("recettesWebParSite : un groupe par site, triés, sans les recettes de livres", () => {
+  const web = (id, titre, source) => ({ id, titre, origine: { type: "web", source, url: "https://exemple.fr/" + id } });
+  const livre = { id: "l", titre: "Livre", origine: { type: "livre", livre: "a", page: 1 } };
+  const groupes = recettesWebParSite([web("1", "Tarte", "Zèbre"), livre, web("2", "Soupe", "Abeille"), web("3", "Gratin", "Zèbre")]);
+  assert.deepEqual(groupes.map((g) => g.site), ["Abeille", "Zèbre"]);
+  assert.deepEqual(groupes[1].recettes.map((r) => r.id), ["3", "1"]);
+  assert.deepEqual(recettesWebParSite([livre]), []);
 });
 
 test("personnesDisponibles : valeurs uniques croissantes", () => {
