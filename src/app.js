@@ -414,10 +414,10 @@ function ecranRecette(idBrut) {
           photoRecette(recette, true),
           h("button", { type: "button", class: "rond retour", "aria-label": "Retour", onclick: retourListe }, icone("retour")),
           h("button", { type: "button", "data-cle": "bascule-semaine", class: `pilule${dansSemaine ? " active" : ""}`, onclick: basculerSemaine },
-            dansSemaine ? "Retirer de ma semaine et des courses" : "Ajouter à ma semaine et aux courses"),
-          h("div", { class: "fiche-titre" },
-            h("h1", { class: "titre-recette" }, recette.titre),
-            h("p", {}, majuscule(recette.categorie), " • ", recette.saisons.join(", ")))),
+            dansSemaine ? "Retirer de ma semaine et des courses" : "Ajouter à ma semaine et aux courses")),
+        h("div", { class: "fiche-titre" },
+          h("h1", { class: "titre-recette" }, recette.titre),
+          h("p", {}, majuscule(recette.categorie), " · ", recette.saisons.join(", "))),
         h("dl", { class: "infos" },
           o.type === "livre"
             ? ligneInfo("Livre", livre ? livre.titre : o.livre, `, page ${o.page}`)
