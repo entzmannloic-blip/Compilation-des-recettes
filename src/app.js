@@ -128,7 +128,7 @@ function ecranSaison() {
   const zoneTypes = h("div", { class: "chips", role: "group", "aria-label": "Type de recette" });
 
   function chip(libelle, actif, quandClic) {
-    return h("button", { type: "button", class: "chip", "aria-pressed": actif, onclick: quandClic }, libelle);
+    return h("button", { type: "button", class: "chip", "aria-pressed": String(actif), onclick: quandClic }, libelle);
   }
 
   function actualiserListe() {
