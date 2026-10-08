@@ -42,6 +42,7 @@ h2.section { color: var(--ink); font-size: 1rem; margin: 28px 0 6px; padding-bot
 input[type=search] { display: block; width: 100%; margin-top: 8px; border: 0; background: var(--gris); color: var(--ink); border-radius: 10px; padding: 10px 14px; min-height: 44px; font: 1rem var(--sans); }
 input[type=search]::placeholder { color: var(--ink2); }
 .saisons { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+.saisons.ignore .saisons-puces { opacity: .45; }
 .saisons-titre { flex: none; color: var(--ink2); font-weight: 500; }
 .saisons-puces { display: flex; gap: 6px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
 .saisons-puces::-webkit-scrollbar { display: none; }
@@ -117,6 +118,8 @@ input[type=search]::placeholder { color: var(--ink2); }
 .fiche-photo .rond { position: absolute; z-index: 2; top: calc(10px + env(safe-area-inset-top, 0px)); background: #fff; color: var(--ink); box-shadow: var(--ombre); }
 .fiche-photo .retour { left: 12px; }
 .fiche-photo .favori { right: 12px; }
+.fiche-photo .panier { right: 64px; }
+.panier .badge { top: 2px; left: auto; right: 0; }
 .favori[aria-pressed="true"] svg { fill: currentColor; }
 .favori[aria-pressed="true"] { color: var(--accent); }
 .fiche-actions { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; max-width: 680px; margin: 0 auto; display: flex; gap: 10px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--page); border-top: 1px solid var(--line); }
@@ -156,7 +159,7 @@ input[type=search]::placeholder { color: var(--ink2); }
 /* Barre du bas : fine, collée en bas */
 .barre { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; background: var(--paper); border-top: 1px solid var(--line); padding: 0 0 env(safe-area-inset-bottom, 0px); }
 .barre-int { max-width: 520px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
-.badge { position: absolute; top: 4px; left: calc(50% + 6px); min-width: 18px; height: 18px; padding: 0 5px; border-radius: 99px; background: var(--accent); color: var(--on-accent); font-size: .79rem; font-weight: 600; line-height: 18px; text-align: center; }
+.badge { position: absolute; top: 4px; left: calc(50% + 6px); min-width: 18px; height: 18px; padding: 0 5px; border-radius: 99px; background: var(--accent); color: var(--on-accent); font-size: .86rem; font-weight: 600; line-height: 18px; text-align: center; }
 .barre a { position: relative; color: var(--ink2); padding: 8px 2px 6px; font-size: .86rem; font-weight: 500; display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; min-height: 52px; }
 .barre a[aria-current="page"] { color: var(--accent); }
 .barre svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
@@ -183,7 +186,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .recettes-choisies { margin-top: 4px; }
 .recettes-choisies summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 600; }
 .rec-ligne { display: flex; align-items: center; gap: 8px; min-height: 48px; border-top: 1px solid var(--line); }
-.rec-ligne > a { flex: 1; min-width: 0; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+.rec-ligne > a { flex: 1; min-width: 0; display: flex; align-items: center; min-height: 44px; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
 .rec-ligne > a:hover { color: var(--accent); }
 .pas-compact { gap: 4px; flex: none; }
 .rec-ligne .rond { flex: none; }
@@ -197,7 +200,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* Aide de première visite */
 .aide { margin-top: 10px; padding: 12px 14px; background: var(--accent-wash); border-radius: 10px; }
 .aide p { margin: 0 0 2px; }
-.aide .lien-texte { margin: 0; min-height: 36px; }
+.aide .lien-texte { margin: 0; min-height: 44px; }
 
 /* Un seul mouvement : la page apparaît en douceur ; le « + » fait un petit rebond */
 @keyframes apparition { from { opacity: 0; } }

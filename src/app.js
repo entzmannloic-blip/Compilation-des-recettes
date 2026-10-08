@@ -382,6 +382,7 @@ function ecranSaison() {
       livre: filtres.livre, tempsMax: filtres.temps, personnes: filtres.personnes, ingredient: filtres.ingredient,
     });
     if (filtres.favoris) trouvees = trouvees.filter((r) => favoris.has(r.id));
+    saisonsChoisies.classList.toggle("ignore", Boolean(filtres.recherche || filtres.favoris));
     compte.textContent = filtres.recherche || filtres.favoris
       ? `${trouvees.length} résultat${trouvees.length > 1 ? "s" : ""} · toute l'année`
       : `${trouvees.length} sur ${recettes.length} recette${recettes.length > 1 ? "s" : ""}`;
@@ -494,6 +495,8 @@ function ecranRecette(idBrut) {
         h("div", { class: "fiche-photo" },
           photoRecette(recette, true),
           h("button", { type: "button", class: "rond retour", "aria-label": "Retour", onclick: retourListe }, icone("retour")),
+          h("a", { class: "rond panier", href: "#/courses", "aria-label": `Voir la liste de courses${Object.keys(semaine).length ? ` (${Object.keys(semaine).length} recette${Object.keys(semaine).length > 1 ? "s" : ""})` : ""}` },
+            icone("courses"), Object.keys(semaine).length ? h("span", { class: "badge" }, String(Object.keys(semaine).length)) : null),
           h("button", {
             type: "button", class: "rond favori", "data-cle": "favori", "aria-pressed": String(favoris.has(id)),
             "aria-label": favoris.has(id) ? "Retirer des favoris" : "Ajouter aux favoris", onclick: basculerFavoriFiche,
@@ -613,7 +616,7 @@ let recettesOuvertes = true;
 
 function ecranCourses() {
   const conteneur = h("div");
-  const etat = { coches: chargerCoches(stockage), message: "", annulation: null };
+  const etat = { coches: chargerCoches(stockage), message: "", annulation: null, retiree: null };
   const compteurs = new Map(); // un compteur durable par recette, pour que le lecteur d'écran annonce le changement
 
   function enregistrer() { sauverCoches(stockage, etat.coches); }
@@ -623,6 +626,7 @@ function ecranCourses() {
     enregistrer();
     etat.message = "";
     etat.annulation = null;
+    etat.retiree = null;
     gardantLeFocus(dessiner);
   }
 
@@ -665,7 +669,20 @@ function ecranCourses() {
   }
 
   function retirer(recette) {
+    etat.retiree = { id: recette.id, personnes: semaine[recette.id] };
+    etat.annulation = null;
+    etat.message = "Recette retirée.";
     semaine = basculer(semaine, recette);
+    sauverSemaine(stockage, semaine);
+    dessinerBarre();
+    gardantLeFocus(dessiner);
+  }
+
+  function annulerRetrait() {
+    const { id, personnes } = etat.retiree;
+    etat.retiree = null;
+    etat.message = "";
+    semaine = { ...semaine, [id]: personnes };
     sauverSemaine(stockage, semaine);
     dessinerBarre();
     gardantLeFocus(dessiner);
@@ -708,6 +725,7 @@ function ecranCourses() {
         h("h1", {}, "Courses"),
         h("div", { class: "vide" },
           "La liste est vide. Touchez « + » sur une recette, ou « Ajouter aux courses » dans sa fiche.",
+          etat.retiree ? h("button", { type: "button", class: "lien-texte", "data-cle": "annuler", onclick: annulerRetrait }, "Annuler le dernier retrait") : null,
           h("a", { class: "lien-action", href: "#/" }, "Voir les recettes")));
       return;
     }
@@ -722,7 +740,8 @@ function ecranCourses() {
         h("button", { type: "button", class: "lien-action", "data-cle": "copier", onclick: () => copier(liste) }, "Copier la liste"),
         h("button", { type: "button", class: "lien-action", "data-cle": "decocher", onclick: toutDecocher }, "Tout décocher")),
       h("p", { class: "sub statut", role: "status" }, etat.message,
-        etat.annulation ? h("button", { type: "button", class: "lien-texte", "data-cle": "annuler", onclick: annuler }, "Annuler") : null),
+        etat.annulation ? h("button", { type: "button", class: "lien-texte", "data-cle": "annuler", onclick: annuler }, "Annuler") : null,
+        etat.retiree ? h("button", { type: "button", class: "lien-texte", "data-cle": "annuler", onclick: annulerRetrait }, "Annuler") : null),
       ...liste.groupes.map((g) => h("section", {}, h("h2", { class: "section" }, g.titre), nonCochesAvant(g.items).map(ligne))),
       liste.placard.length
         ? h("section", {}, h("h2", { class: "section" }, "À vérifier au placard"), nonCochesAvant(liste.placard).map(ligne))
