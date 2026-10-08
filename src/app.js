@@ -492,16 +492,15 @@ function ecranRecette(idBrut) {
             ? ligneInfo("Livre", livre ? livre.titre : o.livre, `, page ${o.page}`)
             : ligneInfo("Source", /^https?:\/\//i.test(o.url) ? h("a", { href: o.url, target: "_blank", rel: "noopener noreferrer" }, o.source) : o.source),
           ligneInfo("Portions",
-            h("span", { class: "pas" },
-              h("button", { type: "button", "data-cle": "pas-moins", "aria-label": "Moins de personnes", onclick: () => changerPersonnes(-1) }, "−"),
-              compteur,
-              h("button", { type: "button", "data-cle": "pas-plus", "aria-label": "Plus de personnes", onclick: () => changerPersonnes(1) }, "+"),
-              h("span", { class: "ou" }, personnes > 1 ? "personnes" : "personne")),
+            `${personnes} personne${personnes > 1 ? "s" : ""}`,
             h("small", { class: "note-livre" },
               `Recette du livre pour ${recette.personnes} personne${recette.personnes > 1 ? "s" : ""}`,
               recette.personnes_texte ? ` (${recette.personnes_texte})` : "")),
           t && t.preparation ? ligneInfo("Préparation", `${t.preparation} min`) : null,
-          t && t.cuisson ? ligneInfo("Cuisson", `${t.cuisson} min`) : null)),
+          t && t.cuisson ? ligneInfo("Cuisson", `${t.cuisson} min`) : null),
+        recette.etapes.length
+          ? h("a", { class: "btn alt btn-cuisine", href: `#/cuisine/${encodeURIComponent(id)}` }, "Cuisiner pas à pas")
+          : null),
       h("div", { class: "fiche-corps" },
         h("section", {},
           h("h2", { class: "section" }, "Ingrédients"),
@@ -515,9 +514,11 @@ function ecranRecette(idBrut) {
                 h("ul", { class: "notes" }, recette.notes.map((n) => h("li", {}, n))))
             : null)),
       h("div", { class: "fiche-actions" },
-        recette.etapes.length
-          ? h("a", { class: "btn alt", href: `#/cuisine/${encodeURIComponent(id)}` }, "Cuisiner pas à pas")
-          : null,
+        // Les portions se règlent à côté du bouton d'ajout : c'est le nombre qui sera mis dans la liste de courses.
+        h("span", { class: "pas" },
+          h("button", { type: "button", "data-cle": "pas-moins", "aria-label": "Moins de personnes", onclick: () => changerPersonnes(-1) }, "−"),
+          h("span", { class: "nb" }, compteur, h("small", {}, personnes > 1 ? "pers." : "pers.")),
+          h("button", { type: "button", "data-cle": "pas-plus", "aria-label": "Plus de personnes", onclick: () => changerPersonnes(1) }, "+")),
         h("button", { type: "button", "data-cle": "bascule-semaine", class: `btn${dansSemaine ? " alt" : ""}`, onclick: basculerSemaine },
           dansSemaine ? "Retirer des courses" : "Ajouter aux courses")));
     compteur.textContent = String(personnes);

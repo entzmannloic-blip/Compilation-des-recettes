@@ -117,6 +117,9 @@ input[type=search]::placeholder { color: var(--ink2); }
 .favori[aria-pressed="true"] { color: var(--accent); }
 .fiche-actions { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; max-width: 680px; margin: 0 auto; display: flex; gap: 10px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--page); border-top: 1px solid var(--line); }
 .fiche-actions .btn { flex: 1; min-height: 48px; }
+.fiche-actions .pas { flex: none; flex-wrap: nowrap; gap: 0; }
+.nb { display: flex; flex-direction: column; align-items: center; min-width: 34px; line-height: 1.1; }
+.nb small { color: var(--ink3); font-size: .86rem; }
 .fiche-titre { margin: 16px 0 0; }
 .fiche-titre .titre-recette { font-size: 1.43rem; line-height: 1.2; margin: 0 0 2px; }
 .fiche-titre p { margin: 0; color: var(--ink2); }
