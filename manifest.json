@@ -1,0 +1,13 @@
+{
+  "name": "Compilation des recettes",
+  "short_name": "Recettes",
+  "lang": "fr",
+  "display": "standalone",
+  "start_url": "./",
+  "background_color": "#f2f4ef",
+  "theme_color": "#4d7c0f",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
