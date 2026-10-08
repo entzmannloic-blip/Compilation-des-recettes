@@ -49,6 +49,16 @@ function personnesPour(recette) {
   return personnesFiche[recette.id] ?? recette.personnes;
 }
 
+// Ajoute ou retire la recette de la semaine (donc des courses) ; renvoie vrai si elle y est maintenant.
+function basculerCourses(recette) {
+  const n = personnesPour(recette);
+  personnesFiche[recette.id] = n;
+  semaine = basculer(semaine, recette);
+  if (Object.hasOwn(semaine, recette.id)) semaine = definirPersonnes(semaine, recette.id, n);
+  sauverSemaine(stockage, semaine);
+  return Object.hasOwn(semaine, recette.id);
+}
+
 // Écran allumé pendant qu'on cuisine (fiche et mode pas à pas). Sans effet si le téléphone ne le permet pas.
 let verrouEcran = null;
 let ecranAllumeVoulu = false;
@@ -113,10 +123,12 @@ const ICONES = {
   filtres: ["M4 7h10M18 7h2M4 17h2M10 17h10", "M16 4v6M8 14v6"],
   retour: ["M15 5l-7 7 7 7"],
   bol: ["M4 11h16a8 8 0 0 1-16 0z", "M8 7l6-3M12 8l3-4"],
+  plus: ["M12 5v14M5 12h14"],
+  coche: ["M5 12.5l4.5 4.5L19 7.5"],
+  croix: ["M6 6l12 12M18 6L6 18"],
 };
 const ONGLETS = [
-  { nom: "saison", libelle: "De saison", href: "#/" },
-  { nom: "semaine", libelle: "Ma semaine", href: "#/semaine" },
+  { nom: "saison", libelle: "Recettes", href: "#/" },
   { nom: "courses", libelle: "Courses", href: "#/courses" },
   { nom: "livres", libelle: "Livres", href: "#/livres" },
 ];
@@ -134,10 +146,15 @@ function icone(nom) {
   return svg;
 }
 
-function dessinerBarre(nomActif) {
+let ongletActif = "saison";
+function dessinerBarre(nomActif = ongletActif) {
+  ongletActif = nomActif;
+  const choisies = Object.keys(semaine).length;
   barre.replaceChildren(
     ...ONGLETS.map((o) =>
-      h("a", { href: o.href, "aria-current": o.nom === nomActif ? "page" : null }, icone(o.nom), o.libelle)
+      h("a", { href: o.href, "aria-current": o.nom === nomActif ? "page" : null },
+        icone(o.nom), o.libelle,
+        o.nom === "courses" && choisies ? h("span", { class: "badge" }, String(choisies)) : null)
     )
   );
 }
@@ -162,11 +179,24 @@ function photoRecette(recette, premierPlan = false) {
 
 function carteRecette(recette) {
   const temps = tempsTotal(recette);
-  return h("a", { class: "carte", href: lienRecette(recette.id) },
-    photoRecette(recette),
-    h("div", { class: "carte-bandeau" },
-      h("h2", {}, recette.titre),
-      temps ? h("span", { class: "carte-temps" }, temps) : null));
+  const bouton = h("button", {
+    type: "button", class: "ajout", "data-cle": `ajout-${recette.id}`,
+    onclick: () => { basculerCourses(recette); majBouton(); dessinerBarre(); },
+  });
+  function majBouton() {
+    const dedans = Object.hasOwn(semaine, recette.id);
+    bouton.setAttribute("aria-pressed", String(dedans));
+    bouton.setAttribute("aria-label", dedans ? `Retirer ${recette.titre} des courses` : `Ajouter ${recette.titre} aux courses`);
+    bouton.replaceChildren(icone(dedans ? "coche" : "plus"));
+  }
+  majBouton();
+  return h("div", { class: "carte" },
+    h("a", { class: "carte-lien", href: lienRecette(recette.id) },
+      photoRecette(recette),
+      h("div", { class: "carte-bandeau" },
+        h("h2", {}, recette.titre),
+        temps ? h("span", { class: "carte-temps" }, temps) : null)),
+    bouton);
 }
 
 function messageErreur(texte, avecRetour = false) {
@@ -175,7 +205,7 @@ function messageErreur(texte, avecRetour = false) {
     h("p", { class: "erreur", role: "alert" }, texte));
 }
 
-// ---------- Écran « De saison » ----------
+// ---------- Écran « Recettes » ----------
 const SAISONS_PUCES = ["printemps", "été", "automne", "hiver"];
 const CATEGORIES_ONGLETS = [
   { valeur: "", libelle: "Tout" }, { valeur: "entrée", libelle: "Entrées" },
@@ -187,8 +217,7 @@ const deSaison = (saison) => (saison === "printemps" ? "de printemps" : `d'${sai
 function ecranSaison() {
   const { recettes, ingredients, livres } = donnees;
   const saisonActuelle = saisonDuMois(new Date());
-  const titre = h("h1", {});
-  const sousTitre = h("p", { class: "sub" });
+  const compte = h("p", { class: "compte", "aria-live": "polite" });
   const onglets = h("div", { class: "onglets", role: "group", "aria-label": "Catégorie" });
   const categories = CATEGORIES_ONGLETS.filter((c) => c.valeur === "" || recettes.some((r) => r.categorie === c.valeur));
   const liste = h("div", { class: "liste" });
@@ -198,14 +227,6 @@ function ecranSaison() {
     type: "button", class: "rond btn-filtres", "data-cle": "ouvrir-filtres", "aria-controls": "panneau-filtres", "aria-label": "Filtres",
     onclick: () => { filtres.ouvert = !filtres.ouvert; actualiserPanneauVisible(); },
   }, icone("filtres"), pastille);
-  const boutonRecherche = h("button", {
-    type: "button", class: "rond", "data-cle": "ouvrir-recherche", "aria-controls": "recherche", "aria-label": "Rechercher",
-    onclick: () => {
-      filtres.rechercheOuverte = !filtres.rechercheOuverte;
-      actualiserRechercheVisible();
-      if (filtres.rechercheOuverte) recherche.focus();
-    },
-  }, icone("loupe"));
   const boutonVoir = h("button", {
     type: "button", class: "btn", "data-cle": "voir-resultats",
     onclick: () => { filtres.ouvert = false; actualiserPanneauVisible(); window.scrollTo(0, 0); },
@@ -217,15 +238,28 @@ function ecranSaison() {
   },
   h("option", { value: "" }, "Tous"),
   ...ingredientsDisponibles(recettes, ingredients).map((i) => h("option", { value: i.id }, i.nom)));
+  const choixSaison = h("select", {
+    id: "filtre-saison", class: "choix-saison", "data-cle": "filtre-saison", "aria-label": "Saison",
+    onchange: (e) => { filtres.saison = e.target.value; actualiserListe(); },
+  },
+  h("option", { value: "auto" }, `De saison (${saisonActuelle})`),
+  h("option", { value: "" }, "Toute l'année"),
+  ...SAISONS_PUCES.map((x) => h("option", { value: x }, majuscule(x))));
+  const recherche = h("input", {
+    type: "search", id: "recherche", class: "recherche", placeholder: "Rechercher une recette ou un ingrédient",
+    "aria-label": "Rechercher", autocomplete: "off", value: filtres.recherche,
+    oninput: (e) => { filtres.recherche = e.target.value; actualiserListe(); },
+  });
 
   const sources = sourcesDisponibles(recettes, livres);
   const types = typesDisponibles(recettes);
   const personnes = personnesDisponibles(recettes);
 
   const actifsDe = (cles) => cles.filter((cle) => filtres[cle] !== FILTRES_PAR_DEFAUT[cle]).length;
-  // La pastille du bouton « Filtres » ne compte pas la catégorie : elle a ses propres onglets, toujours visibles.
-  const nombreActifs = () => actifsDe(Object.keys(FILTRES_PAR_DEFAUT).filter((cle) => cle !== "categorie"));
-  const afficherEffacer = () => actifsDe(Object.keys(FILTRES_PAR_DEFAUT)) > 0;
+  const TOUTES = Object.keys(FILTRES_PAR_DEFAUT);
+  // La pastille du bouton « Filtres » ne compte que le contenu du panneau : saison et catégorie sont toujours visibles.
+  const nombreActifs = () => actifsDe(TOUTES.filter((cle) => cle !== "categorie" && cle !== "saison"));
+  const afficherEffacer = () => actifsDe(TOUTES) > 0 || filtres.recherche !== "";
 
   function puce(cle, valeur, libelle) {
     const actif = filtres[cle] === valeur;
@@ -245,12 +279,6 @@ function ecranSaison() {
     boutonFiltres.setAttribute("aria-expanded", String(filtres.ouvert));
   }
 
-  function actualiserRechercheVisible() {
-    const visible = filtres.rechercheOuverte || filtres.recherche !== "";
-    zoneRecherche.hidden = !visible;
-    boutonRecherche.setAttribute("aria-expanded", String(visible));
-  }
-
   function actualiserOnglets() {
     onglets.replaceChildren(...categories.map((c) =>
       h("button", {
@@ -262,8 +290,6 @@ function ecranSaison() {
   function actualiserPanneau() {
     choixIngredient.value = filtres.ingredient;
     panneau.replaceChildren(...[
-      groupe("Saison", puce("saison", "auto", "De saison"), puce("saison", "", "Toutes"),
-        ...SAISONS_PUCES.map((x) => puce("saison", x, majuscule(x)))),
       sources.length > 1 ? groupe("Livre", puce("livre", "", "Tous"), ...sources.map((x) => puce("livre", x.id, x.titre))) : null,
       types.length > 1 ? groupe("Type", puce("type", "", "Tous"), ...types.map((x) => puce("type", x, majuscule(x)))) : null,
       groupe("Temps (préparation + cuisson)", puce("temps", 0, "Tous"), ...TEMPS_PUCES.map((x) => puce("temps", x.minutes, x.libelle))),
@@ -271,6 +297,10 @@ function ecranSaison() {
       h("div", { class: "groupe" },
         h("label", { class: "groupe-titre", for: "filtre-ingredient" }, "Ingrédient"), choixIngredient),
       boutonVoir].filter(Boolean));
+    majIndicateurs();
+  }
+
+  function majIndicateurs() {
     const actifs = nombreActifs();
     pastille.textContent = actifs ? String(actifs) : "";
     pastille.hidden = actifs === 0;
@@ -279,7 +309,7 @@ function ecranSaison() {
 
   // Rien trouvé : on dit pourquoi et on propose la sortie la plus utile.
   function pasDeResultat(saison) {
-    const autres = Object.keys(FILTRES_PAR_DEFAUT).filter((cle) => cle !== "saison");
+    const autres = TOUTES.filter((cle) => cle !== "saison");
     const seulementLaSaison = filtres.saison === "auto" && !filtres.recherche && actifsDe(autres) === 0;
     if (seulementLaSaison) {
       return h("div", { class: "vide" }, `Aucune recette de saison (${saison}) pour le moment.`,
@@ -291,50 +321,38 @@ function ecranSaison() {
 
   function actualiserListe() {
     const saison = filtres.saison === "auto" ? saisonActuelle : filtres.saison;
+    // Quand on cherche un mot, on cherche dans toute la bibliothèque : la saison ne cache pas les résultats.
     const trouvees = filtrerRecettes(recettes, ingredients, {
-      saison, categorie: filtres.categorie, type: filtres.type, recherche: filtres.recherche,
+      saison: filtres.recherche ? "" : saison, categorie: filtres.categorie, type: filtres.type, recherche: filtres.recherche,
       livre: filtres.livre, tempsMax: filtres.temps, personnes: filtres.personnes, ingredient: filtres.ingredient,
     });
-    const base = filtres.saison === "auto" ? "De saison" : saison ? `Recettes ${deSaison(saison)}` : "Toutes les recettes";
-    titre.textContent = `${base} (${trouvees.length})`;
-    sousTitre.textContent = saison ? majuscule(saison) : "Toute l'année";
+    compte.textContent = filtres.recherche
+      ? `${trouvees.length} résultat${trouvees.length > 1 ? "s" : ""} · toute l'année`
+      : `${trouvees.length} sur ${recettes.length} recette${recettes.length > 1 ? "s" : ""}`;
     boutonVoir.textContent = `Voir ${trouvees.length} recette${trouvees.length > 1 ? "s" : ""}`;
-    liste.replaceChildren(
-      ...(trouvees.length
-        ? trouvees.map(carteRecette)
-        : [pasDeResultat(saison)]));
-    const actifs = nombreActifs();
-    pastille.textContent = actifs ? String(actifs) : "";
-    pastille.hidden = actifs === 0;
-    effacer.hidden = !afficherEffacer();
+    liste.replaceChildren(...(trouvees.length ? trouvees.map(carteRecette) : [pasDeResultat(saison)]));
+    majIndicateurs();
   }
 
-  function actualiserTout() { actualiserOnglets(); actualiserPanneau(); actualiserListe(); }
+  function actualiserTout() { choixSaison.value = filtres.saison; actualiserOnglets(); actualiserPanneau(); actualiserListe(); }
 
   function reinitialiser() {
     Object.assign(filtres, FILTRES_PAR_DEFAUT);
     filtres.recherche = "";
     recherche.value = "";
-    actualiserRechercheVisible();
     gardantLeFocus(actualiserTout);
   }
 
-  const recherche = h("input", {
-    type: "search", id: "recherche", placeholder: "Titre ou ingrédient (ex. oignon)",
-    "aria-label": "Rechercher", autocomplete: "off", value: filtres.recherche,
-    oninput: (e) => { filtres.recherche = e.target.value; actualiserListe(); },
-  });
-  const zoneRecherche = h("div", { class: "zone-recherche" }, recherche);
-
   actualiserPanneauVisible();
-  actualiserRechercheVisible();
   actualiserTout();
   return h("div", {},
+    h("h1", { class: "sr-only" }, "Recettes"),
     h("header", { class: "entete" },
       h("p", { class: "marque" }, icone("bol"), "Compilation des recettes"),
-      h("div", { class: "boutons-entete" }, boutonFiltres, boutonRecherche)),
-    zoneRecherche,
-    titre, sousTitre, onglets,
+      h("div", { class: "boutons-entete" }, boutonFiltres)),
+    recherche,
+    h("div", { class: "barre-outils" }, choixSaison, compte),
+    onglets,
     h("div", { class: "rangee-filtres" }, effacer),
     panneau, liste);
 }
@@ -369,11 +387,7 @@ function ecranRecette(idBrut) {
   }
 
   function basculerSemaine() {
-    const n = personnesActuelles();
-    personnesFiche[id] = n;
-    semaine = basculer(semaine, recette);
-    if (Object.hasOwn(semaine, id)) semaine = definirPersonnes(semaine, id, n);
-    sauverSemaine(stockage, semaine);
+    basculerCourses(recette);
     gardantLeFocus(dessiner);
   }
 
@@ -413,8 +427,7 @@ function ecranRecette(idBrut) {
         h("div", { class: "fiche-photo" },
           photoRecette(recette, true),
           h("button", { type: "button", class: "rond retour", "aria-label": "Retour", onclick: retourListe }, icone("retour")),
-          h("button", { type: "button", "data-cle": "bascule-semaine", class: `pilule${dansSemaine ? " active" : ""}`, onclick: basculerSemaine },
-            dansSemaine ? "Retirer de ma semaine et des courses" : "Ajouter à ma semaine et aux courses")),
+          ),
         h("div", { class: "fiche-titre" },
           h("h1", { class: "titre-recette" }, recette.titre),
           h("p", {}, majuscule(recette.categorie), " · ", recette.saisons.join(", "))),
@@ -432,10 +445,7 @@ function ecranRecette(idBrut) {
               `Recette du livre pour ${recette.personnes} personne${recette.personnes > 1 ? "s" : ""}`,
               recette.personnes_texte ? ` (${recette.personnes_texte})` : "")),
           t && t.preparation ? ligneInfo("Préparation", `${t.preparation} min`) : null,
-          t && t.cuisson ? ligneInfo("Cuisson", `${t.cuisson} min`) : null),
-        recette.etapes.length
-          ? h("a", { class: "btn btn-cuisine", href: `#/cuisine/${encodeURIComponent(id)}` }, "Cuisiner pas à pas")
-          : null),
+          t && t.cuisson ? ligneInfo("Cuisson", `${t.cuisson} min`) : null)),
       h("div", { class: "fiche-corps" },
         h("section", {},
           h("h2", { class: "section" }, "Ingrédients"),
@@ -447,7 +457,13 @@ function ecranRecette(idBrut) {
           recette.notes && recette.notes.length
             ? h("div", {}, h("h2", { class: "section" }, "Notes"),
                 h("ul", { class: "notes" }, recette.notes.map((n) => h("li", {}, n))))
-            : null)));
+            : null)),
+      h("div", { class: "fiche-actions" },
+        recette.etapes.length
+          ? h("a", { class: "btn alt", href: `#/cuisine/${encodeURIComponent(id)}` }, "Cuisiner pas à pas")
+          : null,
+        h("button", { type: "button", "data-cle": "bascule-semaine", class: `btn${dansSemaine ? " alt" : ""}`, onclick: basculerSemaine },
+          dansSemaine ? "Retirer des courses" : "Ajouter aux courses")));
     compteur.textContent = String(personnes);
   }
 
@@ -510,7 +526,7 @@ function ecranCuisine(idBrut) {
   return conteneur;
 }
 
-// ---------- Écran « Courses » ----------
+// ---------- Écran « Courses » : recettes choisies, puis la liste par rayon ----------
 function copierSecours(texte) {
   const zone = h("textarea", { "aria-hidden": "true", style: "position:fixed;opacity:0;top:0" });
   zone.value = texte;
@@ -522,14 +538,36 @@ function copierSecours(texte) {
   return ok;
 }
 
+let recettesOuvertes = true;
+
 function ecranCourses() {
   const conteneur = h("div");
-  const etat = { coches: chargerCoches(stockage), message: "" };
+  const etat = { coches: chargerCoches(stockage), message: "", annulation: null };
+  const compteurs = new Map(); // un compteur durable par recette, pour que le lecteur d'écran annonce le changement
+
+  function enregistrer() { sauverCoches(stockage, etat.coches); }
 
   function cocher(cle, coche) {
     if (coche) etat.coches.add(cle); else etat.coches.delete(cle);
-    sauverCoches(stockage, etat.coches);
+    enregistrer();
     etat.message = "";
+    etat.annulation = null;
+    gardantLeFocus(dessiner);
+  }
+
+  function toutDecocher() {
+    etat.annulation = new Set(etat.coches);
+    etat.coches.clear();
+    enregistrer();
+    etat.message = "Cases décochées.";
+    gardantLeFocus(dessiner);
+  }
+
+  function annuler() {
+    etat.coches = etat.annulation ?? etat.coches;
+    etat.annulation = null;
+    etat.message = "";
+    enregistrer();
     gardantLeFocus(dessiner);
   }
 
@@ -543,7 +581,36 @@ function ecranCourses() {
       ok = copierSecours(texte);
     }
     etat.message = ok ? "Liste copiée." : "Copie impossible : sélectionnez la liste à la main.";
+    etat.annulation = null;
     gardantLeFocus(dessiner);
+  }
+
+  function changerPersonnes(recette, delta) {
+    const n = Math.max(1, semaine[recette.id] + delta);
+    semaine = definirPersonnes(semaine, recette.id, n);
+    personnesFiche[recette.id] = n;
+    sauverSemaine(stockage, semaine);
+    gardantLeFocus(dessiner);
+  }
+
+  function retirer(recette) {
+    semaine = basculer(semaine, recette);
+    sauverSemaine(stockage, semaine);
+    dessinerBarre();
+    gardantLeFocus(dessiner);
+  }
+
+  function ligneRecette(recette) {
+    if (!compteurs.has(recette.id)) compteurs.set(recette.id, h("b", { "aria-live": "polite" }));
+    const compteur = compteurs.get(recette.id);
+    compteur.textContent = String(semaine[recette.id]);
+    return h("div", { class: "rec-ligne" },
+      h("a", { href: lienRecette(recette.id) }, recette.titre),
+      h("span", { class: "pas pas-compact" },
+        h("button", { type: "button", "data-cle": `pas-moins-${recette.id}`, "aria-label": `Moins de personnes pour ${recette.titre}`, onclick: () => changerPersonnes(recette, -1) }, "−"),
+        compteur,
+        h("button", { type: "button", "data-cle": `pas-plus-${recette.id}`, "aria-label": `Plus de personnes pour ${recette.titre}`, onclick: () => changerPersonnes(recette, 1) }, "+")),
+      h("button", { type: "button", class: "rond", "data-cle": `retirer-${recette.id}`, "aria-label": `Retirer ${recette.titre} des courses`, onclick: () => retirer(recette) }, icone("croix")));
   }
 
   function ligne(item) {
@@ -555,8 +622,11 @@ function ecranCourses() {
       h("span", { class: "nom" },
         item.texte ? h("b", { class: "quantite" }, item.texte) : null, item.texte ? " " : null, item.nom,
         item.melange ? h("small", { class: "alerte" }, "Unités différentes selon les recettes : à vérifier") : null,
-        h("small", { class: "origine" }, item.recettes.join(" · "))));
+        item.melange ? h("small", { class: "origine" }, item.recettes.join(" · ")) : null));
   }
+
+  // Les articles pas encore cochés d'abord, les cochés en bas.
+  const nonCochesAvant = (items) => [...items.filter((i) => !etat.coches.has(i.cle)), ...items.filter((i) => etat.coches.has(i.cle))];
 
   function dessiner() {
     const liste = compilerCourses(donnees.recettes, donnees.ingredients, semaine);
@@ -566,20 +636,25 @@ function ecranCourses() {
       conteneur.replaceChildren(
         h("h1", {}, "Courses"),
         h("div", { class: "vide" },
-          "La liste est vide. Ouvrez une recette et touchez « Ajouter à ma semaine et aux courses ».",
+          "La liste est vide. Touchez « + » sur une recette, ou « Ajouter aux courses » dans sa fiche.",
           h("a", { class: "lien-action", href: "#/" }, "Voir les recettes")));
       return;
     }
+    const choisies = Object.keys(semaine).map((id) => donnees.recettes.find((r) => r.id === id)).filter(Boolean);
     conteneur.replaceChildren(
       h("h1", {}, "Courses"),
-      h("p", { class: "sub" }, `${liste.recettes} recette${liste.recettes > 1 ? "s" : ""} · ${restants} article${restants > 1 ? "s" : ""} à acheter sur ${tous.length}`),
+      h("p", { class: "sub" }, `${restants} article${restants > 1 ? "s" : ""} à acheter sur ${tous.length}`),
+      h("details", { class: "recettes-choisies", open: recettesOuvertes, ontoggle: (e) => { recettesOuvertes = e.target.open; } },
+        h("summary", {}, `Recettes choisies (${choisies.length})`),
+        choisies.map(ligneRecette)),
       h("div", { class: "actions" },
         h("button", { type: "button", class: "lien-action", "data-cle": "copier", onclick: () => copier(liste) }, "Copier la liste"),
-        h("button", { type: "button", class: "lien-action", "data-cle": "decocher", onclick: () => { etat.coches.clear(); sauverCoches(stockage, etat.coches); etat.message = ""; gardantLeFocus(dessiner); } }, "Tout décocher")),
-      h("p", { class: "sub statut", role: "status" }, etat.message),
-      ...liste.groupes.map((g) => h("section", {}, h("h2", { class: "section" }, g.titre), g.items.map(ligne))),
+        h("button", { type: "button", class: "lien-action", "data-cle": "decocher", onclick: toutDecocher }, "Tout décocher")),
+      h("p", { class: "sub statut", role: "status" }, etat.message,
+        etat.annulation ? h("button", { type: "button", class: "lien-texte", "data-cle": "annuler", onclick: annuler }, "Annuler") : null),
+      ...liste.groupes.map((g) => h("section", {}, h("h2", { class: "section" }, g.titre), nonCochesAvant(g.items).map(ligne))),
       liste.placard.length
-        ? h("section", {}, h("h2", { class: "section" }, "À vérifier au placard"), liste.placard.map(ligne))
+        ? h("section", {}, h("h2", { class: "section" }, "À vérifier au placard"), nonCochesAvant(liste.placard).map(ligne))
         : null);
   }
 
@@ -619,75 +694,21 @@ function ecranLivres() {
     h("div", { class: "stack" }, cartes));
 }
 
-// ---------- Écran « Ma semaine » ----------
-function ecranSemaine() {
-  const conteneur = h("div");
-  const compteurs = new Map(); // un compteur durable par recette (voir la fiche)
-
-  function changerPersonnes(recette, delta) {
-    semaine = definirPersonnes(semaine, recette.id, Math.max(1, semaine[recette.id] + delta));
-    sauverSemaine(stockage, semaine);
-    gardantLeFocus(dessiner);
-  }
-
-  function retirer(recette) {
-    semaine = basculer(semaine, recette);
-    sauverSemaine(stockage, semaine);
-    gardantLeFocus(dessiner);
-  }
-
-  function carteSemaine(recette) {
-    const personnes = semaine[recette.id];
-    if (!compteurs.has(recette.id)) compteurs.set(recette.id, h("b", { "aria-live": "polite" }));
-    const compteur = compteurs.get(recette.id);
-    compteur.textContent = String(personnes);
-    return h("section", { class: "card" },
-      h("h2", {}, recette.titre),
-      h("div", { class: "ligne", style: "align-items:center; margin-top:10px" },
-        h("b", {}, "Pour"),
-        h("div", { class: "pas" },
-          h("button", { type: "button", "data-cle": `pas-moins-${recette.id}`, "aria-label": `Moins de personnes pour ${recette.titre}`, onclick: () => changerPersonnes(recette, -1) }, "−"),
-          compteur,
-          h("button", { type: "button", "data-cle": `pas-plus-${recette.id}`, "aria-label": `Plus de personnes pour ${recette.titre}`, onclick: () => changerPersonnes(recette, 1) }, "+"),
-          h("span", { class: "ou", style: "margin:0" }, personnes > 1 ? "personnes" : "personne"))),
-      h("div", { class: "actions" },
-        h("a", { class: "lien-action", href: lienRecette(recette.id) }, "Voir la fiche"),
-        h("button", { type: "button", class: "lien-action", "data-cle": `retirer-${recette.id}`, onclick: () => retirer(recette) }, "Retirer")));
-  }
-
-  function dessiner() {
-    // Les recettes enregistrées mais disparues des données sont ignorées.
-    const choisies = Object.keys(semaine)
-      .map((id) => donnees.recettes.find((r) => r.id === id))
-      .filter(Boolean);
-    conteneur.replaceChildren(
-      h("h1", {}, "Ma semaine"),
-      h("p", { class: "sub" }, `${choisies.length} recette${choisies.length > 1 ? "s" : ""}`),
-      choisies.length ? h("div", { class: "actions" }, h("a", { class: "lien-action", href: "#/courses" }, "Voir la liste de courses")) : null,
-      choisies.length
-        ? h("div", { class: "stack" }, choisies.map(carteSemaine))
-        : h("div", { class: "vide" }, "Rien pour l'instant. Ouvrez une recette et touchez « Ajouter à ma semaine et aux courses »."));
-  }
-
-  dessiner();
-  return conteneur;
-}
-
 // ---------- Affichage ----------
 function afficher() {
   if (!donnees) return;
   const route = lireRoute(window.location.hash);
   const ecrans = {
     saison: ecranSaison,
-    semaine: ecranSemaine,
+    semaine: ecranCourses, // ancien nom de l'écran, gardé pour les liens déjà enregistrés
     courses: ecranCourses,
     livres: ecranLivres,
     recette: () => ecranRecette(route.id),
     cuisine: () => ecranCuisine(route.id),
   };
   ecransVus += 1;
-  dessinerBarre(route.nom === "recette" || route.nom === "cuisine" ? "saison" : route.nom);
-  barre.closest(".barre").hidden = route.nom === "cuisine";
+  dessinerBarre(route.nom === "recette" || route.nom === "cuisine" ? "saison" : route.nom === "semaine" ? "courses" : route.nom);
+  barre.closest(".barre").hidden = route.nom === "cuisine" || route.nom === "recette"; // ces écrans ont leurs propres boutons en bas
   garderEcranAllume(route.nom === "recette" || route.nom === "cuisine");
   vue.className = "app" + (route.nom === "saison" ? " large" : route.nom === "recette" ? " fiche-large" : "");
   vue.replaceChildren(ecrans[route.nom]());
