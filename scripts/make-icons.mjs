@@ -1,4 +1,4 @@
-// Génère les icônes de l'application (carré vert herbe + disque clair centré).
+// Génère les icônes de l'application (carré orange brique + disque blanc centré).
 // Aucune dépendance : PNG écrit à la main avec le module zlib de Node.
 import { deflateSync } from 'node:zlib';
 import { writeFile, mkdir } from 'node:fs/promises';
@@ -6,8 +6,8 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 export const TAILLES = [180, 192, 512];
-const FOND = [0x4d, 0x7c, 0x0f];   // --accent (vert herbe)
-const DISQUE = [0xf2, 0xf4, 0xef]; // --page (clair)
+const FOND = [0xc4, 0x50, 0x1f];   // --accent (orange brique)
+const DISQUE = [0xff, 0xff, 0xff]; // --page (blanc)
 
 const TABLE_CRC = Array.from({ length: 256 }, (_, n) => {
   let c = n;

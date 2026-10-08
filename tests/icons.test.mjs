@@ -44,13 +44,13 @@ test('les trois icônes sont de vrais PNG aux bonnes largeurs', async () => {
   }
 });
 
-test('fond vert herbe avec un disque clair au centre', async () => {
+test('fond orange brique avec un disque blanc au centre', async () => {
   const dossier = await mkdtemp(join(tmpdir(), 'icones-'));
   try {
     await genererIcones(dossier);
     const png = await readFile(join(dossier, 'icon-192.png'));
-    assert.deepEqual(pixel(png, 0, 0), [0x4d, 0x7c, 0x0f]);
-    assert.deepEqual(pixel(png, 96, 96), [0xf2, 0xf4, 0xef]);
+    assert.deepEqual(pixel(png, 0, 0), [0xc4, 0x50, 0x1f]);
+    assert.deepEqual(pixel(png, 96, 96), [0xff, 0xff, 0xff]);
   } finally {
     await rm(dossier, { recursive: true, force: true });
   }
