@@ -277,6 +277,18 @@ function ecranSaison() {
     effacer.hidden = !afficherEffacer();
   }
 
+  // Rien trouvé : on dit pourquoi et on propose la sortie la plus utile.
+  function pasDeResultat(saison) {
+    const autres = Object.keys(FILTRES_PAR_DEFAUT).filter((cle) => cle !== "saison");
+    const seulementLaSaison = filtres.saison === "auto" && !filtres.recherche && actifsDe(autres) === 0;
+    if (seulementLaSaison) {
+      return h("div", { class: "vide" }, `Aucune recette de saison (${saison}) pour le moment.`,
+        h("button", { type: "button", class: "lien-action", "data-cle": "toute-annee", onclick: () => { filtres.saison = ""; gardantLeFocus(actualiserTout); } }, "Voir toutes les recettes"));
+    }
+    return h("div", { class: "vide" }, "Aucune recette ne correspond à ces filtres.",
+      h("button", { type: "button", class: "lien-action", "data-cle": "tout-effacer-vide", onclick: () => reinitialiser() }, "Tout effacer"));
+  }
+
   function actualiserListe() {
     const saison = filtres.saison === "auto" ? saisonActuelle : filtres.saison;
     const trouvees = filtrerRecettes(recettes, ingredients, {
@@ -290,8 +302,7 @@ function ecranSaison() {
     liste.replaceChildren(
       ...(trouvees.length
         ? trouvees.map(carteRecette)
-        : [h("div", { class: "vide" }, "Aucune recette avec ces filtres.",
-            h("button", { type: "button", class: "lien-action", onclick: () => reinitialiser() }, "Tout effacer"))]));
+        : [pasDeResultat(saison)]));
     const actifs = nombreActifs();
     pastille.textContent = actifs ? String(actifs) : "";
     pastille.hidden = actifs === 0;
@@ -302,6 +313,9 @@ function ecranSaison() {
 
   function reinitialiser() {
     Object.assign(filtres, FILTRES_PAR_DEFAUT);
+    filtres.recherche = "";
+    recherche.value = "";
+    actualiserRechercheVisible();
     gardantLeFocus(actualiserTout);
   }
 
