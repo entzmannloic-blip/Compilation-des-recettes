@@ -2,7 +2,7 @@
 // createElement / textContent (jamais innerHTML avec des données).
 import {
   filtrerRecettes, typesDisponibles, saisonDuMois, facteur, quantiteAjustee, formaterQuantite,
-  sourcesDisponibles, recettesWebParSite, personnesDisponibles, ingredientsDisponibles,
+  sourcesDisponibles, recettesWebParSite, personnesDisponibles, ingredientsDisponibles, regimeRecette,
 } from "./lib.js";
 import { chargerSemaine, sauverSemaine, basculer, definirPersonnes } from "./semaine.js";
 import { lireRoute } from "./routes.js";
@@ -30,7 +30,7 @@ let semaine = {};
 let favoris = new Set(chargerListe(stockage, CLES.favoris));
 // Filtres de l'écran « Recettes », conservés pendant la session.
 // saisons : null = la saison du moment ; liste de saisons choisies ; [] = toute l'année.
-const FILTRES_PAR_DEFAUT = { saisons: null, livre: "", categorie: "", type: "", temps: 0, personnes: 0, ingredient: "", favoris: false };
+const FILTRES_PAR_DEFAUT = { saisons: null, livre: "", categorie: "", type: "", temps: 0, personnes: 0, ingredient: "", regime: "", favoris: false };
 const filtres = { ...FILTRES_PAR_DEFAUT, recherche: "", ouvert: false, rechercheOuverte: false };
 // Nombre de personnes choisi sur la fiche, par recette (pour les recettes hors semaine).
 const personnesFiche = {};
@@ -331,6 +331,7 @@ function ecranSaison() {
     panneau.replaceChildren(...[
       sources.length > 1 ? groupe("Livre", puce("livre", "", "Tous"), ...sources.map((x) => puce("livre", x.id, x.titre))) : null,
       types.length > 1 ? groupe("Type", puce("type", "", "Tous"), ...types.map((x) => puce("type", x, majuscule(x)))) : null,
+      groupe("Régime (déduit des ingrédients)", puce("regime", "", "Tous"), puce("regime", "vegetarien", "Végétarien"), puce("regime", "vegan", "Vegan")),
       groupe("Temps (préparation + cuisson)", puce("temps", 0, "Tous"), ...TEMPS_PUCES.map((x) => puce("temps", x.minutes, x.libelle))),
       personnes.length > 1 ? groupe("Pour", puce("personnes", 0, "Tous"), ...personnes.map((n) => puce("personnes", n, `${n} personnes`))) : null,
       h("div", { class: "groupe" },
@@ -379,7 +380,7 @@ function ecranSaison() {
     // Recherche et favoris portent sur toute la bibliothèque : les saisons ne cachent pas les résultats.
     let trouvees = filtrerRecettes(recettes, ingredients, {
       saisons: filtres.recherche || filtres.favoris ? [] : saisonsActives(), categorie: filtres.categorie, type: filtres.type, recherche: filtres.recherche,
-      livre: filtres.livre, tempsMax: filtres.temps, personnes: filtres.personnes, ingredient: filtres.ingredient,
+      livre: filtres.livre, tempsMax: filtres.temps, personnes: filtres.personnes, ingredient: filtres.ingredient, regime: filtres.regime,
     });
     if (filtres.favoris) trouvees = trouvees.filter((r) => favoris.has(r.id));
     saisonsChoisies.classList.toggle("ignore", Boolean(filtres.recherche || filtres.favoris));
@@ -466,6 +467,7 @@ function ecranRecette(idBrut) {
     const nomsIngredients = new Map(donnees.ingredients.map((i) => [i.id, i.nom]));
     const o = recette.origine;
     const livre = o.type === "livre" ? donnees.livres.find((l) => l.id === o.livre) : null;
+    const regime = regimeRecette(recette, new Map(donnees.ingredients.map((i) => [i.id, i])));
 
     const t = recette.temps;
     const ligneInfo = (libelle, ...contenu) => [h("dt", {}, libelle), h("dd", {}, ...contenu)];
@@ -514,7 +516,11 @@ function ecranRecette(idBrut) {
               `Recette ${o.type === "livre" ? "du livre" : "d'origine"} pour ${recette.personnes} personne${recette.personnes > 1 ? "s" : ""}`,
               recette.personnes_texte ? ` (${recette.personnes_texte})` : "")),
           t && t.preparation ? ligneInfo("Préparation", `${t.preparation} min`) : null,
-          t && t.cuisson ? ligneInfo("Cuisson", `${t.cuisson} min`) : null),
+          t && t.cuisson ? ligneInfo("Cuisson", `${t.cuisson} min`) : null,
+          regime !== "non"
+            ? ligneInfo("Régime", regime === "vegan" ? "Vegan" : "Végétarien",
+              recette.regime ? null : h("small", { class: "note-livre" }, "Déduit des ingrédients, à vérifier sur les produits achetés"))
+            : null),
         recette.etapes.length
           ? h("a", { class: "btn alt btn-cuisine", href: `#/cuisine/${encodeURIComponent(id)}` }, "Cuisiner pas à pas")
           : null),

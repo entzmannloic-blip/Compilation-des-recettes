@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import {
   normaliser, saisonDuMois, saisonsDeduites, filtrerRecettes,
   typesDisponibles, facteur, quantiteAjustee, formaterQuantite,
-  tempsTotalMinutes, sourcesDisponibles, recettesWebParSite, personnesDisponibles, ingredientsDisponibles,
+  tempsTotalMinutes, sourcesDisponibles, recettesWebParSite, regimeIngredient, regimeRecette, personnesDisponibles, ingredientsDisponibles,
 } from "../src/lib.js";
 import { SAISONS } from "../src/schema.js";
 
@@ -158,4 +158,43 @@ test("filtrerRecettes : plusieurs saisons à la fois", () => {
   assert.deepEqual(ids(["été", "automne"]).sort(), ["gaspacho", "velouté"]);
   assert.equal(ids([]).length, recettes.length);
   assert.equal(ids(undefined).length, recettes.length);
+});
+
+const ingRegime = new Map([
+  ["tomate", { id: "tomate", rayon: "Légumes" }],
+  ["feta", { id: "feta", rayon: "Crèmerie" }],
+  ["poulet", { id: "poulet", rayon: "Boucherie" }],
+  ["thon", { id: "thon", rayon: "Épicerie", regime: "chair" }],
+  ["pate", { id: "pate", rayon: "Crèmerie", regime: "vegetal" }],
+]);
+const avec = (...lignes) => ({ ingredients: lignes.map((l) => (typeof l === "string" ? { ingredient: l, precision: null } : { precision: null, ...l })) });
+
+test("regimeIngredient : le champ l'emporte, sinon le rayon", () => {
+  assert.equal(regimeIngredient(ingRegime.get("tomate")), "vegetal");
+  assert.equal(regimeIngredient(ingRegime.get("feta")), "produit-animal");
+  assert.equal(regimeIngredient(ingRegime.get("poulet")), "chair");
+  assert.equal(regimeIngredient(ingRegime.get("thon")), "chair");
+  assert.equal(regimeIngredient(ingRegime.get("pate")), "vegetal");
+  assert.equal(regimeIngredient(undefined), "vegetal");
+});
+
+test("regimeRecette : vegan, végétarien ou non ; facultatif ignoré ; champ de la recette prioritaire", () => {
+  assert.equal(regimeRecette(avec("tomate", "pate"), ingRegime), "vegan");
+  assert.equal(regimeRecette(avec("tomate", "feta"), ingRegime), "vegetarien");
+  assert.equal(regimeRecette(avec("tomate", "feta", "thon"), ingRegime), "non");
+  assert.equal(regimeRecette(avec("tomate", { ingredient: "poulet", precision: "facultatif" }), ingRegime), "vegan");
+  assert.equal(regimeRecette(avec("tomate", "inconnu"), ingRegime), "vegan");
+  assert.equal(regimeRecette({ ...avec("poulet"), regime: "vegetarien" }, ingRegime), "vegetarien");
+});
+
+test("filtrerRecettes : filtre régime, végétarien inclut vegan", () => {
+  const ings = [...ingRegime.values()].map((i) => ({ ...i, nom: i.id, saisons: [] }));
+  const rec = [
+    { id: "a", titre: "A", saisons: ["hiver"], ...avec("tomate") },
+    { id: "b", titre: "B", saisons: ["hiver"], ...avec("tomate", "feta") },
+    { id: "c", titre: "C", saisons: ["hiver"], ...avec("poulet") },
+  ];
+  assert.deepEqual(filtrerRecettes(rec, ings, { regime: "vegan" }).map((r) => r.id), ["a"]);
+  assert.deepEqual(filtrerRecettes(rec, ings, { regime: "vegetarien" }).map((r) => r.id), ["a", "b"]);
+  assert.deepEqual(filtrerRecettes(rec, ings, {}).map((r) => r.id), ["a", "b", "c"]);
 });

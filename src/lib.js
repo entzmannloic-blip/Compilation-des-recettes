@@ -42,13 +42,43 @@ export function tempsTotalMinutes(recette) {
 }
 
 /**
+ * Régime d'un ingrédient : « chair » (viande, poisson), « produit-animal » (œuf, lait, fromage, miel) ou « vegetal ».
+ * Le champ `regime` de l'ingrédient l'emporte ; sinon on le déduit du rayon.
+ */
+export function regimeIngredient(ingredient) {
+  if (ingredient?.regime) return ingredient.regime;
+  if (ingredient?.rayon === "Boucherie" || ingredient?.rayon === "Poissonnerie") return "chair";
+  if (ingredient?.rayon === "Crèmerie") return "produit-animal";
+  return "vegetal";
+}
+
+/**
+ * Régime d'une recette : « vegan », « vegetarien » ou « non ». Le champ `regime` de la recette l'emporte ;
+ * sinon on prend l'ingrédient le plus animal, en ignorant les lignes « facultatif ».
+ * ingredientsParId : Map id → ingrédient (un ingrédient inconnu est compté végétal).
+ */
+export function regimeRecette(recette, ingredientsParId) {
+  if (recette.regime) return recette.regime;
+  let regime = "vegan";
+  for (const ligne of recette.ingredients) {
+    if (/facultatif/i.test(ligne.precision ?? "")) continue;
+    const r = regimeIngredient(ingredientsParId.get(ligne.ingredient));
+    if (r === "chair") return "non";
+    if (r === "produit-animal") regime = "vegetarien";
+  }
+  return regime;
+}
+
+/**
  * Filtres combinés en « et », résultat trié par titre.
  * saison : une saison ; saisons : liste de saisons (la recette en a au moins une ; liste vide = toute l'année) ;
  * livre : id d'un livre, ou « web » ; tempsMax : minutes (les recettes sans temps connu sont écartées) ;
- * personnes : nombre de personnes de la recette ; ingredient : id d'un ingrédient.
+ * personnes : nombre de personnes de la recette ; ingredient : id d'un ingrédient ;
+ * regime : « vegetarien » (végétarien ou vegan) ou « vegan ».
  */
-export function filtrerRecettes(recettes, ingredients, { saison, saisons, categorie, type, recherche, livre, tempsMax, personnes, ingredient } = {}) {
+export function filtrerRecettes(recettes, ingredients, { saison, saisons, categorie, type, recherche, livre, tempsMax, personnes, ingredient, regime } = {}) {
   const nomsParId = new Map(ingredients.map((i) => [i.id, normaliser(i.nom)]));
+  const ingredientsParId = new Map(ingredients.map((i) => [i.id, i]));
   const motif = recherche ? normaliser(recherche) : "";
   return recettes
     .filter((r) => !saison || r.saisons.includes(saison))
@@ -66,6 +96,11 @@ export function filtrerRecettes(recettes, ingredients, { saison, saisons, catego
     })
     .filter((r) => !personnes || r.personnes === personnes)
     .filter((r) => !ingredient || r.ingredients.some((ligne) => ligne.ingredient === ingredient))
+    .filter((r) => {
+      if (!regime) return true;
+      const rr = regimeRecette(r, ingredientsParId);
+      return regime === "vegan" ? rr === "vegan" : rr !== "non";
+    })
     .filter((r) => {
       if (!motif) return true;
       if (normaliser(r.titre).includes(motif)) return true;

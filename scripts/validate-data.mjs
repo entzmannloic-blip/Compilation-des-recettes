@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
-import { SAISONS, CATEGORIES, RAYONS, UNITES } from "../src/schema.js";
+import { SAISONS, CATEGORIES, RAYONS, UNITES, REGIMES_INGREDIENT, REGIMES_RECETTE } from "../src/schema.js";
 
 const ETATS_JOURNAL = ["brouillon", "validé"];
 
@@ -34,6 +34,9 @@ function validerIngredients(ingredients, erreurs) {
     if (!RAYONS.includes(ing.rayon)) erreurs.push(`${c}.rayon: « ${ing.rayon} » n'est pas un rayon connu`);
     if (!Array.isArray(ing.saisons) || ing.saisons.some((s) => !SAISONS.includes(s))) {
       erreurs.push(`${c}.saisons: liste de saisons attendue (vide = toute l'année)`);
+    }
+    if (ing.regime !== undefined && !REGIMES_INGREDIENT.includes(ing.regime)) {
+      erreurs.push(`${c}.regime: « ${ing.regime} » n'est pas un régime connu (${REGIMES_INGREDIENT.join(", ")})`);
     }
   });
   verifierDoublons(erreurs, "ingredients", ingredients);
@@ -103,6 +106,9 @@ function validerRecette(r, i, idsLivres, idsIngredients, erreurs) {
     erreurs.push(`${c}.notes: liste de textes attendue`);
   }
   if (r.photo !== null && !estTexte(r.photo)) erreurs.push(`${c}.photo: texte ou null attendu`);
+  if (r.regime !== undefined && !REGIMES_RECETTE.includes(r.regime)) {
+    erreurs.push(`${c}.regime: « ${r.regime} » n'est pas un régime connu (${REGIMES_RECETTE.join(", ")})`);
+  }
 }
 
 function verifierUniciteLivrePage(recettes, erreurs) {

@@ -147,3 +147,19 @@ test("une entrée de journal vers une recette inexistante est refusée", () => {
   });
   assert.ok(erreurs.some((e) => e.includes("fantome")), erreurs.join("\n"));
 });
+
+test("régime : valeur inconnue refusée sur un ingrédient et sur une recette", () => {
+  const jeu = jeuValide();
+  jeu.ingredients[0].regime = "carnivore";
+  jeu.recettes[0].regime = "flexitarien";
+  const erreurs = validerDonnees(jeu).join("\n");
+  assert.match(erreurs, /ingredients\[0\]\.regime/);
+  assert.match(erreurs, /recettes\[0\]\.regime/);
+});
+
+test("régime : valeurs connues acceptées", () => {
+  const jeu = jeuValide();
+  jeu.ingredients[1].regime = "produit-animal";
+  jeu.recettes[0].regime = "vegetarien";
+  assert.deepEqual(validerDonnees(jeu), []);
+});
