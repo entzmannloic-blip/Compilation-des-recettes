@@ -41,6 +41,19 @@ function h(tag, attrs = {}, ...enfants) {
   return el;
 }
 
+// Les écrans se redessinent en entier : on note le contrôle actif (data-cle) puis on lui rend le focus.
+// Si le contrôle a disparu (ex. « Retirer »), le focus passe au titre de l'écran.
+function gardantLeFocus(redessiner) {
+  const cle = document.activeElement?.dataset?.cle;
+  redessiner();
+  if (!cle) return;
+  const cible = vue.querySelector(`[data-cle="${CSS.escape(cle)}"]`) ?? vue.querySelector("h1");
+  if (cible) {
+    if (!cible.matches("button, a, input")) cible.setAttribute("tabindex", "-1");
+    cible.focus();
+  }
+}
+
 const majuscule = (t) => t.charAt(0).toUpperCase() + t.slice(1);
 const lienRecette = (id) => `#/recette/${encodeURIComponent(id)}`;
 
@@ -78,22 +91,13 @@ function dessinerBarre(nomActif) {
 }
 
 // ---------- Éléments communs ----------
-function texteOrigine(recette, livres) {
-  const o = recette.origine;
-  if (o.type === "livre") {
-    const livre = livres.find((l) => l.id === o.livre);
-    return `${livre ? livre.titre : o.livre}, page ${o.page}`;
-  }
-  return "Recette d'internet";
-}
-
 function ouEstLaRecette(recette) {
   const o = recette.origine;
   if (o.type === "livre") {
     const livre = donnees.livres.find((l) => l.id === o.livre);
     return h("div", { class: "ou" }, "Livre ", h("b", {}, livre ? livre.titre : o.livre), `, page ${o.page}`);
   }
-  return h("div", { class: "ou" }, h("span", { class: "tag web" }, "Internet"));
+  return h("div", { class: "ou" }, h("span", { class: "tag web" }, "Internet"), o.source ? ` ${o.source}` : null);
 }
 
 function tempsTotal(recette) {
@@ -127,8 +131,8 @@ function ecranSaison() {
   const zoneCategories = h("div", { class: "chips", role: "group", "aria-label": "Entrée ou plat" });
   const zoneTypes = h("div", { class: "chips", role: "group", "aria-label": "Type de recette" });
 
-  function chip(libelle, actif, quandClic) {
-    return h("button", { type: "button", class: "chip", "aria-pressed": String(actif), onclick: quandClic }, libelle);
+  function chip(groupe, libelle, actif, quandClic) {
+    return h("button", { type: "button", class: "chip", "data-cle": `puce-${groupe}-${libelle}`, "aria-pressed": String(actif), onclick: quandClic }, libelle);
   }
 
   function actualiserListe() {
@@ -145,14 +149,14 @@ function ecranSaison() {
   }
 
   function actualiserPuces() {
-    const choisir = (cle, valeur) => () => { filtres[cle] = valeur; actualiserPuces(); actualiserListe(); };
+    const choisir = (cle, valeur) => () => { filtres[cle] = valeur; gardantLeFocus(actualiserPuces); actualiserListe(); };
     zoneCategories.replaceChildren(
-      chip("Tout", filtres.categorie === "", choisir("categorie", "")),
-      chip("Entrée", filtres.categorie === "entrée", choisir("categorie", "entrée")),
-      chip("Plat", filtres.categorie === "plat", choisir("categorie", "plat")));
+      chip("categorie", "Tout", filtres.categorie === "", choisir("categorie", "")),
+      chip("categorie", "Entrée", filtres.categorie === "entrée", choisir("categorie", "entrée")),
+      chip("categorie", "Plat", filtres.categorie === "plat", choisir("categorie", "plat")));
     zoneTypes.replaceChildren(
-      chip("Tous", filtres.type === "", choisir("type", "")),
-      ...typesDisponibles(recettes).map((t) => chip(majuscule(t), filtres.type === t, choisir("type", t))));
+      chip("type", "Tous", filtres.type === "", choisir("type", "")),
+      ...typesDisponibles(recettes).map((t) => chip("type", majuscule(t), filtres.type === t, choisir("type", t))));
   }
 
   const recherche = h("input", {
@@ -186,34 +190,37 @@ function ecranRecette(idBrut) {
   if (!recette) return messageErreur("Recette introuvable", true);
 
   const conteneur = h("div");
+  // Même élément à chaque redessin, pour que le lecteur d'écran annonce le nouveau nombre.
+  const compteur = h("b", { "aria-live": "polite" });
 
   function personnesActuelles() {
-    if (id in semaine) return semaine[id];
+    if (Object.hasOwn(semaine, id)) return semaine[id];
     return personnesFiche[id] ?? recette.personnes;
   }
 
   function changerPersonnes(delta) {
     const n = Math.max(1, personnesActuelles() + delta);
     personnesFiche[id] = n;
-    if (id in semaine) {
+    if (Object.hasOwn(semaine, id)) {
       semaine = definirPersonnes(semaine, id, n);
       sauverSemaine(stockage, semaine);
     }
-    dessiner();
+    gardantLeFocus(dessiner);
   }
 
   function basculerSemaine() {
     const n = personnesActuelles();
+    personnesFiche[id] = n;
     semaine = basculer(semaine, recette);
-    if (id in semaine) semaine = definirPersonnes(semaine, id, n);
+    if (Object.hasOwn(semaine, id)) semaine = definirPersonnes(semaine, id, n);
     sauverSemaine(stockage, semaine);
-    dessiner();
+    gardantLeFocus(dessiner);
   }
 
   function dessiner() {
     const personnes = personnesActuelles();
     const mult = facteur(recette, personnes);
-    const dansSemaine = id in semaine;
+    const dansSemaine = Object.hasOwn(semaine, id);
     const nomsIngredients = new Map(donnees.ingredients.map((i) => [i.id, i.nom]));
     const o = recette.origine;
     const livre = o.type === "livre" ? donnees.livres.find((l) => l.id === o.livre) : null;
@@ -221,7 +228,7 @@ function ecranRecette(idBrut) {
     const blocOu = o.type === "livre"
       ? h("div", { class: "pill-ou" }, `Livre ${livre ? livre.titre : o.livre}, page ${o.page}`)
       : h("div", { class: "pill-ou" }, "Source : ",
-          /^https?:\/\//i.test(o.lien) ? h("a", { href: o.lien, target: "_blank", rel: "noopener noreferrer" }, o.lien) : o.lien);
+          /^https?:\/\//i.test(o.url) ? h("a", { href: o.url, target: "_blank", rel: "noopener noreferrer" }, o.source) : o.source);
 
     const t = recette.temps;
     const temps = t
@@ -243,9 +250,9 @@ function ecranRecette(idBrut) {
         h("div", { class: "ligne", style: "align-items:center" },
           h("b", {}, "Pour"),
           h("div", { class: "pas" },
-            h("button", { type: "button", "aria-label": "Moins de personnes", onclick: () => changerPersonnes(-1) }, "−"),
-            h("b", { "aria-live": "polite" }, String(personnes)),
-            h("button", { type: "button", "aria-label": "Plus de personnes", onclick: () => changerPersonnes(1) }, "+"),
+            h("button", { type: "button", "data-cle": "pas-moins", "aria-label": "Moins de personnes", onclick: () => changerPersonnes(-1) }, "−"),
+            compteur,
+            h("button", { type: "button", "data-cle": "pas-plus", "aria-label": "Plus de personnes", onclick: () => changerPersonnes(1) }, "+"),
             h("span", { class: "ou", style: "margin:0" }, personnes > 1 ? "personnes" : "personne"))),
         h("div", { style: "margin-top:6px" },
           recette.ingredients.map((ligne) =>
@@ -260,8 +267,9 @@ function ecranRecette(idBrut) {
         ? h("div", {}, h("h2", { class: "section" }, "Notes"),
             h("ul", { class: "notes" }, recette.notes.map((n) => h("li", {}, n))))
         : null,
-      h("button", { type: "button", class: `btn${dansSemaine ? " alt" : ""}`, onclick: basculerSemaine },
+      h("button", { type: "button", "data-cle": "bascule-semaine", class: `btn${dansSemaine ? " alt" : ""}`, onclick: basculerSemaine },
         dansSemaine ? "Retirer de ma semaine" : "Ajouter à ma semaine"));
+    compteur.textContent = String(personnes);
   }
 
   dessiner();
@@ -285,14 +293,14 @@ function ecranLivres() {
                 h("span", {}, r.titre), h("span", { class: "qte" }, `p. ${r.origine.page}`)))
           : h("div", { class: "ou" }, "Aucune recette pour le moment.")));
   });
-  const web = recettes.filter((r) => r.origine.type === "internet");
+  const web = recettes.filter((r) => r.origine.type === "web");
   if (web.length) {
     cartes.push(h("section", { class: "card" },
       h("h2", {}, "Recettes d'internet"),
       h("div", { style: "margin-top:8px" },
         web.map((r) =>
           h("a", { class: "livre-ligne", href: lienRecette(r.id) },
-            h("span", {}, r.titre), h("span", { class: "tag web" }, "Internet"))))));
+            h("span", {}, r.titre), h("span", { class: "tag web" }, r.origine.source || "Internet"))))));
   }
   return h("div", {},
     h("h1", {}, "Livres"),
@@ -303,33 +311,37 @@ function ecranLivres() {
 // ---------- Écran « Ma semaine » ----------
 function ecranSemaine() {
   const conteneur = h("div");
+  const compteurs = new Map(); // un compteur durable par recette (voir la fiche)
 
   function changerPersonnes(recette, delta) {
     semaine = definirPersonnes(semaine, recette.id, Math.max(1, semaine[recette.id] + delta));
     sauverSemaine(stockage, semaine);
-    dessiner();
+    gardantLeFocus(dessiner);
   }
 
   function retirer(recette) {
     semaine = basculer(semaine, recette);
     sauverSemaine(stockage, semaine);
-    dessiner();
+    gardantLeFocus(dessiner);
   }
 
   function carteSemaine(recette) {
     const personnes = semaine[recette.id];
+    if (!compteurs.has(recette.id)) compteurs.set(recette.id, h("b", { "aria-live": "polite" }));
+    const compteur = compteurs.get(recette.id);
+    compteur.textContent = String(personnes);
     return h("section", { class: "card" },
       h("h2", {}, recette.titre),
       h("div", { class: "ligne", style: "align-items:center; margin-top:10px" },
         h("b", {}, "Pour"),
         h("div", { class: "pas" },
-          h("button", { type: "button", "aria-label": `Moins de personnes pour ${recette.titre}`, onclick: () => changerPersonnes(recette, -1) }, "−"),
-          h("b", { "aria-live": "polite" }, String(personnes)),
-          h("button", { type: "button", "aria-label": `Plus de personnes pour ${recette.titre}`, onclick: () => changerPersonnes(recette, 1) }, "+"),
+          h("button", { type: "button", "data-cle": `pas-moins-${recette.id}`, "aria-label": `Moins de personnes pour ${recette.titre}`, onclick: () => changerPersonnes(recette, -1) }, "−"),
+          compteur,
+          h("button", { type: "button", "data-cle": `pas-plus-${recette.id}`, "aria-label": `Plus de personnes pour ${recette.titre}`, onclick: () => changerPersonnes(recette, 1) }, "+"),
           h("span", { class: "ou", style: "margin:0" }, personnes > 1 ? "personnes" : "personne"))),
       h("div", { class: "actions" },
         h("a", { class: "lien-action", href: lienRecette(recette.id) }, "Voir la fiche"),
-        h("button", { type: "button", class: "lien-action", onclick: () => retirer(recette) }, "Retirer")));
+        h("button", { type: "button", class: "lien-action", "data-cle": `retirer-${recette.id}`, onclick: () => retirer(recette) }, "Retirer")));
   }
 
   function dessiner() {
