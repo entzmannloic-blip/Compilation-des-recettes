@@ -1338,5 +1338,666 @@
       "Astuces : Utilisez des tomates pelées en conserve pour réaliser une sauce tomate en seulement quelques minutes. Je réalise toujours ce gratin en grosse quantité, il se congèle très bien et se conserve jusqu'à 3 mois."
     ],
     "photo": "photos/gratin-gnocchis-tomate-mozza.jpg"
+  },
+  {
+    "id": "tarte-tatin-tomates-burrata",
+    "titre": "Tarte tatin de tomates et burrata",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 74 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 6,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 45 },
+    "ingredients": [
+      { "ingredient": "pate-brisee", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "tomate-cerise", "quantite": 600, "unite": "g", "precision": null },
+      { "ingredient": "oignon-rouge", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "sucre-roux", "quantite": 2, "unite": "c. à soupe", "precision": "en poudre, + 1 c. à café" },
+      { "ingredient": "vinaigre-balsamique", "quantite": 3, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "burrata", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Commencer par éplucher et couper l'oignon en fines lamelles. Le faire revenir dans de l'huile d'olive dans une poêle bien chaude. Une fois qu'il est translucide, ajouter 1 c. à café de sucre et 1 c. à soupe de vinaigre balsamique. Saler, poivrer et faire revenir à feu doux quelques minutes jusqu'à ce qu'il soit confit.",
+      "Couper les tomates cerise en 2 puis les disposer face coupée vers le haut dans un plat à tarte préalablement recouvert de papier sulfurisé. Saler, poivrer et ajouter un filet d'huile d'olive.",
+      "Disposer le confit d'oignon sur les tomates. Terminer en abaissant la pâte, en prenant soin de bien border le moule. Piquer la tarte à l'aide d'une fourchette.",
+      "Cuire pendant 35 min environ à 180 °C, jusqu'à ce que la pâte soit bien dorée. Laisser refroidir quelques minutes et démouler sur une assiette.",
+      "Attendre que la tarte soit complètement refroidie pour servir avec la burrata et le pesto."
+    ],
+    "notes": [
+      "Un effet wahoo pour un minimum d'efforts. J'achète une pâte brisée toute prête.",
+      "Topping : du pesto maison (p. 14)."
+    ],
+    "photo": null
+  },
+  {
+    "id": "tarte-feuilletee-asperges-chevre-pesto",
+    "titre": "Tarte feuilletée aux asperges, fromage de chèvre et pesto",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 75 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "pate-feuilletee", "quantite": 1, "unite": "pièce", "precision": "ou 4 carrés de pâte feuilletée" },
+      { "ingredient": "asperge", "quantite": 0.5, "unite": "bouquet", "precision": "vertes" },
+      { "ingredient": "fromage-de-chevre", "quantite": 150, "unite": "g", "precision": "frais" },
+      { "ingredient": "creme-liquide", "quantite": 8, "unite": "cl", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": "zeste, bio" },
+      { "ingredient": "tomates-sechees", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "oeufs", "quantite": 1, "unite": "pièce", "precision": "1 jaune, battu" },
+      { "ingredient": "graines-de-sesame-noir", "quantite": null, "unite": null, "precision": "torréfiées" },
+      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Mélanger le fromage de chèvre frais avec la crème liquide, l'huile d'olive, du sel, du poivre, le zeste de citron et les tomates séchées coupées en lamelles.",
+      "Laver les asperges et couper les têtes.",
+      "Étaler la pâte feuilletée et la couper en 4.",
+      "Étaler le fromage de chèvre frais en laissant un bord de 0,5 cm. Ajouter les têtes d'asperges, du sel et du poivre.",
+      "Dorer les bords de la pâte avec le jaune d'œuf battu, saupoudrer de graines de sésame. Enfourner pour 15 min à 180 °C.",
+      "Déguster avec le pesto maison."
+    ],
+    "notes": [
+      "Topping : 3 c. à soupe de pesto maison (p. 14).",
+      "Astuce : Cette recette s'adapte à toutes les saisons car vous pouvez remplacer les ingrédients par vos envies du moment ou ce que vous avez sous la main : de la ricotta, du gorgonzola, des petits pois, des mini-carottes, un reste de légumes rôtis…"
+    ],
+    "photo": null
+  },
+  {
+    "id": "chou-fleur-roti-epice",
+    "titre": "Chou-fleur rôti épicé",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 78 },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 5, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "chou-fleur", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "beurre", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "poudre-de-piment", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "graines-de-sesame", "quantite": 2, "unite": "c. à soupe", "precision": "blond" },
+      { "ingredient": "amandes-effilees", "quantite": 1, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "pignons-de-pin", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": 5, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C.",
+      "Laver puis couper le chou-fleur en 2. Le placer sur une plaque à four recouverte de papier sulfurisé. Arroser d'huile d'olive, saler et poivrer. Enfourner pour 30 min à 180 °C.",
+      "5 min avant la fin de la cuisson, faire fondre le beurre avec le piment, le sésame, les amandes effilées et les pignons de pin dans une poêle. Réserver.",
+      "Servir les quartiers de chou-fleur avec la sauce au yaourt et un peu de beurre pimenté."
+    ],
+    "notes": [
+      "5 min de préparation et hop, au four ! Pas d'épluchage, peu de découpe, cette recette est toujours un grand succès !",
+      "Vinaigrette : 4 c. à soupe de sauce au yaourt et herbes fraîches (p. 18)"
+    ],
+    "photo": "photos/chou-fleur-roti-epice.jpg"
+  },
+  {
+    "id": "salade-fraises-sirop-fleur-oranger",
+    "titre": "Salade de fraises au sirop de fleur d'oranger",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 80 },
+    "saisons": ["printemps"],
+    "categorie": "dessert",
+    "type": "au frais",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 5, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "fraise", "quantite": 350, "unite": "g", "precision": null },
+      { "ingredient": "fleur-d-oranger", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "sucre-roux", "quantite": 50, "unite": "g", "precision": "en poudre" },
+      { "ingredient": "citron-vert", "quantite": 1, "unite": "pièce", "precision": "jus et zeste, bio" }
+    ],
+    "etapes": [
+      "Faire chauffer l'eau avec le sucre et la fleur d'oranger dans une casserole. Porter à ébullition jusqu'à ce que le sucre soit dissous. Laisser refroidir et réserver.",
+      "Laver et couper les fraises en 4. Les mélanger avec 2 c. à soupe de sirop de sucre à la fleur d'oranger (ou plus si vous aimez plus sucré), le jus et le zeste du citron vert.",
+      "Servir les fraises avec le dukkah sucré."
+    ],
+    "notes": [
+      "Pour le sirop : 20 cl d'eau.",
+      "Topping : 3 c. à soupe de dukkah sucré (p. 17).",
+      "Astuce : Le sirop se conserve très bien au frais pendant 3 mois."
+    ],
+    "photo": "photos/salade-fraises-sirop-fleur-oranger.jpg"
+  },
+  {
+    "id": "brioche-perdue-coco-fraises-citron-vert",
+    "titre": "Brioche perdue noix de coco, fraises et citron vert",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 83 },
+    "saisons": ["printemps"],
+    "categorie": "dessert",
+    "type": "œufs",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 5, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "brioche", "quantite": 4, "unite": "pièce", "precision": "tranches" },
+      { "ingredient": "fraise", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "lait-de-coco", "quantite": 25, "unite": "cl", "precision": null },
+      { "ingredient": "citron-vert", "quantite": 1, "unite": "pièce", "precision": "zeste, bio" },
+      { "ingredient": "sucre-en-poudre", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "oeufs", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "beurre", "quantite": 20, "unite": "g", "precision": "demi-sel" }
+    ],
+    "etapes": [
+      "Laver et couper les fraises en 2. Réserver.",
+      "Faire chauffer le lait de coco avec le sucre et le zeste de citron vert.",
+      "Battre les œufs avec le mélange coco/citron.",
+      "Tremper chaque tranche de brioche dans le mélange précédent.",
+      "Faire dorer les tranches 2 min de chaque côté dans une poêle avec un peu de beurre.",
+      "Servir la brioche perdue avec les fraises et un peu de granola sucré."
+    ],
+    "notes": [
+      "Zéro gaspi, zéro effort, 100 % plaisir.",
+      "Topping : 4 c. à soupe de granola choco-noisette (p. 17).",
+      "Astuce : Vous pouvez adapter la recette en fonction des saisons et la servir avec des agrumes en hiver par exemple, des pêches en été et des poires en automne."
+    ],
+    "photo": "photos/brioche-perdue-coco-fraises-citron-vert.jpg"
+  },
+  {
+    "id": "houmous-haricots-blancs",
+    "titre": "Houmous de haricots blancs",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 86 },
+    "saisons": ["été"],
+    "categorie": "entrée",
+    "type": "au frais",
+    "personnes": 6,
+    "personnes_texte": null,
+    "temps": { "preparation": 5, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "haricots-blancs", "quantite": 250, "unite": "g", "precision": "en bocal ou en conserve" },
+      { "ingredient": "tahini", "quantite": 1, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": 80, "unite": "ml", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": "épluchée" },
+      { "ingredient": "citron", "quantite": 0.5, "unite": "pièce", "precision": "jus et zeste, bio" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Mixer tous les ingrédients jusqu'à obtenir un mélange lisse et homogène.",
+      "Dresser dans un bol, arroser d'huile d'olive et déguster bien frais."
+    ],
+    "notes": [
+      "Fait partie du « Buffet de mezzés » (p. 86 à 89) : Quand les potes débarquent à l'improviste ou qu'en fin de semaine on a la flemme de sortir les grands plats, j'aime préparer ces mezzés.",
+      "Astuce : Utilisez des haricots blancs en conserve pour gagner du temps. Si vous n'avez pas de haricots blancs sous la main, utilisez des pois chiches en conserve."
+    ],
+    "photo": "photos/houmous-haricots-blancs.jpg"
+  },
+  {
+    "id": "dip-courgettes-menthe",
+    "titre": "Dip de courgettes à la menthe",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 86 },
+    "saisons": ["été"],
+    "categorie": "entrée",
+    "type": "au frais",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "yaourt-grec", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "courgette", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": 1, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": "zeste, bio" },
+      { "ingredient": "menthe", "quantite": null, "unite": null, "precision": "quelques feuilles" },
+      { "ingredient": "beurre", "quantite": 10, "unite": "g", "precision": null },
+      { "ingredient": "poudre-de-piment", "quantite": null, "unite": null, "precision": "un peu" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Râper les courgettes. Bien les essorer dans un torchon pour évacuer le surplus d'eau.",
+      "Éplucher et écraser la gousse d'ail. Mélanger le yaourt avec les courgettes, le zeste de citron et l'ail. Saler, poivrer.",
+      "Dresser dans un bol, ajouter l'huile d'olive et les feuilles de menthe.",
+      "Avant de servir, faire fondre le beurre avec le piment en poudre. Verser sur le dip et déguster."
+    ],
+    "notes": [
+      "Fait partie du « Buffet de mezzés » (p. 86 à 89) : Quand les potes débarquent à l'improviste ou qu'en fin de semaine on a la flemme de sortir les grands plats, j'aime préparer ces mezzés.",
+      "Ce dip de courgettes change du tzatziki, vous allez adorer !"
+    ],
+    "photo": "photos/dip-courgettes-menthe.jpg"
+  },
+  {
+    "id": "creme-feta-tomates-cerise-roties",
+    "titre": "Crème de feta et tomates cerise rôties",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 88 },
+    "saisons": ["été"],
+    "categorie": "entrée",
+    "type": "au four",
+    "personnes": 6,
+    "personnes_texte": null,
+    "temps": { "preparation": 5, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "feta", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "tomate-cerise", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "yaourt-grec", "quantite": 5, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": "jus et zeste, bio" },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": "épluchée" },
+      { "ingredient": "huile-d-olive", "quantite": 6, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Placer les tomates cerise dans un plat allant au four avec 2 c. à soupe d'huile d'olive, du sel et du poivre. Enfourner pendant 20 min à 180 °C.",
+      "Pendant ce temps, mixer la feta avec le yaourt, le reste d'huile d'olive, le citron, l'ail, du sel et du poivre.",
+      "Servir la crème de feta bien froide avec les tomates cerise rôties."
+    ],
+    "notes": [
+      "Fait partie du « Buffet de mezzés » (p. 86 à 89) : Quand les potes débarquent à l'improviste ou qu'en fin de semaine on a la flemme de sortir les grands plats, j'aime préparer ces mezzés. (suite)",
+      "Astuce : S'il vous reste de la crème de feta, vous pouvez vous en servir dans la semaine comme sauce pour agrémenter un bowl ou des légumes rôtis."
+    ],
+    "photo": "photos/creme-feta-tomates-cerise-roties.jpg"
+  },
+  {
+    "id": "fromages-chevre-marines",
+    "titre": "Fromages de chèvre marinés",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 89 },
+    "saisons": ["été"],
+    "categorie": "entrée",
+    "type": "au frais",
+    "personnes": 1,
+    "personnes_texte": "1 bocal",
+    "temps": { "preparation": 5, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "fromage-de-chevre", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "tomates-sechees", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "thym", "quantite": null, "unite": null, "precision": "frais" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": 1, "unite": "c. à café", "precision": "en grains" }
+    ],
+    "etapes": [
+      "Émincer les tomates séchées.",
+      "Dans un bocal, mettre les fromages de chèvre avec les tomates séchées, le poivre en grains et le thym, puis remplir d'huile d'olive.",
+      "Fermer le bocal et réserver au frais jusqu'au moment de servir."
+    ],
+    "notes": [
+      "Fait partie du « Buffet de mezzés » (p. 86 à 89) : Quand les potes débarquent à l'improviste ou qu'en fin de semaine on a la flemme de sortir les grands plats, j'aime préparer ces mezzés. (fin)",
+      "Pour changer de la traditionnelle planche de fromage, voici des fromages de chèvre marinés, prêts en quelques minutes.",
+      "Astuces : L'idéal est de laisser mariner le fromage plusieurs jours avant le déguster. Les chèvres marinés se conservent 1 mois au frigo. Pensez à le sortir 30 min avant de le déguster, car l'huile à tendance à se figer au frais. S'il vous reste un peu de fromage chèvre mariné, vous pourrez vous en servir dans un crumble salé, une frittata, ou encore un cake."
+    ],
+    "photo": "photos/fromages-chevre-marines.jpg"
+  },
+  {
+    "id": "carpaccio-courgettes-mais",
+    "titre": "Carpaccio de courgettes au maïs",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 90 },
+    "saisons": ["été"],
+    "categorie": "plat",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "courgette", "quantite": 3, "unite": "pièce", "precision": null },
+      { "ingredient": "mais", "quantite": 150, "unite": "g", "precision": "en bocal ou en conserve" },
+      { "ingredient": "framboise", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "fromage-de-chevre", "quantite": 80, "unite": "g", "precision": "frais" },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": "zeste, bio" },
+      { "ingredient": "menthe", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "basilic", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Laver les courgettes et les émincer finement à l'aide d'un économe.",
+      "Laver les framboises délicatement.",
+      "Ciseler les herbes fraîches.",
+      "Mélanger les courgettes avec le maïs, le fromage de chèvre frais émietté et les framboises.",
+      "Ajouter les herbes ciselées, le zeste de citron et la vinaigrette. Saler, poivrer.",
+      "Servir bien frais avec le granola salé."
+    ],
+    "notes": [
+      "Zéro cuisson, zéro épluchage et pas de vaisselle (ou presque).",
+      "Vinaigrette : 4 c. à soupe de vinaigrette au citron (p. 18)",
+      "Topping : 3 c. à soupe de granola salé (p. 15)",
+      "Astuce : Utilisez du maïs en conserve pour gagner du temps !"
+    ],
+    "photo": "photos/carpaccio-courgettes-mais.jpg"
+  },
+  {
+    "id": "fleurs-courgettes-farcies-brocciu-citron-vert",
+    "titre": "Fleurs de courgettes farcies au brocciu et au citron vert",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 93 },
+    "saisons": ["été"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "fleur-de-courgette", "quantite": 16, "unite": "pièce", "precision": null },
+      { "ingredient": "brocciu", "quantite": 150, "unite": "g", "precision": "ou brousse" },
+      { "ingredient": "olives-noires", "quantite": 40, "unite": "g", "precision": "dénoyautées" },
+      { "ingredient": "tomates-sechees", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "citron-vert", "quantite": 1, "unite": "pièce", "precision": "jus et zeste, bio" },
+      { "ingredient": "basilic", "quantite": null, "unite": null, "precision": "quelques feuilles" },
+      { "ingredient": "piment-d-espelette", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "riz-cuit", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Avec un petit couteau, couper le pistil au centre de la fleur. Rincer très délicatement. Sécher et réserver.",
+      "Hacher les tomates séchées et les olives noires. Ciseler le basilic.",
+      "Mélanger le brocciu avec les olives noires, les tomates séchées, le jus et le zeste du citron vert, le basilic, le piment d'Espelette. Saler, poivrer et ajouter un filet d'huile d'olive.",
+      "Farcir les fleurs de courgettes avec ce mélange puis les déposer dans un plat allant au four. Arroser d'huile d'olive et enfourner pour 15 min à 180 °C.",
+      "Servir avec le pesto et un peu de riz."
+    ],
+    "notes": [
+      "Topping : 3 c. à soupe de pesto (p. 14).",
+      "Astuce : Vous pouvez préparer la farce en amont, et farcir vos fleurs de courgettes le jour J. S'il vous reste un peu de farce vous pouvez la déguster avec des pâtes en ajoutant une pointe de crème fraîche."
+    ],
+    "photo": "photos/fleurs-courgettes-farcies-brocciu-citron-vert.jpg"
+  },
+  {
+    "id": "grilled-cheese-tomate-mozza",
+    "titre": "Grilled cheese tomate-mozza",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 95 },
+    "saisons": ["été"],
+    "categorie": "plat",
+    "type": "sandwich",
+    "personnes": 2,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "pain-de-campagne", "quantite": 4, "unite": "pièce", "precision": "tranches" },
+      { "ingredient": "tomate", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "mozzarella", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": "épluchée" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Couper la tomate en tranches puis les placer sur une plaque à four recouverte de papier sulfurisé. Arroser d'huile d'olive, saler, poivrer et les faire rôtir au four à 180 °C pendant 15 min.",
+      "Couper la mozzarella en lamelles.",
+      "Gratter les tranches de pain avec la gousse d'ail épluchée pour l'aromatiser.",
+      "Sur 2 tranches de pain, étaler un peu de pesto. Ajouter quelques tranches de tomates, puis de mozzarella et enfin un filet d'huile d'olive. Refermer avec une tranche de pain.",
+      "Toaster les sandwichs à la poêle dans un peu d'huile d'olive pendant 3 min de chaque côté.",
+      "Déguster aussitôt avec de la salade verte."
+    ],
+    "notes": [
+      "Parce qu'un sandwich peut s'avérer très savoureux sans effort !",
+      "Topping : 2 c. à soupe de pesto maison (p. 14).",
+      "Astuces : Vous pouvez préparer les tomates rôties en amont et assembler le grilled cheese le jour J. Les restes de tomates rôties pourront servir pour réaliser un gaspacho de tomates rôties (p. 96)."
+    ],
+    "photo": "photos/grilled-cheese-tomate-mozza.jpg"
+  },
+  {
+    "id": "gaspacho-tomates-roties",
+    "titre": "Gaspacho de tomates rôties",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 96 },
+    "saisons": ["été"],
+    "categorie": "plat",
+    "type": "soupe",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 45 },
+    "ingredients": [
+      { "ingredient": "tomate", "quantite": 1, "unite": "kg", "precision": null },
+      { "ingredient": "peche", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "oignon-blanc", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "vinaigre-balsamique", "quantite": 20, "unite": "cl", "precision": null },
+      { "ingredient": "origan", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "basilic", "quantite": null, "unite": null, "precision": "quelques feuilles" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C.",
+      "Couper les tomates et la pêche en gros quartiers.",
+      "Éplucher et émincer les oignons et la gousse d'ail.",
+      "Mélanger tous les ingrédients : tomates, pêche, oignons et ail. Saler, poivrer et étaler sur une plaque à four recouverte de papier sulfurisé. Arroser d'huile d'olive et ajouter l'origan.",
+      "Cuire pendant 45 min à 200 °C, jusqu'à ce que les tomates soient confites.",
+      "Mixer l'ensemble dans un blender avec le vinaigre balsamique. Rectifier l'assaisonnement et ajouter un peu d'eau si besoin.",
+      "Réserver au frais.",
+      "Au moment de servir, dresser le gaspacho dans des bols, ajouter un filet d'huile d'olive, quelques croûtons et quelques feuilles de basilic."
+    ],
+    "notes": [
+      "C'est typiquement la recette que j'adore faire en été ! Le fait de rôtir tous les légumes au four apporte un maximum de saveur à ce gaspacho.",
+      "Topping : 3 c. à soupe de croûtons maison (p. 15).",
+      "Astuce : Vous pouvez congeler le gaspacho en portions individuelles dans des sachets de congélation jusqu'à 4 mois."
+    ],
+    "photo": null
+  },
+  {
+    "id": "veloute-mais-lait-de-coco",
+    "titre": "Velouté de maïs au lait de coco",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 97 },
+    "saisons": ["été"],
+    "categorie": "plat",
+    "type": "soupe",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "mais", "quantite": 500, "unite": "g", "precision": "en bocal ou en conserve" },
+      { "ingredient": "lait-de-coco", "quantite": 400, "unite": "ml", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "paprika", "quantite": 2, "unite": "c. à café", "precision": "fumé" },
+      { "ingredient": "coriandre", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Éplucher et émincer l'oignon et la gousse d'ail avant de les faire revenir dans une sauteuse avec un peu d'huile d'olive.",
+      "Ajouter le maïs, du sel, du poivre et le paprika fumé, puis laisser mijoter quelques minutes.",
+      "Ajouter le lait de coco et un peu d'eau pour couvrir à hauteur. Faire cuire pendant 20 min.",
+      "Mixer afin d'obtenir un velouté bien lisse et crémeux. Ajuster l'assaisonnement si besoin.",
+      "Servir la soupe froide ou chaude, avec un peu de coriandre et les pois chiches croustillants."
+    ],
+    "notes": [
+      "J'ai toujours des conserves de maïs dans mon placard. Je l'utilise en salade ou bien en velouté comme dans cette recette.",
+      "Topping : 3 c. à soupe de pois chiches croustillants (p. 14).",
+      "Astuces : Si vous n'avez pas de mixeur assez puissant, passez le velouté au chinois pour éviter les morceaux. Vous pouvez utiliser cette recette comme base de purée pour accompagner des légumes rôtis par exemple. Il vous suffit d'ajouter un peu moins d'eau au moment de mixer pour obtenir une texture plus épaisse."
+    ],
+    "photo": null
+  },
+  {
+    "id": "salade-ble-melon-concombre",
+    "titre": "Salade de blé au melon et au concombre",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 100 },
+    "saisons": ["été"],
+    "categorie": "plat",
+    "type": "salade",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "ble", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "melon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "concombre", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "feta", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "menthe", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "olives-noires", "quantite": 80, "unite": "g", "precision": "dénoyautées" },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Cuire le blé dans une casserole d'eau bouillante salée pendant 10 min. Puis passer le blé sous l'eau froide et l'égoutter.",
+      "Vider et couper le melon en dés.",
+      "Laver et couper le concombre en fines tranches.",
+      "Hacher les olives noires.",
+      "Ciseler la menthe.",
+      "Éplucher et émincer l'oignon.",
+      "Mélanger le blé avec le melon, le concombre, l'oignon, la feta émiettée, les olives noires, la menthe et les pois chiches croustillants.",
+      "Saler, poivrer et ajouter la vinaigrette.",
+      "Servir bien frais."
+    ],
+    "notes": [
+      "Vinaigrette : 3 c. à soupe de vinaigrette au citron (p. 18)",
+      "Topping : 3 c. à soupe de pois chiches croustillants (p. 14)",
+      "Astuce : Vous pouvez cuire le blé et découper les légumes le week-end. Vous n'aurez plus qu'à assembler la salade le jour J."
+    ],
+    "photo": "photos/salade-ble-melon-concombre.jpg"
+  },
+  {
+    "id": "salade-pates-pasteque-feta",
+    "titre": "Salade de pâtes, pastèque et feta",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 103 },
+    "saisons": ["été"],
+    "categorie": "plat",
+    "type": "salade",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "orecchiette", "quantite": 300, "unite": "g", "precision": "ou autres pâtes courtes de votre choix" },
+      { "ingredient": "pasteque", "quantite": 0.5, "unite": "pièce", "precision": null },
+      { "ingredient": "olives-noires", "quantite": 80, "unite": "g", "precision": "dénoyautées" },
+      { "ingredient": "menthe", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "basilic", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "roquette", "quantite": 3, "unite": "bouquet", "precision": "3 poignées" },
+      { "ingredient": "ricotta", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Cuire les pâtes dans une casserole d'eau bouillante salée.",
+      "Passer les pâtes sous l'eau froide et les égoutter.",
+      "Couper la pastèque en petits dés.",
+      "Hacher les olives noires.",
+      "Ciseler les herbes fraîches.",
+      "Mélanger les pâtes avec la roquette, la pastèque, les olives, les herbes fraîches, les pickles d'oignon rouge, la ricotta et la vinaigrette au citron. Saler, poivrer.",
+      "Servir bien frais."
+    ],
+    "notes": [
+      "Une salade colorée et pleine de saveurs ! Cette recette est parfaite pour les grandes tablées d'été.",
+      "Le titre du livre dit « feta » mais la liste des ingrédients indique de la ricotta.",
+      "Vinaigrette : 4 c. à soupe de vinaigrette au citron (p. 18)",
+      "Topping : 2 c. à soupe de pickles d'oignon rouge (p. 15)",
+      "Astuces : Quand je fais des pâtes à la maison, j'aime en faire une plus grosse quantité que je transforme en salade dans la semaine. Vous pouvez varier les saveurs avec ce que vous avez sous la main, fromage de chèvre, melon, concombre, tomates…"
+    ],
+    "photo": "photos/salade-pates-pasteque-feta.jpg"
+  },
+  {
+    "id": "crumble-tomates-burrata",
+    "titre": "Crumble de tomates à la burrata",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 104 },
+    "saisons": ["été"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 40 },
+    "ingredients": [
+      { "ingredient": "tomate-cerise", "quantite": 800, "unite": "g", "precision": "multicolores" },
+      { "ingredient": "burrata", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "oignon-rouge", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "sucre-en-poudre", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "parmesan", "quantite": 100, "unite": "g", "precision": "râpé" },
+      { "ingredient": "beurre", "quantite": 100, "unite": "g", "precision": null },
+      { "ingredient": "farine", "quantite": 100, "unite": "g", "precision": null },
+      { "ingredient": "thym", "quantite": null, "unite": null, "precision": "séché" },
+      { "ingredient": "basilic", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Éplucher, émincer et faire revenir l'oignon dans une poêle avec un filet d'huile d'olive. Saler, poivrer et laisser cuire à feu doux jusqu'à ce qu'il soit translucide. Ajouter la gousse d'ail épluchée et émincée. Cuire 5 min supplémentaires.",
+      "Laver et couper les tomates cerise en 2 puis les ajouter au mélange oignon/ail. Saler, poivrer, ajouter un filet d'huile d'olive et la pincée de sucre.",
+      "Placer dans un plat allant au four. Réserver.",
+      "Ensuite préparer le crumble en mélangeant à la main le beurre, le parmesan, la farine et le thym jusqu'à obtenir un mélange sableux.",
+      "Émietter cette pâte sur les tomates.",
+      "Enfourner pour 30 min à 180 °C, le crumble doit être bien doré.",
+      "Servir tiède ou froid avec la burrata et quelques feuilles de basilic."
+    ],
+    "notes": [
+      "C'est une manière savoureuse de déguster les légumes. Cette recette s'adapte à toutes les saisons, en variant avec les légumes du moment !",
+      "Astuce : Le crumble salé s'adapte à toutes les sauces : un reste de légumes rôtis, une ratatouille… Il se congèle aussi très bien jusqu'à 3 mois."
+    ],
+    "photo": "photos/crumble-tomates-burrata.jpg"
+  },
+  {
+    "id": "panzanella-tomates-peches",
+    "titre": "Panzanella tomates et pêches",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 107 },
+    "saisons": ["été"],
+    "categorie": "plat",
+    "type": "salade",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "tomate", "quantite": 800, "unite": "g", "precision": null },
+      { "ingredient": "peche", "quantite": 3, "unite": "pièce", "precision": null },
+      { "ingredient": "oignon-rouge", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "basilic", "quantite": 1, "unite": "bouquet", "precision": null },
+      { "ingredient": "burrata", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Couper les pêches en quartiers.",
+      "Rincer les tomates et les couper également en quartiers.",
+      "Éplucher et émincer l'oignon.",
+      "Mélanger les tomates avec les pêches et l'oignon rouge dans un saladier. Ajouter les croûtons et les feuilles de basilic ciselées.",
+      "Assaisonner la salade de sel et poivre, arroser avec la vinaigrette.",
+      "Servir bien frais avec la burrata."
+    ],
+    "notes": [
+      "Zéro cuisson et prête en 10 min. Pour changer de la classique salade de tomates, un combo sucré-salé dont vous ne pourrez plus vous passer !",
+      "Vinaigrette : 5 c. à soupe de vinaigrette à l'érable (p. 18)",
+      "Topping : 2 poignées de croûtons maison (p. 15)"
+    ],
+    "photo": "photos/panzanella-tomates-peches.jpg"
+  },
+  {
+    "id": "clafoutis-myrtilles",
+    "titre": "Clafoutis aux myrtilles",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 108 },
+    "saisons": ["été"],
+    "categorie": "dessert",
+    "type": "au four",
+    "personnes": 6,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 40 },
+    "ingredients": [
+      { "ingredient": "myrtille", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "beurre", "quantite": 20, "unite": "g", "precision": "+ 10 g pour le moule" },
+      { "ingredient": "oeufs", "quantite": 3, "unite": "pièce", "precision": null },
+      { "ingredient": "sucre-en-poudre", "quantite": 100, "unite": "g", "precision": "+ 2 c. à soupe" },
+      { "ingredient": "farine", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "lait", "quantite": 50, "unite": "cl", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Faire fondre les 20 g de beurre jusqu'à ce qu'il devienne noisette.",
+      "Battre les œufs avec les 100 g de sucre. Bien mélanger.",
+      "Ajouter la farine, puis le lait petit à petit. Ajouter enfin le beurre fondu. Bien mélanger.",
+      "Beurrer un plat à gratin et saupoudrer les 2 c. à soupe de sucre restantes. Ajouter les fruits puis verser la préparation dessus.",
+      "Enfourner pour 40 min.",
+      "Laisser refroidir et déguster."
+    ],
+    "notes": [
+      "Ce clafoutis est un classique chez moi. J'aime l'adapter à toutes les saisons : des poires à l'automne, des pommes en hiver, ou encore des fraises au printemps.",
+      "Astuce : Si vous n'avez pas de fruits frais sous la main, vous pouvez opter pour des fruits surgelés."
+    ],
+    "photo": "photos/clafoutis-myrtilles.jpg"
   }
 ]

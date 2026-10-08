@@ -144,5 +144,22 @@
   { "id": "fenouil", "nom": "fenouil", "rayon": "Légumes", "saisons": [] },
   { "id": "ricotta", "nom": "ricotta", "rayon": "Crèmerie", "saisons": [] },
   { "id": "mozzarella", "nom": "mozzarella", "rayon": "Crèmerie", "saisons": [] },
-  { "id": "bouquet-garni", "nom": "bouquet garni", "rayon": "Herbes", "saisons": [] }
+  { "id": "bouquet-garni", "nom": "bouquet garni", "rayon": "Herbes", "saisons": [] },
+  { "id": "pate-brisee", "nom": "pâte brisée", "rayon": "Crèmerie", "saisons": [] },
+  { "id": "burrata", "nom": "burrata", "rayon": "Crèmerie", "saisons": [] },
+  { "id": "pate-feuilletee", "nom": "pâte feuilletée", "rayon": "Crèmerie", "saisons": [] },
+  { "id": "fleur-d-oranger", "nom": "fleur d'oranger", "rayon": "Épicerie", "saisons": [] },
+  { "id": "brioche", "nom": "brioche", "rayon": "Boulangerie", "saisons": [] },
+  { "id": "framboise", "nom": "framboise", "rayon": "Fruits", "saisons": [] },
+  { "id": "fleur-de-courgette", "nom": "fleur de courgette", "rayon": "Légumes", "saisons": [] },
+  { "id": "brocciu", "nom": "brocciu", "rayon": "Crèmerie", "saisons": [] },
+  { "id": "piment-d-espelette", "nom": "piment d'Espelette", "rayon": "Épicerie", "saisons": [] },
+  { "id": "riz-cuit", "nom": "riz cuit", "rayon": "Épicerie", "saisons": [] },
+  { "id": "peche", "nom": "pêche", "rayon": "Fruits", "saisons": [] },
+  { "id": "origan", "nom": "origan", "rayon": "Épicerie", "saisons": [] },
+  { "id": "ble", "nom": "blé", "rayon": "Épicerie", "saisons": [] },
+  { "id": "melon", "nom": "melon", "rayon": "Fruits", "saisons": [] },
+  { "id": "orecchiette", "nom": "orecchiette", "rayon": "Épicerie", "saisons": [] },
+  { "id": "pasteque", "nom": "pastèque", "rayon": "Fruits", "saisons": [] },
+  { "id": "myrtille", "nom": "myrtille", "rayon": "Fruits", "saisons": [] }
 ]
