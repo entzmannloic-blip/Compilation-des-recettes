@@ -33,7 +33,7 @@
       "Vinaigrette : 2 c. à soupe de vinaigrette au tahini (p. 18)",
       "Topping : 1 c. à soupe de pickles d'oignon rouge (p. 15)"
     ],
-    "photo": null
+    "photo": "photos/salade-lentilles-carottes-feta.jpg"
   },
   {
     "id": "cereales-betterave-noix",
@@ -455,5 +455,362 @@
       "Sauce : 2 quantités de sauce moyen-orient (p. 158) en remplaçant le jus de citron par du jus de citron vert"
     ],
     "photo": "photos/haricots-poivrons-chili.jpg"
+  },
+  {
+    "id": "halloumi-bowl-potimarron-quinoa",
+    "titre": "Halloumi bowl potimarron et quinoa",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 25 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "bowl",
+    "personnes": 2,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 40 },
+    "ingredients": [
+      { "ingredient": "halloumi", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "potimarron", "quantite": 0.5, "unite": "pièce", "precision": null },
+      { "ingredient": "quinoa", "quantite": 120, "unite": "g", "precision": null },
+      { "ingredient": "chou-rouge", "quantite": 0.25, "unite": "pièce", "precision": null },
+      { "ingredient": "tomates-sechees", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "persil", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "avocat", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Laver et couper le potimarron en dés puis les placer sur une plaque à four recouverte de papier sulfurisé. Arroser d'huile d'olive, saler, poivrer et enfourner pour 30 min à 180 °C.",
+      "Pendant ce temps, faire cuire le quinoa dans une casserole d'eau bouillante salée selon les instructions du paquet. Égoutter et réserver.",
+      "Émincer finement le chou rouge à la mandoline. Hacher les tomates séchées et ciseler le persil. Couper l'avocat en lamelles.",
+      "Couper le halloumi en tranches et le faire revenir dans une poêle quelques minutes de chaque côté, jusqu'à ce qu'il soit bien doré.",
+      "Mélanger le quinoa avec le persil.",
+      "Dresser 2 bols avec : un peu de quinoa, quelques dés de potimarron, les lamelles d'avocat, le chou rouge, quelques pickles d'oignon rouge, les tomates séchées et le halloumi grillé. Arroser de vinaigrette et déguster aussitôt."
+    ],
+    "notes": [
+      "Vinaigrette : 3 c. à soupe de vinaigrette au tahini (p. 18)",
+      "Topping : 2 c. à soupe de pickles d'oignon rouge (p. 15)",
+      "Astuce : L'idée est d'utiliser les légumes que vous avez sous la main, donc n'hésitez pas à varier avec ce que vous trouverez dans votre frigo. Généralement, je fais cuire une grosse quantité de céréales le week-end pour la semaine et je les transforme en bowl, en accompagnement pour curry, en salade, en croquettes…"
+    ],
+    "photo": "photos/halloumi-bowl-potimarron-quinoa.jpg"
+  },
+  {
+    "id": "croque-madame-champignons",
+    "titre": "Croque-madame aux champignons",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 26 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "œufs",
+    "personnes": 2,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "pain-de-campagne", "quantite": 4, "unite": "pièce", "precision": "tranches" },
+      { "ingredient": "champignon", "quantite": 250, "unite": "g", "precision": null },
+      { "ingredient": "epinards-surgeles", "quantite": 100, "unite": "g", "precision": null },
+      { "ingredient": "echalote", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "creme-liquide", "quantite": 150, "unite": "ml", "precision": null },
+      { "ingredient": "comte", "quantite": 80, "unite": "g", "precision": "râpé" },
+      { "ingredient": "oeufs", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C.",
+      "Éplucher et émincer l'échalote et la faire revenir dans une poêle avec un peu d'huile d'olive.",
+      "Émincer et ajouter les champignons, du sel et du poivre. Laisser cuire pendant 10 min à feu moyen.",
+      "Faire revenir les épinards dans une poêle jusqu'à ce qu'ils aient décongelé. Saler, poivrer et réserver.",
+      "Dans une casserole, mettre la crème, le comté râpé, du sel et du poivre. Faire cuire à feu doux jusqu'à ce que le comté ait fondu.",
+      "Sur 2 tranches de pain, ajouter le mélange champignons/échalote et un peu de crème au comté. Refermer avec la deuxième tranche de pain. Ajouter sur le dessus davantage de crème au comté.",
+      "Placer au four pendant 10 min à 200 °C, jusqu'à ce que le croque-madame soit bien gratiné.",
+      "Pendant ce temps, faire cuire les œufs au plat dans une poêle avec un peu d'huile d'olive.",
+      "Servir les croque-madame avec un œuf au plat sur chaque sandwich. Déguster aussitôt."
+    ],
+    "notes": [],
+    "photo": "photos/croque-madame-champignons.jpg"
+  },
+  {
+    "id": "veloute-potimarron-lait-de-coco",
+    "titre": "Velouté de potimarron au lait de coco",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 28 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "soupe",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "potimarron", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "lait-de-coco", "quantite": 50, "unite": "cl", "precision": null },
+      { "ingredient": "oignon-rouge", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "curry", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "tahini", "quantite": 1, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Laver, vider et couper le potimarron en dés.",
+      "Éplucher et émincer l'oignon.",
+      "Placer le potimarron et l'oignon sur une plaque à four recouverte de papier sulfurisé. Ajouter le curry, arroser d'huile d'olive, saler, poivrer et enfourner pour 30 min à 180 °C.",
+      "Placer les légumes dans un blender, ajouter le lait de coco, le tahini et mixer. Si la consistance est trop épaisse, ajouter un peu d'eau.",
+      "Rectifier l'assaisonnement et servir chaud avec les pois chiches croustillants."
+    ],
+    "notes": [
+      "Topping : 3 c. à soupe de pois chiches croustillants (p. 14)",
+      "Eau : 10 cl (facultatif)",
+      "Astuces : Vous pouvez opter pour du potimarron surgelé pour gagner du temps en préparation. Vous pouvez congeler ce velouté en portions individuelles dans des sachets hermétiques jusqu'à 3 mois."
+    ],
+    "photo": "photos/veloute-potimarron-lait-de-coco.jpg"
+  },
+  {
+    "id": "frittata-brocoli-cheddar",
+    "titre": "Frittata brocoli et cheddar",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 31 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "œufs",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 40 },
+    "ingredients": [
+      { "ingredient": "brocoli", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "cheddar", "quantite": 120, "unite": "g", "precision": "râpé" },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "oeufs", "quantite": 6, "unite": "pièce", "precision": null },
+      { "ingredient": "creme-liquide", "quantite": 100, "unite": "ml", "precision": null },
+      { "ingredient": "parmesan", "quantite": 100, "unite": "g", "precision": "râpé" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Laver le brocoli, couper les fleurettes et les faire cuire à la vapeur pendant 8 min. Réserver.",
+      "Éplucher et émincer l'oignon et la gousse d'ail puis les faire revenir dans une poêle avec un peu d'huile d'olive.",
+      "Au bout de quelques minutes, ajouter les fleurettes de brocoli, du sel, du poivre et laisser cuire quelques minutes.",
+      "Préchauffer le four à 180 °C.",
+      "Battre les œufs dans un saladier, ajouter la crème liquide, le cheddar râpé, le parmesan, du sel et du poivre. Ajouter le mélange brocoli/oignon/ail.",
+      "Verser la préparation dans un plat allant au four et cuire pendant 25 min à 180 °C, jusqu'à ce que la frittata soit bien dorée.",
+      "Déguster tiède avec du pesto et de la salade verte."
+    ],
+    "notes": [
+      "Topping : 3 c. à soupe de pesto maison (p. 14)",
+      "Astuce : Vous pouvez réaliser cette recette avec des légumes surgelés. Attention cependant, vous ne pourrez pas la congeler dans ce cas, car on ne recongèle pas un aliment décongelé !"
+    ],
+    "photo": "photos/frittata-brocoli-cheddar.jpg"
+  },
+  {
+    "id": "gnocchis-epinards-gorgonzola-noix-de-pecan",
+    "titre": "Gnocchis aux épinards, gorgonzola et noix de pecan",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 32 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "gnocchis", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "epinards-surgeles", "quantite": 100, "unite": "g", "precision": null },
+      { "ingredient": "gorgonzola", "quantite": 180, "unite": "g", "precision": null },
+      { "ingredient": "noix-de-pecan", "quantite": 2, "unite": "bouquet", "precision": null },
+      { "ingredient": "creme-liquide", "quantite": 10, "unite": "cl", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Faire cuire les gnocchis dans une grande casserole d'eau bouillante salée. Égoutter et réserver.",
+      "Pendant ce temps, préparer la sauce : faire revenir les épinards dans une poêle avec un peu d'huile d'olive, du sel et du poivre. Laisser cuire jusqu'à ce que les épinards aient décongelé.",
+      "Dans une casserole, faire cuire la crème, le gorgonzola, du sel et du poivre. Ajouter les épinards et laisser mijoter quelques minutes jusqu'à ce que le fromage soit complètement lié à la sauce.",
+      "Dans une poêle, faire torréfier les noix de pecan pendant quelques minutes.",
+      "Servir les gnocchis avec la sauce au gorgonzola et parsemer de noix de pecan."
+    ],
+    "notes": [
+      "Liste de courses réduite : avec seulement 5 ingrédients, vous obtiendrez un plat totalement gourmand !"
+    ],
+    "photo": "photos/gnocchis-epinards-gorgonzola-noix-de-pecan.jpg"
+  },
+  {
+    "id": "dhal-lentilles-corail",
+    "titre": "Dhal de lentilles corail",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 35 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "curry",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "lentilles-corail", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "curry", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "garam-masala", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "piment-de-cayenne", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "potimarron-surgele", "quantite": 250, "unite": "g", "precision": null },
+      { "ingredient": "tomates-pelees", "quantite": 400, "unite": "g", "precision": "en conserve" },
+      { "ingredient": "concentre-de-tomates", "quantite": 1, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "lait-de-coco", "quantite": 400, "unite": "ml", "precision": null },
+      { "ingredient": "coriandre", "quantite": null, "unite": null, "precision": "quelques feuilles" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Éplucher l'oignon et la gousse d'ail puis les hacher et les faire revenir dans une grande cocotte avec un peu d'huile d'olive et les épices.",
+      "Ajouter le potimarron dans la cocotte. Saler, poivrer et faire revenir pendant quelques minutes.",
+      "Ajouter les tomates pelées, le concentré de tomates, du sel, du poivre et laisser mijoter quelques minutes.",
+      "Ajouter le lait de coco, l'eau puis les lentilles préalablement rincées dans l'eau froide. Faire cuire jusqu'à ce que les lentilles gonflent et soient tendres. Rajouter de l'eau si besoin. Il faut que le dhal soit encore crémeux à la fin de la cuisson.",
+      "Servir avec les pois chiches croustillants et un peu de coriandre."
+    ],
+    "notes": [
+      "Topping : 2 c. à soupe de pois chiches croustillants (p. 14)",
+      "Eau : 400 ml"
+    ],
+    "photo": "photos/dhal-lentilles-corail.jpg"
+  },
+  {
+    "id": "mac-n-cheese-miso",
+    "titre": "Mac n'cheese au miso",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 37 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "macaronis", "quantite": 350, "unite": "g", "precision": null },
+      { "ingredient": "cheddar", "quantite": 350, "unite": "g", "precision": "râpé" },
+      { "ingredient": "beurre", "quantite": 60, "unite": "g", "precision": null },
+      { "ingredient": "farine", "quantite": 60, "unite": "g", "precision": null },
+      { "ingredient": "lait", "quantite": 600, "unite": "ml", "precision": null },
+      { "ingredient": "miso", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "muscade", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "chapelure-panko", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C en mode gril.",
+      "Faire cuire les pâtes dans une casserole d'eau bouillante salée selon les indications sur le paquet. Égoutter et réserver.",
+      "Pendant ce temps, faire fondre le beurre dans une casserole puis ajouter la farine et mélanger. Quand le mélange épaissit, ajouter le lait. Bien mélanger puis ajouter le miso, la muscade moulue, le poivre et le cheddar. Bien mélanger une nouvelle fois.",
+      "Verser les pâtes dans un plat à gratin, ajouter la béchamel au miso puis la chapelure.",
+      "Faire gratiner quelques minutes au four à 180 °C et déguster."
+    ],
+    "notes": [
+      "Astuce : Vous pouvez réaliser cette recette avec un reste de pâtes (penne, coquillettes, fusillis…)."
+    ],
+    "photo": "photos/mac-n-cheese-miso.jpg"
+  },
+  {
+    "id": "patates-douces-mont-d-or",
+    "titre": "Patates douces rôties au mont d'or",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 38 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 2,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 45 },
+    "ingredients": [
+      { "ingredient": "patate-douce", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "mont-d-or", "quantite": 1, "unite": "pièce", "precision": "petit" },
+      { "ingredient": "sirop-d-erable", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "noix-de-pecan", "quantite": 50, "unite": "g", "precision": null },
+      { "ingredient": "thym", "quantite": null, "unite": null, "precision": "quelques brins" },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Piquer les patates douces à l'aide d'une fourchette, les placer sur une plaque à four recouverte de papier sulfurisé et les faire cuire 45 min à 180 °C.",
+      "20 min avant la fin de la cuisson, faire un trou au centre du mont d'or et ajouter le sirop d'érable. Assaisonner d'un tour de moulin à poivre et enfourner pour 20 min avec les patates douces.",
+      "Faire torréfier les noix de pecan pendant quelques minutes à la poêle.",
+      "Servir les patates douces coupées en 2 avec le mont d'or, quelques noix de pecan, des pois chiches croustillants et du thym frais."
+    ],
+    "notes": [
+      "Topping : 2 poignées de pois chiches croustillants (p. 14)"
+    ],
+    "photo": "photos/patates-douces-mont-d-or.jpg"
+  },
+  {
+    "id": "chou-fleur-tikka-masala",
+    "titre": "Chou-fleur façon tikka masala",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 41 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "curry",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "chou-fleur", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "garam-masala", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "cumin", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "piment-de-cayenne", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "yaourt-grec", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "tomates-pelees", "quantite": 400, "unite": "g", "precision": "en conserve" },
+      { "ingredient": "concentre-de-tomates", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "lait-de-coco", "quantite": 400, "unite": "ml", "precision": null },
+      { "ingredient": "coriandre", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Laver le chou-fleur et le découper en fleurettes. Le faire cuire à la vapeur pendant 10 min. Égoutter et réserver.",
+      "Mélanger toutes les épices et les diviser en 2.",
+      "Mélanger le chou-fleur avec le yaourt à la grecque, la moitié des épices et un filet d'huile d'olive. Laisser mariner quelques minutes.",
+      "Pendant ce temps, éplucher et émincer l'oignon et l'ail. Dans une sauteuse, les faire revenir à feu doux dans un filet d'huile d'olive avec le reste des épices pendant quelques minutes. Puis ajouter le chou-fleur et laisser cuire quelques minutes supplémentaires.",
+      "Enfin, ajouter les tomates pelées, le concentré de tomates, le lait de coco, du sel, du poivre et laisser mijoter 20 min à feu doux.",
+      "Servir avec de la coriandre et les pois chiches croustillants."
+    ],
+    "notes": [
+      "Topping : 2 poignées de pois chiches croustillants (p. 14)",
+      "Astuce : Pour les plus gourmands, vous pouvez accompagner ce plat de nans au fromage."
+    ],
+    "photo": "photos/chou-fleur-tikka-masala.jpg"
+  },
+  {
+    "id": "risotto-four-poireaux-citron-chevre",
+    "titre": "Risotto au four aux poireaux, citron et fromage de chèvre",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 42 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 45 },
+    "ingredients": [
+      { "ingredient": "riz-arborio", "quantite": 450, "unite": "g", "precision": null },
+      { "ingredient": "poireau", "quantite": 120, "unite": "g", "precision": "émincés" },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": "zeste, bio" },
+      { "ingredient": "fromage-de-chevre", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "vin-blanc-sec", "quantite": 10, "unite": "cl", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1.5, "unite": "l", "precision": null },
+      { "ingredient": "beurre", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "parmesan", "quantite": 60, "unite": "g", "precision": "râpé" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Éplucher et émincer l'oignon puis le faire revenir dans une cocotte allant au four avec un peu d'huile d'olive.",
+      "Ajouter les poireaux, le zeste de citron, du sel, du poivre et laisser cuire jusqu'à ce que l'eau des poireaux s'évapore.",
+      "Ajouter le riz, le vin blanc, le bouillon de légumes, du sel et du poivre dans la cocotte.",
+      "Enfourner pour 45 min à 180 °C : le bouillon ne doit pas être totalement absorbé et le riz encore al dente.",
+      "À la sortie du four, ajouter le beurre, le parmesan et le fromage de chèvre. Mélanger et déguster aussitôt !"
+    ],
+    "notes": [
+      "Astuces : N'hésitez pas à utiliser des poireaux surgelés. S'il vous reste un peu de risotto, réalisez des arancinis le lendemain ! Il vous suffit de prélever des boules de risotto et de les paner : rouler les boules dans la farine, puis un œuf battu et enfin dans un peu de chapelure. Cuire ensuite les arancinis 5 min dans une poêle remplie d'un fond d'huile de cuisson (environ 1 cm de hauteur). Veillez à bien les retourner pendant la cuisson afin de cuire chacune des faces."
+    ],
+    "photo": "photos/risotto-four-poireaux-citron-chevre.jpg"
   }
 ]
