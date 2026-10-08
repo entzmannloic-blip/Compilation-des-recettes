@@ -1,3 +1,4 @@
 [
-  { "id": "la-flemme", "titre": "La flemme", "auteur": null }
+  { "id": "la-flemme", "titre": "La flemme", "auteur": null },
+  { "id": "salade", "titre": "Salade", "auteur": "Sue Quinn" }
 ]

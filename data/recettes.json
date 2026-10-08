@@ -34,5 +34,426 @@
       "Topping : 1 c. à soupe de pickles d'oignon rouge (p. 15)"
     ],
     "photo": null
+  },
+  {
+    "id": "cereales-betterave-noix",
+    "titre": "Céréales, betterave & noix",
+    "origine": { "type": "livre", "livre": "salade", "page": 20 },
+    "saisons": ["printemps", "automne", "hiver"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "cereales-cuites", "quantite": 250, "unite": "g", "precision": "par exemple épeautre ou orge perlé, égouttées et rincées" },
+      { "ingredient": "cresson", "quantite": 1, "unite": "bouquet", "precision": "petit, environ 85 g, sans les plus grosses tiges" },
+      { "ingredient": "betterave", "quantite": 2, "unite": "pièce", "precision": "petites, environ 200 g, pelées et râpées" },
+      { "ingredient": "noix", "quantite": 60, "unite": "g", "precision": "torréfiées, hachées grossièrement" },
+      { "ingredient": "vinaigre-balsamique", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "citron", "quantite": 2, "unite": "c. à café", "precision": "zestes, hachés finement" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Verser 2 c. à soupe de vinaigrette dans un saladier et émulsionner avec le vinaigre balsamique et les zestes de citron.",
+      "Ajouter les céréales et le cresson, mélanger pour répartir la sauce.",
+      "Incorporer délicatement les betteraves, ajouter du sel et du poivre.",
+      "Rajouter de la vinaigrette si nécessaire. Saupoudrer de noix et servir immédiatement."
+    ],
+    "notes": [
+      "Vinaigrette : 1 quantité de vinaigrette simple (p. 152)"
+    ],
+    "photo": "photos/cereales-betterave-noix.jpg"
+  },
+  {
+    "id": "quinoa-pimente",
+    "titre": "Quinoa pimenté",
+    "origine": { "type": "livre", "livre": "salade", "page": 22 },
+    "saisons": ["printemps", "été", "automne", "hiver"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "quinoa-cuit", "quantite": 200, "unite": "g", "precision": "rouge, égoutté et rincé" },
+      { "ingredient": "haricots-blancs", "quantite": 250, "unite": "g", "precision": "cuits ou en conserve, égouttés et rincés" },
+      { "ingredient": "avocat", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "piment-rouge", "quantite": 1, "unite": "pièce", "precision": "moyen, émincé finement" },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": "écrasée" },
+      { "ingredient": "poudre-de-piment", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "coriandre", "quantite": 1, "unite": "bouquet", "precision": "hachée" },
+      { "ingredient": "persil", "quantite": 1, "unite": "bouquet", "precision": "plat, haché" },
+      { "ingredient": "graines-de-citrouille", "quantite": 3, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "citron-vert", "quantite": null, "unite": null, "precision": "jus, à votre convenance" }
+    ],
+    "etapes": [
+      "Ajouter l'ail, la poudre de piment et le piment émincé à la vinaigrette.",
+      "Dans un saladier, mettre le quinoa, les haricots, les herbes et les graines de citrouille.",
+      "Verser de la sauce en quantité suffisante pour napper les ingrédients.",
+      "Peler, dénoyauter et couper l'avocat en morceaux, puis l'incorporer délicatement à la salade.",
+      "Ajouter du jus de citron vert selon le goût et de la sauce si nécessaire. Servir immédiatement."
+    ],
+    "notes": [
+      "Vinaigrette : 1 quantité de vinaigrette simple (p. 152) en remplaçant le vinaigre par du jus de citron"
+    ],
+    "photo": "photos/quinoa-pimente.jpg"
+  },
+  {
+    "id": "taboule-vert",
+    "titre": "Taboulé vert",
+    "origine": { "type": "livre", "livre": "salade", "page": 24 },
+    "saisons": ["été", "automne"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "cereales-cuites", "quantite": 80, "unite": "g", "precision": "par exemple orge, épeautre ou engrain" },
+      { "ingredient": "tomate", "quantite": 200, "unite": "g", "precision": "variées, bien mûres, en quartiers" },
+      { "ingredient": "concombre", "quantite": 100, "unite": "g", "precision": "en fines rondelles" },
+      { "ingredient": "oignon-rouge", "quantite": 0.5, "unite": "pièce", "precision": "haché finement" },
+      { "ingredient": "citron", "quantite": 45, "unite": "ml", "precision": "jus, voire plus à votre convenance" },
+      { "ingredient": "ras-el-hanout", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "persil", "quantite": 50, "unite": "g", "precision": "plat, haché finement" },
+      { "ingredient": "pourpier", "quantite": 1, "unite": "bouquet", "precision": "haché" },
+      { "ingredient": "menthe", "quantite": 25, "unite": "g", "precision": "feuilles ciselées finement" },
+      { "ingredient": "huile-d-olive", "quantite": 45, "unite": "ml", "precision": "vierge extra, voire plus à votre convenance" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Mettre les céréales, les tomates, le concombre et l'oignon dans un saladier.",
+      "Ajouter le jus de citron, le ras el-hanout, les fines herbes, l'huile d'olive, le sel et le poivre.",
+      "Mélanger délicatement et rajouter du jus de citron, de l'huile d'olive, du sel et du poivre selon le goût.",
+      "Réserver 20 minutes pour laisser les saveurs se mêler avant de servir."
+    ],
+    "notes": [],
+    "photo": "photos/taboule-vert.jpg"
+  },
+  {
+    "id": "borlotti-legumes-verts",
+    "titre": "Borlotti et légumes verts",
+    "origine": { "type": "livre", "livre": "salade", "page": 26 },
+    "saisons": ["été", "automne"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "haricots-borlotti", "quantite": 240, "unite": "g", "precision": "cuits ou en conserve, égouttés et rincés" },
+      { "ingredient": "haricot-vert", "quantite": 80, "unite": "g", "precision": "équetés et coupés finement" },
+      { "ingredient": "concombre", "quantite": 100, "unite": "g", "precision": "en fines rondelles" },
+      { "ingredient": "roquette", "quantite": 1, "unite": "bouquet", "precision": "feuilles" },
+      { "ingredient": "oignon-rouge", "quantite": 0.5, "unite": "pièce", "precision": "gros, haché finement" },
+      { "ingredient": "orange-sanguine", "quantite": 1, "unite": "pièce", "precision": "pelée à vif et coupée en rondelles" },
+      { "ingredient": "olives-vertes", "quantite": 50, "unite": "g", "precision": "dénoyautées et hachées grossièrement" }
+    ],
+    "etapes": [
+      "Disposer tous les ingrédients, sauf la sauce, dans un grand saladier.",
+      "Verser la moitié de la sauce et mélanger délicatement.",
+      "Rajouter de la sauce selon le goût. Servir immédiatement."
+    ],
+    "notes": [
+      "Vinaigrette : 2 quantités de vinaigrette simple (p. 152) en remplaçant le vinaigre par du jus d'orange et le mélange huile végétale/huile d'olive habituel par de l'huile d'olive uniquement"
+    ],
+    "photo": "photos/borlotti-legumes-verts.jpg"
+  },
+  {
+    "id": "reine-de-saba",
+    "titre": "Reine de Saba",
+    "origine": { "type": "livre", "livre": "salade", "page": 28 },
+    "saisons": ["automne", "hiver"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "cereales-cuites", "quantite": 300, "unite": "g", "precision": "par exemple boulgour, épeautre ou un mélange, rincées et égouttées" },
+      { "ingredient": "cerises-seches", "quantite": 1, "unite": "bouquet", "precision": null },
+      { "ingredient": "grenade", "quantite": 0.5, "unite": "pièce", "precision": "grains" },
+      { "ingredient": "amandes-effilees", "quantite": 4, "unite": "c. à soupe", "precision": "grillées" },
+      { "ingredient": "persil", "quantite": 1, "unite": "bouquet", "precision": "plat, haché" },
+      { "ingredient": "menthe", "quantite": 1, "unite": "bouquet", "precision": "feuilles ciselées grossièrement" },
+      { "ingredient": "citron", "quantite": 2, "unite": "c. à café", "precision": "zestes, hachés finement" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Faire chauffer la sauce dans une petite casserole à feu doux. En ajouter 3 c. à soupe aux céréales. Laisser refroidir.",
+      "Ajouter les autres ingrédients aux céréales, sauf les grains de grenade.",
+      "Mélanger puis rajouter de la sauce, du sel et du poivre selon le goût. Parsemer de grains de grenade au moment de servir."
+    ],
+    "notes": [
+      "Sauce : 1 quantité de sauce moyen-orient (p. 158)"
+    ],
+    "photo": "photos/reine-de-saba.jpg"
+  },
+  {
+    "id": "lentilles-cerises-roquette",
+    "titre": "Lentilles, cerises & roquette",
+    "origine": { "type": "livre", "livre": "salade", "page": 30 },
+    "saisons": ["été"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "lentilles-cuites", "quantite": 500, "unite": "g", "precision": "vertes du Puy, rincées et égouttées" },
+      { "ingredient": "cerise", "quantite": 350, "unite": "g", "precision": "dénoyautées et coupées en quatre" },
+      { "ingredient": "feuilles-de-salade", "quantite": 1, "unite": "bouquet", "precision": "par exemple roquette, mizuna ou pissenlit" },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": "pelée et écrasée" },
+      { "ingredient": "miel", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Mélanger la vinaigrette, l'ail et le miel.",
+      "Dans un plat creux, mélanger les lentilles, les cerises, les feuilles de salade et de la sauce en quantité suffisante pour napper les ingrédients.",
+      "Saler et poivrer généreusement, puis servir immédiatement."
+    ],
+    "notes": [
+      "Vinaigrette : 2 quantités de vinaigrette simple (p. 152) à base de vinaigre balsamique"
+    ],
+    "photo": "photos/lentilles-cerises-roquette.jpg"
+  },
+  {
+    "id": "tomates-lentilles-cremeuses",
+    "titre": "Tomates & lentilles crémeuses",
+    "origine": { "type": "livre", "livre": "salade", "page": 32 },
+    "saisons": ["été", "automne"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "lentilles-cuites", "quantite": 450, "unite": "g", "precision": "rincées et égouttées" },
+      { "ingredient": "tomate", "quantite": 300, "unite": "g", "precision": "bien mûres, en dés" },
+      { "ingredient": "pousses-d-epinard", "quantite": 2, "unite": "bouquet", "precision": "émincées" },
+      { "ingredient": "persil", "quantite": 4, "unite": "c. à soupe", "precision": "plat, ciselé (ou coriandre)" },
+      { "ingredient": "citron", "quantite": null, "unite": null, "precision": "jus, 1 bon filet voire plus à votre convenance" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Mélanger la sauce, les fines herbes, le sel et le poivre.",
+      "Déposer les lentilles dans un saladier et verser de la sauce en quantité suffisante pour les napper généreusement.",
+      "Incorporer les tomates et les pousses d'épinard. Rajouter du jus de citron, du sel et du poivre selon le goût.",
+      "Si possible, réserver 30 minutes avant de servir pour laisser les saveurs se mêler."
+    ],
+    "notes": [
+      "Sauce : 2 quantités de sauce au yaourt (p. 154)"
+    ],
+    "photo": "photos/tomates-lentilles-cremeuses.jpg"
+  },
+  {
+    "id": "taboule-mediterraneen",
+    "titre": "Taboulé méditerranéen",
+    "origine": { "type": "livre", "livre": "salade", "page": 34 },
+    "saisons": ["printemps", "été", "automne", "hiver"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "couscous-israelien", "quantite": 350, "unite": "g", "precision": "à gros grain, cuit" },
+      { "ingredient": "poivron-marine", "quantite": 80, "unite": "g", "precision": "égouttés et coupés en dés" },
+      { "ingredient": "artichaut-marine", "quantite": 80, "unite": "g", "precision": "égouttés et coupés en dés" },
+      { "ingredient": "aubergine-marinee", "quantite": 80, "unite": "g", "precision": "égouttées et coupées en dés" },
+      { "ingredient": "tomate-marinee", "quantite": 60, "unite": "g", "precision": "égouttées et coupées en dés" },
+      { "ingredient": "olives-noires", "quantite": 40, "unite": "g", "precision": "dénoyautées" },
+      { "ingredient": "capres", "quantite": 45, "unite": "g", "precision": "hachées grossièrement" },
+      { "ingredient": "ail", "quantite": 0.5, "unite": "gousse", "precision": "écrasée" },
+      { "ingredient": "basilic", "quantite": 1, "unite": "bouquet", "precision": "feuilles, en morceaux" },
+      { "ingredient": "citron", "quantite": null, "unite": null, "precision": "jus, 1 filet" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Agrémenter la vinaigrette avec l'ail.",
+      "Disposer tous les autres ingrédients dans un saladier et les enrober copieusement de sauce.",
+      "Rajouter du sel, du poivre ou du jus de citron selon le goût.",
+      "Réserver 20 minutes avant de servir pour laisser les saveurs se mêler."
+    ],
+    "notes": [
+      "Vinaigrette : 2 quantités de vinaigrette simple (p. 152) à base de vinaigre balsamique"
+    ],
+    "photo": "photos/taboule-mediterraneen.jpg"
+  },
+  {
+    "id": "thon-haricots-blancs",
+    "titre": "Thon & haricots blancs",
+    "origine": { "type": "livre", "livre": "salade", "page": 36 },
+    "saisons": ["été", "automne"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "haricots-blancs", "quantite": 500, "unite": "g", "precision": "cuits ou en conserve, rincés et égouttés" },
+      { "ingredient": "thon-albacore", "quantite": 300, "unite": "g", "precision": "poids égoutté" },
+      { "ingredient": "anchois", "quantite": 3, "unite": "pièce", "precision": "filets, égouttés" },
+      { "ingredient": "oignon-rouge", "quantite": 1, "unite": "pièce", "precision": "haché finement" },
+      { "ingredient": "persil", "quantite": 15, "unite": "g", "precision": "plat" },
+      { "ingredient": "basilic", "quantite": 10, "unite": "g", "precision": "feuilles" },
+      { "ingredient": "sauge", "quantite": 5, "unite": "pièce", "precision": "feuilles" },
+      { "ingredient": "capres", "quantite": 1, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "c. à soupe", "precision": "jus, voire plus à votre convenance" },
+      { "ingredient": "moutarde-de-dijon", "quantite": 0.5, "unite": "c. à café", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": 135, "unite": "ml", "precision": "vierge extra" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Disposer les haricots, le thon et l'oignon dans un grand plat.",
+      "Mettre les autres ingrédients dans le bol d'un robot et mixer jusqu'à obtenir une sauce assez épaisse.",
+      "Incorporer la sauce au mélange de haricots, puis rajouter du sel, du poivre ou du jus de citron selon le goût.",
+      "Réserver 30 minutes avant de servir pour laisser les saveurs se mêler."
+    ],
+    "notes": [],
+    "photo": "photos/thon-haricots-blancs.jpg"
+  },
+  {
+    "id": "quinoa-pesto-feta",
+    "titre": "Quinoa au pesto & à la feta",
+    "origine": { "type": "livre", "livre": "salade", "page": 38 },
+    "saisons": ["été", "automne"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "quinoa-cuit", "quantite": 450, "unite": "g", "precision": "rouge ou blanc, rincé et égoutté" },
+      { "ingredient": "feta", "quantite": 75, "unite": "g", "precision": null },
+      { "ingredient": "oignon-nouveau", "quantite": 3, "unite": "pièce", "precision": "hachés finement" },
+      { "ingredient": "pignons-de-pin", "quantite": 4, "unite": "c. à soupe", "precision": "grillés" },
+      { "ingredient": "coriandre", "quantite": 15, "unite": "g", "precision": "ciselée" },
+      { "ingredient": "aneth", "quantite": 15, "unite": "g", "precision": "haché" },
+      { "ingredient": "menthe", "quantite": 15, "unite": "g", "precision": "feuilles ciselées" },
+      { "ingredient": "pesto", "quantite": 3, "unite": "c. à soupe", "precision": "voire plus à votre convenance" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Émulsionner la vinaigrette avec le pesto.",
+      "Dans un saladier, mélanger délicatement le quinoa, les oignons nouveaux, les fines herbes et la moitié de la feta.",
+      "Verser de la sauce en quantité suffisante pour napper les ingrédients, saler et poivrer.",
+      "Parsemer du reste de feta et des pignons de pin. Rajouter du sel, du poivre ou de la sauce selon le goût."
+    ],
+    "notes": [
+      "Vinaigrette : 3 quantités de vinaigrette simple (p. 152)"
+    ],
+    "photo": "photos/quinoa-pesto-feta.jpg"
+  },
+  {
+    "id": "nouilles-soba-sauce-miso",
+    "titre": "Nouilles soba sauce miso",
+    "origine": { "type": "livre", "livre": "salade", "page": 40 },
+    "saisons": ["été", "automne"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "nouilles-soba", "quantite": 200, "unite": "g", "precision": "cuites, froides" },
+      { "ingredient": "jeunes-pousses", "quantite": 2, "unite": "bouquet", "precision": "variées" },
+      { "ingredient": "mais", "quantite": 90, "unite": "g", "precision": "grains crus" },
+      { "ingredient": "carotte", "quantite": 100, "unite": "g", "precision": "râpées" },
+      { "ingredient": "avocat", "quantite": 1, "unite": "pièce", "precision": "pelé et découpé en morceaux" },
+      { "ingredient": "oignon-nouveau", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "coriandre", "quantite": 2, "unite": "bouquet", "precision": "ciselée" },
+      { "ingredient": "graines-de-tournesol", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "graines-de-sesame-noir", "quantite": 0.5, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "citron", "quantite": null, "unite": null, "precision": "jus, 1 filet" },
+      { "ingredient": "huile-de-sesame-grille", "quantite": null, "unite": null, "precision": "1 filet" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Mélanger les nouilles et l'huile de sésame pour éviter qu'elles ne collent.",
+      "Les déposer dans un grand saladier avec les jeunes pousses, les légumes, la coriandre et les graines.",
+      "Verser de la sauce en quantité suffisante pour enrober copieusement les ingrédients.",
+      "Rajouter un filet de jus de citron, du sel et du poivre selon le goût. Servir immédiatement."
+    ],
+    "notes": [
+      "Sauce : 1 quantité de sauce miso et gingembre (p. 164)"
+    ],
+    "photo": "photos/nouilles-soba-sauce-miso.jpg"
+  },
+  {
+    "id": "falafels-salade",
+    "titre": "Falafels et salade",
+    "origine": { "type": "livre", "livre": "salade", "page": 42 },
+    "saisons": ["été", "automne"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "falafels", "quantite": 6, "unite": "pièce", "precision": "coupés en deux" },
+      { "ingredient": "pois-chiches", "quantite": 100, "unite": "g", "precision": "cuits ou en conserve, rincés et égouttés" },
+      { "ingredient": "tomate-cerise", "quantite": 150, "unite": "g", "precision": "coupées en deux" },
+      { "ingredient": "concombre", "quantite": 150, "unite": "g", "precision": "coupés en deux et émincés" },
+      { "ingredient": "pain-pita", "quantite": 2, "unite": "pièce", "precision": "1 ou 2, grillés et coupés en morceaux" },
+      { "ingredient": "tahini", "quantite": 3, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "citron", "quantite": 2, "unite": "c. à soupe", "precision": "jus" },
+      { "ingredient": "ail", "quantite": 0.5, "unite": "gousse", "precision": "écrasée" },
+      { "ingredient": "feuilles-de-salade", "quantite": 2, "unite": "bouquet", "precision": "variées" },
+      { "ingredient": "persil", "quantite": 2, "unite": "bouquet", "precision": "plat" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Mélanger le tahini, le jus de citron, l'ail, le sel et le poivre. Ajouter 50 à 100 ml d'eau froide pour obtenir une sauce encore assez épaisse.",
+      "Disposer tous les autres ingrédients, sauf le pain pita et les falafels, dans un grand saladier.",
+      "Verser de la sauce en quantité suffisante pour napper les ingrédients, puis du jus de citron, du sel et du poivre selon le goût.",
+      "Terminer par le pain pita et les falafels juste avant de servir, en présentant le reste de sauce à part."
+    ],
+    "notes": [],
+    "photo": "photos/falafels-salade.jpg"
+  },
+  {
+    "id": "haricots-poivrons-chili",
+    "titre": "Haricots & poivrons au chili",
+    "origine": { "type": "livre", "livre": "salade", "page": 44 },
+    "saisons": ["été", "automne"],
+    "categorie": "entrée",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": "2 à 4 personnes",
+    "temps": { "preparation": null, "cuisson": null },
+    "ingredients": [
+      { "ingredient": "haricots-cuits", "quantite": 450, "unite": "g", "precision": "cuits ou en conserve, par exemple noirs, rouges ou blancs, égouttés et rincés" },
+      { "ingredient": "poivron-rouge", "quantite": 1, "unite": "pièce", "precision": "émincé" },
+      { "ingredient": "poivron-vert", "quantite": 1, "unite": "pièce", "precision": "émincé" },
+      { "ingredient": "poudre-de-piment", "quantite": 0.5, "unite": "c. à café", "precision": null },
+      { "ingredient": "oignon-rouge", "quantite": 1, "unite": "pièce", "precision": "haché finement" },
+      { "ingredient": "coriandre", "quantite": 30, "unite": "g", "precision": "ciselée" },
+      { "ingredient": "citron-vert", "quantite": null, "unite": null, "precision": "jus, à votre convenance" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Mélanger la sauce et la poudre de piment.",
+      "Dans un saladier, disposer tous les autres ingrédients, sauf le jus de citron vert.",
+      "Verser de la sauce en quantité suffisante pour enrober copieusement les ingrédients.",
+      "Rajouter du jus de citron vert, du sel et du poivre selon le goût. Réserver 30 minutes avant de servir."
+    ],
+    "notes": [
+      "Sauce : 2 quantités de sauce moyen-orient (p. 158) en remplaçant le jus de citron par du jus de citron vert"
+    ],
+    "photo": "photos/haricots-poivrons-chili.jpg"
   }
 ]

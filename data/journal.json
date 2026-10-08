@@ -1,3 +1,16 @@
 [
-  { "livre": "la-flemme", "page": 22, "date": "2026-10-08", "etat": "brouillon", "recette": "salade-lentilles-carottes-feta" }
+  { "livre": "la-flemme", "page": 22, "date": "2026-10-08", "etat": "brouillon", "recette": "salade-lentilles-carottes-feta" },
+  { "livre": "salade", "page": 20, "date": "2026-10-08", "etat": "validé", "recette": "cereales-betterave-noix" },
+  { "livre": "salade", "page": 22, "date": "2026-10-08", "etat": "validé", "recette": "quinoa-pimente" },
+  { "livre": "salade", "page": 24, "date": "2026-10-08", "etat": "validé", "recette": "taboule-vert" },
+  { "livre": "salade", "page": 26, "date": "2026-10-08", "etat": "validé", "recette": "borlotti-legumes-verts" },
+  { "livre": "salade", "page": 28, "date": "2026-10-08", "etat": "validé", "recette": "reine-de-saba" },
+  { "livre": "salade", "page": 30, "date": "2026-10-08", "etat": "validé", "recette": "lentilles-cerises-roquette" },
+  { "livre": "salade", "page": 32, "date": "2026-10-08", "etat": "validé", "recette": "tomates-lentilles-cremeuses" },
+  { "livre": "salade", "page": 34, "date": "2026-10-08", "etat": "validé", "recette": "taboule-mediterraneen" },
+  { "livre": "salade", "page": 36, "date": "2026-10-08", "etat": "validé", "recette": "thon-haricots-blancs" },
+  { "livre": "salade", "page": 38, "date": "2026-10-08", "etat": "validé", "recette": "quinoa-pesto-feta" },
+  { "livre": "salade", "page": 40, "date": "2026-10-08", "etat": "validé", "recette": "nouilles-soba-sauce-miso" },
+  { "livre": "salade", "page": 42, "date": "2026-10-08", "etat": "validé", "recette": "falafels-salade" },
+  { "livre": "salade", "page": 44, "date": "2026-10-08", "etat": "validé", "recette": "haricots-poivrons-chili" }
 ]
