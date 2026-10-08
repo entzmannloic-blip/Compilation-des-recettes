@@ -195,7 +195,12 @@ function carteRecette(recette) {
   const temps = tempsTotal(recette);
   const bouton = h("button", {
     type: "button", class: "ajout", "data-cle": `ajout-${recette.id}`,
-    onclick: () => { basculerCourses(recette); majBouton(); dessinerBarre(); },
+    onclick: () => {
+      const dedans = basculerCourses(recette);
+      majBouton();
+      dessinerBarre();
+      annoncer(dedans ? "Ajouté aux courses" : "Retiré des courses", dedans ? { texte: "Voir la liste", href: "#/courses" } : null);
+    },
   });
   function majBouton() {
     const dedans = Object.hasOwn(semaine, recette.id);
@@ -205,12 +210,27 @@ function carteRecette(recette) {
   }
   majBouton();
   return h("div", { class: "carte" },
-    h("a", { class: "carte-lien", href: lienRecette(recette.id) },
-      photoRecette(recette, false, true),
-      h("div", { class: "carte-bandeau" },
-        h("h2", {}, recette.titre),
-        h("span", { class: "carte-temps" }, [temps, lieuCourt(recette)].filter(Boolean).join(" · ")))),
-    bouton);
+    h("div", { class: "carte-photo" },
+      h("a", { href: lienRecette(recette.id), tabindex: "-1", "aria-hidden": "true" }, photoRecette(recette, false, true)),
+      bouton),
+    h("a", { class: "carte-lien carte-bandeau", href: lienRecette(recette.id) },
+      h("h2", {}, recette.titre),
+      h("span", { class: "carte-temps" }, [temps, lieuCourt(recette)].filter(Boolean).join(" · "))));
+}
+
+// Petit message en bas de l'écran (« Ajouté aux courses · Voir la liste »), qui disparaît seul.
+const messageBas = h("div", { class: "message-bas", role: "status", hidden: true });
+document.body.append(messageBas);
+let minuteurMessage = null;
+function annoncer(texte, lien = null) {
+  clearTimeout(minuteurMessage);
+  messageBas.replaceChildren(texte, lien ? h("a", { href: lien.href }, lien.texte) : null);
+  messageBas.hidden = false;
+  minuteurMessage = setTimeout(cacherMessage, 4000);
+}
+function cacherMessage() {
+  clearTimeout(minuteurMessage);
+  messageBas.hidden = true;
 }
 
 function messageErreur(texte, avecRetour = false) {
@@ -426,8 +446,9 @@ function ecranRecette(idBrut) {
   }
 
   function basculerSemaine() {
-    basculerCourses(recette);
+    const dedans = basculerCourses(recette);
     gardantLeFocus(dessiner);
+    annoncer(dedans ? "Ajouté aux courses" : "Retiré des courses", dedans ? { texte: "Voir la liste", href: "#/courses" } : null);
   }
 
   function basculerFavoriFiche() {
@@ -757,6 +778,7 @@ function afficher() {
     cuisine: () => ecranCuisine(route.id),
   };
   ecransVus += 1;
+  cacherMessage();
   dessinerBarre(route.nom === "recette" || route.nom === "cuisine" ? "saison" : route.nom === "semaine" ? "courses" : route.nom);
   barre.closest(".barre").hidden = route.nom === "cuisine" || route.nom === "recette"; // ces écrans ont leurs propres boutons en bas
   garderEcranAllume(route.nom === "recette" || route.nom === "cuisine");
