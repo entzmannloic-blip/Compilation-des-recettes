@@ -6,6 +6,7 @@ import {
 } from "./lib.js";
 import { chargerSemaine, sauverSemaine, basculer, definirPersonnes } from "./semaine.js";
 import { lireRoute } from "./routes.js";
+import { compilerCourses, texteCourses, chargerCoches, sauverCoches } from "./courses.js";
 
 const vue = document.getElementById("vue");
 const barre = document.getElementById("nav");
@@ -107,6 +108,7 @@ const ICONES = {
   saison: ["M5 19c0-8 5-14 14-14 0 9-6 14-14 14z", "M5 19l8-8"],
   semaine: ["M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z", "M4 10h16M9 3v4M15 3v4"],
   livres: ["M4 5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H4z", "M20 5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h6z"],
+  courses: ["M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H6", "M10 20.5v.01M17 20.5v.01"],
   loupe: ["M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14z", "M16 16l4.5 4.5"],
   filtres: ["M4 7h10M18 7h2M4 17h2M10 17h10", "M16 4v6M8 14v6"],
   retour: ["M15 5l-7 7 7 7"],
@@ -115,6 +117,7 @@ const ICONES = {
 const ONGLETS = [
   { nom: "saison", libelle: "De saison", href: "#/" },
   { nom: "semaine", libelle: "Ma semaine", href: "#/semaine" },
+  { nom: "courses", libelle: "Courses", href: "#/courses" },
   { nom: "livres", libelle: "Livres", href: "#/livres" },
 ];
 
@@ -397,7 +400,7 @@ function ecranRecette(idBrut) {
           photoRecette(recette, true),
           h("button", { type: "button", class: "rond retour", "aria-label": "Retour", onclick: retourListe }, icone("retour")),
           h("button", { type: "button", "data-cle": "bascule-semaine", class: `pilule${dansSemaine ? " active" : ""}`, onclick: basculerSemaine },
-            dansSemaine ? "Retirer de ma semaine" : "Ajouter à ma semaine"),
+            dansSemaine ? "Retirer de ma semaine et des courses" : "Ajouter à ma semaine et aux courses"),
           h("div", { class: "fiche-titre" },
             h("h1", { class: "titre-recette" }, recette.titre),
             h("p", {}, majuscule(recette.categorie), " • ", recette.saisons.join(", ")))),
@@ -493,6 +496,83 @@ function ecranCuisine(idBrut) {
   return conteneur;
 }
 
+// ---------- Écran « Courses » ----------
+function copierSecours(texte) {
+  const zone = h("textarea", { "aria-hidden": "true", style: "position:fixed;opacity:0;top:0" });
+  zone.value = texte;
+  document.body.append(zone);
+  zone.select();
+  let ok = false;
+  try { ok = document.execCommand("copy"); } catch { ok = false; }
+  zone.remove();
+  return ok;
+}
+
+function ecranCourses() {
+  const conteneur = h("div");
+  const etat = { coches: chargerCoches(stockage), message: "" };
+
+  function cocher(cle, coche) {
+    if (coche) etat.coches.add(cle); else etat.coches.delete(cle);
+    sauverCoches(stockage, etat.coches);
+    etat.message = "";
+    gardantLeFocus(dessiner);
+  }
+
+  async function copier(liste) {
+    const texte = texteCourses(liste, etat.coches);
+    let ok = false;
+    try {
+      await navigator.clipboard.writeText(texte);
+      ok = true;
+    } catch {
+      ok = copierSecours(texte);
+    }
+    etat.message = ok ? "Liste copiée." : "Copie impossible : sélectionnez la liste à la main.";
+    gardantLeFocus(dessiner);
+  }
+
+  function ligne(item) {
+    const coche = etat.coches.has(item.cle);
+    const caseACocher = h("input", { type: "checkbox", "data-cle": `coche-${item.cle}`, onchange: (e) => cocher(item.cle, e.target.checked) });
+    caseACocher.checked = coche;
+    return h("label", { class: `ing${coche ? " fait" : ""}` },
+      caseACocher,
+      h("span", { class: "nom" },
+        item.texte ? h("b", { class: "quantite" }, item.texte) : null, item.texte ? " " : null, item.nom,
+        item.melange ? h("small", { class: "alerte" }, "Unités différentes selon les recettes : à vérifier") : null,
+        h("small", { class: "origine" }, item.recettes.join(" · "))));
+  }
+
+  function dessiner() {
+    const liste = compilerCourses(donnees.recettes, donnees.ingredients, semaine);
+    const tous = [...liste.groupes.flatMap((g) => g.items), ...liste.placard];
+    const restants = tous.filter((i) => !etat.coches.has(i.cle)).length;
+    if (!liste.recettes) {
+      conteneur.replaceChildren(
+        h("h1", {}, "Courses"),
+        h("div", { class: "vide" },
+          "La liste est vide. Ouvrez une recette et touchez « Ajouter à ma semaine et aux courses ».",
+          h("a", { class: "lien-action", href: "#/" }, "Voir les recettes")));
+      return;
+    }
+    conteneur.replaceChildren(
+      h("h1", {}, "Courses"),
+      h("p", { class: "sub" }, `${liste.recettes} recette${liste.recettes > 1 ? "s" : ""} · ${restants} article${restants > 1 ? "s" : ""} à acheter sur ${tous.length}`),
+      h("div", { class: "actions" },
+        h("button", { type: "button", class: "lien-action", "data-cle": "copier", onclick: () => copier(liste) }, "Copier la liste"),
+        h("button", { type: "button", class: "lien-action", "data-cle": "decocher", onclick: () => { etat.coches.clear(); sauverCoches(stockage, etat.coches); etat.message = ""; gardantLeFocus(dessiner); } }, "Tout décocher")),
+      h("p", { class: "sub statut", role: "status" }, etat.message),
+      ...liste.groupes.map((g) => h("section", {}, h("h2", { class: "section" }, g.titre), g.items.map(ligne))),
+      liste.placard.length
+        ? h("section", {}, h("h2", { class: "section" }, "À vérifier au placard"), liste.placard.map(ligne))
+        : null);
+  }
+
+  dessiner();
+  return conteneur;
+}
+
 // ---------- Écran « Livres » ----------
 function ecranLivres() {
   const { recettes, livres } = donnees;
@@ -569,9 +649,10 @@ function ecranSemaine() {
     conteneur.replaceChildren(
       h("h1", {}, "Ma semaine"),
       h("p", { class: "sub" }, `${choisies.length} recette${choisies.length > 1 ? "s" : ""}`),
+      choisies.length ? h("div", { class: "actions" }, h("a", { class: "lien-action", href: "#/courses" }, "Voir la liste de courses")) : null,
       choisies.length
         ? h("div", { class: "stack" }, choisies.map(carteSemaine))
-        : h("div", { class: "vide" }, "Rien pour l'instant. Ouvrez une recette et touchez « Ajouter à ma semaine »."));
+        : h("div", { class: "vide" }, "Rien pour l'instant. Ouvrez une recette et touchez « Ajouter à ma semaine et aux courses »."));
   }
 
   dessiner();
@@ -585,6 +666,7 @@ function afficher() {
   const ecrans = {
     saison: ecranSaison,
     semaine: ecranSemaine,
+    courses: ecranCourses,
     livres: ecranLivres,
     recette: () => ecranRecette(route.id),
     cuisine: () => ecranCuisine(route.id),

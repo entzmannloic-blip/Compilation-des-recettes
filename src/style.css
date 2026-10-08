@@ -110,7 +110,7 @@ a.carte:hover { background: var(--accent-hover); }
 .fiche-photo::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .75)); pointer-events: none; }
 .fiche-photo .rond, .pilule { position: absolute; z-index: 2; top: calc(12px + env(safe-area-inset-top, 0px)); background: rgba(40, 40, 40, .62); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); color: #fff; box-shadow: none; }
 .fiche-photo .retour { left: 12px; min-height: 48px; }
-.pilule { right: 12px; min-height: 48px; padding: 0 18px; border: 0; border-radius: 99px; font: 700 .9375rem var(--sans); cursor: pointer; }
+.pilule { right: 12px; max-width: calc(100% - 84px); min-height: 48px; padding: 8px 16px; border: 0; border-radius: 99px; font: 700 .9375rem/1.2 var(--sans); text-align: center; cursor: pointer; }
 .pilule.active { background: var(--accent); }
 .fiche-titre { position: absolute; z-index: 2; left: 16px; right: 16px; bottom: 16px; color: #fff; text-shadow: 0 1px 6px rgba(0, 0, 0, .5); }
 .fiche-titre .titre-recette { font-size: 1.75rem; line-height: 1.12; margin: 0 0 4px; text-align: left; }
@@ -145,7 +145,7 @@ a.carte:hover { background: var(--accent-hover); }
 
 /* Barre du bas : pilule flottante */
 .barre { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); z-index: 5; max-width: 480px; margin: 0 auto; background: var(--paper); border-radius: 30px; box-shadow: var(--ombre); padding: 6px; }
-.barre-int { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+.barre-int { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
 .barre a { color: var(--accent-ink); padding: 6px 2px; border-radius: 24px; font-size: .75rem; font-weight: 700; display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; min-height: 52px; }
 .barre a[aria-current="page"] { background: var(--accent-wash); }
 .barre svg { width: 26px; height: 26px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
@@ -167,3 +167,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .cuisine-ing small { color: var(--ink3); }
 .cuisine-pas { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; max-width: 640px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 12px 12px calc(12px + env(safe-area-inset-bottom, 0px)); background: var(--page); border-top: 1px solid var(--line); }
 .cuisine-pas .btn { min-height: 56px; font-size: 1.125rem; }
+
+/* Courses */
+.statut { min-height: 1.4em; margin: 10px 0 0; }
+.ing small.origine { display: block; margin-top: 2px; font-size: .8125rem; }
+.ing small.alerte { display: block; margin-top: 2px; color: var(--warn); font-size: .8125rem; font-weight: 600; }
+.vide .lien-action { padding: 0 24px; flex: none; }

@@ -14,6 +14,7 @@ test("lireRoute : mode cuisine avec identifiant", () => {
 test("lireRoute : semaine et livres", () => {
   assert.deepEqual(lireRoute("#/semaine"), { nom: "semaine" });
   assert.deepEqual(lireRoute("#/livres"), { nom: "livres" });
+  assert.deepEqual(lireRoute("#/courses"), { nom: "courses" });
 });
 
 test("lireRoute : vide, inconnu ou recette sans id → saison", () => {
