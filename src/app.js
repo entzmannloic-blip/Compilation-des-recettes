@@ -300,9 +300,53 @@ function ecranLivres() {
     h("div", { class: "stack" }, cartes));
 }
 
-// ---------- Écran « Ma semaine » : provisoire, rempli à la tâche 5 ----------
+// ---------- Écran « Ma semaine » ----------
 function ecranSemaine() {
-  return h("div", {}, h("h1", {}, "Ma semaine"), h("p", { class: "vide" }, "Cet écran arrive bientôt."));
+  const conteneur = h("div");
+
+  function changerPersonnes(recette, delta) {
+    semaine = definirPersonnes(semaine, recette.id, Math.max(1, semaine[recette.id] + delta));
+    sauverSemaine(stockage, semaine);
+    dessiner();
+  }
+
+  function retirer(recette) {
+    semaine = basculer(semaine, recette);
+    sauverSemaine(stockage, semaine);
+    dessiner();
+  }
+
+  function carteSemaine(recette) {
+    const personnes = semaine[recette.id];
+    return h("section", { class: "card" },
+      h("h2", {}, recette.titre),
+      h("div", { class: "ligne", style: "align-items:center; margin-top:10px" },
+        h("b", {}, "Pour"),
+        h("div", { class: "pas" },
+          h("button", { type: "button", "aria-label": `Moins de personnes pour ${recette.titre}`, onclick: () => changerPersonnes(recette, -1) }, "−"),
+          h("b", { "aria-live": "polite" }, String(personnes)),
+          h("button", { type: "button", "aria-label": `Plus de personnes pour ${recette.titre}`, onclick: () => changerPersonnes(recette, 1) }, "+"),
+          h("span", { class: "ou", style: "margin:0" }, personnes > 1 ? "personnes" : "personne"))),
+      h("div", { class: "actions" },
+        h("a", { class: "lien-action", href: lienRecette(recette.id) }, "Voir la fiche"),
+        h("button", { type: "button", class: "lien-action", onclick: () => retirer(recette) }, "Retirer")));
+  }
+
+  function dessiner() {
+    // Les recettes enregistrées mais disparues des données sont ignorées.
+    const choisies = Object.keys(semaine)
+      .map((id) => donnees.recettes.find((r) => r.id === id))
+      .filter(Boolean);
+    conteneur.replaceChildren(
+      h("h1", {}, "Ma semaine"),
+      h("p", { class: "sub" }, `${choisies.length} recette${choisies.length > 1 ? "s" : ""}`),
+      choisies.length
+        ? h("div", { class: "stack" }, choisies.map(carteSemaine))
+        : h("div", { class: "vide" }, "Rien pour l'instant. Ouvrez une recette et touchez « Ajouter à ma semaine »."));
+  }
+
+  dessiner();
+  return conteneur;
 }
 
 // ---------- Affichage ----------
