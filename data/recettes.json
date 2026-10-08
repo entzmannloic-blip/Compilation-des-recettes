@@ -1999,5 +1999,575 @@
       "Astuce : Si vous n'avez pas de fruits frais sous la main, vous pouvez opter pour des fruits surgelés."
     ],
     "photo": "photos/clafoutis-myrtilles.jpg"
+  },
+  {
+    "id": "fiadone",
+    "titre": "Fiadone",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 111 },
+    "saisons": ["été"],
+    "categorie": "dessert",
+    "type": "au four",
+    "personnes": 6,
+    "personnes_texte": null,
+    "temps": { "preparation": 5, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "brocciu", "quantite": 500, "unite": "g", "precision": "à défaut de la brousse" },
+      { "ingredient": "oeufs", "quantite": 5, "unite": "pièce", "precision": null },
+      { "ingredient": "sucre-en-poudre", "quantite": 100, "unite": "g", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": "zeste, jaune, bio" },
+      { "ingredient": "citron-vert", "quantite": 1, "unite": "pièce", "precision": "zeste, bio" }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Égoutter le brocciu et le mettre dans un saladier. Bien l'écraser à l'aide d'une fourchette et fouetter.",
+      "Ajouter les œufs un à un, bien mélanger. Puis ajouter le sucre et les zestes de citron.",
+      "Verser dans un moule et cuire pendant 25 min à 180 °C. Le gâteau doit être légèrement doré.",
+      "Laisser refroidir et placer au frais jusqu'au moment de servir."
+    ],
+    "notes": [
+      "5 ingrédients, 5 min de préparation, 25 min de sieste et c'est prêt !!! Une spécialité corse, très peu d'ingrédients et de préparation.",
+      "Astuces : Ce gâteau se déguste très frais, c'est bien meilleur ! Si vous ne trouvez pas de brocciu, vous pouvez le remplacer par de la brousse."
+    ],
+    "photo": "photos/fiadone.jpg"
+  },
+  {
+    "id": "salade-betteraves-orange-chevre-pane",
+    "titre": "Salade de betteraves à l'orange et au fromage de chèvre pané",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 114 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "betterave", "quantite": 3, "unite": "pièce", "precision": "cuites" },
+      { "ingredient": "orange", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "aneth", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "menthe", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "fromage-de-chevre", "quantite": 6, "unite": "pièce", "precision": "cabécou" },
+      { "ingredient": "farine", "quantite": 80, "unite": "g", "precision": "T55" },
+      { "ingredient": "chapelure-panko", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "oeufs", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Commencer par paner les fromages de chèvre. Placer la farine et la chapelure dans 2 bols distincts puis saler et poivrer la chapelure.",
+      "Battre l'œuf dans un bol. Plonger les fromages de chèvre dans la farine, puis dans l'œuf, et enfin dans la chapelure. Renouveler l'opération avec chaque fromage de chèvre et réserver au frigo.",
+      "Prélever les suprêmes d'orange, découper les betteraves en quartiers et ciseler la menthe et l'aneth. Mélanger les betteraves avec les suprêmes d'orange, les herbes, la vinaigrette, du sel et du poivre.",
+      "Faire chauffer une poêle avec un peu d'huile et faire dorer les fromages de chèvre panés pendant 5 min de chaque côté, jusqu'à ce qu'ils soient bien grillés.",
+      "Servir 3 fromages de chèvre par personne, accompagnés de la salade de betteraves et d'un peu de granola salé."
+    ],
+    "notes": [
+      "La betterave a tendance à diviser un peu, mais promis avec les oranges et le fromage de chèvre pané, vous ne pourrez plus vous en passer !",
+      "Vinaigrette : 4 c. à soupe de vinaigrette à l'orange (p. 18)",
+      "Topping : 2 c. à soupe de granola salé (p. 15)",
+      "Astuces : Vous pouvez congeler vos fromages de chèvre panés avant la cuisson et les cuire le jour J jusqu'à 3 mois. Lorsque c'est la saison (hiver-printemps), vous pouvez utiliser des oranges sanguines."
+    ],
+    "photo": "photos/salade-betteraves-orange-chevre-pane.jpg"
+  },
+  {
+    "id": "salade-fenouil-kumquats-parmesan",
+    "titre": "Salade de fenouil, kumquats et parmesan",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 117 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "fenouil", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "kumquat", "quantite": 6, "unite": "pièce", "precision": null },
+      { "ingredient": "parmesan", "quantite": 80, "unite": "g", "precision": "en copeaux" },
+      { "ingredient": "orange", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "noix-de-pecan", "quantite": 2, "unite": "bouquet", "precision": "2 poignées" },
+      { "ingredient": "olives-noires", "quantite": 80, "unite": "g", "precision": "dénoyautées" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Émincer les fenouils finement à l'aide d'une mandoline.",
+      "Prélever les suprêmes de l'orange.",
+      "Laver et couper les kumquats finement.",
+      "Torréfier les noix de pécan pendant quelques minutes dans une poêle. Réserver.",
+      "Hacher les olives grossièrement.",
+      "Mélanger le fenouil avec les suprêmes d'orange, les kumquats, les noix de pécan concassées, les olives et les copeaux de parmesan. Saler, poivrer.",
+      "Ajouter la vinaigrette, mélanger et réserver au frais jusqu'à la dégustation.",
+      "Au moment de servir, ajouter un peu de granola salé."
+    ],
+    "notes": [
+      "Je réalise habituellement cette recette avec des oranges. J'ai voulu twister la recette avec des kumquats et ce fut une grande révélation ! Ils apportent une petite pointe d'acidité délicieuse.",
+      "Vinaigrette : 4 c. à soupe de vinaigrette à l'orange (p. 18)",
+      "Topping : 2 c. à soupe de granola salé (p. 15)",
+      "Astuces : Le fenouil a l'avantage de se cuisiner rapidement puisqu'il ne demande aucun épluchage. Dans cette recette vous pouvez remplacer les noix de pécan par des noix de Grenoble ou des noisettes."
+    ],
+    "photo": "photos/salade-fenouil-kumquats-parmesan.jpg"
+  },
+  {
+    "id": "salade-quinoa-brocoli-kiwi",
+    "titre": "Salade quinoa, brocoli et kiwi",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 118 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "salade",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "quinoa", "quantite": 250, "unite": "g", "precision": null },
+      { "ingredient": "brocoli", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "kiwi", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "tomates-sechees", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "persil", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "menthe", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "amandes-effilees", "quantite": 20, "unite": "g", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Cuire le quinoa dans une casserole d'eau bouillante salée selon les instructions du paquet. Puis le passer sous l'eau froide, égoutter et réserver.",
+      "Laver le brocoli et couper les fleurettes puis les placer sur une plaque à four recouverte de papier sulfurisé. Arroser d'huile d'olive, saler, poivrer et enfourner pour 20 min à 180 °C.",
+      "Éplucher et couper les kiwis en dés.",
+      "Émincer les tomates séchées.",
+      "Ciseler les herbes fraîches.",
+      "Torréfier les amandes à la poêle pendant quelques minutes.",
+      "Mélanger tous les ingrédients dans un saladier, ajouter la vinaigrette et servir bien frais."
+    ],
+    "notes": [
+      "Vinaigrette : 4 c. à soupe de vinaigrette érable (p. 18)",
+      "Astuce : Vous pouvez préparer tous vos ingrédients individuellement le week-end et assembler la salade le jour J pour un maximum de gain de temps en semaine."
+    ],
+    "photo": "photos/salade-quinoa-brocoli-kiwi.jpg"
+  },
+  {
+    "id": "croissant-sale-figues-chevre-pesto",
+    "titre": "Croissant salé figues, fromage de chèvre et pesto",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 120 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "sandwich",
+    "personnes": 2,
+    "personnes_texte": null,
+    "temps": { "preparation": 5, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "croissant", "quantite": 2, "unite": "pièce", "precision": "de la veille" },
+      { "ingredient": "figue", "quantite": 6, "unite": "pièce", "precision": null },
+      { "ingredient": "fromage-de-chevre", "quantite": 80, "unite": "g", "precision": "frais" },
+      { "ingredient": "miel", "quantite": 1, "unite": "c. à café", "precision": "liquide" },
+      { "ingredient": "roquette", "quantite": 1, "unite": "bouquet", "precision": "1 poignée" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Ouvrir les croissants en 2 dans la longueur. Les faire réchauffer sur une plaque à four recouverte de papier sulfurisé pendant 5 min à 180 °C.",
+      "Pendant ce temps, couper les figues en 2 et les faire revenir à la poêle avec un peu d'huile d'olive, le miel, du sel et du poivre.",
+      "Tartiner la partie inférieure des croissants de fromage de chèvre. Ajouter un peu de pesto, les figues rôties et de la roquette.",
+      "Refermer et servir aussitôt."
+    ],
+    "notes": [
+      "Zéro gaspi et prêt en 15 min.",
+      "Topping : 2 c. à café de pesto maison (p. 14).",
+      "Astuce : Évitez le gaspillage en utilisant les croissants secs du petit déjeuner de la veille. Vous verrez, le croissant salé, c'est totalement addictif !"
+    ],
+    "photo": "photos/croissant-sale-figues-chevre-pesto.jpg"
+  },
+  {
+    "id": "gnudis-ricotta-epinards",
+    "titre": "Gnudis ricotta et épinards",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 123 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "ricotta", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "epinards-surgeles", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "oeufs", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "parmesan", "quantite": 50, "unite": "g", "precision": "râpé" },
+      { "ingredient": "farine", "quantite": 4, "unite": "c. à soupe", "precision": "T55, + un peu pour fariner les gnudis" },
+      { "ingredient": "beurre", "quantite": 60, "unite": "g", "precision": null },
+      { "ingredient": "sauge", "quantite": null, "unite": null, "precision": "quelques feuilles" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Égoutter la ricotta pour enlever un maximum d'eau.",
+      "Faire revenir les épinards à la poêle pendant 10 min, jusqu'à ce qu'ils soient décongelés, puis les presser pour enlever un maximum d'eau.",
+      "Mélanger la ricotta avec les épinards, l'œuf, le parmesan et la farine. Saler, poivrer.",
+      "Former des boules avec vos mains puis les fariner.",
+      "Faire cuire les gnudis dans une casserole d'eau bouillante salée pendant quelques minutes. Ils remonteront à la surface lorsqu'ils seront cuits.",
+      "Pendant ce temps, faire fondre le beurre dans une poêle avec un filet d'huile d'olive et les feuilles de sauge.",
+      "Égoutter les gnudis et les faire revenir dans la poêle avec le beurre de sauge pendant quelques minutes. Saler, poivrer.",
+      "Servir avec un peu de parmesan."
+    ],
+    "notes": [
+      "Les gnudis, c'est la recette parfaite quand vous avez envie de raviolis mais que vous avez la flemme de les faire. C'est hyper simple à réaliser pour un résultat très gourmand.",
+      "Astuces : Utilisez des épinards congelés pour gagner du temps en préparation. Vous pouvez aussi servir les gnudis avec une sauce tomate toute prête !"
+    ],
+    "photo": "photos/gnudis-ricotta-epinards.jpg"
+  },
+  {
+    "id": "congee-express",
+    "titre": "Congee express",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 125 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "soupe",
+    "personnes": 2,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "riz-cuit", "quantite": 240, "unite": "g", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1.2, "unite": "l", "precision": null },
+      { "ingredient": "gingembre", "quantite": null, "unite": null, "precision": "2 cm, râpé" },
+      { "ingredient": "sauce-soja", "quantite": 5, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "champignon", "quantite": 120, "unite": "g", "precision": "mélange de champignons" },
+      { "ingredient": "oeufs", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "oignon-nouveau", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "coriandre", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "huile-de-sesame-grille", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Dans une grande casserole, porter à ébullition le bouillon de légumes, le gingembre et la sauce soja. Baisser le feu, puis ajouter le riz cuit. Cuire pendant 25 min tout en mélangeant régulièrement.",
+      "Émincer les champignons et les faire revenir dans une poêle avec un peu d'huile de sésame, du sel et du poivre. Laisser cuire pendant 10 min puis réserver.",
+      "Cuire les 2 œufs dans une casserole d'eau bouillante pendant 6 min. À la fin de la cuisson, plonger les œufs dans un bol d'eau glacée puis les écaler. Réserver.",
+      "Émincer l'oignon nouveau.",
+      "Verser le riz dans 2 bols. Servir avec les champignons, les œufs mollets coupés en 2, un peu de coriandre et l'oignon nouveau."
+    ],
+    "notes": [
+      "Un reste de riz et c'est parti !",
+      "Astuces : Cette recette est parfaite pour utiliser les restes de riz cuit de la semaine. N'hésitez pas à vous tourner vers des mélanges de champignons surgelés."
+    ],
+    "photo": "photos/congee-express.jpg"
+  },
+  {
+    "id": "ramen-express-sauce-coco",
+    "titre": "Ramen express sauce coco",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 126 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "soupe",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "nouilles-instantanees", "quantite": 250, "unite": "g", "precision": null },
+      { "ingredient": "lait-de-coco", "quantite": 400, "unite": "ml", "precision": null },
+      { "ingredient": "oeufs", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": "épluchée" },
+      { "ingredient": "oignon-nouveau", "quantite": 1, "unite": "pièce", "precision": "cébette" },
+      { "ingredient": "gingembre", "quantite": null, "unite": null, "precision": "2 cm, râpé" },
+      { "ingredient": "beurre-de-cacahuete", "quantite": 3, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "mais", "quantite": 150, "unite": "g", "precision": "en bocal ou en conserve" },
+      { "ingredient": "sauce-soja", "quantite": 3, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "graines-de-sesame", "quantite": null, "unite": null, "precision": "quelques graines" },
+      { "ingredient": "coriandre", "quantite": null, "unite": null, "precision": "des feuilles" },
+      { "ingredient": "cacahuetes", "quantite": 1, "unite": "c. à soupe", "precision": "concassées" }
+    ],
+    "etapes": [
+      "Cuire les œufs dans une casserole d'eau bouillante pendant 6 min. Puis les passer sous l'eau froide, écaler et réserver.",
+      "Hacher la gousse d'ail.",
+      "Émincer la cébette.",
+      "Dans une casserole, porter à ébullition l'eau, l'ail, le gingembre râpé, le beurre de cacahuète, le lait de coco et la sauce soja.",
+      "Pendant ce temps, faire cuire les nouilles dans une casserole d'eau bouillante le temps indiqué sur le paquet.",
+      "Ajouter les nouilles cuites puis le maïs au bouillon précédent.",
+      "Servir le ramen avec un œuf coupé en 2, quelques graines de sésame, un peu de cébette émincée, de la coriandre et des cacahuètes concassées."
+    ],
+    "notes": [
+      "Vite fait et trop bien fait. On a toujours un paquet de nouilles instantanées dans le placard. Pour éviter la recette trop plan plan, voici un ramen express savoureux !",
+      "Pour le bouillon : 400 ml d'eau.",
+      "Astuces : Choisissez le beurre de cacahuète le plus naturel possible et utilisez du maïs en conserve pour gagner du temps."
+    ],
+    "photo": "photos/ramen-express-sauce-coco.jpg"
+  },
+  {
+    "id": "veloute-chou-fleur-gorgonzola",
+    "titre": "Velouté de chou-fleur au gorgonzola",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 129 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "soupe",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 35 },
+    "ingredients": [
+      { "ingredient": "chou-fleur", "quantite": 900, "unite": "g", "precision": null },
+      { "ingredient": "pomme-de-terre", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "l", "precision": null },
+      { "ingredient": "lait", "quantite": 40, "unite": "cl", "precision": "entier" },
+      { "ingredient": "gorgonzola", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Laver le chou-fleur et séparer les fleurettes.",
+      "Éplucher les pommes de terre et les couper en gros cubes.",
+      "Éplucher, émincer et faire revenir l'oignon dans une sauteuse avec un peu d'huile d'olive. Puis, ajouter le chou-fleur et les pommes de terre. Saler, poivrer et laisser mijoter pendant 5 min.",
+      "Ajouter le bouillon de légumes, couvrir et laisser cuire pendant 25 min.",
+      "Mixer la soupe avec le lait et le gorgonzola.",
+      "Rectifier l'assaisonnement et servir bien chaud avec les croûtons maison."
+    ],
+    "notes": [
+      "Voici un bon moyen de faire manger du chou-fleur à celui qui n'aime pas les légumes sans se prendre la tête.",
+      "Topping : des croûtons maison (p. 15).",
+      "Astuce : Je sais que le gorgonzola est un fromage qui divise un peu, mais croyez-moi il apporte une petite touche gourmande et relève délicieusement le chou-fleur. Pour les plus réticents, vous pouvez le remplacer par du mascarpone ou du fromage de chèvre."
+    ],
+    "photo": "photos/veloute-chou-fleur-gorgonzola.jpg"
+  },
+  {
+    "id": "quinotto-champignons-oeufs-plat",
+    "titre": "Quinotto aux champignons et œufs au plat",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 130 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "quinoa", "quantite": 450, "unite": "g", "precision": null },
+      { "ingredient": "champignon", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "oeufs", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1.5, "unite": "l", "precision": null },
+      { "ingredient": "vin-blanc-sec", "quantite": 10, "unite": "cl", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "comte", "quantite": 100, "unite": "g", "precision": "râpé" },
+      { "ingredient": "beurre", "quantite": 30, "unite": "g", "precision": "froid" },
+      { "ingredient": "vinaigre-blanc", "quantite": 1, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "persil", "quantite": null, "unite": null, "precision": "quelques brins" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Couper les champignons en lamelles. Éplucher et ciseler l'oignon.",
+      "Dans une poêle, faire revenir l'oignon dans un peu d'huile d'olive pendant quelques minutes. Puis ajouter les champignons, du sel, du poivre et laisser cuire pendant quelques minutes. Ajouter le quinoa et mélanger 2 min sur feu vif jusqu'à ce qu'il devienne nacré.",
+      "Mélanger le bouillon très chaud avec le vin blanc, puis en mettre une louche dans la poêle pour hydrater le quinoa. Bien mélanger. Ajouter le bouillon chaud petit à petit jusqu'à ce qu'il soit absorbé.",
+      "Au bout de 16 min, quand le quinoa est encore al dente, éteindre le feu puis incorporer le comté râpé et le beurre froid. Laisser reposer 2 min, le temps qu'ils fondent.",
+      "Au dernier moment, préparer les œufs au plat dans une poêle avec un peu d'huile d'olive.",
+      "Servir le quinotto avec un œuf au plat, des pois chiches croustillants et un peu de persil ciselé."
+    ],
+    "notes": [
+      "Pour changer du traditionnel risotto, voici le quinotto !",
+      "Topping : 2 c. à soupe de pois chiches croustillants (p. 14)",
+      "Astuce : Vous pouvez remplacer les champignons par les légumes que vous avez sous la main et remplacer le comté par du parmesan, du fromage de chèvre, ou encore du gruyère !"
+    ],
+    "photo": "photos/quinotto-champignons-oeufs-plat.jpg"
+  },
+  {
+    "id": "curry-halloumi-pois-chiches-epinards",
+    "titre": "Curry halloumi, pois chiches et épinards",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 133 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "curry",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "pois-chiches", "quantite": 500, "unite": "g", "precision": "cuits, en bocal ou en conserve" },
+      { "ingredient": "halloumi", "quantite": 250, "unite": "g", "precision": null },
+      { "ingredient": "epinards-surgeles", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "lait-de-coco", "quantite": 400, "unite": "ml", "precision": null },
+      { "ingredient": "pate-de-curry", "quantite": 1, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "gingembre-en-poudre", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "riz-cuit", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "coriandre", "quantite": null, "unite": null, "precision": "quelques feuilles pour servir" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Éplucher et émincer l'oignon et l'ail puis les faire revenir dans une casserole avec un peu d'huile d'olive.",
+      "Ajouter les épices et les épinards. Saler, poivrer et laisser mijoter quelques minutes, jusqu'à ce que les épinards soient décongelés.",
+      "Puis ajouter les pois chiches et le lait de coco. Laisser mijoter pendant 20 min. Rectifier l'assaisonnement si besoin.",
+      "Pendant ce temps, couper le halloumi en tranches et le griller à la poêle pendant quelques minutes.",
+      "Servir le curry avec le halloumi, un peu de coriandre et du riz."
+    ],
+    "notes": [
+      "Un curry rapide et rempli de saveurs !",
+      "Astuce : Gagnez un maximum de temps pour ce plat en utilisant des pois chiches en conserve et des épinards surgelés !"
+    ],
+    "photo": "photos/curry-halloumi-pois-chiches-epinards.jpg"
+  },
+  {
+    "id": "crumble-potimarron-chevre",
+    "titre": "Crumble potimarron et fromage de chèvre",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 134 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 45 },
+    "ingredients": [
+      { "ingredient": "potimarron", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "fromage-de-chevre", "quantite": 150, "unite": "g", "precision": "bûche" },
+      { "ingredient": "oignon-rouge", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "beurre", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "farine", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "noisettes", "quantite": 50, "unite": "g", "precision": null },
+      { "ingredient": "parmesan", "quantite": 80, "unite": "g", "precision": "râpé" },
+      { "ingredient": "curry", "quantite": 2, "unite": "c. à café", "precision": "en poudre" },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Laver et couper le potimarron en cubes.",
+      "Éplucher et émincer l'oignon.",
+      "Dans un plat allant au four, mettre le potimarron et l'oignon, les arroser d'huile d'olive, ajouter du curry, du sel et du poivre. Cuire pendant 15 min à 180 °C.",
+      "Pendant ce temps, préparer le crumble : mélanger le beurre, la farine, les noisettes concassées et le parmesan. Saler, poivrer.",
+      "Ajouter le fromage de chèvre coupé en lamelles sur le potimarron, puis parsemer de crumble.",
+      "Cuire à nouveau pendant 30 min à 180 °C, jusqu'à ce que le crumble soit doré.",
+      "Servir avec de la salade verte."
+    ],
+    "notes": [
+      "Le crumble est un plat ultra simple qui a toujours du succès, pour les petits comme pour les grands. Il se prépare en quelques minutes avec seulement 3 ingrédients : beurre, parmesan et farine. Vous pouvez ensuite le décliner à l'infini, en version sucrée ou salée comme ici."
+    ],
+    "photo": "photos/crumble-potimarron-chevre.jpg"
+  },
+  {
+    "id": "tarte-fine-pommes-de-terre-ricotta-thym",
+    "titre": "Tarte fine aux pommes de terre, ricotta et thym",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 136 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 40 },
+    "ingredients": [
+      { "ingredient": "pate-feuilletee", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "pomme-de-terre", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "ricotta", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "thym", "quantite": null, "unite": null, "precision": "frais" },
+      { "ingredient": "oignon", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Éplucher et émincer les oignons en fines lamelles. Les faire revenir dans une poêle avec un peu d'huile d'olive. Saler, poivrer et faire revenir à feu doux pendant quelques minutes jusqu'à ce qu'ils soient confits.",
+      "Dans un bol, mélanger les oignons confits avec la ricotta. Ajouter un filet d'huile d'olive, saler, poivrer et réserver.",
+      "Éplucher et couper les pommes de terre en fines lamelles à l'aide d'un couteau ou d'une mandoline. Réserver dans un saladier rempli d'eau.",
+      "Préchauffer le four à 180 °C.",
+      "Étaler la pâte feuilletée. Ajouter au centre le mélange ricotta/oignons en laissant un bord de 2 cm. Ajouter les pommes de terre en rosace. Arroser d'un filet d'huile d'olive, saler et poivrer. Ajouter un peu de thym frais.",
+      "Enfourner pour 40 min à 180 °C. Déguster tiède ou froid."
+    ],
+    "notes": [
+      "Astuce : Pour gagner du temps, utilisez une mandoline pour découper vos pommes de terre en lamelles, c'est beaucoup plus simple !"
+    ],
+    "photo": null
+  },
+  {
+    "id": "pizza-poires-gorgonzola",
+    "titre": "Pizza poires et gorgonzola",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 137 },
+    "saisons": ["automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "pate-a-pizza", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "poire", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "gorgonzola", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "mascarpone", "quantite": 50, "unite": "g", "precision": null },
+      { "ingredient": "ricotta", "quantite": 100, "unite": "g", "precision": null },
+      { "ingredient": "oignon-blanc", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "noisettes", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 220 °C.",
+      "Étaler la pâte à pizza.",
+      "Mélanger la ricotta avec le mascarpone, du sel, du poivre et un filet d'huile d'olive. Étaler ce mélange sur la pâte.",
+      "Couper la poire en fines lamelles, éplucher et émincer l'oignon puis concasser les noisettes.",
+      "Ajouter l'oignon, la poire, le gorgonzola et les noisettes sur la pâte à pizza. Terminer par un filet d'huile d'olive et enfourner pour 15 min à 220 °C jusqu'à ce que la pizza soit bien dorée.",
+      "Au moment de servir, ajouter le pesto."
+    ],
+    "notes": [
+      "Topping : 2 c. à soupe de pesto maison (p. 14).",
+      "Astuces : Utilisez une pâte à pizza toute prête pour gagner du temps. Vous pouvez même demander à votre boulanger un peu de pâte à pain crue. Si vous n'avez rien de tout ça sous la main, vous pouvez étaler la préparation sur des pains pitas tout prêts et passer le tout au four à 200 °C pendant 10 min."
+    ],
+    "photo": null
+  },
+  {
+    "id": "figues-rotie-miel-granola",
+    "titre": "Figues rôties au miel et granola",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 141 },
+    "saisons": ["automne"],
+    "categorie": "dessert",
+    "type": "au four",
+    "personnes": 2,
+    "personnes_texte": null,
+    "temps": { "preparation": 5, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "figue", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "miel", "quantite": 2, "unite": "c. à café", "precision": "liquide" },
+      { "ingredient": "yaourt-grec", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C.",
+      "Couper les figues en quartiers.",
+      "Arroser de miel et enfourner pour 15 min à 180 °C.",
+      "Servir tiède avec le yaourt à la grecque et le granola."
+    ],
+    "notes": [
+      "Les fruits rôtis constituent un dessert rapide et gourmand quand vous avez envie d'une touche sucrée pour finir le repas. Vous pouvez l'adapter avec plein d'autres fruits selon la saison : pêches, abricots, poires, fraises…",
+      "Topping : 2 c. à soupe de granola choco-noisette (p. 17)."
+    ],
+    "photo": null
+  },
+  {
+    "id": "mouhalabieh-fleur-oranger",
+    "titre": "Mouhalabieh à la fleur d'oranger",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 143 },
+    "saisons": ["automne"],
+    "categorie": "dessert",
+    "type": "au frais",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 5, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "fleur-d-oranger", "quantite": 2, "unite": "c. à soupe", "precision": "eau de fleur d'oranger" },
+      { "ingredient": "lait", "quantite": 50, "unite": "cl", "precision": "frais entier" },
+      { "ingredient": "sucre-en-poudre", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "fecule-de-mais", "quantite": 30, "unite": "g", "precision": null }
+    ],
+    "etapes": [
+      "Dans une casserole hors du feu, mélanger le lait avec le sucre et la fécule de maïs. Puis mettre sur le feu et porter à ébullition pendant 8 min environ, jusqu'à ce que la crème épaississe.",
+      "Éteindre le feu, ajouter l'eau de fleur d'oranger et mélanger à nouveau.",
+      "Laisser tiédir puis verser la préparation dans des verrines. Couvrir de film alimentaire et laisser reposer au frais pendant 5 h.",
+      "Au moment de servir, ajouter le dukkah sucré et déguster aussitôt."
+    ],
+    "notes": [
+      "Repos : 5 h au frais.",
+      "Si son nom peut paraître compliqué, ce dessert d'origine libanaise est pourtant très rapide à préparer. J'adore finir le repas sur une touche sucrée avec ce flan, qui ne nécessite pas de se lancer dans de la grande cuisine !",
+      "Topping : 2 c. à soupe de dukkah sucré (p. 17).",
+      "Astuce : Si vous n'aimez pas la fleur d'oranger ou voulez varier les plaisirs, vous pouvez la remplacer par de la vanille ou de l'eau de rose."
+    ],
+    "photo": "photos/mouhalabieh-fleur-oranger.jpg"
   }
 ]

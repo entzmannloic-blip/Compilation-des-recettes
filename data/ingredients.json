@@ -161,5 +161,20 @@
   { "id": "melon", "nom": "melon", "rayon": "Fruits", "saisons": [] },
   { "id": "orecchiette", "nom": "orecchiette", "rayon": "Épicerie", "saisons": [] },
   { "id": "pasteque", "nom": "pastèque", "rayon": "Fruits", "saisons": [] },
-  { "id": "myrtille", "nom": "myrtille", "rayon": "Fruits", "saisons": [] }
+  { "id": "myrtille", "nom": "myrtille", "rayon": "Fruits", "saisons": [] },
+  { "id": "croissant", "nom": "croissant", "rayon": "Boulangerie", "saisons": [] },
+  { "id": "figue", "nom": "figue", "rayon": "Fruits", "saisons": [] },
+  { "id": "gingembre", "nom": "gingembre", "rayon": "Légumes", "saisons": [] },
+  { "id": "sauce-soja", "nom": "sauce soja", "rayon": "Épicerie", "saisons": [] },
+  { "id": "nouilles-instantanees", "nom": "nouilles instantanées", "rayon": "Épicerie", "saisons": [] },
+  { "id": "beurre-de-cacahuete", "nom": "beurre de cacahuète", "rayon": "Épicerie", "saisons": [] },
+  { "id": "cacahuetes", "nom": "cacahuètes", "rayon": "Épicerie", "saisons": [] },
+  { "id": "pate-de-curry", "nom": "pâte de curry", "rayon": "Épicerie", "saisons": [] },
+  { "id": "gingembre-en-poudre", "nom": "gingembre en poudre", "rayon": "Épicerie", "saisons": [] },
+  { "id": "pate-a-pizza", "nom": "pâte à pizza", "rayon": "Crèmerie", "saisons": [] },
+  { "id": "mascarpone", "nom": "mascarpone", "rayon": "Crèmerie", "saisons": [] },
+  { "id": "fecule-de-mais", "nom": "fécule de maïs", "rayon": "Épicerie", "saisons": [] },
+  { "id": "kumquat", "nom": "kumquat", "rayon": "Fruits", "saisons": [] },
+  { "id": "kiwi", "nom": "kiwi", "rayon": "Fruits", "saisons": [] },
+  { "id": "vinaigre-blanc", "nom": "vinaigre blanc", "rayon": "Épicerie", "saisons": [] }
 ]
