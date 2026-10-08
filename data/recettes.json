@@ -2690,5 +2690,411 @@
       "Aubergines classiques : de petites aubergines violettes fermes, coupées en morceaux de 3 cm, avec 2 ou 3 minutes de plus à l'Air Fryer."
     ],
     "photo": "photos/aubergines-chinoises-ail-sauce-soja.jpg"
+  },
+  {
+    "id": "puree-courgettes-roties-congelable",
+    "titre": "Purée de courgettes rôties, épaisse et congelable",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/08/puree-de-courgettes-roties-epaisse-et-congelable.html/" },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 8,
+    "personnes_texte": "en accompagnement, environ 1,3 kg de purée",
+    "temps": { "preparation": 20, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "courgette", "quantite": 2, "unite": "kg", "precision": "congelées (environ 1,5 kg décongelées et égouttées), ou 1,8 kg de courgettes fraîches" },
+      { "ingredient": "oignon", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 5, "unite": "gousse", "precision": "non pelées" },
+      { "ingredient": "huile-d-olive", "quantite": 4, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "laurier", "quantite": 1, "unite": "pièce", "precision": "petite feuille" },
+      { "ingredient": "thym", "quantite": 2, "unite": "pièce", "precision": "branches, ou origan" },
+      { "ingredient": "piment-d-espelette", "quantite": 0.25, "unite": "c. à café", "precision": null },
+      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null }
+    ],
+    "etapes": [
+      "Courgettes congelées : les laisser décongeler dans une passoire, puis les presser dans un torchon pour retirer un maximum d'eau. Courgettes fraîches : les couper en deux, retirer le cœur graineux si elles sont grosses, les couper en cubes de 2 cm, saler très légèrement et laisser dégorger 20 à 30 minutes, puis les éponger.",
+      "Préchauffer le four à 200 °C, chaleur tournante.",
+      "Étaler les courgettes en couche fine sur une grande plaque, ou deux. Ajouter les oignons émincés, l'ail entier non pelé, l'huile, le thym, le laurier, le piment d'Espelette et le poivre (et le sel si les courgettes étaient congelées). Bien mélanger.",
+      "Enfourner environ 30 minutes en remuant une fois. Les courgettes doivent être tendres et légèrement dorées sur les bords, sans baigner dans le jus : sinon, prolonger de 5 à 10 minutes.",
+      "Retirer le laurier. Presser les gousses d'ail pour récupérer la pulpe.",
+      "Mixer les courgettes avec les oignons et l'ail rôti, sans bouillon. Si le mixeur peine, ajouter seulement 40 ml d'eau. Goûter et rectifier l'assaisonnement.",
+      "Ajouter une finition au choix (voir les notes), de préférence au moment de servir."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Finition au chèvre frais : 90 g de chèvre frais, 1 c. à café de jus de citron et 6 feuilles de menthe ciselées.",
+      "Finition à la ricotta : 140 g de ricotta, le zeste d'un demi-citron, 8 feuilles de basilic ciselées et du poivre.",
+      "Finition façon parmesan : 30 g de parmesan râpé, un filet d'huile d'olive, du zeste de citron et du poivre.",
+      "Finition à la crème : 2 c. à soupe de crème épaisse, 1 pincée de muscade et du poivre.",
+      "Ces quantités de finition sont prévues pour une boîte de 680 à 700 g de purée (4 personnes) : les diviser par deux pour 325 g.",
+      "Pour congeler, garder les finitions pour plus tard : la purée nature supporte mieux la congélation."
+    ],
+    "photo": "photos/puree-courgettes-roties-congelable.jpg"
+  },
+  {
+    "id": "aubergines-bonifacienne",
+    "titre": "Aubergines à la bonifacienne",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/08/aubergines-a-la-bonifacienne-la-recette-corse.html/" },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 35, "cuisson": 50 },
+    "ingredients": [
+      { "ingredient": "aubergine", "quantite": 4, "unite": "pièce", "precision": "moyennes" },
+      { "ingredient": "pain-de-campagne", "quantite": 165, "unite": "g", "precision": "rassis" },
+      { "ingredient": "lait", "quantite": 30, "unite": "cl", "precision": null },
+      { "ingredient": "oeufs", "quantite": 3, "unite": "pièce", "precision": null },
+      { "ingredient": "fromage-de-brebis", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "parmesan", "quantite": 75, "unite": "g", "precision": "vieux" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": "belles gousses" },
+      { "ingredient": "basilic", "quantite": 10, "unite": "g", "precision": "frais, pour la farce, plus quelques feuilles pour servir" },
+      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "sauce-tomate", "quantite": 700, "unite": "g", "precision": "de très bonne qualité" }
+    ],
+    "etapes": [
+      "Laver les aubergines, retirer le pédoncule et les couper en deux dans la longueur.",
+      "Les plonger dans une grande casserole d'eau salée bouillante et les cuire 15 minutes en les retournant à mi-cuisson, en deux fois si besoin. La chair doit être tendre mais la peau rester solide.",
+      "Bien égoutter les aubergines et les laisser tiédir. Pendant ce temps, couper le pain en morceaux et le laisser s'imbiber de lait.",
+      "Récupérer délicatement la chair des aubergines sans abîmer les peaux, puis la presser pour éliminer l'excès d'eau. Essorer aussi le pain et le mixer grossièrement. Râper (ou mixer) les fromages.",
+      "Préchauffer le four à 200 °C, chaleur tournante.",
+      "Dans un grand saladier, mélanger à la main la chair hachée, le pain, les œufs, les fromages, l'ail pressé, le basilic ciselé et un peu de poivre, sans saler. La farce doit rester moelleuse sans être détrempée.",
+      "Verser l'huile dans un grand plat, garnir généreusement les 8 demi-aubergines de farce et les ranger dans le plat.",
+      "Enfourner 20 à 25 minutes, jusqu'à ce que la farce soit prise et bien dorée.",
+      "Servir avec la sauce tomate chaude et des feuilles de basilic."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Pas de sel dans la farce : le fromage de brebis et le vieux parmesan suffisent.",
+      "Le plus important : bien égoutter et presser la chair des aubergines précuites.",
+      "Version traditionnelle : dorer les aubergines farcies à la poêle, côté farce d'abord. Ici, le four évite plusieurs fournées."
+    ],
+    "photo": "photos/aubergines-bonifacienne.jpg"
+  },
+  {
+    "id": "courgettes-chorizo-sauce-tomate",
+    "titre": "Courgettes au chorizo, sauce tomate légèrement épicée",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/08/courgettes-au-chorizo-sauce-tomate-legerement-epicee.html/" },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "mijoté",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "courgette", "quantite": 750, "unite": "g", "precision": "environ 3 moyennes" },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "chorizo", "quantite": 150, "unite": "g", "precision": "doux ou fort" },
+      { "ingredient": "coulis-de-tomates", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "paprika", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "piment-d-espelette", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "origan", "quantite": 0.5, "unite": "c. à café", "precision": "séché (facultatif)" },
+      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": "une pincée si nécessaire" }
+    ],
+    "etapes": [
+      "Retirer la peau du chorizo si besoin et le couper en rondelles. Couper les courgettes en dés de 2 cm, ciseler l'oignon et hacher l'ail.",
+      "Faire revenir le chorizo 4 à 5 minutes dans une sauteuse chaude, sans matière grasse, jusqu'à ce qu'il dore. Le retirer à l'écumoire et garder environ 1 c. à soupe de gras dans la sauteuse.",
+      "Ajouter l'oignon et le faire revenir 3 à 4 minutes à feu moyen. Ajouter l'ail, le paprika, le piment d'Espelette et l'origan, mélanger une trentaine de secondes sans brûler.",
+      "Ajouter les courgettes et les faire revenir 7 à 8 minutes à feu moyen-vif, jusqu'à ce qu'elles commencent à colorer.",
+      "Verser le coulis de tomates, couvrir et laisser mijoter environ 10 minutes à feu moyen-doux.",
+      "Couper chaque rondelle de chorizo en quatre, la remettre dans la sauteuse et poursuivre environ 5 minutes. Les courgettes doivent rester un peu fermes et bien enrobées de sauce.",
+      "Poivrer, goûter avant de saler (le chorizo l'est déjà), puis servir bien chaud avec du riz basmati, du quinoa ou de la semoule."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Sauce trop liquide : retirer le couvercle. Trop épaisse : ajouter 1 à 2 c. à soupe d'eau.",
+      "Le plat peut se préparer à l'avance quelques heures et se réchauffer doucement ; il se garde 2 jours au frais. La congélation est moins recommandée : les courgettes rendent de l'eau."
+    ],
+    "photo": "photos/courgettes-chorizo-sauce-tomate.jpg"
+  },
+  {
+    "id": "aubergines-roties-tomate-mozzarella",
+    "titre": "Aubergines rôties, tomate et mozzarella",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/08/aubergines-roties-tomate-et-mozzarella.html/" },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 2,
+    "personnes_texte": "en accompagnement",
+    "temps": { "preparation": 10, "cuisson": 45 },
+    "ingredients": [
+      { "ingredient": "aubergine", "quantite": 2, "unite": "pièce", "precision": "petites" },
+      { "ingredient": "sauce-tomate", "quantite": 300, "unite": "g", "precision": "arrabbiata au rayon frais, ou classique avec 1 pincée de piment de Cayenne" },
+      { "ingredient": "mozzarella", "quantite": 125, "unite": "g", "precision": "1 boule" },
+      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "ail-en-poudre", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "origan", "quantite": 1.5, "unite": "c. à café", "precision": "séché" },
+      { "ingredient": "basilic", "quantite": 10, "unite": "pièce", "precision": "feuilles fraîches, 8 à 12" },
+      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C, chaleur tournante.",
+      "Couper les aubergines en deux dans la longueur et quadriller la chair sans percer la peau. Les poser sur une plaque, chair vers le haut, les badigeonner d'1 c. à soupe d'huile et saler légèrement.",
+      "Enfourner 35 à 40 minutes : la pointe d'un couteau doit s'enfoncer très facilement (sinon, 5 minutes de plus).",
+      "Pendant ce temps, mélanger la sauce tomate avec l'ail en poudre et 1 c. à café d'origan. Poivrer et goûter avant de saler.",
+      "Poser les aubergines dans un plat, napper de sauce, ajouter la mozzarella déchirée. Mettre le reste de sauce et de mozzarella au fond du plat.",
+      "Arroser de l'huile restante et saupoudrer du reste d'origan. Remettre au four 8 à 10 minutes, jusqu'à ce que la mozzarella fonde et dore.",
+      "Parsemer de basilic ciselé à la sortie du four et servir tout de suite."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Choisir de petites aubergines fermes, lisses et brillantes : elles cuisent plus vite et sont plus fondantes.",
+      "Sans sauce arrabbiata, une sauce tomate nature avec 1 pincée de piment de Cayenne convient."
+    ],
+    "photo": "photos/aubergines-roties-tomate-mozzarella.jpg"
+  },
+  {
+    "id": "ratatouille-epices-cajun",
+    "titre": "Ratatouille aux épices cajun",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/08/ratatouille-aux-epices-cajun-inspiree-du-sud-des-etats-unis.html/" },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "mijoté",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 60 },
+    "ingredients": [
+      { "ingredient": "aubergine", "quantite": 700, "unite": "g", "precision": "2 moyennes" },
+      { "ingredient": "oignon", "quantite": 300, "unite": "g", "precision": "1 gros" },
+      { "ingredient": "poivron-rouge", "quantite": 200, "unite": "g", "precision": "1 poivron" },
+      { "ingredient": "poivron-vert", "quantite": 200, "unite": "g", "precision": "2 poivrons verts corne de bœuf" },
+      { "ingredient": "pomme-de-terre", "quantite": 400, "unite": "g", "precision": "3 moyennes" },
+      { "ingredient": "okra", "quantite": 100, "unite": "g", "precision": "facultatif" },
+      { "ingredient": "huile-d-olive", "quantite": 3, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "cumin", "quantite": 1, "unite": "c. à soupe", "precision": "graines" },
+      { "ingredient": "epices-cajun", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "piment-de-cayenne", "quantite": 1, "unite": "c. à café", "precision": "ou selon le goût" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "gingembre", "quantite": null, "unite": null, "precision": "frais, 3 cm" },
+      { "ingredient": "tomates-pelees", "quantite": 400, "unite": "g", "precision": "concassées, ou coulis de tomates" },
+      { "ingredient": "concentre-de-tomates", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 15, "unite": "cl", "precision": "ou eau, 15 à 20 cl" },
+      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null }
+    ],
+    "etapes": [
+      "Couper les aubergines et les pommes de terre (2 cm) en cubes, émincer l'oignon en gros dés, épépiner et couper les poivrons. Rincer les okras, retirer le pédoncule et les couper en tronçons de 2 à 3 cm.",
+      "Chauffer l'huile dans une grande cocotte. Faire revenir l'oignon 5 minutes avec une pincée de sel, jusqu'à ce qu'il soit translucide.",
+      "Ajouter les poivrons et cuire 5 minutes.",
+      "Ajouter les graines de cumin, les épices cajun, le piment, l'ail haché et le gingembre râpé. Mélanger 1 minute.",
+      "Incorporer les aubergines, les pommes de terre et les okras et faire revenir 8 à 10 minutes en remuant.",
+      "Verser les tomates concassées, le concentré et 15 cl de bouillon ou d'eau. Mélanger, couvrir et laisser mijoter à feu doux 35 à 40 minutes en remuant régulièrement.",
+      "Si le plat réduit trop, ajouter un peu de liquide ; si la sauce est trop abondante, retirer le couvercle quelques minutes.",
+      "Goûter, rectifier sel et poivre, puis servir bien chaud avec du pain de campagne, du riz ou de la semoule."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Les okras sont facultatifs. Sans eux, la recette reste savoureuse.",
+      "Encore meilleure le lendemain, quand les épices ont parfumé tous les légumes."
+    ],
+    "photo": "photos/ratatouille-epices-cajun.jpg"
+  },
+  {
+    "id": "courgettes-pois-chiches-tomate-basilic",
+    "titre": "Courgettes aux pois chiches, tomate, citron et basilic",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/05/courgettes-aux-pois-chiches-tomate-citron-et-basilic.html/" },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "mijoté",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "courgette", "quantite": 2, "unite": "pièce", "precision": "moyennes" },
+      { "ingredient": "poivron-rouge", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "pois-chiches", "quantite": 1, "unite": "boîte", "precision": "de 400 g, environ 265 g égouttés" },
+      { "ingredient": "sauce-tomate", "quantite": 150, "unite": "ml", "precision": null },
+      { "ingredient": "concentre-de-tomates", "quantite": 1, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "citron", "quantite": 0.5, "unite": "pièce", "precision": "jaune, pour le jus" },
+      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "origan", "quantite": 1, "unite": "c. à café", "precision": "séché" },
+      { "ingredient": "thym", "quantite": 0.5, "unite": "c. à café", "precision": "séché" },
+      { "ingredient": "basilic", "quantite": 9, "unite": "pièce", "precision": "feuilles fraîches, 8 à 10" },
+      { "ingredient": "piment-d-espelette", "quantite": 1, "unite": "pincée", "precision": "ou piment doux (facultatif), ou une pincée de poivre" },
+      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": null }
+    ],
+    "etapes": [
+      "Émincer l'oignon, couper le poivron épépiné en petits dés, hacher l'ail. Couper les courgettes en deux dans la longueur puis en demi-rondelles d'environ 1 cm, sans les tailler trop fin pour qu'elles gardent de la tenue.",
+      "Rincer et égoutter les pois chiches.",
+      "Chauffer l'huile dans une sauteuse ou une cocotte. Faire revenir l'oignon et le poivron avec une pincée de sel 7 à 8 minutes à feu moyen-vif.",
+      "Ajouter l'ail, l'origan et le thym, mélanger 1 minute sans brûler l'ail.",
+      "Ajouter les courgettes et cuire 8 à 10 minutes à feu assez vif en remuant souvent : elles doivent être tendres mais pas affaissées.",
+      "Ajouter les pois chiches, la sauce tomate et le concentré. Mélanger délicatement et laisser mijoter 5 minutes.",
+      "Ajouter le jus du demi-citron et le piment si on aime, goûter et rectifier l'assaisonnement.",
+      "Hors du feu, ajouter le basilic grossièrement ciselé. Servir bien chaud, avec du pain grillé frotté à l'ail, du riz, de la semoule ou du boulgour."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Plus gourmand : ajouter des olives noires, de la feta émiettée ou une cuillerée de yaourt grec citronné au moment de servir.",
+      "Se garde 2 jours au réfrigérateur et se réchauffe doucement."
+    ],
+    "photo": "photos/courgettes-pois-chiches-tomate-basilic.jpg"
+  },
+  {
+    "id": "aubergines-air-fryer-sauce-yaourt-menthe",
+    "titre": "Aubergines à l'air fryer, sauce yaourt à la menthe",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/07/aubergines-a-lair-fryer-sauce-yaourt-a-la-menthe.html/" },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "air fryer",
+    "personnes": 2,
+    "personnes_texte": "2 à 3 personnes",
+    "temps": { "preparation": 10, "cuisson": 18 },
+    "ingredients": [
+      { "ingredient": "aubergine", "quantite": 2, "unite": "pièce", "precision": "moyennes" },
+      { "ingredient": "huile-d-olive", "quantite": 4, "unite": "c. à soupe", "precision": "3 pour les aubergines, 1 pour la sauce, plus un filet pour servir" },
+      { "ingredient": "zaatar", "quantite": 1, "unite": "c. à café", "precision": "plus 1 c. à café pour servir" },
+      { "ingredient": "cumin", "quantite": 0.5, "unite": "c. à café", "precision": "moulu" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": "petites : 1 pour les aubergines, 1 pour la sauce, râpées" },
+      { "ingredient": "piment-d-espelette", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "sel", "quantite": 0.5, "unite": "c. à café", "precision": "plus 1 pincée pour la sauce" },
+      { "ingredient": "yaourt-grec", "quantite": 150, "unite": "g", "precision": "yaourt nature, grec ou à la grecque (ou labneh)" },
+      { "ingredient": "citron", "quantite": 1.5, "unite": "c. à soupe", "precision": "de jus" },
+      { "ingredient": "menthe", "quantite": 10, "unite": "pièce", "precision": "feuilles ciselées, plus 1/2 c. à soupe pour servir" },
+      { "ingredient": "grenade", "quantite": 2.5, "unite": "c. à soupe", "precision": "graines, 2 à 3 (facultatif)" }
+    ],
+    "etapes": [
+      "Couper les aubergines en cubes de 2 à 3 cm, sans les éplucher.",
+      "Les enrober dans un saladier avec 3 c. à soupe d'huile, le cumin, 1 gousse d'ail, le sel et le piment d'Espelette : elles doivent être brillantes, pas noyées.",
+      "Les disposer dans le panier de l'air fryer en une seule couche si possible (deux fournées sinon). Cuire 10 à 12 minutes à 190 °C, puis secouer le panier.",
+      "Ajouter le zaatar, mélanger et poursuivre 4 à 6 minutes, jusqu'à ce que les aubergines soient tendres à cœur avec quelques bords colorés.",
+      "Pendant ce temps, mélanger le yaourt, l'ail râpé, le jus de citron, 1 c. à soupe d'huile, une pincée de sel et la menthe ciselée. Goûter et ajuster, en allant doucement sur l'ail cru.",
+      "Servir les aubergines chaudes ou tièdes avec la sauce, un filet d'huile d'olive, de la menthe, une pincée de zaatar et, si on veut, des graines de grenade."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Bon avec du pain pita, du riz, de la semoule, des pois chiches grillés ou en mezze à l'apéritif.",
+      "Se prépare à l'avance : cuire les aubergines quelques heures avant et ajouter sauce, menthe et grenade au dernier moment.",
+      "Sans air fryer : four à 200 °C chaleur tournante, 25 à 30 minutes, en mélangeant à mi-cuisson.",
+      "Avec du labneh : détendre la sauce avec 1 c. à soupe d'eau froide, un peu de citron ou un filet d'huile."
+    ],
+    "photo": "photos/aubergines-air-fryer-sauce-yaourt-menthe.jpg"
+  },
+  {
+    "id": "frites-courgettes-air-fryer-yaourt-citron-confit",
+    "titre": "Frites de courgettes à l'air fryer, sauce yaourt au citron confit",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/06/frites-de-courgettes-a-lair-fryer-sauce-yaourt-au-citron-confit.html/" },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "air fryer",
+    "personnes": 2,
+    "personnes_texte": "2 à 3 personnes",
+    "temps": { "preparation": 20, "cuisson": 14 },
+    "ingredients": [
+      { "ingredient": "courgette", "quantite": 2, "unite": "pièce", "precision": "moyennes, jaunes et/ou vertes" },
+      { "ingredient": "farine", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "oeufs", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "parmesan", "quantite": 50, "unite": "g", "precision": "râpé" },
+      { "ingredient": "chapelure-panko", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": "1 en spray ou filet léger pour la cuisson, 1 pour la sauce" },
+      { "ingredient": "ail-en-poudre", "quantite": 0.5, "unite": "c. à café", "precision": null },
+      { "ingredient": "herbes-de-provence", "quantite": 0.5, "unite": "c. à café", "precision": "ou origan" },
+      { "ingredient": "piment-d-espelette", "quantite": 2, "unite": "pincée", "precision": "ou poivre : 1 pour la panure, 1 petite pour la sauce" },
+      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "yaourt-grec", "quantite": 1, "unite": "pièce", "precision": "yaourt grec ou nature bien épais" },
+      { "ingredient": "citron-confit", "quantite": 0.25, "unite": "pièce", "precision": "au sel, très finement haché" },
+      { "ingredient": "menthe", "quantite": null, "unite": null, "precision": "quelques feuilles" },
+      { "ingredient": "basilic", "quantite": null, "unite": null, "precision": "quelques feuilles" },
+      { "ingredient": "miel", "quantite": null, "unite": null, "precision": "1 mini filet, facultatif, si le citron confit est très salé" }
+    ],
+    "etapes": [
+      "Laver et sécher les courgettes, les couper en bâtonnets assez épais. Retirer à la petite cuillère le cœur aqueux si elles sont grosses. Éponger sur du papier absorbant si elles sont humides, sans les saler.",
+      "Préparer trois assiettes creuses : la farine ; l'œuf battu à la fourchette ; le parmesan mélangé au panko, à l'ail en poudre, aux herbes de Provence, au piment d'Espelette et au sel.",
+      "Passer les bâtonnets dans la farine, puis l'œuf, puis le mélange parmesan-panko en appuyant légèrement. La panure n'a pas besoin de tout couvrir.",
+      "Les déposer dans le panier de l'air fryer en une seule couche, sans trop les serrer, avec un léger spray ou filet d'huile.",
+      "Cuire 10 à 14 minutes à 190 °C, en les retournant délicatement à mi-cuisson, jusqu'à ce qu'ils soient tendres à cœur et dorés.",
+      "Pendant ce temps, mélanger le yaourt avec le citron confit haché, l'huile, la menthe et le basilic ciselés et le piment d'Espelette. Goûter avant de saler ; si c'est trop salé ou vif, ajouter le mini filet de miel.",
+      "Servir les frites dès la sortie de l'air fryer, avec la sauce à côté."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Sans air fryer : four à 210 °C chaleur tournante, 18 à 22 minutes, sur une plaque avec papier cuisson, en les retournant à mi-cuisson. Un peu moins croustillant."
+    ],
+    "photo": "photos/frites-courgettes-air-fryer-yaourt-citron-confit.jpg"
+  },
+  {
+    "id": "aubergines-fondantes-grecque-sauce-tomate",
+    "titre": "Aubergines fondantes à la grecque, sauce tomate à l'ail",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/05/aubergines-fondantes-a-la-grecque-sauce-tomate-a-lail.html/" },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": "en accompagnement, plat à gratin de 24 x 17 cm",
+    "temps": { "preparation": 20, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "aubergine", "quantite": 850, "unite": "g", "precision": "2 à 3 moyennes" },
+      { "ingredient": "sauce-tomate", "quantite": 400, "unite": "ml", "precision": "maison ou bon coulis de tomates" },
+      { "ingredient": "ail", "quantite": 3, "unite": "gousse", "precision": null },
+      { "ingredient": "laurier", "quantite": 2, "unite": "pièce", "precision": "feuilles" },
+      { "ingredient": "romarin", "quantite": 1, "unite": "c. à café", "precision": "séché (ou origan, ou thym)" },
+      { "ingredient": "huile-d-olive", "quantite": 8, "unite": "c. à soupe", "precision": "6 à 8 pour la cuisson des aubergines, plus 1 pour la sauce" },
+      { "ingredient": "sel", "quantite": 2, "unite": "pincée", "precision": null },
+      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": "du moulin" },
+      { "ingredient": "persil", "quantite": 1, "unite": "c. à soupe", "precision": "plat, ciselé" }
+    ],
+    "etapes": [
+      "Laver les aubergines, retirer le pédoncule et les couper en 6 ou 8 quartiers dans la longueur, puis chaque quartier en deux. Retirer un peu du centre s'il est très graineux.",
+      "Sécher les morceaux dans un torchon et les saler : bien secs, ils dorent mieux.",
+      "Cuisson à la poêle : chauffer 3 à 4 c. à soupe d'huile à feu moyen-vif, cuire les aubergines en une seule couche, par fournées d'environ 10 minutes en les retournant. Couvrir quelques minutes à mi-cuisson. Les égoutter sur du papier absorbant. (À l'air fryer : 2 c. à soupe d'huile, 15 à 18 minutes à 200 °C. Au four : 25 à 30 minutes à 200 °C.)",
+      "Préchauffer le four à 180 °C, chaleur tournante.",
+      "Pour la sauce, couper l'ail en fines lamelles et le faire revenir 1 minute à feu doux dans 1 c. à soupe d'huile, sans le colorer.",
+      "Ajouter la sauce tomate, le laurier, le romarin et du poivre. Laisser mijoter 5 minutes, goûter, et ajouter une petite pincée de sucre si elle est acide.",
+      "Disposer les aubergines dans un plat, napper de sauce sans les noyer, en laissant quelques morceaux visibles.",
+      "Enfourner environ 10 minutes. Parsemer de persil et servir chaud, tiède ou à température ambiante."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Choisir des aubergines fermes, brillantes et lourdes pour leur taille : les très grosses sont plus graineuses et plus amères.",
+      "Se garde 3 jours au réfrigérateur et peut se préparer quelques heures à l'avance ; souvent meilleur après un temps de repos.",
+      "Avec du pain frais, des olives et de la feta émiettée."
+    ],
+    "photo": "photos/aubergines-fondantes-grecque-sauce-tomate.jpg"
+  },
+  {
+    "id": "pois-gourmands-champignons-sauce-soja",
+    "titre": "Pois gourmands et champignons sautés à la sauce soja",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/05/pois-gourmands-et-champignons-sautes-a-la-sauce-soja.html/" },
+    "saisons": ["printemps", "été"],
+    "categorie": "plat",
+    "type": "au wok",
+    "personnes": 2,
+    "personnes_texte": "généreux",
+    "temps": { "preparation": 10, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "pois-gourmands", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "sel", "quantite": 1, "unite": "c. à café", "precision": "gros sel, pour l'eau de cuisson" },
+      { "ingredient": "champignon", "quantite": 250, "unite": "g", "precision": "de Paris" },
+      { "ingredient": "oignon-nouveau", "quantite": 2, "unite": "pièce", "precision": "cébettes" },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "gingembre", "quantite": null, "unite": null, "precision": "frais, un morceau de la taille de la gousse d'ail" },
+      { "ingredient": "sauce-soja", "quantite": 2, "unite": "c. à soupe", "precision": "claire, salée" },
+      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "citron-vert", "quantite": 0.5, "unite": "pièce", "precision": "pour le jus" },
+      { "ingredient": "graines-de-sesame", "quantite": 1, "unite": "c. à soupe", "precision": "grillées" },
+      { "ingredient": "sriracha", "quantite": 0.5, "unite": "c. à café", "precision": "facultatif" }
+    ],
+    "etapes": [
+      "Équeuter et rincer les pois gourmands. Les plonger 2 à 3 minutes dans une casserole d'eau salée bouillante (à partir de la reprise de l'ébullition), puis les égoutter et les rafraîchir sous l'eau froide pour garder leur couleur et leur croquant.",
+      "Nettoyer les champignons et les couper en quartiers ou en grosses lamelles. Émincer les cébettes en séparant le blanc du vert. Râper l'ail et le gingembre.",
+      "Chauffer l'huile dans une grande poêle ou un wok. Cuire les champignons 5 à 7 minutes à feu assez vif : ils rendent d'abord de l'eau, puis commencent à dorer.",
+      "Ajouter l'ail, le gingembre et le blanc des cébettes, et cuire 1 minute.",
+      "Ajouter les pois gourmands et les faire sauter 2 à 3 minutes : ils doivent rester légèrement croquants.",
+      "Verser la sauce soja et mélanger rapidement pour enrober.",
+      "Hors du feu, ajouter le jus du demi-citron vert, le vert des cébettes et les graines de sésame. Servir aussitôt, avec du riz ou des nouilles, et un peu de Sriracha si on aime."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Ne pas ajouter de sel : l'eau de cuisson des pois gourmands et la sauce soja en apportent déjà."
+    ],
+    "photo": "photos/pois-gourmands-champignons-sauce-soja.jpg"
   }
 ]

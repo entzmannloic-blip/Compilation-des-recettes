@@ -184,5 +184,19 @@
   { "id": "sauce-soja-foncee", "nom": "sauce soja foncée", "rayon": "Épicerie", "saisons": [] },
   { "id": "vin-de-riz-shaoxing", "nom": "vin de riz Shaoxing", "rayon": "Épicerie", "saisons": [] },
   { "id": "sriracha", "nom": "sauce Sriracha", "rayon": "Épicerie", "saisons": [] },
-  { "id": "vinaigre-de-riz-noir", "nom": "vinaigre de riz noir", "rayon": "Épicerie", "saisons": [] }
+  { "id": "vinaigre-de-riz-noir", "nom": "vinaigre de riz noir", "rayon": "Épicerie", "saisons": [] },
+  { "id": "aubergine", "nom": "aubergine", "rayon": "Légumes", "saisons": ["été", "automne"] },
+  { "id": "okra", "nom": "okra", "rayon": "Légumes", "saisons": ["été"] },
+  { "id": "laurier", "nom": "feuille de laurier", "rayon": "Herbes", "saisons": [] },
+  { "id": "fromage-de-brebis", "nom": "fromage de brebis", "rayon": "Crèmerie", "saisons": [] },
+  { "id": "chorizo", "nom": "chorizo", "rayon": "Boucherie", "saisons": [] },
+  { "id": "sauce-tomate", "nom": "sauce tomate", "rayon": "Épicerie", "saisons": [] },
+  { "id": "coulis-de-tomates", "nom": "coulis de tomates", "rayon": "Épicerie", "saisons": [] },
+  { "id": "ail-en-poudre", "nom": "ail en poudre", "rayon": "Épicerie", "saisons": [] },
+  { "id": "epices-cajun", "nom": "épices cajun", "rayon": "Épicerie", "saisons": [] },
+  { "id": "zaatar", "nom": "zaatar", "rayon": "Épicerie", "saisons": [] },
+  { "id": "herbes-de-provence", "nom": "herbes de Provence", "rayon": "Épicerie", "saisons": [] },
+  { "id": "citron-confit", "nom": "citron confit au sel", "rayon": "Épicerie", "saisons": [] },
+  { "id": "romarin", "nom": "romarin", "rayon": "Herbes", "saisons": [] },
+  { "id": "pois-gourmands", "nom": "pois gourmands", "rayon": "Légumes", "saisons": ["printemps", "été"] }
 ]
