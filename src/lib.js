@@ -8,7 +8,7 @@ export function normaliser(texte) {
     .replace(/œ/g, "oe")
     .replace(/æ/g, "ae")
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .trim();
 }
 
