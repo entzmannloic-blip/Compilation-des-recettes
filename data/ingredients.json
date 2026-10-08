@@ -177,5 +177,12 @@
   { "id": "kumquat", "nom": "kumquat", "rayon": "Fruits", "saisons": [] },
   { "id": "kiwi", "nom": "kiwi", "rayon": "Fruits", "saisons": [] },
   { "id": "vinaigre-blanc", "nom": "vinaigre blanc", "rayon": "Épicerie", "saisons": [] },
-  { "id": "courge-butternut", "nom": "courge butternut", "rayon": "Légumes", "saisons": ["automne", "hiver"] }
+  { "id": "courge-butternut", "nom": "courge butternut", "rayon": "Légumes", "saisons": ["automne", "hiver"] },
+  { "id": "aubergine-chinoise", "nom": "aubergine chinoise", "rayon": "Légumes", "saisons": ["été", "automne"] },
+  { "id": "huile-neutre", "nom": "huile neutre", "rayon": "Épicerie", "saisons": [] },
+  { "id": "sauce-d-huitre", "nom": "sauce d'huître", "rayon": "Épicerie", "saisons": [] },
+  { "id": "sauce-soja-foncee", "nom": "sauce soja foncée", "rayon": "Épicerie", "saisons": [] },
+  { "id": "vin-de-riz-shaoxing", "nom": "vin de riz Shaoxing", "rayon": "Épicerie", "saisons": [] },
+  { "id": "sriracha", "nom": "sauce Sriracha", "rayon": "Épicerie", "saisons": [] },
+  { "id": "vinaigre-de-riz-noir", "nom": "vinaigre de riz noir", "rayon": "Épicerie", "saisons": [] }
 ]

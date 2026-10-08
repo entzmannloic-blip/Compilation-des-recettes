@@ -2605,5 +2605,90 @@
       "Le miso est facultatif : il renforce le goût sans en changer la nature."
     ],
     "photo": "photos/soupe-champignons-butternut.jpg"
+  },
+  {
+    "id": "aubergines-chinoises-sautees-wok",
+    "titre": "Aubergines chinoises sautées au wok",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/08/aubergines-chinoises-sautees-au-wok.html/" },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "au wok",
+    "personnes": 4,
+    "personnes_texte": "en accompagnement",
+    "temps": { "preparation": 15, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "aubergine-chinoise", "quantite": 860, "unite": "g", "precision": "environ 6 aubergines longues" },
+      { "ingredient": "huile-neutre", "quantite": 3, "unite": "c. à soupe", "precision": "pour les aubergines, plus 1 c. à café pour le wok" },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": "petit" },
+      { "ingredient": "ail", "quantite": 3, "unite": "gousse", "precision": null },
+      { "ingredient": "oignon-nouveau", "quantite": 3, "unite": "pièce", "precision": "cébettes" },
+      { "ingredient": "sauce-d-huitre", "quantite": 3, "unite": "c. à soupe", "precision": "pour la sauce" },
+      { "ingredient": "sauce-soja", "quantite": 1.5, "unite": "c. à soupe", "precision": "claire, pour la sauce" },
+      { "ingredient": "sauce-soja-foncee", "quantite": 1.5, "unite": "c. à café", "precision": "pour la sauce" },
+      { "ingredient": "vin-de-riz-shaoxing", "quantite": 1.5, "unite": "c. à soupe", "precision": "pour la sauce" },
+      { "ingredient": "sucre-roux", "quantite": 1.5, "unite": "c. à café", "precision": "pour la sauce" },
+      { "ingredient": "fecule-de-mais", "quantite": 1.5, "unite": "c. à café", "precision": "pour la sauce" },
+      { "ingredient": "sriracha", "quantite": 0.5, "unite": "c. à café", "precision": "ou une bonne pincée de piment de Cayenne" }
+    ],
+    "etapes": [
+      "Préparer tous les ingrédients avant de commencer : la sauce et le wok vont très vite.",
+      "Préchauffer l'Air Fryer 5 minutes à 200 °C. Laver et sécher les aubergines, retirer les extrémités, les couper en gros morceaux et les enrober des 3 c. à soupe d'huile dans un saladier.",
+      "Cuire les aubergines en une seule couche, sans les entasser, 8 à 11 minutes à 200 °C en secouant le panier au bout de 4 minutes. Prévoir deux fournées. Elles doivent être tendres à cœur et légèrement dorées, pas croustillantes.",
+      "Dans un bol, mélanger la sauce d'huître, les deux sauces soja, le vin de riz, le sucre, la Sriracha, 120 ml d'eau et la fécule jusqu'à dissolution complète.",
+      "Éplucher l'oignon et le couper en lamelles épaisses. Hacher l'ail. Émincer les cébettes en séparant le blanc du vert.",
+      "Faire chauffer 1 c. à café d'huile dans un wok ou une grande poêle. Faire revenir l'oignon 2 à 3 minutes à feu assez vif, puis ajouter l'ail et le blanc des cébettes 1 minute.",
+      "Remuer la sauce juste avant de la verser, laisser frémir et épaissir 20 à 30 secondes. Ajouter les aubergines et mélanger délicatement 1 à 2 minutes. Si la sauce épaissit trop, ajouter 1 à 2 c. à soupe d'eau.",
+      "Hors du feu, ajouter le vert des cébettes et servir tout de suite avec du riz blanc ou du riz jasmin."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Sans Air Fryer : four à 220 °C chaleur tournante, 20 à 25 minutes, en retournant à mi-cuisson.",
+      "Sans vin de Shaoxing : même quantité de vin blanc sec, ou d'eau. Ne pas confondre avec le vinaigre de riz.",
+      "Sans sauce d'huître : 1 c. à soupe de sauce soja, 2 c. à soupe d'eau et 1 c. à café de sucre roux, sans le sucre prévu dans la sauce.",
+      "Sans sauce soja foncée : prendre la sauce soja habituelle.",
+      "Aubergines classiques : les choisir petites ou moyennes, les couper en morceaux de 3 cm, compter quelques minutes de plus (25 à 30 minutes au four)."
+    ],
+    "photo": "photos/aubergines-chinoises-sautees-wok.jpg"
+  },
+  {
+    "id": "aubergines-chinoises-ail-sauce-soja",
+    "titre": "Aubergines chinoises à l'ail et sauce soja",
+    "origine": { "type": "web", "source": "Papilles et Pupilles", "url": "https://www.papillesetpupilles.fr/2026/08/aubergines-chinoises-fondantes-a-lail-et-a-la-sauce-soja.html/" },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "au wok",
+    "personnes": 4,
+    "personnes_texte": "avec du riz",
+    "temps": { "preparation": 20, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "aubergine-chinoise", "quantite": 700, "unite": "g", "precision": "environ 5 aubergines" },
+      { "ingredient": "huile-neutre", "quantite": 3, "unite": "c. à soupe", "precision": "plus 1 c. à café pour le wok" },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": "fin, 1/3 de c. à café" },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": "noir, 1/3 de c. à café" },
+      { "ingredient": "oignon-nouveau", "quantite": 2, "unite": "pièce", "precision": "cébettes" },
+      { "ingredient": "graines-de-sesame", "quantite": 1, "unite": "c. à soupe", "precision": "grillées (facultatif)" },
+      { "ingredient": "vinaigre-de-riz-noir", "quantite": 1.5, "unite": "c. à soupe", "precision": "ou vinaigre de riz classique, pour la sauce" },
+      { "ingredient": "sauce-soja", "quantite": 1, "unite": "c. à soupe", "precision": "salée, pour la sauce" },
+      { "ingredient": "sucre-roux", "quantite": 1, "unite": "c. à café", "precision": "pour la sauce" },
+      { "ingredient": "ail", "quantite": 3, "unite": "gousse", "precision": "belles gousses" },
+      { "ingredient": "sriracha", "quantite": 0.5, "unite": "c. à café", "precision": "jusqu'à 1 c. à café (facultatif), ou une pincée de piment de Cayenne" }
+    ],
+    "etapes": [
+      "Préchauffer l'Air Fryer 5 minutes à 200 °C. Laver et sécher les aubergines, retirer les extrémités et les couper en morceaux d'environ 3 cm, en biais, en tournant l'aubergine à chaque coupe pour obtenir des morceaux irréguliers.",
+      "Mélanger les morceaux avec les 3 c. à soupe d'huile, le sel et le poivre dans un saladier.",
+      "Cuire en une seule couche, sans entasser, 7 minutes à 200 °C en secouant le panier au bout de 4 minutes. Prévoir deux ou trois fournées. Les morceaux doivent être dorés sur les arêtes et tendres à cœur : prolonger de 1 à 3 minutes si besoin.",
+      "Pendant ce temps, hacher finement l'ail et émincer les cébettes en séparant le blanc du vert.",
+      "Mélanger dans un petit bol le vinaigre de riz noir, la sauce soja, le sucre et la Sriracha. Commencer par une demi-cuillère de Sriracha et goûter.",
+      "Faire chauffer 1 c. à café d'huile dans un wok à feu moyen. Faire revenir l'ail et le blanc des cébettes 15 à 20 secondes sans les colorer.",
+      "Verser le mélange de sauce et laisser frémir environ 20 secondes. Ajouter les aubergines et remuer délicatement environ 1 minute.",
+      "Hors du feu, ajouter le vert des cébettes et les graines de sésame. Servir tout de suite avec du riz blanc, du riz jasmin ou des nouilles."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Les aubergines peuvent être cuites quelques heures à l'avance : les réchauffer 2 à 3 minutes à 200 °C avant de finir au wok.",
+      "Sans Air Fryer : four à 220 °C chaleur tournante, 20 à 25 minutes, en retournant à mi-cuisson.",
+      "Aubergines classiques : de petites aubergines violettes fermes, coupées en morceaux de 3 cm, avec 2 ou 3 minutes de plus à l'Air Fryer."
+    ],
+    "photo": "photos/aubergines-chinoises-ail-sauce-soja.jpg"
   }
 ]
