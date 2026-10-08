@@ -20,7 +20,7 @@
 html { -webkit-text-size-adjust: 100%; scrollbar-color: var(--line) transparent; }
 body { background: var(--page); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.5; margin: 0; overflow-x: hidden; }
 ::selection { background: var(--accent-wash); color: var(--ink); }
-input, button { caret-color: var(--accent); }
+input, button, select { caret-color: var(--accent); }
 a { text-underline-offset: 3px; }
 .app { max-width: 480px; margin: 0 auto; padding: 0 16px calc(96px + env(safe-area-inset-bottom, 0px)); }
 @media (min-width: 700px) { .app { max-width: 640px; } }
@@ -35,16 +35,24 @@ h2.section { margin: 36px 0 14px; }
 .meta { color: var(--ink3); font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; margin: 0; }
 .meta b { color: var(--ink2); font-weight: 700; }
 
-/* Filtres : rubriques soulignées, comme dans une table des matières */
-.rubriques { display: flex; gap: 22px; flex-wrap: wrap; margin: 0 0 6px; border-bottom: 1px solid var(--line); }
-.rubriques[hidden] { display: none; }
-.rubrique { border: 0; border-bottom: 2px solid transparent; background: none; color: var(--ink3); padding: 10px 0 8px; min-height: 44px; font: 600 .9375rem var(--sans); cursor: pointer; margin-bottom: -1px; }
-.rubrique:hover { color: var(--ink); }
-.rubrique[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--accent); }
-input[type=search] { width: 100%; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 2px; padding: 12px 14px; min-height: 48px; font: 1rem var(--sans); margin-bottom: 4px; }
+/* Filtres : un bouton qui ouvre un panneau de puces */
+input[type=search] { width: 100%; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 2px; padding: 12px 14px; min-height: 48px; font: 1rem var(--sans); }
 input[type=search]::placeholder { color: var(--ink3); }
-.interrupteur { display: flex; align-items: center; gap: 12px; font-size: .9375rem; color: var(--ink2); min-height: 48px; cursor: pointer; }
-.interrupteur input { width: 22px; height: 22px; accent-color: var(--accent); }
+.rangee-filtres { display: flex; align-items: center; gap: 12px; margin: 10px 0 0; }
+.btn-filtres { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 18px; border: 1px solid var(--ink); background: transparent; color: var(--ink); border-radius: 2px; font: 700 .9375rem var(--sans); cursor: pointer; }
+.btn-filtres[aria-expanded="true"] { background: var(--ink); color: var(--page); }
+.pastille { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 99px; background: var(--accent); color: var(--on-accent); font-size: .75rem; line-height: 22px; text-align: center; }
+.pastille[hidden], .effacer[hidden], .panneau[hidden] { display: none; }
+.effacer { min-height: 48px; border: 0; background: none; color: var(--accent-deep); font: 600 .9375rem var(--sans); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.panneau { margin-top: 10px; padding: 6px 0 4px; border-top: 1px solid var(--ink); }
+.groupe { padding: 12px 0 4px; }
+.groupe-titre { display: block; margin: 0 0 8px; color: var(--ink3); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.puces { display: flex; flex-wrap: wrap; gap: 8px; }
+.puce { min-height: 44px; padding: 0 16px; border: 1px solid var(--line); background: var(--paper); color: var(--ink2); border-radius: 2px; font: 600 .9375rem var(--sans); cursor: pointer; }
+.puce:hover { border-color: var(--ink); color: var(--ink); }
+.puce[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.panneau .btn { margin: 18px 0 8px; }
+.choix { width: 100%; min-height: 48px; padding: 0 12px; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 2px; font: 1rem var(--sans); }
 
 /* Liste : un plat, une photo */
 .liste { display: grid; gap: 40px 28px; margin-top: 24px; }
@@ -73,7 +81,7 @@ a.carte .meta { font-size: .75rem; }
 .actions { display: flex; gap: 8px; margin-top: 14px; }
 .lien-action { flex: 1; display: grid; place-items: center; min-height: 48px; border: 1px solid var(--ink); background: transparent; color: var(--ink); border-radius: 2px; font: 700 .9375rem var(--sans); text-decoration: none; cursor: pointer; }
 .lien-action:hover { background: var(--ink); color: var(--page); }
-.vide { color: var(--ink3); text-align: center; padding: 32px 0; grid-column: 1 / -1; }
+.vide { color: var(--ink3); text-align: center; padding: 32px 0; grid-column: 1 / -1; display: grid; gap: 14px; justify-items: center; }
 .erreur { background: var(--warn-wash); color: var(--warn); font-weight: 600; border-radius: 2px; padding: 14px; margin-top: 24px; }
 
 /* Cartes simples (Livres, Ma semaine) : un filet d'encre en tête, comme un chapitre */
@@ -118,5 +126,5 @@ a.carte .meta { font-size: .75rem; }
 .barre a { color: var(--ink3); padding: 4px 2px; font-size: .75rem; font-weight: 600; display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; min-height: 48px; }
 .barre a[aria-current="page"] { color: var(--accent); }
 .barre svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .ing:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: -2px; }

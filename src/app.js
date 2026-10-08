@@ -1,6 +1,9 @@
 // Interface : De saison, fiche de recette, Livres. Tout le DOM est construit avec
 // createElement / textContent (jamais innerHTML avec des données).
-import { filtrerRecettes, typesDisponibles, saisonDuMois, facteur, quantiteAjustee, formaterQuantite } from "./lib.js";
+import {
+  filtrerRecettes, typesDisponibles, saisonDuMois, facteur, quantiteAjustee, formaterQuantite,
+  sourcesDisponibles, personnesDisponibles, ingredientsDisponibles,
+} from "./lib.js";
 import { chargerSemaine, sauverSemaine, basculer, definirPersonnes } from "./semaine.js";
 import { lireRoute } from "./routes.js";
 
@@ -22,7 +25,9 @@ const stockage = ouvrirStockage();
 let donnees = null; // { recettes, ingredients, livres }
 let semaine = {};
 // Filtres de l'écran « De saison », conservés pendant la session.
-const filtres = { saisonSeulement: true, categorie: "", type: "", recherche: "" };
+// saison : « auto » = la saison du moment, "" = toute l'année.
+const FILTRES_PAR_DEFAUT = { saison: "auto", livre: "", categorie: "", type: "", temps: 0, personnes: 0, ingredient: "" };
+const filtres = { ...FILTRES_PAR_DEFAUT, recherche: "", ouvert: false };
 // Nombre de personnes choisi sur la fiche, par recette (pour les recettes hors semaine).
 const personnesFiche = {};
 // Ingrédients cochés sur la fiche, par recette (le temps de la session).
@@ -134,42 +139,102 @@ function messageErreur(texte, avecRetour = false) {
 }
 
 // ---------- Écran « De saison » ----------
-function ecranSaison() {
-  const { recettes, ingredients } = donnees;
-  const saison = saisonDuMois(new Date());
-  const liste = h("div", { class: "liste" });
-  const sousTitre = h("p", { class: "sub" });
-  const zoneCategories = h("div", { class: "rubriques", role: "group", "aria-label": "Entrée ou plat" });
-  const zoneTypes = h("div", { class: "rubriques", role: "group", "aria-label": "Type de recette" });
+const SAISONS_PUCES = ["printemps", "été", "automne", "hiver"];
+const TEMPS_PUCES = [{ libelle: "30 min max", minutes: 30 }, { libelle: "1 h max", minutes: 60 }];
+const deSaison = (saison) => (saison === "printemps" ? "de printemps" : `d'${saison}`);
 
-  function chip(groupe, libelle, actif, quandClic) {
-    return h("button", { type: "button", class: "rubrique", "data-cle": `puce-${groupe}-${libelle}`, "aria-pressed": String(actif), onclick: quandClic }, libelle);
+function ecranSaison() {
+  const { recettes, ingredients, livres } = donnees;
+  const saisonActuelle = saisonDuMois(new Date());
+  const titre = h("h1", {});
+  const sousTitre = h("p", { class: "sub" });
+  const liste = h("div", { class: "liste" });
+  const panneau = h("div", { class: "panneau", id: "panneau-filtres" });
+  const pastille = h("span", { class: "pastille" });
+  const boutonFiltres = h("button", {
+    type: "button", class: "btn-filtres", "data-cle": "ouvrir-filtres", "aria-controls": "panneau-filtres",
+    onclick: () => { filtres.ouvert = !filtres.ouvert; actualiserPanneauVisible(); },
+  }, "Filtres", pastille);
+  const boutonVoir = h("button", {
+    type: "button", class: "btn", "data-cle": "voir-resultats",
+    onclick: () => { filtres.ouvert = false; actualiserPanneauVisible(); window.scrollTo(0, 0); },
+  });
+  const effacer = h("button", { type: "button", class: "effacer", "data-cle": "effacer-filtres", onclick: () => reinitialiser() }, "Tout effacer");
+  const choixIngredient = h("select", {
+    id: "filtre-ingredient", class: "choix", "data-cle": "filtre-ingredient",
+    onchange: (e) => { filtres.ingredient = e.target.value; actualiserTout(); },
+  },
+  h("option", { value: "" }, "Tous"),
+  ...ingredientsDisponibles(recettes, ingredients).map((i) => h("option", { value: i.id }, i.nom)));
+
+  const sources = sourcesDisponibles(recettes, livres);
+  const types = typesDisponibles(recettes);
+  const personnes = personnesDisponibles(recettes);
+
+  const nombreActifs = () => Object.keys(FILTRES_PAR_DEFAUT).filter((cle) => filtres[cle] !== FILTRES_PAR_DEFAUT[cle]).length;
+
+  function puce(cle, valeur, libelle) {
+    const actif = filtres[cle] === valeur;
+    return h("button", {
+      type: "button", class: "puce", "data-cle": `puce-${cle}-${valeur}`, "aria-pressed": String(actif),
+      onclick: () => { filtres[cle] = valeur; gardantLeFocus(actualiserPanneau); actualiserListe(); },
+    }, libelle);
+  }
+
+  function groupe(libelle, ...puces) {
+    return h("div", { class: "groupe", role: "group", "aria-label": libelle },
+      h("p", { class: "groupe-titre" }, libelle), h("div", { class: "puces" }, puces));
+  }
+
+  function actualiserPanneauVisible() {
+    panneau.hidden = !filtres.ouvert;
+    boutonFiltres.setAttribute("aria-expanded", String(filtres.ouvert));
+  }
+
+  function actualiserPanneau() {
+    choixIngredient.value = filtres.ingredient;
+    panneau.replaceChildren(...[
+      groupe("Saison", puce("saison", "auto", "De saison"), puce("saison", "", "Toutes"),
+        ...SAISONS_PUCES.map((x) => puce("saison", x, majuscule(x)))),
+      groupe("Catégorie", puce("categorie", "", "Toutes"), puce("categorie", "entrée", "Entrée"), puce("categorie", "plat", "Plat")),
+      sources.length > 1 ? groupe("Livre", puce("livre", "", "Tous"), ...sources.map((x) => puce("livre", x.id, x.titre))) : null,
+      types.length > 1 ? groupe("Type", puce("type", "", "Tous"), ...types.map((x) => puce("type", x, majuscule(x)))) : null,
+      groupe("Temps (préparation + cuisson)", puce("temps", 0, "Tous"), ...TEMPS_PUCES.map((x) => puce("temps", x.minutes, x.libelle))),
+      personnes.length > 1 ? groupe("Pour", puce("personnes", 0, "Tous"), ...personnes.map((n) => puce("personnes", n, `${n} personnes`))) : null,
+      h("div", { class: "groupe" },
+        h("label", { class: "groupe-titre", for: "filtre-ingredient" }, "Ingrédient"), choixIngredient),
+      boutonVoir].filter(Boolean));
+    const actifs = nombreActifs();
+    pastille.textContent = actifs ? String(actifs) : "";
+    pastille.hidden = actifs === 0;
+    effacer.hidden = actifs === 0;
   }
 
   function actualiserListe() {
+    const saison = filtres.saison === "auto" ? saisonActuelle : filtres.saison;
     const trouvees = filtrerRecettes(recettes, ingredients, {
-      saison: filtres.saisonSeulement ? saison : "",
-      categorie: filtres.categorie,
-      type: filtres.type,
-      recherche: filtres.recherche,
+      saison, categorie: filtres.categorie, type: filtres.type, recherche: filtres.recherche,
+      livre: filtres.livre, tempsMax: filtres.temps, personnes: filtres.personnes, ingredient: filtres.ingredient,
     });
-    sousTitre.textContent = `${majuscule(saison)} · ${trouvees.length} recette${trouvees.length > 1 ? "s" : ""}`;
+    titre.textContent = filtres.saison === "auto" ? "De saison" : saison ? `Recettes ${deSaison(saison)}` : "Toutes les recettes";
+    sousTitre.textContent = `${saison ? majuscule(saison) : "Toute l'année"} · ${trouvees.length} recette${trouvees.length > 1 ? "s" : ""}`;
+    boutonVoir.textContent = `Voir ${trouvees.length} recette${trouvees.length > 1 ? "s" : ""}`;
     liste.replaceChildren(
-      ...(trouvees.length ? trouvees.map(carteRecette) : [h("div", { class: "vide" }, "Aucune recette avec ces filtres.")])
-    );
+      ...(trouvees.length
+        ? trouvees.map(carteRecette)
+        : [h("div", { class: "vide" }, "Aucune recette avec ces filtres.",
+            h("button", { type: "button", class: "lien-action", onclick: () => reinitialiser() }, "Tout effacer"))]));
+    const actifs = nombreActifs();
+    pastille.textContent = actifs ? String(actifs) : "";
+    pastille.hidden = actifs === 0;
+    effacer.hidden = actifs === 0;
   }
 
-  function actualiserPuces() {
-    const choisir = (cle, valeur) => () => { filtres[cle] = valeur; gardantLeFocus(actualiserPuces); actualiserListe(); };
-    zoneCategories.replaceChildren(
-      chip("categorie", "Tout", filtres.categorie === "", choisir("categorie", "")),
-      chip("categorie", "Entrée", filtres.categorie === "entrée", choisir("categorie", "entrée")),
-      chip("categorie", "Plat", filtres.categorie === "plat", choisir("categorie", "plat")));
-    const types = typesDisponibles(recettes);
-    zoneTypes.hidden = types.length < 2; // un seul type : la rangée ne sert à rien
-    zoneTypes.replaceChildren(
-      chip("type", "Tous", filtres.type === "", choisir("type", "")),
-      ...types.map((t) => chip("type", majuscule(t), filtres.type === t, choisir("type", t))));
+  function actualiserTout() { actualiserPanneau(); actualiserListe(); }
+
+  function reinitialiser() {
+    Object.assign(filtres, FILTRES_PAR_DEFAUT);
+    gardantLeFocus(actualiserTout);
   }
 
   const recherche = h("input", {
@@ -177,18 +242,13 @@ function ecranSaison() {
     "aria-label": "Rechercher", autocomplete: "off", value: filtres.recherche,
     oninput: (e) => { filtres.recherche = e.target.value; actualiserListe(); },
   });
-  const interrupteur = h("input", {
-    type: "checkbox", id: "saison-seulement", checked: filtres.saisonSeulement,
-    onchange: (e) => { filtres.saisonSeulement = e.target.checked; actualiserListe(); },
-  });
-  interrupteur.checked = filtres.saisonSeulement;
 
-  actualiserPuces();
-  actualiserListe();
+  actualiserPanneauVisible();
+  actualiserTout();
   return h("div", {},
-    h("h1", {}, "De saison"), sousTitre, recherche,
-    h("label", { class: "interrupteur" }, interrupteur, "Seulement les recettes de saison"),
-    zoneCategories, zoneTypes, liste);
+    titre, sousTitre, recherche,
+    h("div", { class: "rangee-filtres" }, boutonFiltres, effacer),
+    panneau, liste);
 }
 
 // ---------- Fiche de recette ----------
