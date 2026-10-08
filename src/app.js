@@ -25,6 +25,14 @@ let semaine = {};
 const filtres = { saisonSeulement: true, categorie: "", type: "", recherche: "" };
 // Nombre de personnes choisi sur la fiche, par recette (pour les recettes hors semaine).
 const personnesFiche = {};
+// Ingrédients cochés sur la fiche, par recette (le temps de la session).
+const cocheesFiche = new Map();
+// Nombre d'écrans vus : tant qu'il n'y en a qu'un, « Retour » mène à la liste au lieu de quitter le site.
+let ecransVus = 0;
+function retourListe() {
+  if (ecransVus > 1) window.history.back();
+  else window.location.hash = "#/";
+}
 
 function h(tag, attrs = {}, ...enfants) {
   const el = document.createElement(tag);
@@ -91,15 +99,6 @@ function dessinerBarre(nomActif) {
 }
 
 // ---------- Éléments communs ----------
-function ouEstLaRecette(recette) {
-  const o = recette.origine;
-  if (o.type === "livre") {
-    const livre = donnees.livres.find((l) => l.id === o.livre);
-    return h("div", { class: "ou" }, "Livre ", h("b", {}, livre ? livre.titre : o.livre), `, page ${o.page}`);
-  }
-  return h("div", { class: "ou" }, h("span", { class: "tag web" }, "Internet"), o.source ? ` ${o.source}` : null);
-}
-
 function tempsTotal(recette) {
   const t = recette.temps;
   if (!t) return "";
@@ -107,13 +106,25 @@ function tempsTotal(recette) {
   return total > 0 ? `${total} min` : "";
 }
 
+// Photo du plat ; sans photo (livre pas encore photographié), un aplat avec l'initiale.
+function photoRecette(recette, premierPlan = false) {
+  if (!recette.photo) return h("div", { class: "photo vide", "aria-hidden": "true" }, recette.titre.charAt(0).toUpperCase());
+  return h("figure", { class: "photo" },
+    h("img", {
+      src: recette.photo, alt: recette.titre, width: 800, height: 800,
+      loading: premierPlan ? "eager" : "lazy", decoding: "async", fetchpriority: premierPlan ? "high" : null,
+    }));
+}
+
 function carteRecette(recette) {
-  return h("a", { class: "card carte", href: lienRecette(recette.id) },
-    h("div", { class: "ligne" }, h("h2", {}, recette.titre), h("span", { class: "ou" }, tempsTotal(recette))),
-    h("div", { class: "tags" },
-      h("span", { class: "tag" }, majuscule(recette.categorie)),
-      h("span", { class: "tag" }, majuscule(recette.type))),
-    ouEstLaRecette(recette));
+  const o = recette.origine;
+  const livre = o.type === "livre" ? donnees.livres.find((l) => l.id === o.livre) : null;
+  const lieu = o.type === "livre" ? `${livre ? livre.titre : o.livre} · page ${o.page}` : (o.source || "Internet");
+  const temps = tempsTotal(recette);
+  return h("a", { class: "carte", href: lienRecette(recette.id) },
+    photoRecette(recette),
+    h("h2", {}, recette.titre),
+    h("p", { class: "meta" }, lieu, temps ? ` · ${temps}` : ""));
 }
 
 function messageErreur(texte, avecRetour = false) {
@@ -126,13 +137,13 @@ function messageErreur(texte, avecRetour = false) {
 function ecranSaison() {
   const { recettes, ingredients } = donnees;
   const saison = saisonDuMois(new Date());
-  const liste = h("div", { class: "stack" });
+  const liste = h("div", { class: "liste" });
   const sousTitre = h("p", { class: "sub" });
-  const zoneCategories = h("div", { class: "chips", role: "group", "aria-label": "Entrée ou plat" });
-  const zoneTypes = h("div", { class: "chips", role: "group", "aria-label": "Type de recette" });
+  const zoneCategories = h("div", { class: "rubriques", role: "group", "aria-label": "Entrée ou plat" });
+  const zoneTypes = h("div", { class: "rubriques", role: "group", "aria-label": "Type de recette" });
 
   function chip(groupe, libelle, actif, quandClic) {
-    return h("button", { type: "button", class: "chip", "data-cle": `puce-${groupe}-${libelle}`, "aria-pressed": String(actif), onclick: quandClic }, libelle);
+    return h("button", { type: "button", class: "rubrique", "data-cle": `puce-${groupe}-${libelle}`, "aria-pressed": String(actif), onclick: quandClic }, libelle);
   }
 
   function actualiserListe() {
@@ -154,9 +165,11 @@ function ecranSaison() {
       chip("categorie", "Tout", filtres.categorie === "", choisir("categorie", "")),
       chip("categorie", "Entrée", filtres.categorie === "entrée", choisir("categorie", "entrée")),
       chip("categorie", "Plat", filtres.categorie === "plat", choisir("categorie", "plat")));
+    const types = typesDisponibles(recettes);
+    zoneTypes.hidden = types.length < 2; // un seul type : la rangée ne sert à rien
     zoneTypes.replaceChildren(
       chip("type", "Tous", filtres.type === "", choisir("type", "")),
-      ...typesDisponibles(recettes).map((t) => chip("type", majuscule(t), filtres.type === t, choisir("type", t))));
+      ...types.map((t) => chip("type", majuscule(t), filtres.type === t, choisir("type", t))));
   }
 
   const recherche = h("input", {
@@ -225,9 +238,9 @@ function ecranRecette(idBrut) {
     const o = recette.origine;
     const livre = o.type === "livre" ? donnees.livres.find((l) => l.id === o.livre) : null;
 
-    const blocOu = o.type === "livre"
-      ? h("div", { class: "pill-ou" }, `Livre ${livre ? livre.titre : o.livre}, page ${o.page}`)
-      : h("div", { class: "pill-ou" }, "Source : ",
+    const lieu = o.type === "livre"
+      ? h("p", { class: "ou" }, "Livre ", h("b", {}, livre ? livre.titre : o.livre), `, page ${o.page}`)
+      : h("p", { class: "ou" }, "Source : ",
           /^https?:\/\//i.test(o.url) ? h("a", { href: o.url, target: "_blank", rel: "noopener noreferrer" }, o.source) : o.source);
 
     const t = recette.temps;
@@ -235,40 +248,56 @@ function ecranRecette(idBrut) {
       ? [t.preparation ? `${t.preparation} min` : "", t.cuisson ? `cuisson ${t.cuisson} min` : ""].filter(Boolean).join(" · ")
       : "";
 
+    const cochees = cocheesFiche.get(id) ?? new Set();
+    const ligneIngredient = (ligne, i) => {
+      const caseACocher = h("input", {
+        type: "checkbox", "data-cle": `coche-${i}`, checked: cochees.has(i),
+        onchange: (e) => {
+          const ensemble = cocheesFiche.get(id) ?? new Set();
+          if (e.target.checked) ensemble.add(i); else ensemble.delete(i);
+          cocheesFiche.set(id, ensemble);
+          e.target.closest("label").classList.toggle("fait", e.target.checked);
+        },
+      });
+      caseACocher.checked = cochees.has(i);
+      return h("label", { class: `ing${cochees.has(i) ? " fait" : ""}` },
+        caseACocher,
+        h("span", { class: "nom" }, nomsIngredients.get(ligne.ingredient) ?? ligne.ingredient,
+          ligne.precision ? h("small", {}, ` (${ligne.precision})`) : null),
+        h("span", { class: "qte" }, formaterQuantite(quantiteAjustee(ligne.quantite, mult), ligne.unite)));
+    };
+
     conteneur.replaceChildren(
-      h("a", { class: "retour", href: "#/" }, "‹ Retour"),
-      h("h1", { class: "titre-recette" }, recette.titre),
-      h("div", { class: "tags", style: "margin-top:0" },
-        h("span", { class: "tag" }, majuscule(recette.categorie)),
-        h("span", { class: "tag" }, majuscule(recette.type)),
-        recette.saisons.map((s) => h("span", { class: "tag" }, majuscule(s)))),
-      blocOu,
-      h("p", { class: "sub" },
-        `Recette du livre pour ${recette.personnes} personne${recette.personnes > 1 ? "s" : ""}`,
-        recette.personnes_texte ? ` (${recette.personnes_texte})` : ""),
-      h("div", { class: "card" },
-        h("div", { class: "ligne", style: "align-items:center" },
+      h("div", { class: "fiche-tete" },
+        h("button", { type: "button", class: "retour", onclick: retourListe }, "‹ Retour"),
+        photoRecette(recette, true),
+        h("h1", { class: "titre-recette" }, recette.titre),
+        h("p", { class: "meta" }, majuscule(recette.categorie), " · ", recette.saisons.join(", ")),
+        lieu,
+        h("div", { class: "portions" },
           h("b", {}, "Pour"),
           h("div", { class: "pas" },
             h("button", { type: "button", "data-cle": "pas-moins", "aria-label": "Moins de personnes", onclick: () => changerPersonnes(-1) }, "−"),
             compteur,
-            h("button", { type: "button", "data-cle": "pas-plus", "aria-label": "Plus de personnes", onclick: () => changerPersonnes(1) }, "+"),
-            h("span", { class: "ou", style: "margin:0" }, personnes > 1 ? "personnes" : "personne"))),
-        h("div", { style: "margin-top:6px" },
-          recette.ingredients.map((ligne) =>
-            h("div", { class: "ing" },
-              h("span", {}, nomsIngredients.get(ligne.ingredient) ?? ligne.ingredient,
-                ligne.precision ? h("small", {}, ` (${ligne.precision})`) : null),
-              h("span", { class: "qte" }, formaterQuantite(quantiteAjustee(ligne.quantite, mult), ligne.unite)))))),
-      h("h2", { class: "section" }, "Préparation", temps ? ` · ${temps}` : ""),
-      ...recette.etapes.map((texte, i) =>
-        h("div", { class: "etape" }, h("span", {}, String(i + 1)), h("div", {}, texte))),
-      recette.notes && recette.notes.length
-        ? h("div", {}, h("h2", { class: "section" }, "Notes"),
-            h("ul", { class: "notes" }, recette.notes.map((n) => h("li", {}, n))))
-        : null,
-      h("button", { type: "button", "data-cle": "bascule-semaine", class: `btn${dansSemaine ? " alt" : ""}`, onclick: basculerSemaine },
-        dansSemaine ? "Retirer de ma semaine" : "Ajouter à ma semaine"));
+            h("button", { type: "button", "data-cle": "pas-plus", "aria-label": "Plus de personnes", onclick: () => changerPersonnes(1) }, "+")),
+          h("span", { class: "ou" }, personnes > 1 ? "personnes" : "personne")),
+        h("p", { class: "note-livre" },
+          `Recette du livre pour ${recette.personnes} personne${recette.personnes > 1 ? "s" : ""}`,
+          recette.personnes_texte ? ` (${recette.personnes_texte})` : ""),
+        h("button", { type: "button", "data-cle": "bascule-semaine", class: `btn${dansSemaine ? " alt" : ""}`, onclick: basculerSemaine },
+          dansSemaine ? "Retirer de ma semaine" : "Ajouter à ma semaine")),
+      h("div", { class: "fiche-corps" },
+        h("section", {},
+          h("h2", { class: "section" }, "Ingrédients"),
+          recette.ingredients.map(ligneIngredient)),
+        h("section", {},
+          h("h2", { class: "section" }, "Préparation", temps ? ` · ${temps}` : ""),
+          ...recette.etapes.map((texte, i) =>
+            h("div", { class: "etape" }, h("span", {}, String(i + 1)), h("div", {}, texte))),
+          recette.notes && recette.notes.length
+            ? h("div", {}, h("h2", { class: "section" }, "Notes"),
+                h("ul", { class: "notes" }, recette.notes.map((n) => h("li", {}, n))))
+            : null)));
     compteur.textContent = String(personnes);
   }
 
@@ -371,7 +400,9 @@ function afficher() {
     livres: ecranLivres,
     recette: () => ecranRecette(route.id),
   };
+  ecransVus += 1;
   dessinerBarre(route.nom === "recette" ? "saison" : route.nom);
+  vue.className = "app" + (route.nom === "saison" ? " large" : route.nom === "recette" ? " fiche-large" : "");
   vue.replaceChildren(ecrans[route.nom]());
   window.scrollTo(0, 0);
 }

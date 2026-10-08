@@ -1,72 +1,122 @@
-/* Mêmes codes que la maquette : cartes claires, accent vert herbe, titres de recette en Georgia. */
+/* Livre de cuisine imprimé : blanc cassé, encre, un seul rouge ; Bodoni Moda pour les titres, la police du système pour tout le reste. */
+@font-face { font-family: "Bodoni Moda"; src: url(../fonts/bodoni-moda.woff2) format("woff2"); font-weight: 400 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Bodoni Moda"; src: url(../fonts/bodoni-moda-italic.woff2) format("woff2"); font-weight: 400 900; font-style: italic; font-display: swap; }
 :root {
-  --page: #f2f4ef; --paper: #ffffff; --ink: #20281d; --ink2: #4b5645; --ink3: #5f6a58; --line: #e2e6dc;
-  --accent: #4d7c0f; --accent-deep: #3f6212; --accent-wash: #ecf5dc; --on-accent: #ffffff;
-  --info: #0369a1; --info-wash: #e0f2fe; --warn: #b45309; --warn-wash: #fef3c7;
-  --sans: system-ui, -apple-system, "Segoe UI", sans-serif; --serif: Georgia, "Times New Roman", serif;
+  --page: #f6f1e8; --paper: #fbf8f2; --ink: #1a1612; --ink2: #4a4238; --ink3: #675e52; --line: #d8cfbf;
+  --accent: #b3202a; --accent-deep: #8f1a22; --accent-wash: #f0dcd5; --on-accent: #ffffff;
+  --info: #0369a1; --info-wash: #e0f2fe; --warn: #8a4b08; --warn-wash: #f6e7c4;
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Bodoni Moda", Georgia, "Times New Roman", serif;
+  color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --page: #14170f; --paper: #1d2117; --ink: #ecefe6; --ink2: #b9c1ae; --ink3: #98a28c; --line: #2c3324;
-    --accent: #9ccc4f; --accent-deep: #b7de72; --accent-wash: #26331a; --on-accent: #14170f;
+    --page: #15110e; --paper: #1d1814; --ink: #f3ece0; --ink2: #cfc5b5; --ink3: #a89d8d; --line: #3a3229;
+    --accent: #f06a6f; --accent-deep: #ff9a9e; --accent-wash: #3a1d1f; --on-accent: #15110e;
     --info: #7dd3fc; --info-wash: #0c2a3d; --warn: #fbbf24; --warn-wash: #3a2c0a;
   }
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scrollbar-color: var(--line) transparent; }
 body { background: var(--page); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.5; margin: 0; overflow-x: hidden; }
+::selection { background: var(--accent-wash); color: var(--ink); }
+input, button { caret-color: var(--accent); }
+a { text-underline-offset: 3px; }
 .app { max-width: 480px; margin: 0 auto; padding: 0 16px calc(96px + env(safe-area-inset-bottom, 0px)); }
 @media (min-width: 700px) { .app { max-width: 640px; } }
-h1 { font-size: 1.75rem; line-height: 1.12; font-weight: 800; margin: 20px 0 4px; overflow-wrap: anywhere; }
-h1.titre-recette { font-family: var(--serif); }
-h2 { font-family: var(--serif); font-size: 1.0625rem; line-height: 1.22; margin: 0; overflow-wrap: anywhere; }
-h2.section { margin: 18px 0 10px; }
-.sub { color: var(--ink3); font-size: .875rem; margin: 0 0 14px; }
-.card { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
-.stack { display: flex; flex-direction: column; gap: 10px; }
-.chips { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 10px; }
-.chip { border: 1px solid var(--line); background: var(--paper); color: var(--ink2); border-radius: 99px; padding: 6px 12px; font: 600 .8125rem var(--sans); cursor: pointer; }
-.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
-.tag { display: inline-block; border-radius: 99px; padding: 2px 9px; font-size: .75rem; font-weight: 700; background: var(--accent-wash); color: var(--accent-deep); }
-.tag.web { background: var(--info-wash); color: var(--info); }
-.tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
-.ou { font-size: .8125rem; color: var(--ink3); margin-top: 6px; }
-.ou b { color: var(--ink2); }
-input[type=search] { width: 100%; border: 1px solid var(--line); background: var(--paper); color: var(--ink); border-radius: 10px; padding: 10px 12px; font: 1rem var(--sans); margin-bottom: 10px; }
-.interrupteur { display: flex; align-items: center; gap: 8px; font-size: .875rem; color: var(--ink2); margin-bottom: 12px; min-height: 32px; }
-.interrupteur input { width: 20px; height: 20px; accent-color: var(--accent); }
-.btn { display: block; width: 100%; border: 0; background: var(--accent); color: var(--on-accent); border-radius: 10px; padding: 12px; font: 700 1rem var(--sans); cursor: pointer; margin-top: 8px; }
-.btn.alt { background: var(--paper); color: var(--accent-deep); border: 1px solid var(--accent); }
-.ligne { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+@media (min-width: 900px) { .app.large { max-width: 1120px; } .app.fiche-large { max-width: 980px; } }
+
+/* Titres : Bodoni Moda, contraste fort */
+h1, h2, .titre-recette { font-family: var(--display); font-optical-sizing: auto; font-weight: 500; overflow-wrap: anywhere; text-wrap: balance; }
+h1 { font-size: 2.5rem; line-height: 1.05; letter-spacing: -0.01em; margin: 28px 0 6px; }
+h2 { font-size: 1.5rem; line-height: 1.15; margin: 0; }
+h2.section { margin: 36px 0 14px; }
+.sub { color: var(--ink3); font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 18px; }
+.meta { color: var(--ink3); font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; margin: 0; }
+.meta b { color: var(--ink2); font-weight: 700; }
+
+/* Filtres : rubriques soulignées, comme dans une table des matières */
+.rubriques { display: flex; gap: 22px; flex-wrap: wrap; margin: 0 0 6px; border-bottom: 1px solid var(--line); }
+.rubriques[hidden] { display: none; }
+.rubrique { border: 0; border-bottom: 2px solid transparent; background: none; color: var(--ink3); padding: 10px 0 8px; min-height: 44px; font: 600 .9375rem var(--sans); cursor: pointer; margin-bottom: -1px; }
+.rubrique:hover { color: var(--ink); }
+.rubrique[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+input[type=search] { width: 100%; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 2px; padding: 12px 14px; min-height: 48px; font: 1rem var(--sans); margin-bottom: 4px; }
+input[type=search]::placeholder { color: var(--ink3); }
+.interrupteur { display: flex; align-items: center; gap: 12px; font-size: .9375rem; color: var(--ink2); min-height: 48px; cursor: pointer; }
+.interrupteur input { width: 22px; height: 22px; accent-color: var(--accent); }
+
+/* Liste : un plat, une photo */
+.liste { display: grid; gap: 40px 28px; margin-top: 24px; }
+@media (min-width: 640px) { .liste { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .liste { grid-template-columns: repeat(3, 1fr); } }
 a.carte { display: block; color: inherit; text-decoration: none; }
-a.carte:hover { border-color: var(--accent); }
-.retour { display: inline-block; color: var(--accent-deep); font-weight: 700; font-size: .9375rem; padding: 14px 0 0; text-decoration: none; }
-.pill-ou { background: var(--accent-wash); color: var(--accent-deep); border-radius: 10px; padding: 10px 12px; font-weight: 700; margin: 12px 0; overflow-wrap: anywhere; }
-.pill-ou a { color: inherit; }
-.etape { display: flex; gap: 10px; margin: 0 0 10px; }
-.etape > span { flex: none; width: 24px; height: 24px; border-radius: 99px; background: var(--accent-wash); color: var(--accent-deep); font-weight: 800; font-size: .8125rem; display: grid; place-items: center; }
-.etape > div { min-width: 0; overflow-wrap: anywhere; }
-.ing { display: flex; justify-content: space-between; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); }
-.ing:last-child { border: 0; }
-.ing > span:first-child { min-width: 0; overflow-wrap: anywhere; }
-.ing small { color: var(--ink3); }
-.qte { font-variant-numeric: tabular-nums; color: var(--ink2); white-space: nowrap; }
-.pas { display: flex; align-items: center; gap: 10px; }
-.pas button { width: 40px; height: 40px; border-radius: 99px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font-size: 1.2rem; cursor: pointer; }
-.pas b { min-width: 2ch; text-align: center; font-variant-numeric: tabular-nums; }
-.notes { margin: 0; padding-left: 20px; }
-.notes li { margin-bottom: 8px; overflow-wrap: anywhere; }
-.actions { display: flex; gap: 8px; margin-top: 12px; }
-.lien-action { flex: 1; display: grid; place-items: center; min-height: 44px; border: 1px solid var(--line); background: var(--paper); color: var(--accent-deep); border-radius: 10px; font: 700 .9375rem var(--sans); text-decoration: none; cursor: pointer; }
-.lien-action:hover { border-color: var(--accent); }
-.vide { color: var(--ink3); text-align: center; padding: 24px 0; }
-.erreur { background: var(--warn-wash); color: var(--warn); font-weight: 600; border-radius: 10px; padding: 14px; margin-top: 24px; }
-.livre-ligne { display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
+.photo { margin: 0; aspect-ratio: 1; background: var(--accent-wash); overflow: hidden; display: block; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo.vide { display: grid; place-items: center; font-family: var(--display); font-style: italic; font-size: 5rem; color: var(--accent); }
+a.carte h2 { margin: 14px 0 6px; transition: color .15s ease-out; }
+a.carte:hover h2 { color: var(--accent); }
+a.carte .meta { font-size: .75rem; }
+
+/* Origine, étiquettes, actions */
+.tag { display: inline-block; border-radius: 2px; padding: 2px 8px; font-size: .75rem; font-weight: 700; letter-spacing: .04em; background: var(--accent-wash); color: var(--accent-deep); }
+.tag.web { background: var(--info-wash); color: var(--info); }
+.ou { font-size: .8125rem; color: var(--ink3); }
+.ou b { color: var(--ink2); }
+.btn { display: block; width: 100%; border: 1px solid var(--accent); background: var(--accent); color: var(--on-accent); border-radius: 2px; min-height: 48px; padding: 12px; font: 700 1rem var(--sans); cursor: pointer; }
+.btn.alt { background: transparent; color: var(--accent-deep); }
+.btn:hover { background: var(--accent-deep); border-color: var(--accent-deep); color: var(--on-accent); }
+.btn.alt:hover { background: var(--accent-wash); color: var(--accent-deep); }
+.ligne { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.retour { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink2); font-weight: 600; font-size: .9375rem; text-decoration: none; background: none; border: 0; padding: 0; font-family: var(--sans); cursor: pointer; }
+.retour:hover { color: var(--accent); }
+.actions { display: flex; gap: 8px; margin-top: 14px; }
+.lien-action { flex: 1; display: grid; place-items: center; min-height: 48px; border: 1px solid var(--ink); background: transparent; color: var(--ink); border-radius: 2px; font: 700 .9375rem var(--sans); text-decoration: none; cursor: pointer; }
+.lien-action:hover { background: var(--ink); color: var(--page); }
+.vide { color: var(--ink3); text-align: center; padding: 32px 0; grid-column: 1 / -1; }
+.erreur { background: var(--warn-wash); color: var(--warn); font-weight: 600; border-radius: 2px; padding: 14px; margin-top: 24px; }
+
+/* Cartes simples (Livres, Ma semaine) : un filet d'encre en tête, comme un chapitre */
+.stack { display: flex; flex-direction: column; gap: 28px; }
+.card { background: transparent; border: 0; border-top: 2px solid var(--ink); padding: 14px 0 0; }
+.livre-ligne { display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 48px; padding: 8px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
 .livre-ligne:last-child { border: 0; }
-.livre-ligne:hover span:first-child { color: var(--accent-deep); }
-.barre { position: fixed; left: 0; right: 0; bottom: 0; background: var(--paper); border-top: 1px solid var(--line); padding: 6px 0 calc(6px + env(safe-area-inset-bottom, 0px)); }
+.livre-ligne:hover span:first-child { color: var(--accent); }
+
+/* Fiche : pensée pour la cuisine */
+.fiche-tete { display: grid; gap: 4px; }
+.fiche-tete .photo { margin: 0 -16px; aspect-ratio: 4 / 3; }
+.fiche-tete .titre-recette { font-size: 2.5rem; margin: 22px 0 10px; }
+.portions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 22px 0 14px; padding: 12px 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); }
+.pas { display: flex; align-items: center; gap: 12px; }
+.pas button { width: 44px; height: 44px; border-radius: 2px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font: 400 1.5rem var(--sans); cursor: pointer; }
+.pas button:hover { background: var(--ink); color: var(--page); }
+.pas b { min-width: 2ch; text-align: center; font-family: var(--display); font-size: 1.75rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.note-livre { color: var(--ink3); font-size: .8125rem; margin: 0 0 14px; }
+.ing { display: flex; align-items: center; gap: 14px; min-height: 52px; padding: 8px 0; border-bottom: 1px solid var(--line); cursor: pointer; }
+.ing input { flex: none; width: 24px; height: 24px; accent-color: var(--accent); }
+.ing .nom { flex: 1; min-width: 0; overflow-wrap: anywhere; font-size: 1.0625rem; }
+.ing small { color: var(--ink3); font-size: .875rem; }
+.ing.fait .nom { color: var(--ink3); text-decoration: line-through; text-decoration-color: var(--accent); }
+.qte { font-variant-numeric: tabular-nums; color: var(--ink2); white-space: nowrap; font-weight: 600; }
+.etape { display: flex; gap: 16px; margin: 0 0 22px; max-width: 62ch; }
+.etape > span { flex: none; width: 2rem; font-family: var(--display); font-style: italic; font-size: 2.25rem; line-height: 1; color: var(--accent); font-weight: 500; font-variant-numeric: lining-nums; }
+.etape > div { min-width: 0; overflow-wrap: anywhere; font-size: 1.125rem; line-height: 1.55; }
+.notes { margin: 0; padding-left: 20px; max-width: 62ch; color: var(--ink2); }
+.notes li { margin-bottom: 8px; overflow-wrap: anywhere; }
+@media (min-width: 900px) {
+  .fiche-tete { grid-template-columns: 1fr 1fr; column-gap: 48px; align-items: center; }
+  .fiche-tete > :not(.photo) { grid-column: 2; }
+  .fiche-tete .photo { margin: 0; aspect-ratio: 1; grid-column: 1; grid-row: 1 / span 7; }
+  .fiche-corps { display: grid; grid-template-columns: 380px 1fr; column-gap: 64px; align-items: start; margin-top: 16px; }
+  .fiche-corps h2.section { margin-top: 24px; }
+}
+
+/* Barre du bas */
+.barre { position: fixed; left: 0; right: 0; bottom: 0; background: var(--paper); border-top: 1px solid var(--ink); padding: 6px 0 calc(6px + env(safe-area-inset-bottom, 0px)); }
 .barre-int { max-width: 640px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
-.barre a { color: var(--ink3); padding: 4px 2px; font-size: .6875rem; font-weight: 600; display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; min-height: 44px; }
+.barre a { color: var(--ink3); padding: 4px 2px; font-size: .75rem; font-weight: 600; display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; min-height: 48px; }
 .barre a[aria-current="page"] { color: var(--accent); }
-.barre svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.barre svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ing:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: -2px; }
