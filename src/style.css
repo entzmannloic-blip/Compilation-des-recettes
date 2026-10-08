@@ -5,6 +5,7 @@
   --ombre: 0 1px 3px rgba(60, 64, 67, .3);
   --info: #0369a1; --info-wash: #e0f2fe; --warn: #b06000; --warn-wash: #fef7e0;
   --sans: "Google Sans", Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: Georgia, "Times New Roman", serif; /* titres de recettes : aucune police à télécharger */
   color-scheme: light;
 }
 * { box-sizing: border-box; }
@@ -80,7 +81,7 @@ input[type=search]::placeholder { color: var(--ink2); }
 .photo.vide { display: grid; place-items: center; background: var(--accent-wash); color: var(--accent); }
 .photo.vide svg { width: 40%; height: 40%; stroke: currentColor; fill: none; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; opacity: .45; }
 .carte-bandeau { padding: 8px 2px 0; }
-.carte-bandeau h2 { font-size: 1rem; font-weight: 500; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-wrap: pretty; }
+.carte-bandeau h2 { font-family: var(--serif); font-size: 1.07rem; font-weight: 400; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-wrap: pretty; }
 .carte-lien:hover h2 { color: var(--accent); }
 .carte-temps { display: block; margin-top: 2px; color: var(--ink3); font-size: .86rem; }
 
@@ -128,7 +129,7 @@ input[type=search]::placeholder { color: var(--ink2); }
 .nb { display: flex; flex-direction: column; align-items: center; min-width: 34px; line-height: 1.1; }
 .nb small { color: var(--ink3); font-size: .86rem; }
 .fiche-titre { margin: 16px 0 0; }
-.fiche-titre .titre-recette { font-size: 1.43rem; line-height: 1.2; margin: 0 0 2px; }
+.fiche-titre .titre-recette { font-family: var(--serif); font-size: 1.57rem; font-weight: 400; line-height: 1.15; margin: 0 0 2px; }
 .fiche-titre p { margin: 0; color: var(--ink2); }
 .infos { display: grid; grid-template-columns: minmax(84px, 30%) 1fr; gap: 8px 12px; margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--line); }
 .infos dt { color: var(--ink2); }
@@ -170,7 +171,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .cuisine { padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
 .cuisine-tete { display: flex; align-items: center; gap: 8px; padding: calc(10px + env(safe-area-inset-top, 0px)) 0 0; }
 .cuisine-tete .rond { flex: none; background: var(--gris); }
-.cuisine-titre { font-size: 1rem; font-weight: 500; text-align: left; margin: 0; }
+.cuisine-titre { font-family: var(--serif); font-size: 1.14rem; font-weight: 400; text-align: left; margin: 0; }
 .cuisine-progres { margin: 18px 0 8px; color: var(--accent); font-weight: 600; }
 .cuisine-barre { height: 4px; border-radius: 99px; background: var(--gris); overflow: hidden; }
 .cuisine-barre span { display: block; height: 100%; background: var(--accent); border-radius: 99px; }
