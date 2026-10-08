@@ -122,9 +122,23 @@ export function quantiteAjustee(quantite, multiplicateur) {
 }
 
 /** Texte affiché : « 200 g », « 0,5 bouquet », « 3 » (pièce), « au goût ». */
+// Fractions courantes en cuisine, seulement pour les unités qu'on compte (pas pour g, ml…).
+const FRACTIONS = [[0.25, "¼"], [1 / 3, "⅓"], [0.5, "½"], [2 / 3, "⅔"], [0.75, "¾"]];
+const UNITES_COMPTEES = [null, "", "pièce", "bouquet", "gousse", "pincée", "boîte", "c. à soupe", "c. à café"];
+
+function nombreLisible(quantite, unite) {
+  const arrondi = arrondir2(quantite);
+  if (UNITES_COMPTEES.includes(unite ?? null)) {
+    const entier = Math.floor(arrondi);
+    const fraction = FRACTIONS.find(([valeur]) => Math.abs(arrondi - entier - valeur) < 0.011);
+    if (fraction) return entier > 0 ? `${entier} ${fraction[1]}` : fraction[1];
+  }
+  return String(arrondi).replace(".", ",");
+}
+
 export function formaterQuantite(quantite, unite) {
   if (quantite === null) return "au goût";
-  const nombre = String(arrondir2(quantite)).replace(".", ",");
+  const nombre = nombreLisible(quantite, unite);
   if (!unite || unite === "pièce") return nombre;
   return `${nombre} ${unite}`;
 }

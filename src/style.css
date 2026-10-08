@@ -81,9 +81,11 @@ a.carte:hover { background: var(--accent-hover); }
 .tag.web { background: var(--info-wash); color: var(--info); }
 .ou { font-size: .875rem; color: var(--ink3); }
 .ou b { color: var(--ink2); }
-.btn { display: block; width: 100%; border: 1px solid var(--accent); background: var(--accent); color: var(--on-accent); border-radius: 99px; min-height: 48px; padding: 12px; font: 700 1rem var(--sans); cursor: pointer; }
+.btn { display: flex; align-items: center; justify-content: center; width: 100%; text-align: center; text-decoration: none; border: 1px solid var(--accent); background: var(--accent); color: var(--on-accent); border-radius: 99px; min-height: 48px; padding: 12px; font: 700 1rem var(--sans); cursor: pointer; }
 .btn.alt { background: transparent; color: var(--accent-ink); }
 .btn:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: var(--on-accent); }
+.btn:disabled { opacity: .4; cursor: default; }
+.btn.btn-cuisine { margin-top: 18px; }
 .btn.alt:hover { background: var(--accent-wash); color: var(--accent-ink); }
 .ligne { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
 .retour { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink2); font-weight: 600; font-size: .9375rem; text-decoration: none; background: none; border: 0; padding: 0; font-family: var(--sans); cursor: pointer; }
@@ -149,3 +151,19 @@ a.carte:hover { background: var(--accent-hover); }
 .barre svg { width: 26px; height: 26px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
 .ing:has(input:focus-visible) { outline: 2px solid var(--accent-ink); outline-offset: -2px; }
+
+/* Mode cuisine : une étape à la fois, texte gros, boutons larges en bas */
+.cuisine { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)); }
+.cuisine-tete { display: flex; align-items: center; gap: 12px; padding: calc(12px + env(safe-area-inset-top, 0px)) 0 0; }
+.cuisine-tete .rond { flex: none; }
+.cuisine-titre { font-size: 1.125rem; text-align: left; margin: 0; }
+.cuisine-progres { margin: 22px 0 8px; color: var(--accent-ink); font-size: 1.0625rem; font-weight: 700; }
+.cuisine-barre { height: 6px; border-radius: 99px; background: var(--gris); overflow: hidden; }
+.cuisine-barre span { display: block; height: 100%; background: var(--accent); border-radius: 99px; }
+.cuisine-etape { font-size: 1.625rem; line-height: 1.45; margin: 28px 0; overflow-wrap: anywhere; max-width: 36ch; }
+.cuisine-ingredients { margin-top: 24px; padding: 4px 16px; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; }
+.cuisine-ingredients summary { min-height: 48px; display: flex; align-items: center; cursor: pointer; color: var(--accent-ink); font-weight: 700; }
+.cuisine-ing { margin: 0; padding: 10px 0; border-top: 1px solid var(--line); font-size: 1.0625rem; }
+.cuisine-ing small { color: var(--ink3); }
+.cuisine-pas { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; max-width: 640px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 12px 12px calc(12px + env(safe-area-inset-bottom, 0px)); background: var(--page); border-top: 1px solid var(--line); }
+.cuisine-pas .btn { min-height: 56px; font-size: 1.125rem; }

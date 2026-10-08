@@ -83,7 +83,14 @@ test("facteur et quantiteAjustee", () => {
 
 test("formaterQuantite", () => {
   assert.equal(formaterQuantite(200, "g"), "200 g");
-  assert.equal(formaterQuantite(0.5, "bouquet"), "0,5 bouquet");
+  assert.equal(formaterQuantite(0.5, "bouquet"), "½ bouquet");
+  assert.equal(formaterQuantite(1.5, "pièce"), "1 ½");
+  assert.equal(formaterQuantite(0.25, "c. à café"), "¼ c. à café");
+  assert.equal(formaterQuantite(0.33, "pièce"), "⅓");
+  assert.equal(formaterQuantite(2.75, "c. à soupe"), "2 ¾ c. à soupe");
+  assert.equal(formaterQuantite(0.5, "l"), "0,5 l");
+  assert.equal(formaterQuantite(1.5, "kg"), "1,5 kg");
+  assert.equal(formaterQuantite(0.9, "pièce"), "0,9");
   assert.equal(formaterQuantite(3, "pièce"), "3");
   assert.equal(formaterQuantite(null, null), "au goût");
   assert.equal(formaterQuantite(2, "c. à soupe"), "2 c. à soupe");

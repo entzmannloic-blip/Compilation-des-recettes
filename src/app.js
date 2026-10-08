@@ -38,6 +38,38 @@ function retourListe() {
   if (ecransVus > 1) window.history.back();
   else window.location.hash = "#/";
 }
+// Étape affichée en mode cuisine, par recette (le temps de la session).
+const etapeCuisine = new Map();
+let ingredientsOuverts = false;
+
+// Nombre de personnes d'une recette : celui de « Ma semaine » s'il y est, sinon celui choisi sur la fiche, sinon celui du livre.
+function personnesPour(recette) {
+  if (Object.hasOwn(semaine, recette.id)) return semaine[recette.id];
+  return personnesFiche[recette.id] ?? recette.personnes;
+}
+
+// Écran allumé pendant qu'on cuisine (fiche et mode pas à pas). Sans effet si le téléphone ne le permet pas.
+let verrouEcran = null;
+let ecranAllumeVoulu = false;
+async function garderEcranAllume(actif) {
+  ecranAllumeVoulu = actif;
+  try {
+    if (!actif) {
+      const ancien = verrouEcran;
+      verrouEcran = null;
+      await ancien?.release();
+      return;
+    }
+    if (verrouEcran || !("wakeLock" in navigator)) return;
+    verrouEcran = await navigator.wakeLock.request("screen");
+    verrouEcran.addEventListener("release", () => { verrouEcran = null; });
+  } catch {
+    verrouEcran = null;
+  }
+}
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && ecranAllumeVoulu) garderEcranAllume(true);
+});
 
 function h(tag, attrs = {}, ...enfants) {
   const el = document.createElement(tag);
@@ -306,8 +338,7 @@ function ecranRecette(idBrut) {
   const compteur = h("b", { "aria-live": "polite" });
 
   function personnesActuelles() {
-    if (Object.hasOwn(semaine, id)) return semaine[id];
-    return personnesFiche[id] ?? recette.personnes;
+    return personnesPour(recette);
   }
 
   function changerPersonnes(delta) {
@@ -384,7 +415,10 @@ function ecranRecette(idBrut) {
               `Recette du livre pour ${recette.personnes} personne${recette.personnes > 1 ? "s" : ""}`,
               recette.personnes_texte ? ` (${recette.personnes_texte})` : "")),
           t && t.preparation ? ligneInfo("Préparation", `${t.preparation} min`) : null,
-          t && t.cuisson ? ligneInfo("Cuisson", `${t.cuisson} min`) : null)),
+          t && t.cuisson ? ligneInfo("Cuisson", `${t.cuisson} min`) : null),
+        recette.etapes.length
+          ? h("a", { class: "btn btn-cuisine", href: `#/cuisine/${encodeURIComponent(id)}` }, "Cuisiner pas à pas")
+          : null),
       h("div", { class: "fiche-corps" },
         h("section", {},
           h("h2", { class: "section" }, "Ingrédients"),
@@ -398,6 +432,61 @@ function ecranRecette(idBrut) {
                 h("ul", { class: "notes" }, recette.notes.map((n) => h("li", {}, n))))
             : null)));
     compteur.textContent = String(personnes);
+  }
+
+  dessiner();
+  return conteneur;
+}
+
+// ---------- Mode cuisine : une étape à la fois, en gros ----------
+function ecranCuisine(idBrut) {
+  let id;
+  try {
+    id = decodeURIComponent(idBrut);
+  } catch {
+    return messageErreur("Recette introuvable", true);
+  }
+  const recette = donnees.recettes.find((r) => r.id === id);
+  if (!recette || !recette.etapes.length) return messageErreur("Recette introuvable", true);
+
+  const etapes = recette.etapes;
+  const noms = new Map(donnees.ingredients.map((i) => [i.id, i.nom]));
+  let n = Math.min(etapeCuisine.get(id) ?? 0, etapes.length - 1);
+  const conteneur = h("div", { class: "cuisine" });
+
+  function aller(delta) {
+    n = Math.max(0, Math.min(etapes.length - 1, n + delta));
+    etapeCuisine.set(id, n);
+    gardantLeFocus(dessiner);
+    window.scrollTo(0, 0);
+  }
+
+  function dessiner() {
+    const personnes = personnesPour(recette);
+    const mult = facteur(recette, personnes);
+    const derniere = n === etapes.length - 1;
+    conteneur.replaceChildren(
+      h("div", { class: "cuisine-tete" },
+        h("a", { class: "rond", href: lienRecette(id), "aria-label": "Quitter le mode pas à pas" }, icone("retour")),
+        h("h1", { class: "cuisine-titre" }, recette.titre)),
+      h("p", { class: "cuisine-progres", "aria-live": "polite" }, `Étape ${n + 1} sur ${etapes.length}`),
+      h("div", { class: "cuisine-barre", "aria-hidden": "true" }, h("span", { style: `width:${((n + 1) / etapes.length) * 100}%` })),
+      h("p", { class: "cuisine-etape" }, etapes[n]),
+      h("details", {
+        class: "cuisine-ingredients", open: ingredientsOuverts,
+        ontoggle: (e) => { ingredientsOuverts = e.target.open; },
+      },
+      h("summary", {}, `Ingrédients pour ${personnes} personne${personnes > 1 ? "s" : ""}`),
+      recette.ingredients.map((ligne) =>
+        h("p", { class: "cuisine-ing" },
+          h("b", {}, formaterQuantite(quantiteAjustee(ligne.quantite, mult), ligne.unite)), " ",
+          noms.get(ligne.ingredient) ?? ligne.ingredient,
+          ligne.precision ? h("small", {}, ` (${ligne.precision})`) : null))),
+      h("div", { class: "cuisine-pas" },
+        h("button", { type: "button", class: "btn alt", "data-cle": "precedent", disabled: n === 0, onclick: () => aller(-1) }, "Précédent"),
+        derniere
+          ? h("a", { class: "btn", href: lienRecette(id) }, "Terminé")
+          : h("button", { type: "button", class: "btn", "data-cle": "suivant", onclick: () => aller(1) }, "Suivant")));
   }
 
   dessiner();
@@ -498,9 +587,12 @@ function afficher() {
     semaine: ecranSemaine,
     livres: ecranLivres,
     recette: () => ecranRecette(route.id),
+    cuisine: () => ecranCuisine(route.id),
   };
   ecransVus += 1;
-  dessinerBarre(route.nom === "recette" ? "saison" : route.nom);
+  dessinerBarre(route.nom === "recette" || route.nom === "cuisine" ? "saison" : route.nom);
+  barre.closest(".barre").hidden = route.nom === "cuisine";
+  garderEcranAllume(route.nom === "recette" || route.nom === "cuisine");
   vue.className = "app" + (route.nom === "saison" ? " large" : route.nom === "recette" ? " fiche-large" : "");
   vue.replaceChildren(ecrans[route.nom]());
   window.scrollTo(0, 0);
