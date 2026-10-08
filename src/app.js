@@ -224,7 +224,7 @@ document.body.append(messageBas);
 let minuteurMessage = null;
 function annoncer(texte, lien = null) {
   clearTimeout(minuteurMessage);
-  messageBas.replaceChildren(texte, lien ? h("a", { href: lien.href }, lien.texte) : null);
+  messageBas.replaceChildren(...[texte, lien ? h("a", { href: lien.href }, lien.texte) : null].filter(Boolean));
   messageBas.hidden = false;
   minuteurMessage = setTimeout(cacherMessage, 4000);
 }
@@ -613,10 +613,12 @@ function copierSecours(texte) {
 }
 
 let recettesOuvertes = true;
+// Mode magasin : liste plus grande, articles cochés masqués, écran allumé. Gardé sur le téléphone.
+let modeMagasin = chargerListe(stockage, CLES.magasin).includes("oui");
 
 function ecranCourses() {
   const conteneur = h("div");
-  const etat = { coches: chargerCoches(stockage), message: "", annulation: null, retiree: null };
+  const etat = { coches: chargerCoches(stockage), message: "", annulation: null, retiree: null, voirCoches: false };
   const compteurs = new Map(); // un compteur durable par recette, pour que le lecteur d'écran annonce le changement
 
   function enregistrer() { sauverCoches(stockage, etat.coches); }
@@ -713,6 +715,15 @@ function ecranCourses() {
         item.melange ? h("small", { class: "origine" }, item.recettes.join(" · ")) : null));
   }
 
+  function basculerMagasin() {
+    modeMagasin = !modeMagasin;
+    sauverListe(stockage, CLES.magasin, modeMagasin ? ["oui"] : []);
+    etat.voirCoches = false;
+    garderEcranAllume(modeMagasin);
+    gardantLeFocus(dessiner);
+    window.scrollTo(0, 0);
+  }
+
   // Les articles pas encore cochés d'abord, les cochés en bas.
   const nonCochesAvant = (items) => [...items.filter((i) => !etat.coches.has(i.cle)), ...items.filter((i) => etat.coches.has(i.cle))];
 
@@ -730,22 +741,35 @@ function ecranCourses() {
       return;
     }
     const choisies = Object.keys(semaine).map((id) => donnees.recettes.find((r) => r.id === id)).filter(Boolean);
-    conteneur.replaceChildren(
+    conteneur.classList.toggle("magasin", modeMagasin);
+    // En mode magasin, on ne montre que ce qu'il reste à acheter (sauf si on demande à revoir les cochés).
+    const masquerCoches = modeMagasin && !etat.voirCoches;
+    const montrer = (items) => (masquerCoches ? items.filter((i) => !etat.coches.has(i.cle)) : nonCochesAvant(items));
+    const groupes = liste.groupes.map((g) => ({ titre: g.titre, items: montrer(g.items) })).filter((g) => g.items.length > 0);
+    const placard = montrer(liste.placard);
+    const nbCoches = tous.length - restants;
+    conteneur.replaceChildren(...[
       h("h1", {}, "Courses"),
       h("p", { class: "sub" }, `${restants} article${restants > 1 ? "s" : ""} à acheter sur ${tous.length}`),
-      h("details", { class: "recettes-choisies", open: recettesOuvertes, ontoggle: (e) => { recettesOuvertes = e.target.open; } },
+      h("button", {
+        type: "button", class: `btn bascule-magasin${modeMagasin ? "" : " alt"}`, "data-cle": "magasin", "aria-pressed": String(modeMagasin), onclick: basculerMagasin,
+      }, modeMagasin ? "Quitter le mode magasin" : "Mode magasin"),
+      modeMagasin ? null : h("details", { class: "recettes-choisies", open: recettesOuvertes, ontoggle: (e) => { recettesOuvertes = e.target.open; } },
         h("summary", {}, `Recettes choisies (${choisies.length})`),
         choisies.map(ligneRecette)),
-      h("div", { class: "actions" },
+      modeMagasin ? null : h("div", { class: "actions" },
         h("button", { type: "button", class: "lien-action", "data-cle": "copier", onclick: () => copier(liste) }, "Copier la liste"),
         h("button", { type: "button", class: "lien-action", "data-cle": "decocher", onclick: toutDecocher }, "Tout décocher")),
       h("p", { class: "sub statut", role: "status" }, etat.message,
         etat.annulation ? h("button", { type: "button", class: "lien-texte", "data-cle": "annuler", onclick: annuler }, "Annuler") : null,
         etat.retiree ? h("button", { type: "button", class: "lien-texte", "data-cle": "annuler", onclick: annulerRetrait }, "Annuler") : null),
-      ...liste.groupes.map((g) => h("section", {}, h("h2", { class: "section" }, g.titre), nonCochesAvant(g.items).map(ligne))),
-      liste.placard.length
-        ? h("section", {}, h("h2", { class: "section" }, "À vérifier au placard"), nonCochesAvant(liste.placard).map(ligne))
-        : null);
+      masquerCoches && restants === 0 ? h("div", { class: "vide" }, "Tout est dans le panier.") : null,
+      ...groupes.map((g) => h("section", {}, h("h2", { class: "section" }, g.titre), g.items.map(ligne))),
+      placard.length ? h("section", {}, h("h2", { class: "section" }, "À vérifier au placard"), placard.map(ligne)) : null,
+      modeMagasin && nbCoches > 0
+        ? h("button", { type: "button", class: "lien-action voir-coches", "data-cle": "voir-coches", onclick: () => { etat.voirCoches = !etat.voirCoches; gardantLeFocus(dessiner); } },
+          etat.voirCoches ? "Masquer les articles cochés" : `Revoir les ${nbCoches} article${nbCoches > 1 ? "s" : ""} coché${nbCoches > 1 ? "s" : ""}`)
+        : null].filter(Boolean));
   }
 
   dessiner();
@@ -800,7 +824,7 @@ function afficher() {
   cacherMessage();
   dessinerBarre(route.nom === "recette" || route.nom === "cuisine" ? "saison" : route.nom === "semaine" ? "courses" : route.nom);
   barre.closest(".barre").hidden = route.nom === "cuisine" || route.nom === "recette"; // ces écrans ont leurs propres boutons en bas
-  garderEcranAllume(route.nom === "recette" || route.nom === "cuisine");
+  garderEcranAllume(route.nom === "recette" || route.nom === "cuisine" || ((route.nom === "courses" || route.nom === "semaine") && modeMagasin));
   vue.className = "app" + (route.nom === "saison" ? " large" : route.nom === "recette" ? " fiche-large" : "");
   vue.replaceChildren(ecrans[route.nom]());
   window.scrollTo(0, 0);

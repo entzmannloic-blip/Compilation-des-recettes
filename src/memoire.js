@@ -4,6 +4,7 @@
 export const CLES = {
   favoris: "compilation-recettes.favoris",
   aide: "compilation-recettes.aide",
+  magasin: "compilation-recettes.mode-magasin",
 };
 
 /** Lit une liste de textes ; renvoie [] si le stockage est absent, en erreur ou illisible. */
