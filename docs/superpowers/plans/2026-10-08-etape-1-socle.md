@@ -17,7 +17,7 @@
 - **Nombre de personnes obligatoire** pour chaque recette (entier ≥ 1) ; refusé par la validation s'il manque.
 - Saisons : printemps, été, automne, hiver. Catégories : entrée, plat. Look : cartes claires, polices système, titres de recette en Georgia, accent vert herbe (couleur à valider), thème clair et sombre.
 - Chaque recette a une origine : livre + page, ou internet + lien.
-- Contrôles avant chaque commit de données : `node --test tests/` et `node scripts/validate-data.mjs`.
+- Contrôles avant chaque commit de données : `npm test` et `node scripts/validate-data.mjs`.
 - Test sur mobile (375 px) et ordinateur, console sans erreur, avant de déclarer terminé.
 - Commits : message en français ; terminer par la ligne `Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>`.
 - Aucune création GitHub avant la tâche 8 et l'accord explicite de Loïc.
@@ -79,7 +79,7 @@
 - [ ] **Step 2: Lancer** `node --test tests/validate-data.test.mjs` — attendu : échec (module absent).
 - [ ] **Step 3: Implémenter** `src/schema.js`, `validerDonnees` et le mode ligne de commande dans `scripts/validate-data.mjs` (fonction exportée, CLI exécutée seulement si le fichier est lancé directement).
 - [ ] **Step 4: Remplir les données de départ** : `livres.json` avec `{id:"la-flemme", titre:"La flemme", auteur:null}` ; `ingredients.json` avec lentilles cuites (Épicerie), carotte (Légumes), feta (Crèmerie), échalote (Légumes), persil (Herbes), menthe (Herbes), noix de pécan (Épicerie), tous `saisons: []` sauf mention contraire à valider avec Loïc ; `recettes.json` avec la *Salade de lentilles, carottes et feta* : livre `la-flemme`, page 22, saisons `["hiver"]`, catégorie `plat`, type `salade`, personnes 2, temps préparation 8 / cuisson 2, 10 lignes d'ingrédients (200 g lentilles cuites « en bocal ou en conserve » ; 3 pièce carotte ; 100 g feta ; 1 pièce échalote ; 0,5 bouquet persil ; 0,5 bouquet menthe ; 2 c. à soupe noix de pécan ; sel et poivre `quantite: null`), 6 étapes (texte du livre), notes : astuce lentilles, « Vinaigrette : 2 c. à soupe de vinaigrette au tahini (p. 18) », « Topping : 1 c. à soupe de pickles d'oignon rouge (p. 15) » ; `journal.json` avec l'entrée livre/page 22, état `brouillon` jusqu'à validation de Loïc.
-- [ ] **Step 5: Lancer** `node --test tests/ && node scripts/validate-data.mjs` — attendu : tests verts, `OK : 1 recettes`.
+- [ ] **Step 5: Lancer** `npm test && node scripts/validate-data.mjs` — attendu : tests verts, `OK : 1 recettes`.
 - [ ] **Step 6: Commit** : `git init`, puis `git add -A && git commit -m "Données de départ et validation"`.
 
 ---
@@ -110,7 +110,7 @@
   - `formaterQuantite(200,"g")==="200 g"`, `(0.5,"bouquet")==="0,5 bouquet"`, `(3,"pièce")==="3"`, `(null,null)==="au goût"`, `(2,"c. à soupe")==="2 c. à soupe"`, `(1.333,"cl")==="1,33 cl"`
 - [ ] **Step 2: Lancer** `node --test tests/lib.test.mjs` — attendu : échec.
 - [ ] **Step 3: Implémenter** les fonctions de l'Interface dans `src/lib.js`.
-- [ ] **Step 4: Lancer** `node --test tests/` — attendu : tout vert.
+- [ ] **Step 4: Lancer** `npm test` — attendu : tout vert.
 - [ ] **Step 5: Commit** : `git add -A && git commit -m "Logique pure : filtres, saisons, quantités"`.
 
 ---
@@ -134,9 +134,9 @@
   - `basculer` ajoute avec `personnes` de la recette puis retire ; l'objet d'origine n'est pas modifié
   - `definirPersonnes(s,"a",0)` → 1 ; `(s,"a",3.6)` → 4 ; `(s,"absent",3)` → inchangé
   - `lireRoute("#/recette/salade-x")` → `{nom:"recette",id:"salade-x"}` ; `""`, `"#/n-importe-quoi"`, `"#/recette/"` → `{nom:"saison"}`
-- [ ] **Step 2: Lancer** `node --test tests/` — attendu : échec.
+- [ ] **Step 2: Lancer** `npm test` — attendu : échec.
 - [ ] **Step 3: Implémenter** `src/semaine.js` et `src/routes.js` selon les Interfaces.
-- [ ] **Step 4: Lancer** `node --test tests/` — attendu : tout vert.
+- [ ] **Step 4: Lancer** `npm test` — attendu : tout vert.
 - [ ] **Step 5: Commit** : `git add -A && git commit -m "Ma semaine (état) et routes"`.
 
 ---
@@ -185,7 +185,7 @@
 
 - [ ] **Step 1: Écrire un test** `tests/icons.test.mjs` : après génération dans un dossier temporaire, chaque fichier commence par la signature PNG `89 50 4E 47 0D 0A 1A 0A` et sa largeur lue dans l'en-tête vaut 180, 192, 512.
 - [ ] **Step 2: Lancer** — attendu : échec ; **implémenter** `scripts/make-icons.mjs` (fonction exportée + exécution directe) ; relancer — attendu : vert.
-- [ ] **Step 3: Générer les icônes à la racine**, écrire `manifest.json`, compléter `index.html`, relancer `node --test tests/` et vérifier dans le navigateur que le manifeste se charge sans erreur.
+- [ ] **Step 3: Générer les icônes à la racine**, écrire `manifest.json`, compléter `index.html`, relancer `npm test` et vérifier dans le navigateur que le manifeste se charge sans erreur.
 - [ ] **Step 4: Commit** : `git add -A && git commit -m "Manifeste et icônes"`.
 
 ---
@@ -202,7 +202,7 @@
 
 - [ ] **Step 1: Écrire le script PowerShell** à partir de la méthode déjà éprouvée (décodage WinRT puis encodage JPEG), l'essayer sur le dossier `C:\Users\entzm\Desktop\Recette` — attendu : un JPEG de 1 600 px de large par photo.
 - [ ] **Step 2: Lot de Loïc** : pour chaque recette, présenter le brouillon (tableau titre, livre, page, saison, catégorie, type, personnes, ingrédients, étapes, doutes) et attendre sa validation ; ne rien écrire dans `data/` avant.
-- [ ] **Step 3: Écrire les données validées**, passer les entrées du journal à `validé`, lancer `node --test tests/ && node scripts/validate-data.mjs` — attendu : vert.
+- [ ] **Step 3: Écrire les données validées**, passer les entrées du journal à `validé`, lancer `npm test && node scripts/validate-data.mjs` — attendu : vert.
 - [ ] **Step 4: Mesurer le coût réel du lot** (points de la fenêtre de 5 heures avant/après, nombre de photos) pour la fiche de compte rendu.
 - [ ] **Step 5: Commit** : `git add -A && git commit -m "Premier lot : La flemme"`.
 
