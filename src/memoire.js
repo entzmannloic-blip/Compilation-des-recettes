@@ -1,9 +1,8 @@
-// Petites listes gardées sur le téléphone : favoris, recettes vues récemment, aide déjà lue.
+// Petites listes gardées sur le téléphone : favoris, aide déjà lue.
 // Fonctions pures ; le stockage est injecté (getItem / setItem), comme pour semaine.js.
 
 export const CLES = {
   favoris: "compilation-recettes.favoris",
-  recents: "compilation-recettes.recents",
   aide: "compilation-recettes.aide",
 };
 
@@ -24,11 +23,6 @@ export function sauverListe(storage, cle, liste) {
   } catch {
     // Sans stockage, la liste reste valable pour la session en cours.
   }
-}
-
-/** Met l'identifiant en tête de la liste (sans doublon) et garde les `max` plus récents. */
-export function ajouterRecent(liste, id, max = 8) {
-  return [id, ...liste.filter((x) => x !== id)].slice(0, max);
 }
 
 /** Ajoute l'identifiant s'il n'y est pas, le retire sinon. Renvoie une nouvelle liste. */

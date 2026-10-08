@@ -6,7 +6,7 @@ import {
 } from "./lib.js";
 import { chargerSemaine, sauverSemaine, basculer, definirPersonnes } from "./semaine.js";
 import { lireRoute } from "./routes.js";
-import { chargerListe, sauverListe, ajouterRecent, basculerFavori, CLES } from "./memoire.js";
+import { chargerListe, sauverListe, basculerFavori, CLES } from "./memoire.js";
 import { compilerCourses, texteCourses, chargerCoches, sauverCoches } from "./courses.js";
 
 const vue = document.getElementById("vue");
@@ -26,12 +26,11 @@ const stockage = ouvrirStockage();
 
 let donnees = null; // { recettes, ingredients, livres }
 let semaine = {};
-// Favoris et recettes vues récemment, gardés sur le téléphone.
+// Favoris, gardés sur le téléphone.
 let favoris = new Set(chargerListe(stockage, CLES.favoris));
-let recents = chargerListe(stockage, CLES.recents);
-// Filtres de l'écran « De saison », conservés pendant la session.
-// saison : « auto » = la saison du moment, "" = toute l'année.
-const FILTRES_PAR_DEFAUT = { saison: "auto", livre: "", categorie: "", type: "", temps: 0, personnes: 0, ingredient: "", favoris: false };
+// Filtres de l'écran « Recettes », conservés pendant la session.
+// saisons : null = la saison du moment ; liste de saisons choisies ; [] = toute l'année.
+const FILTRES_PAR_DEFAUT = { saisons: null, livre: "", categorie: "", type: "", temps: 0, personnes: 0, ingredient: "", favoris: false };
 const filtres = { ...FILTRES_PAR_DEFAUT, recherche: "", ouvert: false, rechercheOuverte: false };
 // Nombre de personnes choisi sur la fiche, par recette (pour les recettes hors semaine).
 const personnesFiche = {};
@@ -246,7 +245,6 @@ function ecranSaison() {
     type: "button", class: "rond favori", "data-cle": "filtre-favoris", "aria-label": "Afficher seulement les favoris",
     onclick: () => { filtres.favoris = !filtres.favoris; actualiserTout(); },
   }, icone("etoile"));
-  const recentsZone = h("section", { class: "recents", "aria-label": "Vus récemment" });
   const aide = chargerListe(stockage, CLES.aide).includes("accueil") ? null : h("div", { class: "aide", role: "note" },
     h("p", {}, "Touchez + sur une recette pour l'ajouter à vos courses : l'onglet Courses additionne tout et classe par rayon. L'étoile d'une fiche la garde en favori."),
     h("button", { type: "button", class: "lien-texte", "data-cle": "aide-ok", onclick: () => { sauverListe(stockage, CLES.aide, ["accueil"]); aide.remove(); } }, "Compris"));
@@ -261,13 +259,9 @@ function ecranSaison() {
   },
   h("option", { value: "" }, "Tous"),
   ...ingredientsDisponibles(recettes, ingredients).map((i) => h("option", { value: i.id }, i.nom)));
-  const choixSaison = h("select", {
-    id: "filtre-saison", class: "choix-saison", "data-cle": "filtre-saison", "aria-label": "Saison",
-    onchange: (e) => { filtres.saison = e.target.value; actualiserListe(); },
-  },
-  h("option", { value: "auto" }, `De saison (${saisonActuelle})`),
-  h("option", { value: "" }, "Toute l'année"),
-  ...SAISONS_PUCES.map((x) => h("option", { value: x }, majuscule(x))));
+  const puces_saisons = h("div", { class: "saisons-puces" });
+  const saisonsChoisies = h("div", { class: "saisons", role: "group", "aria-label": "Saison" },
+    h("span", { class: "saisons-titre" }, "Saison"), puces_saisons);
   const recherche = h("input", {
     type: "search", id: "recherche", class: "recherche", placeholder: "Rechercher une recette ou un ingrédient",
     "aria-label": "Rechercher", autocomplete: "off", value: filtres.recherche,
@@ -279,10 +273,12 @@ function ecranSaison() {
   const personnes = personnesDisponibles(recettes);
 
   const actifsDe = (cles) => cles.filter((cle) => filtres[cle] !== FILTRES_PAR_DEFAUT[cle]).length;
-  const TOUTES = Object.keys(FILTRES_PAR_DEFAUT);
-  // La pastille du bouton « Filtres » ne compte que le contenu du panneau : saison et catégorie sont toujours visibles.
-  const nombreActifs = () => actifsDe(TOUTES.filter((cle) => cle !== "categorie" && cle !== "saison" && cle !== "favoris"));
-  const afficherEffacer = () => actifsDe(TOUTES) > 0 || filtres.recherche !== "";
+  const AUTRES = Object.keys(FILTRES_PAR_DEFAUT).filter((cle) => cle !== "saisons");
+  const saisonsActives = () => filtres.saisons ?? [saisonActuelle];
+  const saisonsParDefaut = () => { const a = saisonsActives(); return a.length === 1 && a[0] === saisonActuelle; };
+  // La pastille du bouton « Filtres » ne compte que le contenu du panneau : saisons, catégorie et favoris sont toujours visibles.
+  const nombreActifs = () => actifsDe(AUTRES.filter((cle) => cle !== "categorie" && cle !== "favoris"));
+  const afficherEffacer = () => actifsDe(AUTRES) > 0 || !saisonsParDefaut() || filtres.recherche !== "";
 
   function puce(cle, valeur, libelle) {
     const actif = filtres[cle] === valeur;
@@ -323,14 +319,17 @@ function ecranSaison() {
     majIndicateurs();
   }
 
-  function majRecents() {
-    const vues = recents.map((id) => recettes.find((r) => r.id === id)).filter(Boolean).slice(0, 6);
-    const calme = actifsDe(TOUTES) === 0 && !filtres.recherche;
-    recentsZone.hidden = !calme || vues.length === 0;
-    recentsZone.replaceChildren(
-      h("h2", { class: "mini-titre" }, "Vus récemment"),
-      h("div", { class: "recents-liste" }, vues.map((r) =>
-        h("a", { class: "recent", href: lienRecette(r.id) }, photoRecette(r, false, true), h("span", {}, r.titre)))));
+  function actualiserSaisons() {
+    const actives = saisonsActives();
+    puces_saisons.replaceChildren(...SAISONS_PUCES.map((x) =>
+      h("button", {
+        type: "button", class: "puce", "data-cle": `saison-${x}`, "aria-pressed": String(actives.includes(x)),
+        onclick: () => {
+          filtres.saisons = actives.includes(x) ? actives.filter((y) => y !== x) : [...actives, x];
+          gardantLeFocus(actualiserSaisons);
+          actualiserListe();
+        },
+      }, majuscule(x))));
   }
 
   function majIndicateurs() {
@@ -342,27 +341,24 @@ function ecranSaison() {
   }
 
   // Rien trouvé : on dit pourquoi et on propose la sortie la plus utile.
-  function pasDeResultat(saison) {
+  function pasDeResultat() {
     if (filtres.favoris && favoris.size === 0) {
       return h("div", { class: "vide" }, "Aucun favori pour le moment. Touchez l'étoile dans une fiche pour en ajouter.",
         h("button", { type: "button", class: "lien-action", "data-cle": "voir-tout", onclick: () => { filtres.favoris = false; actualiserTout(); } }, "Voir toutes les recettes"));
     }
-    const autres = TOUTES.filter((cle) => cle !== "saison");
-    const seulementLaSaison = filtres.saison === "auto" && !filtres.recherche && actifsDe(autres) === 0;
+    const seulementLaSaison = saisonsParDefaut() && !filtres.recherche && actifsDe(AUTRES) === 0;
     if (seulementLaSaison) {
-      return h("div", { class: "vide" }, `Aucune recette de saison (${saison}) pour le moment.`,
-        h("button", { type: "button", class: "lien-action", "data-cle": "toute-annee", onclick: () => { filtres.saison = ""; gardantLeFocus(actualiserTout); } }, "Voir toutes les recettes"));
+      return h("div", { class: "vide" }, `Aucune recette de saison (${saisonActuelle}) pour le moment.`,
+        h("button", { type: "button", class: "lien-action", "data-cle": "toute-annee", onclick: () => { filtres.saisons = []; gardantLeFocus(actualiserTout); } }, "Voir toutes les recettes"));
     }
     return h("div", { class: "vide" }, "Aucune recette ne correspond à ces filtres.",
       h("button", { type: "button", class: "lien-action", "data-cle": "tout-effacer-vide", onclick: () => reinitialiser() }, "Tout effacer"));
   }
 
   function actualiserListe() {
-    const saison = filtres.saison === "auto" ? saisonActuelle : filtres.saison;
-    // Quand on cherche un mot, on cherche dans toute la bibliothèque : la saison ne cache pas les résultats.
-    // Recherche et favoris portent sur toute la bibliothèque : la saison ne cache pas les résultats.
+    // Recherche et favoris portent sur toute la bibliothèque : les saisons ne cachent pas les résultats.
     let trouvees = filtrerRecettes(recettes, ingredients, {
-      saison: filtres.recherche || filtres.favoris ? "" : saison, categorie: filtres.categorie, type: filtres.type, recherche: filtres.recherche,
+      saisons: filtres.recherche || filtres.favoris ? [] : saisonsActives(), categorie: filtres.categorie, type: filtres.type, recherche: filtres.recherche,
       livre: filtres.livre, tempsMax: filtres.temps, personnes: filtres.personnes, ingredient: filtres.ingredient,
     });
     if (filtres.favoris) trouvees = trouvees.filter((r) => favoris.has(r.id));
@@ -370,15 +366,15 @@ function ecranSaison() {
       ? `${trouvees.length} résultat${trouvees.length > 1 ? "s" : ""} · toute l'année`
       : `${trouvees.length} sur ${recettes.length} recette${recettes.length > 1 ? "s" : ""}`;
     boutonVoir.textContent = `Voir ${trouvees.length} recette${trouvees.length > 1 ? "s" : ""}`;
-    liste.replaceChildren(...(trouvees.length ? trouvees.map(carteRecette) : [pasDeResultat(saison)]));
-    majRecents();
+    liste.replaceChildren(...(trouvees.length ? trouvees.map(carteRecette) : [pasDeResultat()]));
     majIndicateurs();
   }
 
-  function actualiserTout() { choixSaison.value = filtres.saison; actualiserOnglets(); actualiserPanneau(); actualiserListe(); }
+  function actualiserTout() { actualiserSaisons(); actualiserOnglets(); actualiserPanneau(); actualiserListe(); }
 
   function reinitialiser() {
     Object.assign(filtres, FILTRES_PAR_DEFAUT);
+    filtres.saisons = null;
     filtres.recherche = "";
     recherche.value = "";
     gardantLeFocus(actualiserTout);
@@ -392,9 +388,9 @@ function ecranSaison() {
       h("p", { class: "marque" }, icone("bol"), "Compilation des recettes"),
       h("div", { class: "boutons-entete" }, boutonFavoris, boutonFiltres)),
     recherche,
-    h("div", { class: "barre-outils" }, choixSaison, compte),
+    saisonsChoisies,
+    compte,
     aide,
-    recentsZone,
     onglets,
     h("div", { class: "rangee-filtres" }, effacer),
     panneau, liste);
@@ -410,9 +406,6 @@ function ecranRecette(idBrut) {
   }
   const recette = donnees.recettes.find((r) => r.id === id);
   if (!recette) return messageErreur("Recette introuvable", true);
-
-  recents = ajouterRecent(recents, id);
-  sauverListe(stockage, CLES.recents, recents);
 
   const conteneur = h("div");
   // Même élément à chaque redessin, pour que le lecteur d'écran annonce le nouveau nombre.

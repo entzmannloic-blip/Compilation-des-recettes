@@ -43,14 +43,16 @@ export function tempsTotalMinutes(recette) {
 
 /**
  * Filtres combinés en « et », résultat trié par titre.
+ * saison : une saison ; saisons : liste de saisons (la recette en a au moins une ; liste vide = toute l'année) ;
  * livre : id d'un livre, ou « web » ; tempsMax : minutes (les recettes sans temps connu sont écartées) ;
  * personnes : nombre de personnes de la recette ; ingredient : id d'un ingrédient.
  */
-export function filtrerRecettes(recettes, ingredients, { saison, categorie, type, recherche, livre, tempsMax, personnes, ingredient } = {}) {
+export function filtrerRecettes(recettes, ingredients, { saison, saisons, categorie, type, recherche, livre, tempsMax, personnes, ingredient } = {}) {
   const nomsParId = new Map(ingredients.map((i) => [i.id, normaliser(i.nom)]));
   const motif = recherche ? normaliser(recherche) : "";
   return recettes
     .filter((r) => !saison || r.saisons.includes(saison))
+    .filter((r) => !saisons || saisons.length === 0 || r.saisons.some((x) => saisons.includes(x)))
     .filter((r) => !categorie || r.categorie === categorie)
     .filter((r) => !type || r.type === type)
     .filter((r) => {

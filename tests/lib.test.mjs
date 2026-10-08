@@ -142,3 +142,11 @@ test("ingredientsDisponibles : au moins 2 recettes, sans les ingrédients jamais
     { id: "courge", nom: "Courge" }, { id: "tomate", nom: "Tomate" },
   ]);
 });
+
+test("filtrerRecettes : plusieurs saisons à la fois", () => {
+  const ids = (saisons) => filtrerRecettes(recettes, ingredients, { saisons }).map((r) => r.id);
+  assert.deepEqual(ids(["été"]), ["gaspacho"]);
+  assert.deepEqual(ids(["été", "automne"]).sort(), ["gaspacho", "velouté"]);
+  assert.equal(ids([]).length, recettes.length);
+  assert.equal(ids(undefined).length, recettes.length);
+});
