@@ -1,0 +1,38 @@
+[
+  {
+    "id": "salade-lentilles-carottes-feta",
+    "titre": "Salade de lentilles, carottes et feta",
+    "origine": { "type": "livre", "livre": "la-flemme", "page": 22 },
+    "saisons": ["hiver"],
+    "categorie": "plat",
+    "type": "salade",
+    "personnes": 2,
+    "personnes_texte": null,
+    "temps": { "preparation": 8, "cuisson": 2 },
+    "ingredients": [
+      { "ingredient": "lentilles-cuites", "quantite": 200, "unite": "g", "precision": "en bocal ou en conserve" },
+      { "ingredient": "carotte", "quantite": 3, "unite": "pièce", "precision": null },
+      { "ingredient": "feta", "quantite": 100, "unite": "g", "precision": null },
+      { "ingredient": "echalote", "quantite": 1, "unite": "pièce", "precision": "épluchée" },
+      { "ingredient": "persil", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "menthe", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "noix-de-pecan", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "sel", "quantite": null, "unite": null, "precision": null },
+      { "ingredient": "poivre", "quantite": null, "unite": null, "precision": null }
+    ],
+    "etapes": [
+      "Réaliser des tagliatelles de carottes à l'aide d'un économe.",
+      "Ciseler l'échalote et les herbes.",
+      "Torréfier les noix de pécan à la poêle pendant 2 min. Réserver.",
+      "Émietter la feta.",
+      "Mélanger tous les ingrédients dans un saladier. Saler, poivrer.",
+      "Placer au frais jusqu'au moment de servir."
+    ],
+    "notes": [
+      "Astuce : Les lentilles font partie des aliments les plus riches en fibres. J'aime en avoir toujours sous la main en conserve pour éviter la cuisson plutôt longue des lentilles sèches. Elles sont très faciles à utiliser en salade, en curry ou pour accompagner des légumes rôtis.",
+      "Vinaigrette : 2 c. à soupe de vinaigrette au tahini (p. 18)",
+      "Topping : 1 c. à soupe de pickles d'oignon rouge (p. 15)"
+    ],
+    "photo": null
+  }
+]

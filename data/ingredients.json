@@ -1,0 +1,11 @@
+[
+  { "id": "lentilles-cuites", "nom": "lentilles cuites", "rayon": "Épicerie", "saisons": [] },
+  { "id": "carotte", "nom": "carotte", "rayon": "Légumes", "saisons": [] },
+  { "id": "feta", "nom": "feta", "rayon": "Crèmerie", "saisons": [] },
+  { "id": "echalote", "nom": "échalote", "rayon": "Légumes", "saisons": [] },
+  { "id": "persil", "nom": "persil", "rayon": "Herbes", "saisons": [] },
+  { "id": "menthe", "nom": "menthe", "rayon": "Herbes", "saisons": [] },
+  { "id": "noix-de-pecan", "nom": "noix de pécan", "rayon": "Épicerie", "saisons": [] },
+  { "id": "sel", "nom": "sel", "rayon": "Épicerie", "saisons": [] },
+  { "id": "poivre", "nom": "poivre", "rayon": "Épicerie", "saisons": [] }
+]
