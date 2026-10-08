@@ -27,7 +27,7 @@ let semaine = {};
 // Filtres de l'écran « De saison », conservés pendant la session.
 // saison : « auto » = la saison du moment, "" = toute l'année.
 const FILTRES_PAR_DEFAUT = { saison: "auto", livre: "", categorie: "", type: "", temps: 0, personnes: 0, ingredient: "" };
-const filtres = { ...FILTRES_PAR_DEFAUT, recherche: "", ouvert: false };
+const filtres = { ...FILTRES_PAR_DEFAUT, recherche: "", ouvert: false, rechercheOuverte: false };
 // Nombre de personnes choisi sur la fiche, par recette (pour les recettes hors semaine).
 const personnesFiche = {};
 // Ingrédients cochés sur la fiche, par recette (le temps de la session).
@@ -75,6 +75,10 @@ const ICONES = {
   saison: ["M5 19c0-8 5-14 14-14 0 9-6 14-14 14z", "M5 19l8-8"],
   semaine: ["M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z", "M4 10h16M9 3v4M15 3v4"],
   livres: ["M4 5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H4z", "M20 5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h6z"],
+  loupe: ["M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14z", "M16 16l4.5 4.5"],
+  filtres: ["M4 7h10M18 7h2M4 17h2M10 17h10", "M16 4v6M8 14v6"],
+  retour: ["M15 5l-7 7 7 7"],
+  bol: ["M4 11h16a8 8 0 0 1-16 0z", "M8 7l6-3M12 8l3-4"],
 };
 const ONGLETS = [
   { nom: "saison", libelle: "De saison", href: "#/" },
@@ -122,14 +126,12 @@ function photoRecette(recette, premierPlan = false) {
 }
 
 function carteRecette(recette) {
-  const o = recette.origine;
-  const livre = o.type === "livre" ? donnees.livres.find((l) => l.id === o.livre) : null;
-  const lieu = o.type === "livre" ? `${livre ? livre.titre : o.livre} · page ${o.page}` : (o.source || "Internet");
   const temps = tempsTotal(recette);
   return h("a", { class: "carte", href: lienRecette(recette.id) },
     photoRecette(recette),
-    h("h2", {}, recette.titre),
-    h("p", { class: "meta" }, lieu, temps ? ` · ${temps}` : ""));
+    h("div", { class: "carte-bandeau" },
+      h("h2", {}, recette.titre),
+      temps ? h("span", { class: "carte-temps" }, temps) : null));
 }
 
 function messageErreur(texte, avecRetour = false) {
@@ -140,6 +142,10 @@ function messageErreur(texte, avecRetour = false) {
 
 // ---------- Écran « De saison » ----------
 const SAISONS_PUCES = ["printemps", "été", "automne", "hiver"];
+const CATEGORIES_ONGLETS = [
+  { valeur: "", libelle: "Tout" }, { valeur: "entrée", libelle: "Entrées" },
+  { valeur: "plat", libelle: "Plats" }, { valeur: "dessert", libelle: "Desserts" },
+];
 const TEMPS_PUCES = [{ libelle: "30 min max", minutes: 30 }, { libelle: "1 h max", minutes: 60 }];
 const deSaison = (saison) => (saison === "printemps" ? "de printemps" : `d'${saison}`);
 
@@ -148,13 +154,23 @@ function ecranSaison() {
   const saisonActuelle = saisonDuMois(new Date());
   const titre = h("h1", {});
   const sousTitre = h("p", { class: "sub" });
+  const onglets = h("div", { class: "onglets", role: "group", "aria-label": "Catégorie" });
+  const categories = CATEGORIES_ONGLETS.filter((c) => c.valeur === "" || recettes.some((r) => r.categorie === c.valeur));
   const liste = h("div", { class: "liste" });
   const panneau = h("div", { class: "panneau", id: "panneau-filtres" });
   const pastille = h("span", { class: "pastille" });
   const boutonFiltres = h("button", {
-    type: "button", class: "btn-filtres", "data-cle": "ouvrir-filtres", "aria-controls": "panneau-filtres",
+    type: "button", class: "rond btn-filtres", "data-cle": "ouvrir-filtres", "aria-controls": "panneau-filtres", "aria-label": "Filtres",
     onclick: () => { filtres.ouvert = !filtres.ouvert; actualiserPanneauVisible(); },
-  }, "Filtres", pastille);
+  }, icone("filtres"), pastille);
+  const boutonRecherche = h("button", {
+    type: "button", class: "rond", "data-cle": "ouvrir-recherche", "aria-controls": "recherche", "aria-label": "Rechercher",
+    onclick: () => {
+      filtres.rechercheOuverte = !filtres.rechercheOuverte;
+      actualiserRechercheVisible();
+      if (filtres.rechercheOuverte) recherche.focus();
+    },
+  }, icone("loupe"));
   const boutonVoir = h("button", {
     type: "button", class: "btn", "data-cle": "voir-resultats",
     onclick: () => { filtres.ouvert = false; actualiserPanneauVisible(); window.scrollTo(0, 0); },
@@ -171,7 +187,10 @@ function ecranSaison() {
   const types = typesDisponibles(recettes);
   const personnes = personnesDisponibles(recettes);
 
-  const nombreActifs = () => Object.keys(FILTRES_PAR_DEFAUT).filter((cle) => filtres[cle] !== FILTRES_PAR_DEFAUT[cle]).length;
+  const actifsDe = (cles) => cles.filter((cle) => filtres[cle] !== FILTRES_PAR_DEFAUT[cle]).length;
+  // La pastille du bouton « Filtres » ne compte pas la catégorie : elle a ses propres onglets, toujours visibles.
+  const nombreActifs = () => actifsDe(Object.keys(FILTRES_PAR_DEFAUT).filter((cle) => cle !== "categorie"));
+  const afficherEffacer = () => actifsDe(Object.keys(FILTRES_PAR_DEFAUT)) > 0;
 
   function puce(cle, valeur, libelle) {
     const actif = filtres[cle] === valeur;
@@ -191,12 +210,25 @@ function ecranSaison() {
     boutonFiltres.setAttribute("aria-expanded", String(filtres.ouvert));
   }
 
+  function actualiserRechercheVisible() {
+    const visible = filtres.rechercheOuverte || filtres.recherche !== "";
+    zoneRecherche.hidden = !visible;
+    boutonRecherche.setAttribute("aria-expanded", String(visible));
+  }
+
+  function actualiserOnglets() {
+    onglets.replaceChildren(...categories.map((c) =>
+      h("button", {
+        type: "button", class: "onglet", "data-cle": `onglet-${c.valeur || "tout"}`, "aria-pressed": String(filtres.categorie === c.valeur),
+        onclick: () => { filtres.categorie = c.valeur; gardantLeFocus(actualiserOnglets); actualiserListe(); },
+      }, c.libelle)));
+  }
+
   function actualiserPanneau() {
     choixIngredient.value = filtres.ingredient;
     panneau.replaceChildren(...[
       groupe("Saison", puce("saison", "auto", "De saison"), puce("saison", "", "Toutes"),
         ...SAISONS_PUCES.map((x) => puce("saison", x, majuscule(x)))),
-      groupe("Catégorie", puce("categorie", "", "Toutes"), puce("categorie", "entrée", "Entrée"), puce("categorie", "plat", "Plat"), puce("categorie", "dessert", "Dessert")),
       sources.length > 1 ? groupe("Livre", puce("livre", "", "Tous"), ...sources.map((x) => puce("livre", x.id, x.titre))) : null,
       types.length > 1 ? groupe("Type", puce("type", "", "Tous"), ...types.map((x) => puce("type", x, majuscule(x)))) : null,
       groupe("Temps (préparation + cuisson)", puce("temps", 0, "Tous"), ...TEMPS_PUCES.map((x) => puce("temps", x.minutes, x.libelle))),
@@ -207,7 +239,7 @@ function ecranSaison() {
     const actifs = nombreActifs();
     pastille.textContent = actifs ? String(actifs) : "";
     pastille.hidden = actifs === 0;
-    effacer.hidden = actifs === 0;
+    effacer.hidden = !afficherEffacer();
   }
 
   function actualiserListe() {
@@ -216,8 +248,9 @@ function ecranSaison() {
       saison, categorie: filtres.categorie, type: filtres.type, recherche: filtres.recherche,
       livre: filtres.livre, tempsMax: filtres.temps, personnes: filtres.personnes, ingredient: filtres.ingredient,
     });
-    titre.textContent = filtres.saison === "auto" ? "De saison" : saison ? `Recettes ${deSaison(saison)}` : "Toutes les recettes";
-    sousTitre.textContent = `${saison ? majuscule(saison) : "Toute l'année"} · ${trouvees.length} recette${trouvees.length > 1 ? "s" : ""}`;
+    const base = filtres.saison === "auto" ? "De saison" : saison ? `Recettes ${deSaison(saison)}` : "Toutes les recettes";
+    titre.textContent = `${base} (${trouvees.length})`;
+    sousTitre.textContent = saison ? majuscule(saison) : "Toute l'année";
     boutonVoir.textContent = `Voir ${trouvees.length} recette${trouvees.length > 1 ? "s" : ""}`;
     liste.replaceChildren(
       ...(trouvees.length
@@ -227,10 +260,10 @@ function ecranSaison() {
     const actifs = nombreActifs();
     pastille.textContent = actifs ? String(actifs) : "";
     pastille.hidden = actifs === 0;
-    effacer.hidden = actifs === 0;
+    effacer.hidden = !afficherEffacer();
   }
 
-  function actualiserTout() { actualiserPanneau(); actualiserListe(); }
+  function actualiserTout() { actualiserOnglets(); actualiserPanneau(); actualiserListe(); }
 
   function reinitialiser() {
     Object.assign(filtres, FILTRES_PAR_DEFAUT);
@@ -242,12 +275,18 @@ function ecranSaison() {
     "aria-label": "Rechercher", autocomplete: "off", value: filtres.recherche,
     oninput: (e) => { filtres.recherche = e.target.value; actualiserListe(); },
   });
+  const zoneRecherche = h("div", { class: "zone-recherche" }, recherche);
 
   actualiserPanneauVisible();
+  actualiserRechercheVisible();
   actualiserTout();
   return h("div", {},
-    titre, sousTitre, recherche,
-    h("div", { class: "rangee-filtres" }, boutonFiltres, effacer),
+    h("header", { class: "entete" },
+      h("p", { class: "marque" }, icone("bol"), "Compilation des recettes"),
+      h("div", { class: "boutons-entete" }, boutonFiltres, boutonRecherche)),
+    zoneRecherche,
+    titre, sousTitre, onglets,
+    h("div", { class: "rangee-filtres" }, effacer),
     panneau, liste);
 }
 
@@ -298,15 +337,8 @@ function ecranRecette(idBrut) {
     const o = recette.origine;
     const livre = o.type === "livre" ? donnees.livres.find((l) => l.id === o.livre) : null;
 
-    const lieu = o.type === "livre"
-      ? h("p", { class: "ou" }, "Livre ", h("b", {}, livre ? livre.titre : o.livre), `, page ${o.page}`)
-      : h("p", { class: "ou" }, "Source : ",
-          /^https?:\/\//i.test(o.url) ? h("a", { href: o.url, target: "_blank", rel: "noopener noreferrer" }, o.source) : o.source);
-
     const t = recette.temps;
-    const temps = t
-      ? [t.preparation ? `${t.preparation} min` : "", t.cuisson ? `cuisson ${t.cuisson} min` : ""].filter(Boolean).join(" · ")
-      : "";
+    const ligneInfo = (libelle, ...contenu) => [h("dt", {}, libelle), h("dd", {}, ...contenu)];
 
     const cochees = cocheesFiche.get(id) ?? new Set();
     const ligneIngredient = (ligne, i) => {
@@ -322,36 +354,43 @@ function ecranRecette(idBrut) {
       caseACocher.checked = cochees.has(i);
       return h("label", { class: `ing${cochees.has(i) ? " fait" : ""}` },
         caseACocher,
-        h("span", { class: "nom" }, nomsIngredients.get(ligne.ingredient) ?? ligne.ingredient,
-          ligne.precision ? h("small", {}, ` (${ligne.precision})`) : null),
-        h("span", { class: "qte" }, formaterQuantite(quantiteAjustee(ligne.quantite, mult), ligne.unite)));
+        h("span", { class: "nom" },
+          h("b", { class: "quantite" }, formaterQuantite(quantiteAjustee(ligne.quantite, mult), ligne.unite)), " ",
+          nomsIngredients.get(ligne.ingredient) ?? ligne.ingredient,
+          ligne.precision ? h("small", {}, ` (${ligne.precision})`) : null));
     };
 
     conteneur.replaceChildren(
       h("div", { class: "fiche-tete" },
-        h("button", { type: "button", class: "retour", onclick: retourListe }, "‹ Retour"),
-        photoRecette(recette, true),
-        h("h1", { class: "titre-recette" }, recette.titre),
-        h("p", { class: "meta" }, majuscule(recette.categorie), " · ", recette.saisons.join(", ")),
-        lieu,
-        h("div", { class: "portions" },
-          h("b", {}, "Pour"),
-          h("div", { class: "pas" },
-            h("button", { type: "button", "data-cle": "pas-moins", "aria-label": "Moins de personnes", onclick: () => changerPersonnes(-1) }, "−"),
-            compteur,
-            h("button", { type: "button", "data-cle": "pas-plus", "aria-label": "Plus de personnes", onclick: () => changerPersonnes(1) }, "+")),
-          h("span", { class: "ou" }, personnes > 1 ? "personnes" : "personne")),
-        h("p", { class: "note-livre" },
-          `Recette du livre pour ${recette.personnes} personne${recette.personnes > 1 ? "s" : ""}`,
-          recette.personnes_texte ? ` (${recette.personnes_texte})` : ""),
-        h("button", { type: "button", "data-cle": "bascule-semaine", class: `btn${dansSemaine ? " alt" : ""}`, onclick: basculerSemaine },
-          dansSemaine ? "Retirer de ma semaine" : "Ajouter à ma semaine")),
+        h("div", { class: "fiche-photo" },
+          photoRecette(recette, true),
+          h("button", { type: "button", class: "rond retour", "aria-label": "Retour", onclick: retourListe }, icone("retour")),
+          h("button", { type: "button", "data-cle": "bascule-semaine", class: `pilule${dansSemaine ? " active" : ""}`, onclick: basculerSemaine },
+            dansSemaine ? "Retirer de ma semaine" : "Ajouter à ma semaine"),
+          h("div", { class: "fiche-titre" },
+            h("h1", { class: "titre-recette" }, recette.titre),
+            h("p", {}, majuscule(recette.categorie), " • ", recette.saisons.join(", ")))),
+        h("dl", { class: "infos" },
+          o.type === "livre"
+            ? ligneInfo("Livre", livre ? livre.titre : o.livre, `, page ${o.page}`)
+            : ligneInfo("Source", /^https?:\/\//i.test(o.url) ? h("a", { href: o.url, target: "_blank", rel: "noopener noreferrer" }, o.source) : o.source),
+          ligneInfo("Portions",
+            h("span", { class: "pas" },
+              h("button", { type: "button", "data-cle": "pas-moins", "aria-label": "Moins de personnes", onclick: () => changerPersonnes(-1) }, "−"),
+              compteur,
+              h("button", { type: "button", "data-cle": "pas-plus", "aria-label": "Plus de personnes", onclick: () => changerPersonnes(1) }, "+"),
+              h("span", { class: "ou" }, personnes > 1 ? "personnes" : "personne")),
+            h("small", { class: "note-livre" },
+              `Recette du livre pour ${recette.personnes} personne${recette.personnes > 1 ? "s" : ""}`,
+              recette.personnes_texte ? ` (${recette.personnes_texte})` : "")),
+          t && t.preparation ? ligneInfo("Préparation", `${t.preparation} min`) : null,
+          t && t.cuisson ? ligneInfo("Cuisson", `${t.cuisson} min`) : null)),
       h("div", { class: "fiche-corps" },
         h("section", {},
           h("h2", { class: "section" }, "Ingrédients"),
           recette.ingredients.map(ligneIngredient)),
         h("section", {},
-          h("h2", { class: "section" }, "Préparation", temps ? ` · ${temps}` : ""),
+          h("h2", { class: "section" }, "Préparation"),
           ...recette.etapes.map((texte, i) =>
             h("div", { class: "etape" }, h("span", {}, String(i + 1)), h("div", {}, texte))),
           recette.notes && recette.notes.length
