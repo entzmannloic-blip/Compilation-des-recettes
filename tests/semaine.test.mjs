@@ -102,3 +102,12 @@ test("definirPersonnes : id absent de la semaine → inchangé, sans modifier l'
   definirPersonnes(s, "a", 9);
   assert.deepEqual(s, { a: 4 });
 });
+
+test("basculer / definirPersonnes : un id comme « constructor » ou « toString » n'est pas déjà présent", () => {
+  const recette = { id: "toString", personnes: 3 };
+  const ajoute = basculer({}, recette);
+  assert.deepEqual(Object.keys(ajoute), ["toString"]);
+  assert.equal(ajoute.toString, 3);
+  assert.deepEqual(Object.keys(basculer(ajoute, recette)), []);
+  assert.deepEqual(Object.keys(definirPersonnes({}, "constructor", 4)), []);
+});

@@ -39,14 +39,14 @@ export function sauverSemaine(storage, semaine) {
 /** Ajoute la recette (avec ses personnes) ou la retire. Renvoie un nouvel objet. */
 export function basculer(semaine, recette) {
   const copie = { ...semaine };
-  if (recette.id in copie) delete copie[recette.id];
+  if (Object.hasOwn(copie, recette.id)) delete copie[recette.id];
   else copie[recette.id] = recette.personnes;
   return copie;
 }
 
 /** Fixe le nombre de personnes (entier ≥ 1) d'une recette déjà dans la semaine. */
 export function definirPersonnes(semaine, id, n) {
-  if (!(id in semaine)) return { ...semaine };
+  if (!Object.hasOwn(semaine, id)) return { ...semaine };
   const personnes = Number.isFinite(n) ? Math.max(1, Math.round(n)) : 1;
   return { ...semaine, [id]: personnes };
 }
