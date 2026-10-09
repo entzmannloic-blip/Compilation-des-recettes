@@ -3119,10 +3119,7 @@
       { "ingredient": "oignon-rouge", "quantite": 1, "unite": "pièce", "precision": null },
       { "ingredient": "cumin", "quantite": 6, "unite": "g", "precision": null },
       { "ingredient": "oeufs", "quantite": 8, "unite": "pièce", "precision": null },
-      { "ingredient": "huile-d-olive", "quantite": 1, "unite": "c. à soupe", "precision": "2 traits" },
       { "ingredient": "sucre-en-poudre", "quantite": 2, "unite": "pincée", "precision": null },
-      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": "et pour l'eau du riz" },
-      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null },
       { "ingredient": "coriandre", "quantite": null, "unite": null, "precision": "facultatif, ou ciboulette" }
     ],
     "etapes": [
@@ -3159,10 +3156,7 @@
       { "ingredient": "radis", "quantite": 1, "unite": "bouquet", "precision": null },
       { "ingredient": "yaourt", "quantite": 2, "unite": "pièce", "precision": null },
       { "ingredient": "citron-confit", "quantite": 0.5, "unite": "pièce", "precision": null },
-      { "ingredient": "dukkah", "quantite": 10, "unite": "g", "precision": null },
-      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": "2 traits" },
-      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": "et pour l'eau du riz" },
-      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null }
+      { "ingredient": "dukkah", "quantite": 10, "unite": "g", "precision": null }
     ],
     "etapes": [
       "Faire bouillir une casserole d'eau salée (la bouilloire fait gagner du temps). Y plonger le riz rouge et le laisser cuire 18 minutes à feu moyen.",
@@ -3199,11 +3193,7 @@
       { "ingredient": "linguine", "quantite": 500, "unite": "g", "precision": null },
       { "ingredient": "pesto", "quantite": 200, "unite": "g", "precision": "pesto verde" },
       { "ingredient": "oeufs", "quantite": 2, "unite": "pièce", "precision": null },
-      { "ingredient": "farine", "quantite": 6, "unite": "c. à soupe", "precision": null },
-      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": "2 traits" },
-      { "ingredient": "huile-neutre", "quantite": 2, "unite": "c. à soupe", "precision": "2 traits, pour la friture" },
-      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": "et pour l'eau des pâtes" },
-      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null }
+      { "ingredient": "farine", "quantite": 6, "unite": "c. à soupe", "precision": null }
     ],
     "etapes": [
       "Couper l'aubergine en tranches d'environ 1 cm. Éplucher et hacher finement l'ail.",
@@ -3243,10 +3233,7 @@
       { "ingredient": "carotte", "quantite": 2, "unite": "pièce", "precision": null },
       { "ingredient": "concombre", "quantite": 1, "unite": "pièce", "precision": null },
       { "ingredient": "poudre-de-wasabi", "quantite": 6, "unite": "g", "precision": null },
-      { "ingredient": "graines-de-sesame", "quantite": 8, "unite": "g", "precision": null },
-      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": "2 traits" },
-      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": "et pour l'eau du quinoa" },
-      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null }
+      { "ingredient": "graines-de-sesame", "quantite": 8, "unite": "g", "precision": null }
     ],
     "etapes": [
       "Faire bouillir une casserole d'eau salée pour cuire le quinoa. Éplucher la carotte et la tailler en lamelles à l'économe. Éplucher le concombre, le couper en deux, puis en rondelles.",

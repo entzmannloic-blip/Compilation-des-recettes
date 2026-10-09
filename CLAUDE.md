@@ -18,6 +18,7 @@ Méthode `superpowers:subagent-driven-development` : un assistant neuf par tâch
 - Tests : `npm test` (la forme `node --test tests/` échoue sous Node 22 / Windows). Contrôle des données : `node scripts/validate-data.mjs`.
 - Aucune dépendance npm, pas d'étape de build, pas de service worker (pas de hors-ligne).
 - Interface en français ; nombre de personnes obligatoire pour chaque recette.
+- Recettes d'internet (Les Commis, etc.) : ne pas lister huile d'olive, huile neutre, eau, sel, poivre dans les ingrédients (demande de Loïc, 9 octobre 2026) ; les garder dans les étapes. Trouver une recette à partir de son titre : recherche web limitée à lescommis.com (les adresses ne se devinent pas) ; nombre de personnes dans `recipeYield` de la page.
 - Commits en français, terminés par `Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>`.
 - Mise en ligne : depuis le 9 octobre 2026, Loïc a retiré l'obligation de demander. Livrer (commit + `git push`) sans redemander son accord, après les contrôles. Dépôt public accepté, aucune donnée personnelle dans le site.
 - Test sur mobile (375 px) et ordinateur, console sans erreur, avant de dire « c'est fait ».
