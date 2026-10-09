@@ -11,6 +11,7 @@ import {
   NOMS_MOIS, MOIS_DE_SAISON, saisonDuMoisNumero, alimentsDuMois, alimentsDeLaSaison, chercherAliments, libelleMois,
   moisParIngredient, recettesAvecAliment, moisAvantSaison,
 } from "./saison.js";
+import { peindreSaisons } from "./aquarelle.js";
 import { compilerCourses, texteCourses, chargerCoches, sauverCoches } from "./courses.js";
 
 const vue = document.getElementById("vue");
@@ -854,7 +855,6 @@ function ecranLivres() {
 }
 
 // ---------- Écran « Saison » : roue des mois, aliments de saison ----------
-const EMOJI_SAISON = { printemps: "🌱", été: "☀️", automne: "🍂", hiver: "❄️" };
 const LETTRES_MOIS = ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sep", "Oct", "Nov", "Déc"];
 const INITIALES_MOIS = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
 const MOIS_MILIEU = { printemps: 4, été: 7, automne: 10, hiver: 1 }; // mois sur lequel la roue se place quand on choisit une saison
@@ -863,6 +863,7 @@ const moisActuel = new Date().getMonth() + 1;
 const calendrier = { mois: moisActuel, saison: null, recherche: "", ouvert: null };
 let rotationRoue = -(moisActuel - 1) * 30; // degrés cumulés : la roue tourne par le chemin le plus court
 let fermerFeuilleCourante = null;
+let toilesAquarelle = null; // les quatre lavis de la roue, peints une seule fois
 
 const normaliserAngle = (a) => ((((a + 180) % 360) + 360) % 360) - 180;
 function viserMois(mois) {
@@ -877,11 +878,14 @@ function ecranCalendrier() {
   const conteneur = h("div", {});
 
   // --- la roue ---
-  const centreEmoji = h("span", { class: "centre-emoji", "aria-hidden": "true" });
+  const centreSaison = h("span", { class: "centre-saison" });
   const centreNom = h("span", { class: "centre-nom" });
   const centreDetail = h("span", { class: "centre-detail" });
-  const centre = h("div", { class: "roue-centre", "aria-live": "polite" }, centreEmoji, centreNom, centreDetail);
+  const centre = h("div", { class: "roue-centre", "aria-live": "polite" }, centreSaison, centreNom, centreDetail);
+  toilesAquarelle ??= peindreSaisons();
+  const toiles = Object.entries(toilesAquarelle).map(([saison, toile]) => { toile.className = "toile"; toile.dataset.saison = saison; toile.setAttribute("aria-hidden", "true"); return toile; });
   const roue = h("div", { class: "roue", role: "group", "aria-label": "Roue des mois : faites-la tourner ou touchez un mois" },
+    toiles,
     LETTRES_MOIS.map((lettres, i) =>
       h("button", {
         type: "button", class: `roue-mois${i + 1 === moisActuel ? " ici" : ""}`, style: `--a:${i * 30}`,
@@ -890,20 +894,9 @@ function ecranCalendrier() {
   const zone = h("div", { class: "roue-zone" }, h("span", { class: "roue-fleche", "aria-hidden": "true" }), roue, centre);
   roue.style.setProperty("--rot", String(rotationRoue));
 
-  function fondRoue() {
-    const couleurs = [], voile = [];
-    for (let k = 1; k <= 12; k += 1) {
-      const a = (k - 1) * 30, b = k * 30;
-      couleurs.push(`${variableSaison(k)} ${a}deg ${b}deg`);
-      const estompe = calendrier.saison && saisonDuMoisNumero(k) !== calendrier.saison;
-      voile.push(`${estompe ? "rgba(255,255,255,.7)" : "transparent"} ${a}deg ${b}deg`);
-    }
-    return `repeating-conic-gradient(from -15deg, #fff 0 1.2deg, transparent 1.2deg 30deg), conic-gradient(from -15deg, ${voile.join(", ")}), conic-gradient(from -15deg, ${couleurs.join(", ")})`;
-  }
-
   function majCentre(mois) {
     const saison = calendrier.saison ?? saisonDuMoisNumero(mois);
-    centreEmoji.textContent = EMOJI_SAISON[saison];
+    centreSaison.textContent = calendrier.saison ? "la saison" : saison;
     if (calendrier.saison) {
       const liste = alimentsDeLaSaison(aliments, calendrier.saison);
       centreNom.textContent = majuscule(calendrier.saison);
@@ -992,7 +985,7 @@ function ecranCalendrier() {
 
   // --- saisons, mois, recherche ---
   const boutonsSaison = h("div", { class: "saison-boutons", role: "group", "aria-label": "Saisons" });
-  const chipsMois = h("div", { class: "puces", role: "group", "aria-label": "Mois" });
+  const chipsMois = h("div", { class: "puces puces-mois", role: "group", "aria-label": "Mois" });
   const retour = h("button", { type: "button", class: "lien-action retour-mois", "data-cle": "ce-mois", onclick: () => choisirMois(moisActuel) }, "Revenir à ce mois-ci");
   const recherche = h("input", {
     type: "search", class: "recherche", placeholder: "Chercher un aliment, toute l'année", "aria-label": "Chercher un aliment",
@@ -1039,7 +1032,7 @@ function ecranCalendrier() {
   }
   function rafraichir() {
     gardantLeFocus(() => {
-      roue.style.background = fondRoue();
+      toiles.forEach((toile) => toile.classList.toggle("estompe", Boolean(calendrier.saison) && toile.dataset.saison !== calendrier.saison));
       majCentre(calendrier.mois);
       roue.querySelectorAll(".roue-mois").forEach((b, i) => {
         const dansSaison = calendrier.saison ? MOIS_DE_SAISON[calendrier.saison].includes(i + 1) : i + 1 === calendrier.mois;
@@ -1047,7 +1040,7 @@ function ecranCalendrier() {
       });
       boutonsSaison.replaceChildren(...Object.keys(MOIS_DE_SAISON).map((s) =>
         h("button", { type: "button", class: "saison-btn", "data-saison": s, "data-cle": `saison-${s}`, "aria-pressed": String(calendrier.saison === s), onclick: () => choisirSaison(s) },
-          h("span", { "aria-hidden": "true" }, EMOJI_SAISON[s]), majuscule(s))));
+          h("span", { class: "tache", "aria-hidden": "true" }), majuscule(s))));
       chipsMois.replaceChildren(...NOMS_MOIS.map((nom, i) =>
         h("button", { type: "button", class: "puce", "data-cle": `mois-${i + 1}`, "aria-pressed": String(!calendrier.saison && calendrier.mois === i + 1), onclick: () => choisirMois(i + 1) }, majuscule(nom))));
       retour.hidden = !calendrier.saison && calendrier.mois === moisActuel;
