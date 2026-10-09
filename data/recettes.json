@@ -3474,5 +3474,309 @@
       "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les 4 cuillères à soupe d'huile d'olive se répartissent entre les légumes et le couscous sans détail dans la page."
     ],
     "photo": "photos/couscous-legumes-rotis-amandes.jpg"
+  },
+  {
+    "id": "poulet-effiloche-gnocchi-sauce-tomate-fumee",
+    "titre": "Poulet effiloché et gnocchi dorés à la sauce tomate fumée",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/poulet-effiloche-gnocchi-dores-et-sauce-tomate-fumee/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "mijoté",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 25, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "cuisse-de-poulet", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "gnocchis", "quantite": 600, "unite": "g", "precision": null },
+      { "ingredient": "carotte", "quantite": 480, "unite": "g", "precision": null },
+      { "ingredient": "coulis-de-tomates", "quantite": 400, "unite": "ml", "precision": null },
+      { "ingredient": "laurier", "quantite": 2, "unite": "pièce", "precision": "feuilles" },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": "jaune" },
+      { "ingredient": "paprika", "quantite": 2, "unite": "c. à café", "precision": "fumé" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "origan", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "sucre-en-poudre", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "beurre", "quantite": 20, "unite": "g", "precision": "2 noix, demi-sel" }
+    ],
+    "etapes": [
+      "Chauffer une grande casserole à feu moyen avec un trait d'huile d'olive. Y dorer les cuisses de poulet 3 minutes par face, saler et poivrer. Pendant ce temps, éplucher l'oignon et les carottes, émincer finement l'oignon et couper les carottes en petits dés de 5 mm. Éplucher et hacher l'ail. Réserver le poulet sur une assiette.",
+      "Dans la même casserole, ajouter un peu d'huile si besoin et faire suer l'oignon et les carottes 4 minutes, en salant légèrement. Ajouter l'ail, l'origan, le paprika fumé et le sucre.",
+      "Verser le coulis de tomate et 200 ml d'eau, ajouter le laurier et mélanger. Plonger les cuisses de poulet dans la sauce et laisser mijoter 30 minutes à feu doux, en remuant de temps en temps et en baissant le feu si la sauce réduit trop vite. Elle doit épaissir et les carottes devenir fondantes.",
+      "Chauffer une poêle à feu moyen avec une noix de beurre ou un filet d'huile d'olive (les deux pour les plus gourmands). Y dorer les gnocchi 6 à 8 minutes en remuant souvent, pour qu'ils soient grillés dehors et moelleux dedans. Saler et poivrer.",
+      "Sortir le poulet de la casserole, retirer la peau et les os : la viande doit se détacher toute seule. L'effilocher avec deux fourchettes et la remettre dans la sauce en mélangeant bien.",
+      "Répartir les gnocchi dorés dans des assiettes creuses, napper d'effiloché de poulet et de sauce aux légumes, et ajouter un tour de moulin à poivre. Servir bien chaud."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Le beurre est noté « 2 noix » : compté 20 g."
+    ],
+    "photo": "photos/poulet-effiloche-gnocchi-sauce-tomate-fumee.jpg"
+  },
+  {
+    "id": "parmentier-legumes-automne-fromage",
+    "titre": "Parmentier de légumes d'automne au fromage",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/parmentier-de-legumes-dautomne-au-comte/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 30, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "champignon", "quantite": 400, "unite": "g", "precision": "de Paris" },
+      { "ingredient": "emmental", "quantite": 160, "unite": "g", "precision": "râpé" },
+      { "ingredient": "carotte", "quantite": 800, "unite": "g", "precision": null },
+      { "ingredient": "feuilles-de-salade", "quantite": 1, "unite": "pièce", "precision": "salade, pour accompagner" },
+      { "ingredient": "pommes-de-terre", "quantite": 700, "unite": "g", "precision": null },
+      { "ingredient": "noisettes", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "sauce-soja-sucree", "quantite": 4, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": "jaune" },
+      { "ingredient": "thym", "quantite": 2, "unite": "g", "precision": null },
+      { "ingredient": "beurre", "quantite": 40, "unite": "g", "precision": "doux" }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C en chaleur traditionnelle. Éplucher les pommes de terre et les carottes, les couper en cubes et les mettre dans une casserole d'eau salée. Porter à ébullition puis cuire 25 à 30 minutes à feu moyen.",
+      "Ôter le pied des champignons et les émincer. Éplucher et ciseler l'oignon. Concasser grossièrement les noisettes.",
+      "Chauffer une poêle à feu moyen avec une noix de beurre et y faire revenir l'oignon 2 minutes. Ajouter les champignons, saler, poivrer et cuire 5 minutes en remuant, jusqu'à ce qu'ils soient bien dorés. Verser la sauce soja sucrée et laisser légèrement caraméliser.",
+      "Quand les légumes sont tendres, les égoutter et les remettre dans la casserole. Ajouter le thym, les deux tiers du fromage et une noix de beurre, saler, poivrer et écraser le tout au fouet.",
+      "Disposer les champignons dans un plat à gratin et parsemer de noisettes concassées. Recouvrir de purée et du reste du fromage. Enfourner 10 minutes.",
+      "Vérifier que le parmentier est bien gratiné (le gril du four peut aider quelques instants) et le déguster bien chaud."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). L'adresse de la page parle de comté et le titre actuel de la page est « Parmentier d'automne aux champignons et carottes » ; la liste d'ingrédients indique de l'emmental râpé, c'est celui retenu ici."
+    ],
+    "photo": "photos/parmentier-legumes-automne-fromage.jpg"
+  },
+  {
+    "id": "orzo-petits-pois-citron-romarin",
+    "titre": "Orzo petit pois au citron et romarin",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/ruta-orzo-petits-pois-citron-romarin/"
+    },
+    "saisons": ["printemps", "été"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "petits-pois", "quantite": 440, "unite": "g", "precision": null },
+      { "ingredient": "cuisine-soja", "quantite": 200, "unite": "ml", "precision": "crème de cuisine au soja" },
+      { "ingredient": "orzo", "quantite": 400, "unite": "g", "precision": "semi-complet" },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "romarin", "quantite": 1, "unite": "bouquet", "precision": "2 tiges, frais" },
+      { "ingredient": "oignon-rouge", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "pièce", "precision": "cube" }
+    ],
+    "etapes": [
+      "Porter à ébullition 800 ml d'eau et y diluer le bouillon de légumes. Peler et émincer l'oignon rouge. Dans une sauteuse, à feu moyen, chauffer 4 traits d'huile d'olive et y faire revenir l'oignon et le romarin 2 minutes. Ajouter l'orzo et mélanger 1 minute pour le nacrer.",
+      "Verser le bouillon en une seule fois et bien mélanger. Baisser à feu moyen et cuire 10 minutes, jusqu'à ce que le liquide soit absorbé, en remuant régulièrement pour éviter que ça accroche. Ajuster le temps et ajouter un peu d'eau si besoin.",
+      "Pendant ce temps, laver, zester et presser le citron. Égoutter les petits pois.",
+      "Goûter l'orzo, puis ajouter la crème de cuisine au soja, le zeste et le jus du citron, les petits pois, du sel et du poivre. Mélanger 5 minutes à feu doux avant d'arrêter la cuisson.",
+      "Servir l'orzo crémeux."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les « 2 tiges » de romarin sont comptées en 1 bouquet. La page écrit « cuisine soja » : compris comme une crème de cuisine au soja."
+    ],
+    "photo": "photos/orzo-petits-pois-citron-romarin.jpg"
+  },
+  {
+    "id": "nouilles-wuhan-cacahuete-sesame",
+    "titre": "Nouilles Wuhan sauce cacahuète et sésame",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/ruta-nouilles-wuhan-a-la-sauce-cacahuete-sesame/"
+    },
+    "saisons": ["printemps", "été", "automne", "hiver"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "nouilles-de-riz", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "carotte", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "beurre-de-cacahuete", "quantite": 80, "unite": "g", "precision": "purée de cacahuète" },
+      { "ingredient": "oignon-nouveau", "quantite": 1, "unite": "pièce", "precision": "cébette" },
+      { "ingredient": "sauce-soja-sucree", "quantite": 60, "unite": "ml", "precision": null },
+      { "ingredient": "graines-de-sesame", "quantite": 3, "unite": "g", "precision": null }
+    ],
+    "etapes": [
+      "Laver, éplucher et couper les carottes en fins bâtonnets. Laver et émincer la cébette en réservant le vert pour le dressage. Dans une poêle à feu moyen, chauffer un filet d'huile neutre et y faire revenir le blanc de la cébette avec les carottes pendant 15 minutes, en remuant régulièrement.",
+      "Dans un bol, mélanger le beurre de cacahuète, la sauce soja sucrée et 8 cuillères à soupe d'eau, saler et poivrer.",
+      "Porter de l'eau salée à ébullition dans une casserole, y verser les nouilles de riz, bien remuer et les cuire à petits bouillons, à découvert, 4 minutes, en les mélangeant une ou deux fois pour qu'elles ne collent pas.",
+      "Égoutter les nouilles et les passer sous un peu d'eau froide. Dans la poêle des carottes, ajouter la sauce cacahuète et les nouilles. Mélanger doucement 2 minutes pour lier la sauce.",
+      "Servir les nouilles et parsemer de graines de sésame et du vert de la cébette."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). La photo d'origine montre aussi des haricots verts, absents de la liste d'ingrédients."
+    ],
+    "photo": "photos/nouilles-wuhan-cacahuete-sesame.jpg"
+  },
+  {
+    "id": "saute-porc-abricots-amandes",
+    "titre": "Sauté de porc aux abricots et aux amandes",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/saute-de-porc-aux-abricots-bio/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "mijoté",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 25, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "saute-de-porc", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "abricots-secs", "quantite": 100, "unite": "g", "precision": null },
+      { "ingredient": "semoule", "quantite": 300, "unite": "g", "precision": "de blé" },
+      { "ingredient": "carotte", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "amandes-emondees", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "pièce", "precision": "cube" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "cumin", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "gingembre-en-poudre", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "coriandre-en-poudre", "quantite": 1, "unite": "c. à café", "precision": null },
+      { "ingredient": "farine", "quantite": 2, "unite": "c. à soupe", "precision": null }
+    ],
+    "etapes": [
+      "Éplucher les carottes et les couper en fines rondelles. Éplucher et hacher l'ail (ôter le germe, il sera plus digeste). Couper les abricots secs en quatre. Concasser les amandes si on le souhaite. Recouper les morceaux de porc s'ils sont trop gros.",
+      "Chauffer une cocotte à feu moyen avec un filet d'huile d'olive. Y faire revenir l'ail et les carottes 2 minutes en remuant. Ajouter le cumin, le gingembre et la coriandre et remuer 1 minute pour torréfier les épices.",
+      "Ajouter le sauté de porc et le dorer 3 à 4 minutes en remuant, saler et poivrer. Baisser à feu doux, saupoudrer de farine et mélanger.",
+      "Ajouter le bouillon de légumes (cube émietté) et les abricots secs, et mélanger. Mouiller d'eau à mi-hauteur, couvrir et laisser mijoter 20 minutes à feu doux. La sauce doit être onctueuse, sans noyer la viande.",
+      "Dix minutes avant la fin de cuisson, verser la semoule dans un bol et la couvrir d'un volume égal d'eau bouillante (300 ml pour 4). Saler, poivrer, couvrir 5 minutes, puis égrener à la fourchette avec un filet d'huile d'olive.",
+      "Servir la semoule avec le sauté de porc, arroser de jus de cuisson et parsemer d'amandes. On peut ajouter de la coriandre ou du persil frais si on en a."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page)."
+    ],
+    "photo": "photos/saute-porc-abricots-amandes.jpg"
+  },
+  {
+    "id": "parmentier-canard-gingembre",
+    "titre": "Parmentier de canard au gingembre",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/jean-parmentier-de-canard/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "cuisses-de-canard-confites", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "pommes-de-terre", "quantite": 1000, "unite": "g", "precision": null },
+      { "ingredient": "carotte", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "poireau", "quantite": 2, "unite": "pièce", "precision": "blancs" },
+      { "ingredient": "gingembre", "quantite": 20, "unite": "g", "precision": "frais" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "laurier", "quantite": 2, "unite": "pièce", "precision": "feuilles" },
+      { "ingredient": "oignon-nouveau", "quantite": 1, "unite": "pièce", "precision": "cébette" },
+      { "ingredient": "lait", "quantite": 400, "unite": "ml", "precision": null }
+    ],
+    "etapes": [
+      "Éplucher les pommes de terre, les couper en cubes et les plonger dans une casserole d'eau froide salée avec une feuille de laurier. Porter à ébullition et cuire 20 à 25 minutes à feu moyen à doux. Préchauffer le four à 180 °C en chaleur traditionnelle.",
+      "Couper les radicelles du poireau et bien le rincer. Éplucher la carotte, l'ail et le gingembre. Émincer finement le poireau et la carotte. Émincer la cébette en gardant le vert pour le dressage. Hacher l'ail et le gingembre.",
+      "Chauffer les cuisses de canard au micro-ondes dans leur sachet pour liquéfier la graisse (ou dans un saladier d'eau chaude à défaut). Réserver la graisse dans un bol pour la purée. Effilocher la viande en laissant la peau.",
+      "Chauffer une poêle à feu moyen à vif avec un filet d'huile d'olive et y faire sauter les légumes 5 minutes. Ajouter le gingembre, le blanc de cébette et l'ail, et poursuivre la cuisson en remuant. Quand les légumes sont fondants, ajouter le canard et le faire colorer 3 minutes. Mouiller légèrement avec de l'eau.",
+      "Vérifier la cuisson des pommes de terre en les piquant, les égoutter, les remettre dans la casserole et retirer le laurier. Les écraser au fouet en ajoutant peu à peu la graisse de canard et le lait, saler et poivrer.",
+      "Disposer la garniture au canard dans un plat à gratin huilé et la recouvrir de purée. Arroser d'un filet d'huile d'olive et enfourner 10 minutes. Servir bien chaud, parsemé de cébette."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les cuisses de canard sont des cuisses confites, vendues en sachet."
+    ],
+    "photo": "photos/parmentier-canard-gingembre.jpg"
+  },
+  {
+    "id": "veloute-butternut-ravioles-emmental",
+    "titre": "Velouté de butternut et ravioles à l'emmental",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/veloute-de-butternut-et-ravioles-a-lemmental/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "soupe",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "ravioles-du-dauphine", "quantite": 480, "unite": "g", "precision": "à l'emmental" },
+      { "ingredient": "parmesan", "quantite": 100, "unite": "g", "precision": "râpé" },
+      { "ingredient": "courge-butternut", "quantite": 800, "unite": "g", "precision": null },
+      { "ingredient": "preparation-vegetale-avoine", "quantite": 200, "unite": "ml", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "pièce", "precision": "cube" }
+    ],
+    "etapes": [
+      "Garder les ravioles au frais jusqu'à l'étape 4. Éplucher la butternut, la couper en deux dans la longueur, ôter les graines et la tailler en cubes.",
+      "Mettre les cubes de butternut dans une casserole avec 900 ml d'eau, saler, poivrer et ajouter le bouillon de légumes. Porter à ébullition et cuire 25 minutes.",
+      "Vérifier la cuisson de la courge en la piquant : elle doit être fondante. Mixer le tout en ajoutant la préparation végétale à l'avoine, et un peu d'eau si besoin pour obtenir un velouté assez fluide. Saler et poivrer si nécessaire, puis garder le velouté à feu doux.",
+      "Plonger délicatement les ravioles dans le velouté et les laisser cuire 2 minutes à feu doux, en remuant doucement pour ne pas les écraser.",
+      "Servir le velouté dans des bols, arroser d'un filet d'huile d'olive et parsemer de parmesan râpé."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). L'emmental est dans la farce des ravioles ; le seul fromage à ajouter est le parmesan."
+    ],
+    "photo": "photos/veloute-butternut-ravioles-emmental.jpg"
+  },
+  {
+    "id": "risotto-cremeux-courgettes-citron",
+    "titre": "Risotto crémeux courgettes et citron",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/risotto-cremeux-courgettes-and-citron/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "roquette", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "cuisine-riz", "quantite": 200, "unite": "ml", "precision": "préparation végétale de cuisine au riz" },
+      { "ingredient": "courgette", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "riz", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "pièce", "precision": "cube" },
+      { "ingredient": "echalote", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "pousses-d-epinard", "quantite": 20, "unite": "g", "precision": "listées sur la page, sans emploi dans les étapes" },
+      { "ingredient": "vinaigre-balsamique", "quantite": 2, "unite": "c. à soupe", "precision": "2 traits" }
+    ],
+    "etapes": [
+      "Porter à ébullition 1 litre d'eau dans une petite casserole et y diluer le bouillon de légumes. Peler et émincer l'échalote. Laver la courgette et la couper en cubes d'environ 2 cm (la peau peut rester). Laver, zester et presser le citron. Laver et essorer la roquette.",
+      "Dans une sauteuse ou une cocotte, chauffer un filet d'huile d'olive et y faire revenir l'échalote 2 minutes. Ajouter la courgette et la faire revenir 3 minutes.",
+      "Ajouter le riz et mélanger 3 minutes pour le nacrer. Quand il est translucide, verser une louche de bouillon ; une fois le bouillon absorbé, recommencer jusqu'à épuisement du bouillon, en mélangeant fréquemment et délicatement pour que le riz n'accroche pas.",
+      "Goûter le risotto ; quand le riz est cuit, ajouter la préparation végétale de cuisine au riz, le zeste et le jus du citron. Mélanger, ajuster l'assaisonnement en sel et poivre et arrêter la cuisson.",
+      "Servir le risotto dans des assiettes. Selon les goûts, déposer la roquette dessus ou à côté, assaisonnée d'huile d'olive et de vinaigre balsamique."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les 20 g de pousses d'épinards figurent dans la liste de la page mais pas dans les étapes. Le riz est noté « riz » sans variété."
+    ],
+    "photo": "photos/risotto-cremeux-courgettes-citron.jpg"
   }
 ]

@@ -221,5 +221,16 @@
   { "id": "tagliatelles-de-riz", "nom": "tagliatelles de riz", "rayon": "Épicerie", "saisons": [] },
   { "id": "pak-choi", "nom": "pak choï", "rayon": "Légumes", "saisons": [] },
   { "id": "navet", "nom": "navet", "rayon": "Légumes", "saisons": ["automne", "hiver"] },
-  { "id": "panais", "nom": "panais", "rayon": "Légumes", "saisons": ["automne", "hiver"] }
+  { "id": "panais", "nom": "panais", "rayon": "Légumes", "saisons": ["automne", "hiver"] },
+  { "id": "cuisse-de-poulet", "nom": "cuisses de poulet", "rayon": "Boucherie", "saisons": [] },
+  { "id": "saute-de-porc", "nom": "sauté de porc", "rayon": "Boucherie", "saisons": [] },
+  { "id": "cuisses-de-canard-confites", "nom": "cuisses de canard confites", "rayon": "Boucherie", "saisons": [] },
+  { "id": "emmental", "nom": "emmental râpé", "rayon": "Crèmerie", "saisons": [] },
+  { "id": "pommes-de-terre", "nom": "pommes de terre", "rayon": "Légumes", "saisons": [] },
+  { "id": "nouilles-de-riz", "nom": "nouilles de riz", "rayon": "Épicerie", "saisons": [] },
+  { "id": "abricots-secs", "nom": "abricots secs", "rayon": "Épicerie", "saisons": [] },
+  { "id": "amandes-emondees", "nom": "amandes émondées", "rayon": "Épicerie", "saisons": [] },
+  { "id": "cuisine-soja", "nom": "crème de cuisine au soja", "rayon": "Épicerie", "saisons": [] },
+  { "id": "cuisine-riz", "nom": "préparation végétale de cuisine au riz", "rayon": "Épicerie", "saisons": [] },
+  { "id": "preparation-vegetale-avoine", "nom": "préparation végétale à l'avoine", "rayon": "Épicerie", "saisons": [] }
 ]
