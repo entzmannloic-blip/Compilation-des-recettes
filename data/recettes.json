@@ -5381,5 +5381,52 @@
       "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Cette page portait auparavant le titre « Poulet rôti aux légumes printaniers et boulgour »."
     ],
     "photo": "photos/poulet-roti-legumes-laques-miel.jpg"
+  },
+  {
+    "id": "lasagnes-bolognaise-bechamel",
+    "titre": "Lasagnes à la bolognaise et béchamel",
+    "origine": {
+      "type": "web",
+      "source": "Papilles et Pupilles",
+      "url": "https://www.papillesetpupilles.fr/2012/11/recette-de-lasagnes-lasagnes-a-la-bolognaise.html/"
+    },
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 6,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 40 },
+    "ingredients": [
+      { "ingredient": "feuilles-de-lasagne", "quantite": 350, "unite": "g", "precision": "10 feuilles" },
+      { "ingredient": "saute-de-porc", "quantite": 350, "unite": "g", "precision": null },
+      { "ingredient": "saute-de-veau", "quantite": 250, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": "petit" },
+      { "ingredient": "persil", "quantite": 0.5, "unite": "bouquet", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "coulis-de-tomates", "quantite": 750, "unite": "ml", "precision": null },
+      { "ingredient": "piment-d-espelette", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "beurre", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "farine", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "lait", "quantite": 500, "unite": "ml", "precision": "demi-écrémé" },
+      { "ingredient": "parmesan", "quantite": 50, "unite": "g", "precision": null }
+    ],
+    "etapes": [
+      "Préparer la béchamel : faire fondre le beurre dans une casserole, ajouter la farine et mélanger à la fourchette jusqu'à obtenir un mélange homogène. Verser le lait en une seule fois et remuer sans cesse jusqu'à ce que la sauce épaississe légèrement, environ 5 minutes. Réserver.",
+      "Éplucher l'oignon et l'ail, dégermer l'ail et le couper en morceaux. Laver, sécher et équeuter le persil. Couper les viandes en cubes.",
+      "Mixer ensemble les viandes, l'oignon, l'ail et le persil, en plusieurs fois, jusqu'à obtenir la consistance d'une viande hachée, sans trop mixer. Assaisonner de sel, de poivre et de piment d'Espelette et goûter : la préparation ne doit pas être fade.",
+      "Faire revenir cette farce 5 minutes dans une sauteuse avec 2 cuillères à soupe d'huile d'olive, puis ajouter le coulis de tomates et laisser mijoter 15 minutes. Réserver.",
+      "Préchauffer le four à 180 °C (chaleur tournante). Huiler légèrement un plat à four d'environ 28 x 22 cm.",
+      "Monter les lasagnes : poser 2 feuilles de lasagne, puis un peu de sauce bolognaise et un peu de béchamel. Répéter jusqu'à épuisement des ingrédients, en finissant par des feuilles de lasagne.",
+      "Saupoudrer de parmesan et enfourner 20 minutes."
+    ],
+    "notes": [
+      "Recette de Papilles et Pupilles, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Prévue pour un plat de 28 x 22 cm. Feuilles de lasagne fraîches ; la sauce est volontairement abondante pour des lasagnes moelleuses.",
+      "On peut monter le plat quelques heures à l'avance et le garder au frais ; le sortir environ 30 minutes avant la cuisson."
+    ],
+    "photo": "photos/lasagnes-bolognaise-bechamel.jpg"
   }
 ]

@@ -279,5 +279,7 @@
   { "id": "kasha", "nom": "kasha (sarrasin grillé)", "rayon": "Épicerie", "saisons": [] },
   { "id": "pecorino", "nom": "pecorino", "rayon": "Crèmerie", "saisons": [] },
   { "id": "graines-de-pavot", "nom": "graines de pavot", "rayon": "Épicerie", "saisons": [] },
-  { "id": "quatre-epices", "nom": "quatre-épices", "rayon": "Épicerie", "saisons": [] }
+  { "id": "quatre-epices", "nom": "quatre-épices", "rayon": "Épicerie", "saisons": [] },
+  { "id": "feuilles-de-lasagne", "nom": "feuilles de lasagne fraîches", "rayon": "Crèmerie", "saisons": [] },
+  { "id": "saute-de-veau", "nom": "sauté de veau", "rayon": "Boucherie", "saisons": [] }
 ]
