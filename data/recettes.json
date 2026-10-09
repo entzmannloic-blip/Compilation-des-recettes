@@ -4079,5 +4079,643 @@
       "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les 6 tiges de persil sont comptées en 1 bouquet."
     ],
     "photo": "photos/smashed-potatoes-coleslaw.jpg"
+  },
+  {
+    "id": "udon-sautees-legumes-saison",
+    "titre": "Nouilles udon sautées aux légumes de saison",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/wok-de-legumes-de-saison-et-nouilles-sautees/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au wok",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "nouilles-udon", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "coriandre", "quantite": 1, "unite": "bouquet", "precision": "4 tiges, fraîche" },
+      { "ingredient": "chou-blanc", "quantite": 0.5, "unite": "pièce", "precision": null },
+      { "ingredient": "sauce-soja", "quantite": 4, "unite": "c. à soupe", "precision": "salée, bio" },
+      { "ingredient": "poireau", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "cacahuetes", "quantite": 60, "unite": "g", "precision": null },
+      { "ingredient": "carotte", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null }
+    ],
+    "etapes": [
+      "Faire bouillir une casserole d'eau salée pour les nouilles. Couper le poireau et le chou blanc en très fines lamelles. Faire des tagliatelles de carotte à l'économe (la peau peut rester si elle est bio). Éplucher et hacher l'ail. Effeuiller la coriandre.",
+      "Cuire les nouilles dans l'eau bouillante le temps indiqué sur le paquet. Pendant ce temps, concasser grossièrement les cacahuètes (on peut les faire griller légèrement pour plus de croquant). Égoutter les nouilles et les réserver.",
+      "Chauffer un wok ou une poêle à feu moyen avec un filet d'huile neutre et y faire revenir l'ail et les légumes 7 minutes.",
+      "Ajouter les nouilles égouttées et la sauce soja salée, avec une pincée de sucre pour un mélange sucré-salé. Mélanger délicatement, et allonger si besoin avec un peu d'huile neutre et de sauce soja.",
+      "Servir dans des assiettes creuses, parsemer de coriandre et de cacahuètes, et déguster aussitôt."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). La pincée de sucre de l'étape 4 n'est pas dans la liste de la page."
+    ],
+    "photo": "photos/udon-sautees-legumes-saison.jpg"
+  },
+  {
+    "id": "houmous-legumes-rotis-noisettes",
+    "titre": "Houmous, légumes rôtis et noisettes grillées",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/houmous-legumes-rotis-et-noisettes-grillees/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "pois-chiches", "quantite": 460, "unite": "g", "precision": "égouttés" },
+      { "ingredient": "pommes-de-terre", "quantite": 800, "unite": "g", "precision": null },
+      { "ingredient": "carotte", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "oignon-nouveau", "quantite": 1, "unite": "pièce", "precision": "cébette" },
+      { "ingredient": "noisettes", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "betterave", "quantite": 1, "unite": "pièce", "precision": "crue" },
+      { "ingredient": "persil", "quantite": 1, "unite": "bouquet", "precision": "6 tiges, frais" },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "thym", "quantite": 1, "unite": "bouquet", "precision": "4 tiges, frais" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": "à doser selon les goûts" }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C en chaleur tournante. Laver, éplucher et couper les carottes en bâtonnets. Laver, éplucher et couper les pommes de terre et la betterave en quartiers dans la longueur, comme des potatoes.",
+      "Sur une plaque couverte de papier cuisson ou dans un plat à gratin, disposer tous les légumes et les arroser d'huile d'olive (8 cuillères à soupe en tout pour la recette). Parsemer de thym effeuillé, de sel et de poivre. Enfourner 30 à 35 minutes, jusqu'à ce que les légumes soient tendres.",
+      "Laver et émincer la cébette. Laver et ciseler le persil et le réserver pour le dressage. Éplucher l'ail, égoutter les pois chiches et presser le citron.",
+      "Concasser grossièrement les noisettes et les torréfier à sec dans une poêle 2 minutes. Les réserver pour le dressage.",
+      "Dans la cuve d'un mixeur, mettre les pois chiches, l'ail, le jus de citron et de l'huile d'olive, saler, poivrer et mixer jusqu'à obtenir une texture homogène. Ajouter un filet d'huile d'olive ou d'eau si besoin pour un houmous onctueux.",
+      "Dans une assiette, disposer le houmous avec les légumes rôtis (vérifier leur cuisson en les piquant). Parsemer de noisettes, de cébette et de persil. Ce plat se déguste chaud, tiède ou froid."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les 460 g de pois chiches sont comptés égouttés. L'huile d'olive (8 cuillères à soupe) sert aux légumes et au houmous sans détail dans la page."
+    ],
+    "photo": "photos/houmous-legumes-rotis-noisettes.jpg"
+  },
+  {
+    "id": "veloute-potimarron-coco-pita",
+    "titre": "Velouté de potimarron, lait de coco et pita",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/ruta-veloute-de-potiron-a-la-creme-de-coco-naan/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "soupe",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "potimarron", "quantite": 800, "unite": "g", "precision": null },
+      { "ingredient": "lait-de-coco", "quantite": 400, "unite": "ml", "precision": null },
+      { "ingredient": "gingembre", "quantite": 40, "unite": "g", "precision": "frais" },
+      { "ingredient": "echalote", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "curcuma", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "pain-pita", "quantite": 4, "unite": "pièce", "precision": null }
+    ],
+    "etapes": [
+      "Laver, éplucher, évider et couper le potimarron en petits cubes. Peler et émincer l'échalote.",
+      "Dans une casserole à feu moyen, chauffer 4 cuillères à soupe d'huile d'olive et y faire revenir le potimarron avec l'échalote 2 minutes. Ajouter 800 ml d'eau, le curcuma, du sel et du poivre. Mélanger, porter à ébullition et laisser cuire 15 minutes à couvert.",
+      "En parallèle, peler et râper le gingembre. L'ajouter dans la casserole avec le lait de coco, mélanger et poursuivre la cuisson 5 minutes. Sans grille-pain, préchauffer le four en mode gril.",
+      "Vérifier la cuisson des légumes en les piquant, puis les mixer au blender ou au mixeur plongeant jusqu'à obtenir une texture lisse. Réserver à couvert. Si la texture est trop dense, allonger avec un peu d'eau.",
+      "Faire griller les pains pita entiers 1 à 2 minutes au grille-pain, ou 5 minutes sous le gril du four à mi-hauteur.",
+      "Déguster le velouté de potimarron avec les pains pita."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). L'adresse de la page parle de naan et de potiron ; la recette utilise du potimarron et des pains pita."
+    ],
+    "photo": "photos/veloute-potimarron-coco-pita.jpg"
+  },
+  {
+    "id": "butternut-farci-millet-feta-cranberries",
+    "titre": "Butternut farci, millet, feta et cranberries",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/courge-butternut-farcies-au-millet-et-feta/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 25, "cuisson": 35 },
+    "ingredients": [
+      { "ingredient": "feta", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "coriandre", "quantite": 1, "unite": "bouquet", "precision": "4 tiges, fraîche" },
+      { "ingredient": "courge-butternut", "quantite": 1000, "unite": "g", "precision": null },
+      { "ingredient": "millet", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "cranberries", "quantite": 30, "unite": "g", "precision": "séchées" },
+      { "ingredient": "noix", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": "jaune" },
+      { "ingredient": "zaatar", "quantite": 2, "unite": "c. à café", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C en chaleur traditionnelle. Couper la butternut en deux dans la longueur, ôter les graines à la cuillère et entailler la chair en quadrillage au couteau. Les poser sur une plaque couverte de papier cuisson, les badigeonner d'huile d'olive au pinceau et enfourner 50 minutes.",
+      "Pendant ce temps, éplucher et ciseler l'oignon. Effeuiller et hacher la coriandre.",
+      "Chauffer une casserole à feu moyen avec un filet d'huile d'olive et y cuire l'oignon 2 minutes en remuant. Verser 400 ml d'eau et porter à ébullition. Plonger le millet, baisser à feu très doux et le cuire à couvert le temps indiqué sur le paquet, en surveillant : il doit absorber toute l'eau.",
+      "Vérifier la cuisson de la courge au couteau, il doit s'enfoncer facilement. La sortir du four et vider la chair dans un saladier à la cuillère, sans trop abîmer les coques, qu'on garde.",
+      "Dans le saladier, effriter la feta avec les doigts. Ajouter le millet cuit, les noix et les cranberries, et le zaatar. Saler, poivrer et bien mélanger pour obtenir une farce.",
+      "Garnir les coques de farce. Enfourner 5 minutes sous le gril ou 10 minutes en chaleur traditionnelle pour gratiner. Parsemer de coriandre fraîche et déguster sans attendre."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Le titre de la page est « Butternut farcie millet, feta & cranberries »."
+    ],
+    "photo": "photos/butternut-farci-millet-feta-cranberries.jpg"
+  },
+  {
+    "id": "poulet-mijote-pruneaux-patates-douces",
+    "titre": "Poulet mijoté aux pruneaux et patates douces",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/poulet-mijote-aux-pruneaux-et-patates-douces/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "mijoté",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "haut-de-cuisse-de-poulet", "quantite": 1100, "unite": "g", "precision": null },
+      { "ingredient": "pruneaux", "quantite": 160, "unite": "g", "precision": null },
+      { "ingredient": "patate-douce", "quantite": 600, "unite": "g", "precision": null },
+      { "ingredient": "courge-butternut", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "bouillon-de-poule", "quantite": 1, "unite": "pièce", "precision": "cube" },
+      { "ingredient": "oignon", "quantite": 2, "unite": "pièce", "precision": "jaune" },
+      { "ingredient": "thym", "quantite": 1, "unite": "bouquet", "precision": "2 tiges, frais" }
+    ],
+    "etapes": [
+      "Éplucher la butternut et les patates douces et les couper en petits dés. Émincer l'oignon.",
+      "Chauffer une cocotte à feu moyen avec un filet d'huile d'olive et y faire revenir l'oignon 2 minutes, jusqu'à ce qu'il soit translucide.",
+      "Ajouter les hauts de cuisse, saler, poivrer et les faire dorer 3 minutes de chaque côté.",
+      "Ajouter les pruneaux, les légumes et le thym. Ajouter le bouillon (cube) et mouiller d'eau à mi-hauteur. Couvrir et laisser mijoter 20 minutes à feu moyen. Retirer le couvercle et poursuivre la cuisson 5 minutes pour faire réduire la sauce.",
+      "Vérifier la cuisson : le poulet doit être cuit à cœur et les légumes fondants. Servir chaud dans des assiettes creuses."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). La butternut s'ajoute aux patates douces. Les 2 tiges de thym sont comptées en 1 bouquet."
+    ],
+    "photo": "photos/poulet-mijote-pruneaux-patates-douces.jpg"
+  },
+  {
+    "id": "veloute-champignons-tartines-truffe",
+    "titre": "Velouté de champignons et tartines à la truffe",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/veloute-de-champignons-et-tartines-a-la-truffe/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "soupe",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "fromage-frais-truffe", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "champignon", "quantite": 500, "unite": "g", "precision": "de Paris" },
+      { "ingredient": "pain-bruschetta", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "cuisine-soja", "quantite": 200, "unite": "ml", "precision": "crème de soja" },
+      { "ingredient": "ciboulette", "quantite": 1, "unite": "bouquet", "precision": "10 tiges, fraîche" },
+      { "ingredient": "echalote", "quantite": 2, "unite": "pièce", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four en mode gril si on n'a pas de grille-pain. Si besoin, ôter le bout terreux des champignons et les couper en quatre. Éplucher et émincer l'échalote. Ciseler la ciboulette.",
+      "Chauffer une casserole ou une cocotte à feu moyen avec un filet d'huile d'olive et y faire revenir les champignons et l'échalote 5 minutes en remuant bien. Saler et poivrer.",
+      "Quand les champignons sont tendres, verser 400 ml d'eau et la crème de soja. Porter à ébullition puis couper le feu.",
+      "Mixer le tout et rectifier l'assaisonnement si besoin.",
+      "Toaster le pain au grille-pain, ou le poser sur une plaque couverte de papier cuisson et l'enfourner 2 à 3 minutes jusqu'à ce qu'il soit grillé (le gril chauffe fort, surveiller).",
+      "Servir le velouté bien chaud avec le pain tartiné de fromage frais à la truffe, et parsemer de ciboulette au dernier moment."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). La page indique « crème de soja » dans la liste et « préparation végétale soja » dans l'étape. Les 10 tiges de ciboulette sont comptées en 1 bouquet."
+    ],
+    "photo": "photos/veloute-champignons-tartines-truffe.jpg"
+  },
+  {
+    "id": "oyakodon-comme-au-japon",
+    "titre": "Oyakodon, comme au Japon",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/oyakodon-comme-au-japon/"
+    },
+    "saisons": ["printemps", "été", "automne", "hiver"],
+    "categorie": "plat",
+    "type": "bowl",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "filet-de-poulet", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "oignon-nouveau", "quantite": 2, "unite": "pièce", "precision": "cébettes" },
+      { "ingredient": "riz-rond", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "algues-nori", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "sauce-soja", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "miso", "quantite": 60, "unite": "g", "precision": "pâte de miso" },
+      { "ingredient": "oeufs", "quantite": 4, "unite": "pièce", "precision": "seulement les jaunes" }
+    ],
+    "etapes": [
+      "Mettre le riz dans une casserole, remplir d'eau froide, mélanger et égoutter. Répéter le rinçage 3 fois. Remettre le riz dans la casserole avec 500 ml d'eau. Porter sur feu vif jusqu'à ébullition, baisser sur feu très doux, couvrir et cuire le temps indiqué sur le paquet.",
+      "Pendant ce temps, laver la cébette et retirer sa première peau. Couper le vert en tronçons et émincer le blanc en fines lamelles. Chauffer une autre casserole à feu moyen avec un trait d'huile neutre et y faire revenir le blanc de cébette 3 minutes en remuant, en salant. Garder le vert pour le service.",
+      "Dans la même casserole, ajouter 1 litre d'eau (pour 4 personnes) et le miso, et cuire 10 minutes à feu doux.",
+      "Tailler les filets de poulet en cubes. Quand le miso est bien infusé, plonger le poulet dans le bouillon, ajouter la sauce soja et cuire 5 à 7 minutes. Ajuster l'assaisonnement en sel. Le poulet doit être cuit à cœur, sinon prolonger la cuisson.",
+      "Servir le riz dans des bols. Casser les œufs, séparer les blancs des jaunes et déposer un jaune dans chaque bol de riz, puis parsemer d'algues nori. Les blancs peuvent servir à faire des meringues ou des financiers.",
+      "Servir le bouillon miso au poulet dans d'autres bols et parsemer de vert de cébette. Mélanger le jaune d'œuf au riz et déguster avec le bouillon bien chaud."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Seuls les 4 jaunes d'œufs sont utilisés. Le bouillon demande 1 litre d'eau pour 4 personnes (la liste de la page indique 500 ml, valeur pour le riz). Le titre de la page est « Oyakodon comme au Japon »."
+    ],
+    "photo": "photos/oyakodon-comme-au-japon.jpg"
+  },
+  {
+    "id": "marmite-kefta-boeuf-tomate",
+    "titre": "Marmite de kefta de bœuf mijotée à la tomate",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/marmite-de-kefta-et-butternut-dabdel-alaoui/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "mijoté",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 30, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "boeuf-hache", "quantite": 500, "unite": "g", "precision": "assaisonné" },
+      { "ingredient": "courge-butternut", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "tomates-pelees", "quantite": 2, "unite": "boîte", "precision": "à confirmer : « 2 pièces » sur la page" },
+      { "ingredient": "oignon-rouge", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "concentre-de-tomates", "quantite": 70, "unite": "g", "precision": null },
+      { "ingredient": "coriandre", "quantite": 1, "unite": "bouquet", "precision": "6 tiges, fraîche" },
+      { "ingredient": "semoule-de-mais", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "piment-de-cayenne", "quantite": 2, "unite": "pincée", "precision": "à doser selon les goûts" },
+      { "ingredient": "cumin", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "gingembre-en-poudre", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "miel", "quantite": 2, "unite": "c. à café", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C en chaleur tournante. Laver, évider et couper la butternut (sans l'éplucher si elle est bio) en lamelles d'environ 2 cm d'épaisseur. La disposer sur une plaque couverte de papier cuisson ou dans un plat à gratin, arroser d'huile d'olive, saler, poivrer, mélanger et enfourner 30 minutes.",
+      "Ciseler finement l'oignon rouge. Éplucher et hacher l'ail. Ciseler la coriandre avec les tiges.",
+      "Chauffer une cocotte à feu moyen avec un filet d'huile d'olive. Y faire suer l'oignon et la moitié de l'ail 1 minute en remuant. Ajouter les tomates pelées, le concentré de tomates, le cumin, le gingembre et le piment de Cayenne, et bien mélanger. Ajouter un fond d'eau et laisser mijoter 20 minutes.",
+      "Mettre le bœuf haché et le reste de l'ail dans un saladier et former 6 boulettes par personne. Quand les tomates ont réduit, poser les boulettes dessus en les espaçant, couvrir et laisser mijoter encore 5 minutes.",
+      "Dans une casserole, porter 1,2 litre d'eau à ébullition. Y verser la semoule de maïs en pluie et mélanger énergiquement au fouet 4 à 5 minutes à feu doux. Saler, poivrer, et ajouter un peu d'eau si elle est trop épaisse.",
+      "Sortir la butternut du four et l'arroser de miel au dernier moment. Servir la semoule de maïs avec les keftas en sauce et la butternut rôtie, et parsemer de coriandre fraîche."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les « 2 pièces » de tomates pelées sont comptées en 2 boîtes, sans taille indiquée. Les 6 tiges de coriandre sont comptées en 1 bouquet."
+    ],
+    "photo": "photos/marmite-kefta-boeuf-tomate.jpg"
+  },
+  {
+    "id": "saute-porc-legumes-moutarde",
+    "titre": "Sauté de porc et légumes à la moutarde",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/saute-de-porc-et-legumes-a-la-moutarde/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "mijoté",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "saute-de-porc", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "creme-liquide", "quantite": 200, "unite": "ml", "precision": null },
+      { "ingredient": "fenouil", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "carotte", "quantite": 700, "unite": "g", "precision": null },
+      { "ingredient": "moutarde", "quantite": 40, "unite": "g", "precision": "à l'ancienne" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "graines-de-moutarde", "quantite": 4, "unite": "g", "precision": null }
+    ],
+    "etapes": [
+      "Éplucher les carottes, les couper en deux dans la longueur puis en fines demi-rondelles. Laver le fenouil et le couper en petits morceaux de la même taille que les demi-rondelles de carottes. Écraser l'ail avec la paume de la main.",
+      "Chauffer une cocotte ou une sauteuse à feu moyen avec un filet d'huile neutre. Y faire revenir les légumes et l'ail 3 minutes, saler, poivrer et ajouter les graines de moutarde. Mouiller d'eau à hauteur, couvrir, porter à ébullition puis cuire 10 minutes à feu doux. Ôter le couvercle et poursuivre la cuisson 15 minutes, jusqu'à évaporation de l'eau.",
+      "Si les morceaux de porc sont gros, les recouper en cubes d'environ 2 cm. Chauffer une poêle à feu vif avec un filet d'huile neutre et les faire dorer 10 minutes en remuant.",
+      "Déglacer avec 100 ml d'eau et faire réduire 5 minutes. Verser la crème, ajouter la moutarde, saler, poivrer et bien mélanger. Laisser frémir 5 minutes à feu très doux.",
+      "Vérifier la cuisson : les légumes doivent être fondants, la viande cuite à cœur et la sauce nappante. Servir les légumes avec la viande arrosée de sauce crémeuse."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Le titre de la page est « Sauté de porc et légumes, à la moutarde »."
+    ],
+    "photo": "photos/saute-porc-legumes-moutarde.jpg"
+  },
+  {
+    "id": "bibimbap-coreen-shiitakes",
+    "titre": "Bibimbap coréen aux champignons shiitakés",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/ruta-bibimbap-coreen-uf/"
+    },
+    "saisons": ["printemps", "été", "automne"],
+    "categorie": "plat",
+    "type": "bowl",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "shiitake", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "concombre", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "riz-rond", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "huile-de-sesame-grille", "quantite": 4, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "carotte", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "sauce-soja-sucree", "quantite": 4, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "graines-de-sesame-noir", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "graines-de-sesame", "quantite": 2, "unite": "g", "precision": null },
+      { "ingredient": "vinaigre-blanc", "quantite": 4, "unite": "c. à soupe", "precision": "ou vinaigre de cidre" },
+      { "ingredient": "sucre-en-poudre", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "oeufs", "quantite": 4, "unite": "pièce", "precision": null }
+    ],
+    "etapes": [
+      "Mettre le riz dans une casserole, remplir d'eau froide, mélanger et égoutter. Répéter le rinçage 3 fois. Remettre le riz dans la casserole avec 500 ml d'eau. Porter sur feu vif jusqu'à ébullition, baisser sur feu très doux, couvrir et cuire 15 minutes.",
+      "Laver et couper le concombre en rondelles. Laver, éplucher et couper les carottes en fins bâtonnets, ou les râper. Laver et couper les shiitakés en lamelles.",
+      "Dans une poêle, chauffer l'huile neutre et y faire revenir les carottes 10 minutes en remuant régulièrement. Une fois le riz cuit, le laisser reposer 5 à 10 minutes hors du feu.",
+      "En parallèle, dans un bol, peler et râper l'ail, ajouter l'huile de sésame et la sauce soja sucrée, du sel et du poivre, et réserver pour le dressage. Dans un autre petit bol, mélanger le vinaigre et le sucre jusqu'à dissolution (vinaigre blanc de préférence, ou de cidre).",
+      "Débarrasser les carottes dans une assiette, faire revenir les shiitakés 5 minutes, puis les retirer de la poêle. Dans la même poêle, à feu moyen, chauffer de l'huile neutre et cuire les œufs au plat 3 minutes. Saler, poivrer et couper le feu.",
+      "Arroser le riz de vinaigre sucré et mélanger délicatement. Servir le riz dans des assiettes creuses et disposer dessus les shiitakés, le concombre, les carottes et les œufs. Répartir les graines de sésame et la sauce soja-sésame."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Il existe plusieurs bibimbap aux shiitakés sur le site (avec épinards, ou « shiitakés poêlés ») : c'est celui au riz vinaigré et au concombre, dont le titre est « Bibimbap coréen aux shiitakés »."
+    ],
+    "photo": "photos/bibimbap-coreen-shiitakes.jpg"
+  },
+  {
+    "id": "risotto-coquillettes-chorizo",
+    "titre": "Risotto de coquillettes au chorizo",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/risotto-dorzo-au-chorizo/"
+    },
+    "saisons": ["printemps", "été", "automne", "hiver"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "chorizo", "quantite": 120, "unite": "g", "precision": null },
+      { "ingredient": "roquette", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "parmesan", "quantite": 60, "unite": "g", "precision": "râpé" },
+      { "ingredient": "vin-blanc-sec", "quantite": 250, "unite": "ml", "precision": null },
+      { "ingredient": "coquillettes", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "echalote", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "beurre", "quantite": 60, "unite": "g", "precision": "froid" },
+      { "ingredient": "vinaigre", "quantite": 2, "unite": "c. à soupe", "precision": "2 traits, pour la roquette" }
+    ],
+    "etapes": [
+      "Faire bouillir 1,6 litre d'eau dans une casserole ou à la bouilloire. Éplucher et ciseler l'échalote. Couper le beurre en petits morceaux et le réserver au frais jusqu'à l'étape 5. Ôter la peau du chorizo et le couper en dés.",
+      "Chauffer une cocotte ou une sauteuse à feu moyen avec un filet d'huile d'olive. Y faire suer l'échalote 1 minute en remuant, puis ajouter le chorizo et le cuire 2 minutes en remuant de temps en temps, jusqu'à ce qu'il soit bien doré.",
+      "Ajouter les coquillettes, remuer et les laisser nacrer 1 minute : elles deviennent légèrement translucides. Déglacer avec le vin blanc, porter à ébullition et laisser réduire jusqu'à évaporation presque totale.",
+      "Verser l'eau bouillante louche par louche : le liquide doit être absorbé par les coquillettes entre chaque louche, en remuant régulièrement. Pendant ce temps, rincer et essorer la roquette.",
+      "Au bout de 8 minutes environ, ajouter le beurre froid en mélangeant énergiquement, puis le parmesan râpé. Le mélange doit devenir crémeux ; si besoin, ajouter un peu d'eau.",
+      "Arroser la roquette d'un filet d'huile d'olive et de vinaigre, saler et poivrer. Rectifier l'assaisonnement du risotto si besoin et le servir aussitôt, bien chaud, avec la roquette."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). L'adresse de la page parle d'orzo mais la recette utilise des coquillettes. Le vinaigre est noté « 2 traits » sans précision de type : compté en 2 cuillères à soupe."
+    ],
+    "photo": "photos/risotto-coquillettes-chorizo.jpg"
+  },
+  {
+    "id": "bowl-epeautre-legumes-fondants",
+    "titre": "Bowl d'épeautre et légumes fondants",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/legumes-fondant-et-epeautre-citronne/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "bowl",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "petit-epeautre", "quantite": 240, "unite": "g", "precision": null },
+      { "ingredient": "pak-choi", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "carotte", "quantite": 600, "unite": "g", "precision": null },
+      { "ingredient": "oignon-nouveau", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "graines-de-citrouille", "quantite": 40, "unite": "g", "precision": "graines de courge" },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "pièce", "precision": "cube" },
+      { "ingredient": "romarin", "quantite": 1, "unite": "bouquet", "precision": "4 tiges, frais" }
+    ],
+    "etapes": [
+      "Faire bouillir une casserole d'eau salée pour cuire le petit épeautre. Éplucher l'oignon nouveau et le couper en quartiers (couper la tige en petits biseaux pour le dressage). Couper le pak choï en quatre. Éplucher et couper les carottes en fines rondelles.",
+      "Disposer les légumes dans une sauteuse avec un filet d'huile d'olive. Ajouter le romarin, saler et poivrer. Verser 200 ml d'eau et le bouillon de légumes, couvrir et cuire 20 minutes à feu moyen. Verser le petit épeautre dans l'eau bouillante pour le temps indiqué sur le paquet.",
+      "Torréfier les graines de courge dans une poêle sans matière grasse à feu vif 2 minutes en remuant.",
+      "Presser le citron et mélanger le jus dans un saladier avec 6 cuillères à soupe d'huile d'olive au total pour la recette (une partie pour les légumes), du sel et du poivre.",
+      "Goûter puis égoutter l'épeautre et le mettre dans le saladier. Vérifier que les légumes sont fondants, retirer le romarin, ajouter les légumes et bien mélanger.",
+      "Servir le petit épeautre aux légumes dans des bols ou des assiettes creuses, tant que c'est chaud, et parsemer de graines de courge grillées."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les 4 tiges de romarin sont comptées en 1 bouquet. L'huile d'olive (6 cuillères à soupe) est partagée entre les légumes et la vinaigrette sans détail dans la page."
+    ],
+    "photo": "photos/bowl-epeautre-legumes-fondants.jpg"
+  },
+  {
+    "id": "poulet-souvlaki-tian-legumes",
+    "titre": "Poulet souvlaki et tian de légumes",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/poulet-souvlaki-tian-de-legumes/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 25, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "cuisse-de-poulet", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "courgette", "quantite": 800, "unite": "g", "precision": null },
+      { "ingredient": "aubergine", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "tomate", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "oignon-rouge", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "epices-souvlaki", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "thym", "quantite": 1, "unite": "bouquet", "precision": "6 tiges, frais" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C en chaleur tournante. Éplucher l'oignon et le couper en rondelles de 5 mm. Couper les tomates, la courgette et l'aubergine en tranches d'environ 1 cm. Éplucher l'ail et le couper en fines lamelles. Peu importe si les rondelles n'ont pas toutes le même diamètre.",
+      "Dans un saladier, mélanger les épices souvlaki avec de l'huile d'olive (10 traits au total pour la recette), du sel et du poivre. Badigeonner les cuisses de poulet avec la moitié de cette préparation et bien masser pour que les épices imprègnent la chair. Laisser mariner jusqu'à l'étape suivante.",
+      "Ajouter les légumes, l'ail et le thym frais dans le saladier avec le reste de sauce et bien mélanger pour enrober. Ajouter un peu d'huile d'olive si nécessaire. Disposer les légumes en les alternant dans un plat à four et poser le poulet par-dessus. Enfourner 40 minutes.",
+      "Vérifier la cuisson : les légumes doivent être fondants et les cuisses bien dorées et chaudes à cœur. Presser légèrement les tomates pour libérer leur jus au fond du plat. Déguster aussitôt."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). L'étape 3 de la page est vide : le montage du tian est décrit à l'étape 4. Les 6 tiges de thym sont comptées en 1 bouquet."
+    ],
+    "photo": "photos/poulet-souvlaki-tian-legumes.jpg"
+  },
+  {
+    "id": "gnocchi-champignons-creme-truffe",
+    "titre": "Gnocchi et champignons à la crème de truffe",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/gnocchis-a-la-creme-de-truffe-et-champignons/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "gnocchis", "quantite": 600, "unite": "g", "precision": null },
+      { "ingredient": "creme-de-truffe", "quantite": 40, "unite": "g", "precision": null },
+      { "ingredient": "creme-liquide", "quantite": 400, "unite": "ml", "precision": "400 g sur la page" },
+      { "ingredient": "champignon", "quantite": 500, "unite": "g", "precision": "de Paris" }
+    ],
+    "etapes": [
+      "Couper le bout terreux des champignons et les laver si besoin, puis les couper en lamelles.",
+      "Chauffer une poêle à feu vif avec un filet d'huile d'olive et y faire revenir les champignons 5 minutes en remuant bien. Saler et poivrer.",
+      "Ajouter les gnocchi dans la poêle et les cuire 3 minutes en remuant. Couvrir et cuire encore 3 minutes à feu moyen : ils doivent être bien moelleux et dorés.",
+      "Ajouter la crème liquide et la crème de truffe, mélanger 2 à 3 minutes, saler et poivrer.",
+      "Servir les gnocchi bien chauds."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). La crème liquide est notée « 400 g » sur la page : comptée en 400 ml. Le titre de la page est « Gnocchi & champignons à la crème de truffe »."
+    ],
+    "photo": "photos/gnocchi-champignons-creme-truffe.jpg"
+  },
+  {
+    "id": "bowl-vitamine-lentilles-corail-cranberry",
+    "titre": "Bowl vitaminé de lentilles corail et cranberry",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/ruta-bowl-vitamine-aux-lentilles-corail-baies-de-goji/"
+    },
+    "saisons": ["printemps", "été"],
+    "categorie": "plat",
+    "type": "bowl",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "mesclun", "quantite": 1, "unite": "pièce", "precision": "4 pincées sur la page, soit quelques poignées" },
+      { "ingredient": "lentilles-corail", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "tomate-cerise", "quantite": 250, "unite": "g", "precision": null },
+      { "ingredient": "concombre", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "cuisine-soja", "quantite": 200, "unite": "ml", "precision": "crème de cuisine au soja" },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "amandes-emondees", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "cranberries", "quantite": 30, "unite": "g", "precision": "séchées" },
+      { "ingredient": "echalote", "quantite": 1, "unite": "pièce", "precision": null }
+    ],
+    "etapes": [
+      "Rincer les lentilles corail à l'eau claire dans une passoire fine. Les plonger dans une casserole d'eau froide non salée, porter à ébullition et les cuire le temps indiqué sur le paquet, en salant à mi-cuisson.",
+      "Laver et couper les tomates cerises en deux. Laver, éplucher et couper le concombre en rondelles. Éplucher et hacher l'échalote. Concasser grossièrement les amandes et les cranberries séchées. Laver et essorer le mesclun.",
+      "Dans un bol, zester le citron et presser son jus. Ajouter la préparation végétale et 4 cuillères à soupe d'huile d'olive au total pour la recette, saler et poivrer bien, puis mélanger pour obtenir une sauce homogène. Ajouter un peu plus d'huile d'olive si la sauce est trop citronnée.",
+      "Goûter puis égoutter les lentilles cuites. Dans une assiette, disposer les tomates cerises, le concombre, le mesclun et les lentilles. Parsemer d'amandes concassées et de cranberries séchées, et arroser de sauce citronnée."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). L'adresse de la page parle de baies de goji mais la recette utilise des cranberries. Le mesclun est noté « 4 pincées » : compté en 1 sachet. La page écrit « cuisine soja » : compris comme une crème de cuisine au soja. L'échalote est hachée à l'étape 2 mais n'est pas citée dans le dressage."
+    ],
+    "photo": "photos/bowl-vitamine-lentilles-corail-cranberry.jpg"
+  },
+  {
+    "id": "legumes-onctueux-curry-coco",
+    "titre": "Légumes onctueux, curry et coco",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/curry-de-legumes/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "curry",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 30, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "lait-de-coco", "quantite": 200, "unite": "ml", "precision": null },
+      { "ingredient": "quinoa-rouge", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "quinoa", "quantite": 150, "unite": "g", "precision": "blanc" },
+      { "ingredient": "coriandre", "quantite": 1, "unite": "bouquet", "precision": "4 tiges, fraîche" },
+      { "ingredient": "carotte", "quantite": 3, "unite": "pièce", "precision": null },
+      { "ingredient": "panais", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "citron-vert", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "beurre-de-cacahuete", "quantite": 40, "unite": "g", "precision": "purée de cacahuète" },
+      { "ingredient": "beurre-de-cacahuete", "quantite": 40, "unite": "g", "precision": "listé aussi comme « pâte de cacahuètes » sur la page" },
+      { "ingredient": "feuilles-de-lime", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "gingembre", "quantite": 15, "unite": "g", "precision": "frais" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "curry", "quantite": 5, "unite": "g", "precision": "mélange curry et lime avec les feuilles de lime" }
+    ],
+    "etapes": [
+      "Éplucher le panais et les carottes et les couper en biseaux. Éplucher et hacher l'ail et le gingembre. Effeuiller la coriandre. Couper le citron vert en quartiers.",
+      "Faire bouillir une casserole d'eau salée pour cuire le quinoa. Chauffer une sauteuse ou une poêle à feu moyen avec un filet d'huile neutre et y faire revenir l'ail et le gingembre 2 à 3 minutes en remuant bien, en baissant le feu si ça colore trop.",
+      "Ajouter les légumes et le mélange curry et lime (curry et feuilles de lime) à la sauteuse, saler et remuer. Laisser cuire à feu moyen 5 minutes en remuant de temps en temps.",
+      "Verser la purée de cacahuète, le lait de coco et 800 ml d'eau. Couvrir et laisser cuire 25 à 30 minutes à feu doux, en surveillant que ça n'accroche pas et en ajoutant un peu d'eau si ça réduit trop. Plonger le quinoa dans l'eau bouillante pour 15 minutes.",
+      "Vérifier la cuisson des légumes en les piquant, et chauffer la sauteuse quelques minutes à feu vif si la sauce est trop liquide. Goûter, égoutter le quinoa et le servir dans des bols. Disposer les légumes au coco par-dessus, arroser de jus de citron vert et parsemer de coriandre."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les données de la page listent du quinoa rouge et du quinoa blanc (150 g chacun) et deux produits à base de cacahuète (« purée » et « pâte », 40 g chacun) ; la liste visible n'en montre peut-être qu'un de chaque, à vérifier sur votre papier. Le titre de la page est « Légumes onctueux au curry & coco »."
+    ],
+    "photo": "photos/legumes-onctueux-curry-coco.jpg"
+  },
+  {
+    "id": "spaghetti-cacio-e-pepe-legumes-ete",
+    "titre": "Spaghetti cacio e pepe aux légumes d'été",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/spaghetti-cacio-e-pepe/"
+    },
+    "saisons": ["été"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "parmesan", "quantite": 100, "unite": "g", "precision": "râpé ; « pecorino » dans l'étape" },
+      { "ingredient": "spaghetti", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "tomate", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "courgette", "quantite": 600, "unite": "g", "precision": null },
+      { "ingredient": "oeufs", "quantite": 2, "unite": "pièce", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C en chaleur traditionnelle. Couper la courgette en deux, puis en biseaux. Couper les tomates en deux dans l'épaisseur.",
+      "Disposer les légumes dans un plat à four, arroser d'un filet d'huile d'olive, saler et poivrer. Enfourner 30 minutes.",
+      "Faire bouillir une casserole d'eau salée et y plonger les pâtes le temps indiqué sur le paquet. Dans un saladier, battre les œufs entiers avec le fromage râpé et bien poivrer (le pecorino est déjà salé).",
+      "Prélever une louche d'eau de cuisson. Goûter, puis égoutter les pâtes et les verser directement dans le saladier avec le mélange œuf-fromage. Bien mélanger en versant l'eau de cuisson peu à peu.",
+      "Servir les spaghetti cacio e pepe sans attendre, dans des assiettes creuses, accompagnés des légumes d'été rôtis."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). La liste indique du parmesan râpé mais l'étape parle de pecorino (le fromage d'une vraie cacio e pepe) : à vérifier sur votre papier. La page indique un œuf entier à l'étape 3 et 2 œufs dans la liste ; ce sont les 2 œufs qui sont comptés. Le titre de la page est « Spaghetti cacio & pepe aux légumes d'été »."
+    ],
+    "photo": "photos/spaghetti-cacio-e-pepe-legumes-ete.jpg"
   }
 ]
