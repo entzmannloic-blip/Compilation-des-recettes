@@ -134,7 +134,23 @@ function validerJournal(journal, idsRecettes, idsLivres, erreurs) {
   });
 }
 
-export function validerDonnees({ livres, ingredients, recettes, journal }) {
+function validerSaisonnalite(aliments, idsIngredients, erreurs) {
+  aliments.forEach((a, i) => {
+    const c = `saisonnalite[${i}]`;
+    if (!estTexte(a.id)) erreurs.push(`${c}.id: identifiant obligatoire`);
+    if (!estTexte(a.nom)) erreurs.push(`${c}.nom: nom obligatoire`);
+    if (a.type !== "legume" && a.type !== "fruit") erreurs.push(`${c}.type: « legume » ou « fruit » attendu`);
+    if (!Array.isArray(a.mois) || a.mois.length === 0 || a.mois.some((m) => !estEntierMin(m, 1) || m > 12) || new Set(a.mois).size !== a.mois.length) {
+      erreurs.push(`${c}.mois: liste de mois (1 à 12, sans doublon) attendue`);
+    }
+    liste(a.ingredients).forEach((id) => {
+      if (!idsIngredients.has(id)) erreurs.push(`${c}.ingredients: ingrédient « ${id} » introuvable`);
+    });
+  });
+  verifierDoublons(erreurs, "saisonnalite", aliments);
+}
+
+export function validerDonnees({ livres, ingredients, recettes, journal, saisonnalite = [] }) {
   const erreurs = [];
   validerLivres(livres, erreurs);
   validerIngredients(ingredients, erreurs);
@@ -144,6 +160,7 @@ export function validerDonnees({ livres, ingredients, recettes, journal }) {
   verifierDoublons(erreurs, "recettes", recettes);
   verifierUniciteLivrePage(recettes, erreurs);
   validerJournal(journal, new Set(recettes.map((r) => r.id)), idsLivres, erreurs);
+  validerSaisonnalite(saisonnalite, idsIngredients, erreurs);
   return erreurs;
 }
 
@@ -154,6 +171,7 @@ function lireDonnees() {
     ingredients: lire("ingredients"),
     recettes: lire("recettes"),
     journal: lire("journal"),
+    saisonnalite: lire("saisonnalite"),
   };
 }
 
@@ -161,7 +179,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const donnees = lireDonnees();
   const erreurs = validerDonnees(donnees);
   if (erreurs.length === 0) {
-    console.log(`OK : ${donnees.recettes.length} recettes`);
+    console.log(`OK : ${donnees.recettes.length} recettes, ${donnees.saisonnalite.length} aliments de saison`);
   } else {
     console.error(erreurs.join("\n"));
     process.exit(1);
