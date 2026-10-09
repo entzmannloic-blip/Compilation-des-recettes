@@ -285,3 +285,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* Mois de saison d'un ingrédient sur la fiche */
 .mois-ing { display: block; color: var(--ink3); font-size: .86rem; }
 .mois-ing.oui { color: var(--accent); }
+
+/* Onglet « Recettes » : le logo de l'application (marmite), de la couleur de l'onglet */
+.barre .logo-onglet { display: block; width: 28px; height: 22px; background: currentColor; -webkit-mask: url(../logo.png) center / contain no-repeat; mask: url(../logo.png) center / contain no-repeat; }
+.aliments { scroll-margin-top: 4px; }

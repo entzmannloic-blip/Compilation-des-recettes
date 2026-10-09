@@ -178,7 +178,7 @@ function dessinerBarre(nomActif = ongletActif) {
   barre.replaceChildren(
     ...ONGLETS.map((o) =>
       h("a", { href: o.href, "aria-current": o.nom === nomActif ? "page" : null },
-        icone(o.nom), o.libelle,
+        o.nom === "saison" ? h("span", { class: "logo-onglet", "aria-hidden": "true" }) : icone(o.nom), o.libelle,
         o.nom === "courses" && choisies ? h("span", { class: "badge" }, String(choisies)) : null)
     )
   );
@@ -915,6 +915,13 @@ function ecranCalendrier() {
     }
   }
 
+  // Après un choix de mois ou de saison, la page descend toute seule vers les listes (après un court instant pour voir la roue tourner).
+  function descendreAuxAliments() {
+    setTimeout(() => {
+      const doux = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      listes.scrollIntoView({ behavior: doux ? "smooth" : "auto", block: "start" });
+    }, 350);
+  }
   function tournerVers(mois) {
     viserMois(mois);
     roue.style.setProperty("--rot", String(rotationRoue));
@@ -926,15 +933,17 @@ function ecranCalendrier() {
     recherche.value = "";
     tournerVers(mois);
     rafraichir();
+    descendreAuxAliments();
   }
   function choisirSaison(saison) {
-    if (calendrier.saison === saison) { calendrier.saison = null; rafraichir(); return; }
+    if (calendrier.saison === saison) { calendrier.saison = null; rafraichir(); descendreAuxAliments(); return; }
     calendrier.saison = saison;
     calendrier.recherche = "";
     recherche.value = "";
     calendrier.mois = MOIS_MILIEU[saison];
     tournerVers(calendrier.mois);
     rafraichir();
+    descendreAuxAliments();
   }
 
   // Glisser la roue du doigt : elle suit, puis se cale sur le mois le plus proche.
@@ -975,6 +984,7 @@ function ecranCalendrier() {
     recherche.value = "";
     tournerVers(calendrier.mois);
     rafraichir();
+    descendreAuxAliments();
   };
   roue.addEventListener("pointerup", finGlisse);
   roue.addEventListener("pointercancel", finGlisse);
