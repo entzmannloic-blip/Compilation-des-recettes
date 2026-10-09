@@ -31,7 +31,7 @@ h2.section { color: var(--ink); font-size: 1rem; margin: 28px 0 6px; padding-bot
 /* En-tête : marque à gauche, deux boutons ronds à droite */
 .entete { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: calc(10px + env(safe-area-inset-top, 0px)) 0 0; }
 .marque { display: flex; align-items: center; gap: 8px; margin: 0; min-height: 44px; color: var(--ink); font-size: 1.07rem; font-weight: 600; min-width: 0; text-decoration: none; cursor: pointer; }
-.marque svg { flex: none; width: 24px; height: 24px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.marque img { flex: none; width: auto; height: 28px; }
 .boutons-entete { display: flex; gap: 4px; flex: none; }
 .rond { position: relative; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--ink2); cursor: pointer; }
 .rond:hover { background: var(--gris); }

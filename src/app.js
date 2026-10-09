@@ -432,7 +432,7 @@ function ecranSaison() {
           reinitialiser();
           window.scrollTo(0, 0);
         },
-      }, icone("bol"), "Compilation des recettes"),
+      }, h("img", { src: "logo.png", alt: "", width: 35, height: 28 }), "Compilation des recettes"),
       h("div", { class: "boutons-entete" }, boutonFavoris, boutonFiltres)),
     recherche,
     saisonsChoisies,
