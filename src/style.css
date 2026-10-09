@@ -47,7 +47,7 @@ input[type=search]::placeholder { color: var(--ink2); }
 .saisons-titre { flex: none; color: var(--ink2); font-weight: 500; }
 .saisons-puces { display: flex; gap: 6px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
 .saisons-puces::-webkit-scrollbar { display: none; }
-.saisons-puces .puce { flex: none; padding: 0 10px; }
+.saisons-puces .puce { flex: none; padding: 0 9px; }
 .compte { margin: 2px 0 0; color: var(--ink2); font-size: .93rem; }
 .onglets { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; margin-top: 4px; border-bottom: 1px solid var(--line); }
 .onglet { min-height: 44px; padding: 0 6px; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; background: transparent; color: var(--ink2); font: 500 1rem var(--sans); cursor: pointer; }
@@ -60,7 +60,7 @@ input[type=search]::placeholder { color: var(--ink2); }
 .groupe { padding: 10px 0 2px; }
 .groupe-titre { display: block; margin: 0 0 6px; color: var(--ink2); font-size: .93rem; font-weight: 500; }
 .puces { display: flex; flex-wrap: wrap; gap: 6px; }
-.puce { min-height: 34px; padding: 0 12px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); border-radius: 99px; font: 400 1rem var(--sans); cursor: pointer; }
+.puce { min-height: 28px; padding: 0 10px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); border-radius: 99px; font: 400 1rem var(--sans); cursor: pointer; line-height: 1.2; }
 .puce:hover { background: var(--gris); }
 .puce[aria-pressed="true"] { background: var(--accent-wash); border-color: var(--accent); color: var(--accent); font-weight: 600; }
 .panneau .btn { margin: 14px 0 4px; }
