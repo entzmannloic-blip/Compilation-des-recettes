@@ -5270,5 +5270,116 @@
       "Quantités pour 4 personnes (rendement indiqué dans les données de la page)."
     ],
     "photo": "photos/crumble-courgettes-parmesan-thym.jpg"
+  },
+  {
+    "id": "poulet-croute-sesame-legumes-marines",
+    "titre": "Poulet en croûte de sésame et légumes marinés",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/poulet-en-croute-de-sesame-legumes-soja-miel/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 25, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "cuisse-de-poulet", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "courgette", "quantite": 1000, "unite": "g", "precision": null },
+      { "ingredient": "carotte", "quantite": 800, "unite": "g", "precision": null },
+      { "ingredient": "oignon-nouveau", "quantite": 1, "unite": "pièce", "precision": "cébette" },
+      { "ingredient": "sauce-soja", "quantite": 2, "unite": "c. à soupe", "precision": "salée" },
+      { "ingredient": "miel", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "graines-de-pavot", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "graines-de-sesame", "quantite": 2, "unite": "c. à soupe", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C (chaleur tournante). Poser les cuisses de poulet dans un plat, les badigeonner d'huile d'olive, parsemer du mélange sésame et pavot, saler et enfourner 30 minutes.",
+      "Pendant ce temps, hacher l'ail, couper les carottes en fins biseaux et les courgettes en deux dans la longueur puis en biseaux. Émincer la cébette.",
+      "Dans une sauteuse à feu moyen avec un filet d'huile d'olive, faire suer les carottes et l'ail 3 minutes en remuant. Ajouter les courgettes, baisser à feu doux, couvrir et cuire 10 à 12 minutes, jusqu'à ce que les légumes soient tendres.",
+      "Verser le miel et la sauce soja, poivrer, passer à feu vif et faire caraméliser les légumes en surveillant bien : ça va vite. Arrêter le feu quand ils sont bien colorés et tendres.",
+      "Vérifier la cuisson du poulet en le piquant : la lame doit ressortir brûlante. Servir les légumes avec le poulet, parsemés de cébette."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). La page indique « 1 pièce » de miel : comprise comme 2 c. à soupe (quantité non précisée)."
+    ],
+    "photo": "photos/poulet-croute-sesame-legumes-marines.jpg"
+  },
+  {
+    "id": "poulet-miel-quatre-epices-poire",
+    "titre": "Poulet miel et quatre épices",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/poulet-miel-et-quatre-epices/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "filet-de-poulet", "quantite": 4, "unite": "pièce", "precision": "escalopes" },
+      { "ingredient": "navet", "quantite": 440, "unite": "g", "precision": null },
+      { "ingredient": "pommes-de-terre", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "poire", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "quatre-epices", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "beurre", "quantite": 40, "unite": "g", "precision": null },
+      { "ingredient": "miel", "quantite": 2, "unite": "c. à soupe", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C (chaleur tournante). Laver, éplucher et couper les pommes de terre et les navets en cubes.",
+      "Les étaler sur une plaque couverte de papier cuisson ou dans un plat à gratin, arroser de 4 c. à soupe d'huile d'olive, saler, poivrer, mélanger et enfourner 20 minutes en remuant à mi-cuisson.",
+      "Hacher l'ail. Dans une sauteuse ou une grande poêle à feu moyen, faire fondre le beurre et y faire revenir l'ail 1 minute. Couper le poulet en cubes, l'ajouter et le faire dorer 5 minutes en mélangeant.",
+      "Éplucher la poire (on peut garder la peau si elle est bien mûre) et la couper en lamelles. L'ajouter dans la sauteuse avec 300 ml d'eau, le miel et le mélange quatre-épices, saler, poivrer, mélanger et couvrir 10 minutes.",
+      "Servir le poulet à la poire avec les légumes rôtis, arrosé de sauce selon le goût."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page)."
+    ],
+    "photo": "photos/poulet-miel-quatre-epices-poire.jpg"
+  },
+  {
+    "id": "poulet-roti-legumes-laques-miel",
+    "titre": "Poulet rôti et légumes laqués au miel",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/poulet-roti-aux-legumes-printaniers-et-boulgour/"
+    },
+    "saisons": ["printemps", "été"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 35 },
+    "ingredients": [
+      { "ingredient": "cuisse-de-poulet", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "radis", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "boulgour", "quantite": 240, "unite": "g", "precision": null },
+      { "ingredient": "miel", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "carotte", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "persil", "quantite": 1, "unite": "bouquet", "precision": "4 tiges, frais" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C (chaleur traditionnelle). Couper les carottes en bâtonnets et les radis en quartiers dans la longueur, éplucher et émincer l'ail.",
+      "Poser les cuisses de poulet dans un plat à four, ajouter les légumes, arroser d'un filet d'huile d'olive et de miel, ajouter l'ail, saler, poivrer et mélanger. Enfourner 40 à 45 minutes en remuant les légumes à mi-cuisson.",
+      "Faire bouillir une casserole d'eau salée, y cuire le boulgour selon le paquet, l'égoutter et le garder au chaud. Ciseler finement le persil.",
+      "Vérifier la cuisson du poulet en le piquant avec un couteau fin pendant 10 secondes : la lame doit ressortir brûlante, sinon prolonger la cuisson.",
+      "Servir le poulet avec les légumes et le boulgour, parsemer de persil et arroser du jus de cuisson."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Cette page portait auparavant le titre « Poulet rôti aux légumes printaniers et boulgour »."
+    ],
+    "photo": "photos/poulet-roti-legumes-laques-miel.jpg"
   }
 ]
