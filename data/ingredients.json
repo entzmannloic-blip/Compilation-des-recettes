@@ -199,5 +199,13 @@
   { "id": "citron-confit", "nom": "citron confit au sel", "rayon": "Épicerie", "saisons": [] },
   { "id": "romarin", "nom": "romarin", "rayon": "Herbes", "saisons": [] },
   { "id": "pois-gourmands", "nom": "pois gourmands", "rayon": "Légumes", "saisons": ["printemps", "été"] },
-  { "id": "riz", "nom": "riz", "rayon": "Épicerie", "saisons": [] }
+  { "id": "riz", "nom": "riz", "rayon": "Épicerie", "saisons": [] },
+  { "id": "riz-rouge", "nom": "riz rouge", "rayon": "Épicerie", "saisons": [] },
+  { "id": "dukkah", "nom": "épices dukkah", "rayon": "Épicerie", "saisons": [] },
+  { "id": "yaourt", "nom": "yaourt nature", "rayon": "Crèmerie", "saisons": [] },
+  { "id": "linguine", "nom": "linguine", "rayon": "Épicerie", "saisons": [] },
+  { "id": "chapelure", "nom": "chapelure", "rayon": "Épicerie", "saisons": [] },
+  { "id": "sauce-soja-sucree", "nom": "sauce soja sucrée", "rayon": "Épicerie", "saisons": [] },
+  { "id": "thon", "nom": "thon en boîte", "rayon": "Épicerie", "saisons": [], "regime": "chair" },
+  { "id": "poudre-de-wasabi", "nom": "poudre de wasabi", "rayon": "Épicerie", "saisons": [] }
 ]

@@ -3134,8 +3134,130 @@
     ],
     "notes": [
       "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
-      "Quantités pour 4 personnes (8 œufs). La page ne donne pas le nombre de personnes : déduit des 8 œufs."
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page, 8 œufs)."
     ],
     "photo": "photos/shakshouka-feta-pois-chiches.jpg"
+  },
+  {
+    "id": "poelee-legumes-croquants-riz-rouge",
+    "titre": "Poêlée de légumes croquants et riz rouge",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/poelee-legumes-croquants-riz-rouge/"
+    },
+    "saisons": ["printemps", "été"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 25, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "riz-rouge", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "pois-gourmands", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "radis", "quantite": 1, "unite": "bouquet", "precision": null },
+      { "ingredient": "yaourt", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "citron-confit", "quantite": 0.5, "unite": "pièce", "precision": null },
+      { "ingredient": "dukkah", "quantite": 10, "unite": "g", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": "2 traits" },
+      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": "et pour l'eau du riz" },
+      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null }
+    ],
+    "etapes": [
+      "Faire bouillir une casserole d'eau salée (la bouilloire fait gagner du temps). Y plonger le riz rouge et le laisser cuire 18 minutes à feu moyen.",
+      "Pendant la cuisson, équeuter, laver et couper les radis en deux. Éplucher l'oignon, le couper en deux puis l'émincer finement. Émincer les pois gourmands finement dans la longueur. Retirer la chair du citron confit pour ne garder que la peau, et la hacher en tout petits morceaux.",
+      "Chauffer une poêle avec un trait d'huile d'olive. Y faire revenir l'oignon et le citron confit 2 minutes à feu moyen. Ajouter les pois gourmands et les radis, et poursuivre la cuisson 2 à 3 minutes : les légumes doivent rester croquants.",
+      "Égoutter le riz et l'arroser d'un filet d'huile d'olive. Il doit être ferme, pas croquant. Répartir le riz dans des bols et disposer les légumes par-dessus. Ajouter une belle cuillère de yaourt, saler, poivrer et saupoudrer de dukkah."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Poids du yaourt (2 pots) et du bouquet de radis non précisés."
+    ],
+    "photo": "photos/poelee-legumes-croquants-riz-rouge.jpg"
+  },
+  {
+    "id": "aubergine-milanese-linguine-pesto",
+    "titre": "Aubergine milanaise et linguine au pesto",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/aubergine-milanese/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 30, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "aubergine", "quantite": 600, "unite": "g", "precision": null },
+      { "ingredient": "origan", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "chapelure", "quantite": 120, "unite": "g", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "coulis-de-tomates", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "linguine", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "pesto", "quantite": 200, "unite": "g", "precision": "pesto verde" },
+      { "ingredient": "oeufs", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "farine", "quantite": 6, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": "2 traits" },
+      { "ingredient": "huile-neutre", "quantite": 2, "unite": "c. à soupe", "precision": "2 traits, pour la friture" },
+      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": "et pour l'eau des pâtes" },
+      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null }
+    ],
+    "etapes": [
+      "Couper l'aubergine en tranches d'environ 1 cm. Éplucher et hacher finement l'ail.",
+      "Porter une casserole d'eau salée à ébullition pour les pâtes. Dans une petite casserole à feu doux, verser le coulis de tomate, ajouter 100 ml d'eau, l'huile d'olive, l'ail et l'origan. Saler, poivrer et laisser mijoter jusqu'au service.",
+      "Verser la chapelure dans une assiette et la farine dans une autre. Dans une assiette creuse, battre les œufs avec une pincée de sel et de poivre. Passer chaque tranche d'aubergine dans la farine en tapotant pour retirer l'excédent, puis dans l'œuf battu, puis dans la chapelure.",
+      "Chauffer une poêle ou une sauteuse à feu moyen avec un bon filet d'huile neutre. Y cuire les tranches 3 à 4 minutes par face, jusqu'à ce qu'elles soient bien dorées.",
+      "Plonger les linguine dans l'eau bouillante 6 à 8 minutes. Goûter, puis égoutter en gardant une louche d'eau de cuisson. Remettre les pâtes dans la casserole, ajouter la sauce tomate et verser l'eau de cuisson peu à peu en remuant, jusqu'à obtenir une sauce qui enrobe bien les pâtes.",
+      "Servir les pâtes avec les aubergines milanaises et arroser le tout de pesto."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les œufs sont dans le placard, pas dans le panier de la recette. Quantités notées « c.c. » et « c.s. » sur la page, lues comme cuillères à café et à soupe."
+    ],
+    "photo": "photos/aubergine-milanese-linguine-pesto.jpg"
+  },
+  {
+    "id": "bowl-thon-cremeux-quinoa",
+    "titre": "Bowl de thon crémeux et quinoa",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/bowl-de-thon-cremeux-etquinoa/"
+    },
+    "saisons": ["printemps", "été"],
+    "categorie": "plat",
+    "type": "bowl",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "thon", "quantite": 2, "unite": "boîte", "precision": "à confirmer : « 2 pièces » sur la page" },
+      { "ingredient": "quinoa", "quantite": 300, "unite": "g", "precision": "blond" },
+      { "ingredient": "yaourt-grec", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": "jaune, bio" },
+      { "ingredient": "sauce-soja-sucree", "quantite": 60, "unite": "g", "precision": null },
+      { "ingredient": "sauce-soja", "quantite": 2, "unite": "c. à soupe", "precision": "salée, bio" },
+      { "ingredient": "carotte", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "concombre", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "poudre-de-wasabi", "quantite": 6, "unite": "g", "precision": null },
+      { "ingredient": "graines-de-sesame", "quantite": 8, "unite": "g", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": 2, "unite": "c. à soupe", "precision": "2 traits" },
+      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": "et pour l'eau du quinoa" },
+      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null }
+    ],
+    "etapes": [
+      "Faire bouillir une casserole d'eau salée pour cuire le quinoa. Éplucher la carotte et la tailler en lamelles à l'économe. Éplucher le concombre, le couper en deux, puis en rondelles.",
+      "Plonger le quinoa dans l'eau bouillante le temps indiqué sur le paquet. Égoutter le thon et le mettre dans un bol. Ajouter le yaourt grec et bien mélanger. Râper le zeste du citron au-dessus avec une râpe fine, saler, poivrer et mélanger.",
+      "Goûter le quinoa, l'égoutter et le passer sous l'eau froide pour le tiédir, puis l'arroser d'huile d'olive. Dans un autre bol, presser le citron, ajouter la sauce soja sucrée et la sauce soja salée, et mélanger.",
+      "Répartir le quinoa dans des assiettes creuses. Disposer les légumes et la crème de thon par-dessus, arroser de sauce et parsemer de sésame au wasabi."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Le thon est noté « 2 pièces » sans poids : compté en boîtes. La photo d'origine montre aussi des radis, absents de la liste. Temps de cuisson du quinoa : voir le paquet. Le sésame se mélange au wasabi avant de parsemer (non précisé sur la page)."
+    ],
+    "photo": "photos/bowl-thon-cremeux-quinoa.jpg"
   }
 ]
