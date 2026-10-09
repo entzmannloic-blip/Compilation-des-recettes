@@ -3096,5 +3096,46 @@
       "Ne pas ajouter de sel : l'eau de cuisson des pois gourmands et la sauce soja en apportent déjà."
     ],
     "photo": "photos/pois-gourmands-champignons-sauce-soja.jpg"
+  },
+  {
+    "id": "shakshouka-feta-pois-chiches",
+    "titre": "Shakshouka à la feta et pois chiches rôtis",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/shakchouka-aux-pois-chiches-feta-et-menthe/"
+    },
+    "saisons": ["printemps", "été", "automne", "hiver"],
+    "categorie": "plat",
+    "type": "œufs",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "riz", "quantite": 320, "unite": "g", "precision": null },
+      { "ingredient": "pois-chiches", "quantite": 1, "unite": "boîte", "precision": "égouttés et rincés" },
+      { "ingredient": "coulis-de-tomates", "quantite": 400, "unite": "ml", "precision": null },
+      { "ingredient": "feta", "quantite": 150, "unite": "g", "precision": null },
+      { "ingredient": "oignon-rouge", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "cumin", "quantite": 6, "unite": "g", "precision": null },
+      { "ingredient": "oeufs", "quantite": 8, "unite": "pièce", "precision": null },
+      { "ingredient": "huile-d-olive", "quantite": 1, "unite": "c. à soupe", "precision": "2 traits" },
+      { "ingredient": "sucre-en-poudre", "quantite": 2, "unite": "pincée", "precision": null },
+      { "ingredient": "sel", "quantite": 1, "unite": "pincée", "precision": "et pour l'eau du riz" },
+      { "ingredient": "poivre", "quantite": 1, "unite": "pincée", "precision": null },
+      { "ingredient": "coriandre", "quantite": null, "unite": null, "precision": "facultatif, ou ciboulette" }
+    ],
+    "etapes": [
+      "Faire bouillir une casserole d'eau salée pour le riz. Émincer finement l'oignon rouge. Égoutter, rincer et égoutter à nouveau les pois chiches.",
+      "Plonger le riz dans l'eau bouillante et le cuire selon le temps indiqué sur le paquet. Chauffer une poêle à feu moyen avec un peu d'huile d'olive et y faire suer la moitié de l'oignon 1 à 2 minutes. Garder le reste de l'oignon dans de l'eau froide.",
+      "Ajouter les pois chiches et le cumin, et les faire dorer 2 à 3 minutes. Verser le coulis de tomate, saler, poivrer et ajouter le sucre. Laisser cuire 4 à 5 minutes.",
+      "Former 8 puits dans la sauce (4 pour 2 personnes) et casser un œuf dans chacun. Couvrir et laisser cuire 5 minutes à feu doux, jusqu'à la cuisson souhaitée.",
+      "Égoutter le riz et le servir avec la shakshouka. Parsemer de feta émiettée et d'oignon rouge, et ajouter de la coriandre ou de la ciboulette si on aime."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (8 œufs). La page ne donne pas le nombre de personnes : déduit des 8 œufs."
+    ],
+    "photo": "photos/shakshouka-feta-pois-chiches.jpg"
   }
 ]

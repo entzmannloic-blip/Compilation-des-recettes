@@ -198,5 +198,6 @@
   { "id": "herbes-de-provence", "nom": "herbes de Provence", "rayon": "Épicerie", "saisons": [] },
   { "id": "citron-confit", "nom": "citron confit au sel", "rayon": "Épicerie", "saisons": [] },
   { "id": "romarin", "nom": "romarin", "rayon": "Herbes", "saisons": [] },
-  { "id": "pois-gourmands", "nom": "pois gourmands", "rayon": "Légumes", "saisons": ["printemps", "été"] }
+  { "id": "pois-gourmands", "nom": "pois gourmands", "rayon": "Légumes", "saisons": ["printemps", "été"] },
+  { "id": "riz", "nom": "riz", "rayon": "Épicerie", "saisons": [] }
 ]
