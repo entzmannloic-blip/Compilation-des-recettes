@@ -1,6 +1,6 @@
 {
-  "name": "Compilation des recettes",
-  "short_name": "Recettes",
+  "name": "Nos recettes",
+  "short_name": "Nos recettes",
   "lang": "fr",
   "display": "standalone",
   "start_url": "./",

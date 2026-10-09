@@ -1,6 +1,7 @@
 param(
     [string]$Source = "scripts/logo-source.png",
-    [string]$Sortie = "."
+    [string]$Sortie = ".",
+    [string]$Couleur = ""
 )
 # Fabrique, à partir du logo d'origine (fond blanc), le logo transparent de l'en-tête (logo.png)
 # et les icônes de l'application (icon-180/192/512.png : fond blanc, logo centré avec marge).
@@ -16,6 +17,7 @@ for ($y = 0; $y -lt $h; $y++) { for ($x = 0; $x -lt $w; $x++) {
     $p = $src.GetPixel($x, $y); $m = [Math]::Min($p.R, [Math]::Min($p.G, $p.B))
     if ($m -lt $minC) { $minC = $m; $cr = $p.R; $cg = $p.G; $cb = $p.B }
 } }
+if ($Couleur) { $c = [System.Drawing.ColorTranslator]::FromHtml($Couleur); $cr = $c.R; $cg = $c.G; $cb = $c.B }
 $clair = New-Object System.Drawing.Bitmap $w, $h, ([System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
 $x0 = $w; $y0 = $h; $x1 = 0; $y1 = 0
 for ($y = 0; $y -lt $h; $y++) { for ($x = 0; $x -lt $w; $x++) {

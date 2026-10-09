@@ -423,7 +423,7 @@ function ecranSaison() {
     h("h1", { class: "sr-only" }, "Recettes"),
     h("header", { class: "entete" },
       h("a", {
-        class: "marque", href: "#/", "data-cle": "accueil", "aria-label": "Accueil : Compilation des recettes",
+        class: "marque", href: "#/", "data-cle": "accueil", "aria-label": "Accueil : Nos recettes",
         onclick: (e) => { // déjà à l'accueil : on repart d'une liste neuve, en haut de page
           if (window.location.hash && window.location.hash !== "#/") return;
           e.preventDefault();
@@ -432,7 +432,7 @@ function ecranSaison() {
           reinitialiser();
           window.scrollTo(0, 0);
         },
-      }, h("img", { src: "logo.png", alt: "", width: 35, height: 28 }), "Compilation des recettes"),
+      }, h("img", { src: "logo.png", alt: "", width: 35, height: 28 }), "Nos recettes"),
       h("div", { class: "boutons-entete" }, boutonFavoris, boutonFiltres)),
     recherche,
     saisonsChoisies,
