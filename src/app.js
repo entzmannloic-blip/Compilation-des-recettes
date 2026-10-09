@@ -36,11 +36,25 @@ const filtres = { ...FILTRES_PAR_DEFAUT, recherche: "", ouvert: false, recherche
 const personnesFiche = {};
 // Ingrédients cochés sur la fiche, par recette (le temps de la session).
 const cocheesFiche = new Map();
-// Nombre d'écrans vus : tant qu'il n'y en a qu'un, « Retour » mène à la liste au lieu de quitter le site.
-let ecransVus = 0;
-function retourListe() {
-  if (ecransVus > 1) window.history.back();
-  else window.location.hash = "#/";
+// Rang de l'écran dans l'historique du navigateur (0 = première entrée de l'onglet), gardé dans l'état de chaque entrée :
+// « Fermer » ne revient en arrière que s'il y a bien une page du site avant, sinon il mène à la liste.
+let rangHistorique = 0;
+let hashAvant = null; // adresse de l'écran précédemment affiché (null : premier écran de l'onglet)
+function noterRang() {
+  const etat = window.history.state;
+  if (Number.isInteger(etat?.rang)) { rangHistorique = etat.rang; return; }
+  const rang = hashAvant === null ? 0 : rangHistorique + 1;
+  rangHistorique = rang;
+  window.history.replaceState({ rang, precedent: hashAvant ?? "" }, "");
+}
+// Ferme la fiche comme une fenêtre : retour à la page d'où l'on vient (liste, courses, livres), jamais au mode pas à pas.
+function fermerFiche() {
+  const precedent = window.history.state?.precedent ?? "";
+  const dejaVu = rangHistorique > 0 && precedent !== "" && !precedent.startsWith("#/cuisine/") && !precedent.startsWith("#/recette/");
+  if (!dejaVu) { window.location.hash = "#/"; return; }
+  const avant = window.location.hash;
+  window.history.back();
+  setTimeout(() => { if (window.location.hash === avant) window.location.hash = "#/"; }, 400);
 }
 // Étape affichée en mode cuisine, par recette (le temps de la session).
 const etapeCuisine = new Map();
@@ -125,6 +139,7 @@ const ICONES = {
   loupe: ["M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14z", "M16 16l4.5 4.5"],
   filtres: ["M4 7h10M18 7h2M4 17h2M10 17h10", "M16 4v6M8 14v6"],
   retour: ["M15 5l-7 7 7 7"],
+  croix: ["M6 6l12 12M18 6L6 18"],
   bol: ["M4 11h16a8 8 0 0 1-16 0z", "M8 7l6-3M12 8l3-4"],
   plus: ["M12 5v14M5 12h14"],
   coche: ["M5 12.5l4.5 4.5L19 7.5"],
@@ -407,7 +422,17 @@ function ecranSaison() {
   return h("div", {},
     h("h1", { class: "sr-only" }, "Recettes"),
     h("header", { class: "entete" },
-      h("p", { class: "marque" }, icone("bol"), "Compilation des recettes"),
+      h("a", {
+        class: "marque", href: "#/", "data-cle": "accueil", "aria-label": "Accueil : Compilation des recettes",
+        onclick: (e) => { // déjà à l'accueil : on repart d'une liste neuve, en haut de page
+          if (window.location.hash && window.location.hash !== "#/") return;
+          e.preventDefault();
+          filtres.ouvert = false;
+          actualiserPanneauVisible();
+          reinitialiser();
+          window.scrollTo(0, 0);
+        },
+      }, icone("bol"), "Compilation des recettes"),
       h("div", { class: "boutons-entete" }, boutonFavoris, boutonFiltres)),
     recherche,
     saisonsChoisies,
@@ -496,7 +521,7 @@ function ecranRecette(idBrut) {
       h("div", { class: "fiche-tete" },
         h("div", { class: "fiche-photo" },
           photoRecette(recette, true),
-          h("button", { type: "button", class: "rond retour", "aria-label": "Retour", onclick: retourListe }, icone("retour")),
+          h("button", { type: "button", class: "rond fermer", "data-cle": "fermer-fiche", "aria-label": "Fermer la fiche", onclick: fermerFiche }, icone("croix")),
           h("a", { class: "rond panier", href: "#/courses", "aria-label": `Voir la liste de courses${Object.keys(semaine).length ? ` (${Object.keys(semaine).length} recette${Object.keys(semaine).length > 1 ? "s" : ""})` : ""}` },
             icone("courses"), Object.keys(semaine).length ? h("span", { class: "badge" }, String(Object.keys(semaine).length)) : null),
           h("button", {
@@ -825,7 +850,7 @@ function afficher() {
     recette: () => ecranRecette(route.id),
     cuisine: () => ecranCuisine(route.id),
   };
-  ecransVus += 1;
+  noterRang();
   cacherMessage();
   dessinerBarre(route.nom === "recette" || route.nom === "cuisine" ? "saison" : route.nom === "semaine" ? "courses" : route.nom);
   barre.closest(".barre").hidden = route.nom === "cuisine" || route.nom === "recette"; // ces écrans ont leurs propres boutons en bas
@@ -833,6 +858,7 @@ function afficher() {
   vue.className = "app" + (route.nom === "saison" ? " large" : route.nom === "recette" ? " fiche-large" : "");
   vue.replaceChildren(ecrans[route.nom]());
   window.scrollTo(0, 0);
+  hashAvant = window.location.hash || "#/";
 }
 
 async function lireJson(chemin) {
@@ -856,6 +882,14 @@ async function demarrer() {
     return;
   }
   window.addEventListener("hashchange", afficher);
+  // Comme une fenêtre qui s'ouvre sur la liste : un clic à côté de la fiche (hors page) ou la touche Échap la ferme.
+  document.addEventListener("click", (e) => {
+    const cible = e.target;
+    if ((cible === document.documentElement || cible === document.body) && lireRoute(window.location.hash).nom === "recette") fermerFiche();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lireRoute(window.location.hash).nom === "recette") fermerFiche();
+  });
   afficher();
 }
 

@@ -30,7 +30,7 @@ h2.section { color: var(--ink); font-size: 1rem; margin: 28px 0 6px; padding-bot
 
 /* En-tête : marque à gauche, deux boutons ronds à droite */
 .entete { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: calc(10px + env(safe-area-inset-top, 0px)) 0 0; }
-.marque { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--ink); font-size: 1.07rem; font-weight: 600; min-width: 0; }
+.marque { display: flex; align-items: center; gap: 8px; margin: 0; min-height: 44px; color: var(--ink); font-size: 1.07rem; font-weight: 600; min-width: 0; text-decoration: none; cursor: pointer; }
 .marque svg { flex: none; width: 24px; height: 24px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .boutons-entete { display: flex; gap: 4px; flex: none; }
 .rond { position: relative; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--ink2); cursor: pointer; }
@@ -47,7 +47,7 @@ input[type=search]::placeholder { color: var(--ink2); }
 .saisons-titre { flex: none; color: var(--ink2); font-weight: 500; }
 .saisons-puces { display: flex; gap: 6px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
 .saisons-puces::-webkit-scrollbar { display: none; }
-.saisons-puces .puce { flex: none; padding: 0 11px; }
+.saisons-puces .puce { flex: none; padding: 0 10px; }
 .compte { margin: 2px 0 0; color: var(--ink2); font-size: .93rem; }
 .onglets { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; margin-top: 4px; border-bottom: 1px solid var(--line); }
 .onglet { min-height: 44px; padding: 0 6px; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; background: transparent; color: var(--ink2); font: 500 1rem var(--sans); cursor: pointer; }
@@ -60,7 +60,7 @@ input[type=search]::placeholder { color: var(--ink2); }
 .groupe { padding: 10px 0 2px; }
 .groupe-titre { display: block; margin: 0 0 6px; color: var(--ink2); font-size: .93rem; font-weight: 500; }
 .puces { display: flex; flex-wrap: wrap; gap: 6px; }
-.puce { min-height: 44px; padding: 0 14px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); border-radius: 99px; font: 400 1rem var(--sans); cursor: pointer; }
+.puce { min-height: 34px; padding: 0 12px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); border-radius: 99px; font: 400 1rem var(--sans); cursor: pointer; }
 .puce:hover { background: var(--gris); }
 .puce[aria-pressed="true"] { background: var(--accent-wash); border-color: var(--accent); color: var(--accent); font-weight: 600; }
 .panneau .btn { margin: 14px 0 4px; }
@@ -122,9 +122,10 @@ input[type=search]::placeholder { color: var(--ink2); }
 .fiche-photo .rond:hover { background: rgba(16, 20, 18, .68); }
 .fiche-photo .rond svg { stroke-width: 2.2; }
 .fiche-photo .favori[aria-pressed="true"] { color: #ffd54a; }
-.fiche-photo .rond:focus-visible { outline-color: #fff; outline-offset: 0; }.fiche-photo .retour { left: 12px; }
-.fiche-photo .favori { right: 12px; }
-.fiche-photo .panier { right: 64px; }
+.fiche-photo .rond:focus-visible { outline-color: #fff; outline-offset: 0; }
+.fiche-photo .fermer { right: 12px; }
+.fiche-photo .favori { right: 64px; }
+.fiche-photo .panier { right: 116px; }
 .panier .badge { top: 2px; left: auto; right: 0; }
 .favori[aria-pressed="true"] svg { fill: currentColor; }
 .favori[aria-pressed="true"] { color: var(--accent); }
@@ -156,7 +157,9 @@ input[type=search]::placeholder { color: var(--ink2); }
 .notes li { margin-bottom: 6px; overflow-wrap: anywhere; }
 @media (min-width: 900px) {
   .fiche-photo { margin: 12px 0 0; aspect-ratio: 16 / 7; max-height: none; border-radius: 14px; }
-  .fiche-photo .retour { left: 14px; }
+  .fiche-photo .fermer { right: 14px; }
+  .fiche-photo .favori { right: 66px; }
+  .fiche-photo .panier { right: 118px; }
   .infos { max-width: 520px; }
   .fiche-corps { display: grid; grid-template-columns: 340px 1fr; column-gap: 56px; align-items: start; margin-top: 8px; }
   .fiche-corps h2.section { margin-top: 20px; }
