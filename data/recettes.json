@@ -3778,5 +3778,306 @@
       "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les 20 g de pousses d'épinards figurent dans la liste de la page mais pas dans les étapes. Le riz est noté « riz » sans variété."
     ],
     "photo": "photos/risotto-cremeux-courgettes-citron.jpg"
+  },
+  {
+    "id": "quenelles-brochet-bechamel-nantua",
+    "titre": "Quenelle de brochet et béchamel façon Nantua",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/quenelles-souffles-sauce-nantua/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "quenelles-de-brochet", "quantite": 8, "unite": "pièce", "precision": null },
+      { "ingredient": "champignon", "quantite": 250, "unite": "g", "precision": "de Paris" },
+      { "ingredient": "riz", "quantite": 320, "unite": "g", "precision": null },
+      { "ingredient": "lait", "quantite": 400, "unite": "ml", "precision": null },
+      { "ingredient": "beurre", "quantite": 50, "unite": "g", "precision": "doux" },
+      { "ingredient": "fumet-de-poisson", "quantite": 10, "unite": "g", "precision": null },
+      { "ingredient": "farine", "quantite": 50, "unite": "g", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 210 °C en chaleur tournante. Couper les champignons en quatre.",
+      "Dans une casserole à feu moyen, faire fondre le beurre. Ajouter la farine et remuer vigoureusement au fouet 2 minutes pour colorer le mélange : c'est un roux.",
+      "Verser le lait en remuant au fouet jusqu'à ébullition : la béchamel épaissit et devient nappante. Ajouter le fumet de poisson, saler et poivrer.",
+      "Disposer les quenelles de brochet dans un plat à four, verser la sauce façon Nantua par-dessus et ajouter les champignons autour. Enfourner 30 minutes, jusqu'à ce que les quenelles soient bien dorées.",
+      "Vingt minutes avant la fin de la cuisson, faire bouillir une casserole d'eau salée, y verser le riz et le cuire 10 à 12 minutes. L'égoutter et le garder dans la casserole.",
+      "Servir les quenelles dorées avec les champignons et la sauce façon Nantua, accompagnées de riz, sans attendre."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Le titre de la page est « Quenelles de brochet & béchamel façon Nantua »."
+    ],
+    "photo": "photos/quenelles-brochet-bechamel-nantua.jpg"
+  },
+  {
+    "id": "boulettes-courgette-sauce-fraiche",
+    "titre": "Boulettes de courgettes et sauce fraîche",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/boulettes-de-courgette-et-couscous/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 25, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "yaourt-de-brebis", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "parmesan", "quantite": 60, "unite": "g", "precision": "râpé" },
+      { "ingredient": "persil", "quantite": 1, "unite": "bouquet", "precision": "3 tiges, frais" },
+      { "ingredient": "courgette", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "semoule", "quantite": 300, "unite": "g", "precision": "semi-complète" },
+      { "ingredient": "chapelure-panko", "quantite": 120, "unite": "g", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "oeufs", "quantite": 2, "unite": "pièce", "precision": null }
+    ],
+    "etapes": [
+      "Effeuiller et hacher le persil. Presser le citron et réserver le jus. Râper la courgette dans un saladier (environ 500 g de chair pour 4), la mettre dans un torchon et bien la presser pour ôter l'excédent d'eau.",
+      "Préchauffer le four à 180 °C en chaleur traditionnelle. Dans le saladier, ajouter le persil, la chapelure, les œufs et le fromage râpé. Saler, poivrer et bien mélanger jusqu'à obtenir une farce homogène.",
+      "Former des boulettes avec les mains ou une cuillère (environ 5 par personne). Les disposer sur une plaque couverte de papier cuisson et enfourner 25 minutes.",
+      "Dans une casserole, faire bouillir 300 ml d'eau avec un filet d'huile d'olive et une pincée de sel. Retirer du feu, plonger la semoule, mélanger, couvrir et laisser gonfler hors du feu 10 minutes.",
+      "Dans un bol, mélanger le jus de citron, le yaourt de brebis et un filet d'huile d'olive, saler et poivrer.",
+      "Servir les boulettes bien chaudes avec la sauce citronnée et la semoule."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Le fromage est noté « parmesan râpé » dans la liste et « grana padano » dans l'étape. L'adresse de la page contient « couscous » mais la recette utilise de la semoule. Les 3 tiges de persil sont comptées en 1 bouquet."
+    ],
+    "photo": "photos/boulettes-courgette-sauce-fraiche.jpg"
+  },
+  {
+    "id": "boulettes-porc-thai-riz",
+    "titre": "Boulettes de porc thaï et riz basmati",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/boulettes-de-porc-thai/"
+    },
+    "saisons": ["printemps", "été", "automne", "hiver"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 25, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "chair-a-saucisse", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "riz", "quantite": 320, "unite": "g", "precision": "basmati d'après votre titre ; « riz de Camargue » sur la page" },
+      { "ingredient": "sauce-teriyaki", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "oignon-nouveau", "quantite": 1, "unite": "pièce", "precision": "cébette" },
+      { "ingredient": "gingembre", "quantite": 15, "unite": "g", "precision": "frais" },
+      { "ingredient": "chapelure-panko", "quantite": 50, "unite": "g", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null }
+    ],
+    "etapes": [
+      "Faire bouillir une casserole d'eau salée pour le riz. Retirer la première peau de la cébette si besoin et l'émincer. Éplucher le gingembre et l'ail, et les hacher finement ou les râper.",
+      "Dans un saladier, mélanger la chapelure panko et 100 ml d'eau. Ajouter la chair à saucisse, l'ail et le gingembre, et bien mélanger.",
+      "Former de petites boulettes de la taille d'une balle de ping-pong (environ 5 par personne). Plonger le riz dans l'eau bouillante pour 12 minutes.",
+      "Chauffer une poêle à feu moyen avec un filet d'huile neutre et y cuire les boulettes de porc 8 minutes en les retournant régulièrement. Couvrir pour accélérer la cuisson.",
+      "Quand les boulettes sont cuites, ajouter la sauce teriyaki et 1 à 2 cuillères à soupe d'eau, et poursuivre la cuisson 2 minutes à feu moyen en remuant bien pour les enrober.",
+      "Piquer un couteau dans une boulette : si elle est bien chaude à cœur, c'est cuit. Égoutter le riz et le servir dans des bols, disposer les boulettes dessus, arroser de sauce et parsemer de cébette."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). La recherche n'a trouvé que « Boulettes de porc thaï & riz de Camargue » ; la liste de la page indique « riz » sans variété. Le basmati de votre titre n'est pas confirmé : à vérifier avec votre recette papier."
+    ],
+    "photo": "photos/boulettes-porc-thai-riz.jpg"
+  },
+  {
+    "id": "poisson-criee-fondue-poireaux",
+    "titre": "Poisson de la criée et fondue de poireaux twisté",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/poisson-blanc-fondue-poireau/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "mijoté",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "poisson-blanc", "quantite": 480, "unite": "g", "precision": "de la criée" },
+      { "ingredient": "poireau", "quantite": 1200, "unite": "g", "precision": null },
+      { "ingredient": "creme-liquide", "quantite": 400, "unite": "ml", "precision": null },
+      { "ingredient": "riz", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "fumet-de-poisson", "quantite": 10, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 2, "unite": "pièce", "precision": "jaune" },
+      { "ingredient": "paprika", "quantite": 6, "unite": "g", "precision": null },
+      { "ingredient": "aneth", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "beurre", "quantite": 20, "unite": "g", "precision": "2 noix" }
+    ],
+    "etapes": [
+      "Couper les poireaux en deux puis les émincer finement, pour une texture plus fondante. Éplucher et émincer l'ail et l'oignon. Faire bouillir une casserole d'eau salée pour le riz.",
+      "Chauffer une sauteuse à feu doux avec une noix de beurre et un filet d'huile d'olive. Y mettre les poireaux, l'ail et l'oignon, saler, poivrer et couvrir. Ajouter un fond d'eau si ça accroche. Cuire 10 minutes en remuant régulièrement.",
+      "Plonger le riz dans l'eau bouillante le temps indiqué sur le paquet. Couper le poisson en deux filets égaux, pour un morceau par personne, et le disposer dans une assiette. Saler, poivrer et saupoudrer chaque côté de paprika.",
+      "Dans la sauteuse, ajouter le mélange aneth et fumet de poisson et la crème. Mélanger et cuire 2 minutes. Goûter, puis égoutter le riz et le garder au chaud jusqu'au service.",
+      "Poser le poisson sur les légumes, couvrir de nouveau et poursuivre la cuisson 5 minutes à feu doux. Le poisson doit s'effeuiller facilement.",
+      "Servir la fondue de poireaux et le riz dans les assiettes avec les filets de poisson et arroser de sauce à la crème. Déguster bien chaud."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Le poisson blanc varie selon l'arrivage de la criée. La quantité de poireaux (1,2 kg) est celle de la page. Le beurre est noté « 2 noix » : compté 20 g. Le titre de la page est « Poisson de la criée & fondue de poireaux twistée »."
+    ],
+    "photo": "photos/poisson-criee-fondue-poireaux.jpg"
+  },
+  {
+    "id": "curry-brocoli-lentilles-corail-coco",
+    "titre": "Curry de brocoli, lentilles corail et lait de coco",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/ruta-curry-de-brocoli-lentilles-corail-et-lait-de-coco/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "curry",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "brocoli", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "lait-de-coco", "quantite": 400, "unite": "ml", "precision": null },
+      { "ingredient": "lentilles-corail", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "carotte", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "pate-de-curry", "quantite": 40, "unite": "g", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "pièce", "precision": "cube" },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": "jaune" },
+      { "ingredient": "noix-de-cajou", "quantite": 2, "unite": "c. à soupe", "precision": null }
+    ],
+    "etapes": [
+      "Chauffer 800 ml d'eau et y diluer le bouillon de légumes. Concasser grossièrement les noix de cajou. Dans une sauteuse, sans matière grasse, les torréfier 2 minutes à feu moyen à vif, puis les réserver pour le dressage.",
+      "Laver, éplucher et couper les carottes en petits bâtonnets. Laver le brocoli, prélever les fleurettes (recouper les plus grosses en deux), éplucher la tige et la couper en fines rondelles. Peler et émincer l'oignon.",
+      "Dans la sauteuse qui a servi aux noix de cajou, chauffer 2 cuillères à soupe d'huile neutre à feu moyen. Y faire revenir l'oignon avec la pâte de curry 2 minutes.",
+      "Ajouter les carottes et le brocoli et les faire revenir 5 minutes. Rincer les lentilles corail dans une passoire fine et les incorporer aux légumes avec le lait de coco et le bouillon. Mélanger, couvrir et laisser mijoter 12 minutes. En fin de cuisson, saler et poivrer selon le goût.",
+      "Servir le curry bien chaud, parsemé de noix de cajou."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Le titre de la page est « Curry de brocoli lentilles corail & lait de coco »."
+    ],
+    "photo": "photos/curry-brocoli-lentilles-corail-coco.jpg"
+  },
+  {
+    "id": "parmentier-lentilles-paprika-fume",
+    "titre": "Parmentier de lentilles au paprika fumé",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/parmentier-de-lentilles-fumees/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 30, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "lentilles-vertes", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "pommes-de-terre", "quantite": 900, "unite": "g", "precision": null },
+      { "ingredient": "pulpe-de-tomate", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "carotte", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "thym", "quantite": 1, "unite": "bouquet", "precision": "4 tiges, frais" },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "paprika", "quantite": 6, "unite": "g", "precision": "fumé" },
+      { "ingredient": "chapelure", "quantite": 20, "unite": "g", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "beurre", "quantite": 60, "unite": "g", "precision": null }
+    ],
+    "etapes": [
+      "Éplucher la carotte, la couper en deux dans la longueur puis en petits cubes (mirepoix). Éplucher et ciseler l'oignon. Éplucher et écraser l'ail.",
+      "Chauffer une sauteuse à feu moyen avec un filet d'huile d'olive. Y faire revenir l'oignon, l'ail et la carotte 2 minutes, puis couvrir et laisser cuire 5 minutes à feu doux. Ajouter les lentilles, la pulpe de tomate, le paprika fumé et la moitié du thym. Saler à mi-cuisson. Verser 600 ml d'eau et laisser mijoter 35 minutes à feu doux, en surveillant et en ajoutant de l'eau si ça accroche.",
+      "Pendant ce temps, éplucher les pommes de terre et les couper en cubes. Les mettre dans une casserole d'eau froide salée avec le reste du thym. Porter à ébullition et cuire 25 minutes à petite ébullition. Quand elles sont presque cuites, préchauffer le four à 200 °C en chaleur traditionnelle.",
+      "Égoutter les pommes de terre, les remettre dans la casserole avec une belle noix de beurre et les écraser au presse-purée ou au fouet. Saler et poivrer.",
+      "Quand les lentilles sont fondantes, les répartir au fond d'un plat, les recouvrir de purée et parsemer de chapelure. Enfourner 15 minutes : la chapelure doit griller.",
+      "Déguster bien chaud, si on veut avec une salade verte pour faire baisser l'index glycémique du plat."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Il existe sur le site une page voisine « Parmentier de lentilles fumées » avec 2 cuillères à soupe de paprika fumé ; celle-ci en compte 6 g. Les 4 tiges de thym sont comptées en 1 bouquet. Le beurre (60 g) est noté dans la liste, la page ne détaille pas la part de la purée."
+    ],
+    "photo": "photos/parmentier-lentilles-paprika-fume.jpg"
+  },
+  {
+    "id": "poulet-roti-zaatar-carottes-yaourt",
+    "titre": "Poulet rôti au zaatar, carottes rôties et yaourt citronné",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/poulet-roti-au-zaatar-carottes-roties-et-yaourt-citronne/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "cuisse-de-poulet", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "carotte", "quantite": 800, "unite": "g", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "yaourt", "quantite": 2, "unite": "pièce", "precision": "nature, bio" },
+      { "ingredient": "pommes-de-terre", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "zaatar", "quantite": 2, "unite": "c. à soupe", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C en chaleur tournante. Éplucher les carottes et les couper en bâtonnets ou en biseaux. Éplucher les pommes de terre et les couper aussi en bâtonnets.",
+      "Disposer les carottes et les pommes de terre sur une plaque couverte de papier cuisson et ajouter les cuisses de poulet. Arroser d'un filet d'huile d'olive, saupoudrer de zaatar, saler, poivrer et bien mélanger pour tout enrober.",
+      "Enfourner la plaque 35 à 40 minutes. À mi-cuisson, retourner les cuisses et mélanger les légumes.",
+      "Pendant ce temps, mélanger le yaourt avec un filet de jus de citron, du sel et du poivre.",
+      "Vérifier que le poulet est bien cuit à cœur et les légumes tendres. Servir les cuisses rôties avec les carottes et les pommes de terre fondantes et la sauce au yaourt citronné."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). La quantité de jus de citron pour la sauce n'est pas précisée."
+    ],
+    "photo": "photos/poulet-roti-zaatar-carottes-yaourt.jpg"
+  },
+  {
+    "id": "smashed-potatoes-coleslaw",
+    "titre": "Smashed potatoes croustillantes et coleslaw maison",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/ruta-smashed-potatoes-coleslaw/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 25, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "pommes-de-terre", "quantite": 1000, "unite": "g", "precision": "avec la peau" },
+      { "ingredient": "carotte", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "chou-blanc", "quantite": 0.5, "unite": "pièce", "precision": null },
+      { "ingredient": "preparation-vegetale-nature", "quantite": 2, "unite": "pièce", "precision": "type yaourt, nature" },
+      { "ingredient": "persil", "quantite": 1, "unite": "bouquet", "precision": "6 tiges, frais" },
+      { "ingredient": "epices-cajun", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "moutarde", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "vinaigre-de-cidre", "quantite": 2, "unite": "c. à soupe", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C en chaleur tournante. Laver les pommes de terre et les couper en deux si elles sont grosses, sans les éplucher : cela fait toute la différence. Les plonger dans une casserole d'eau à température ambiante, porter à ébullition et cuire 25 à 30 minutes à feu moyen, à couvert.",
+      "Pendant ce temps, dans un saladier, mélanger la préparation végétale avec la moutarde, le vinaigre de cidre, du sel et du poivre. Dans ce même saladier, laver et émincer finement le chou blanc (à l'économe ou à la mandoline), laver et râper les carottes, laver et ciseler le persil. Bien mélanger et réserver au frais jusqu'au service.",
+      "Égoutter les pommes de terre cuites, elles doivent être fondantes. Les déposer sur une plaque couverte de papier cuisson, peau vers le haut, et les écraser grossièrement avec le fond d'une casserole.",
+      "Arroser d'huile d'olive, saupoudrer du mélange d'épices cajun, de sel et de poivre, puis enfourner 20 minutes.",
+      "Servir les pommes de terre dès la sortie du four, accompagnées du coleslaw."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les 6 tiges de persil sont comptées en 1 bouquet."
+    ],
+    "photo": "photos/smashed-potatoes-coleslaw.jpg"
   }
 ]

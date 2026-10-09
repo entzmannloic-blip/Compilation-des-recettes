@@ -232,5 +232,17 @@
   { "id": "amandes-emondees", "nom": "amandes émondées", "rayon": "Épicerie", "saisons": [] },
   { "id": "cuisine-soja", "nom": "crème de cuisine au soja", "rayon": "Épicerie", "saisons": [] },
   { "id": "cuisine-riz", "nom": "préparation végétale de cuisine au riz", "rayon": "Épicerie", "saisons": [] },
-  { "id": "preparation-vegetale-avoine", "nom": "préparation végétale à l'avoine", "rayon": "Épicerie", "saisons": [] }
+  { "id": "preparation-vegetale-avoine", "nom": "préparation végétale à l'avoine", "rayon": "Épicerie", "saisons": [] },
+  { "id": "quenelles-de-brochet", "nom": "quenelles de brochet", "rayon": "Poissonnerie", "saisons": [] },
+  { "id": "poisson-blanc", "nom": "poisson blanc", "rayon": "Poissonnerie", "saisons": [] },
+  { "id": "fumet-de-poisson", "nom": "fumet de poisson", "rayon": "Épicerie", "saisons": [], "regime": "chair" },
+  { "id": "yaourt-de-brebis", "nom": "yaourt de brebis", "rayon": "Crèmerie", "saisons": [] },
+  { "id": "chair-a-saucisse", "nom": "chair à saucisse", "rayon": "Boucherie", "saisons": [] },
+  { "id": "sauce-teriyaki", "nom": "sauce teriyaki", "rayon": "Épicerie", "saisons": [] },
+  { "id": "noix-de-cajou", "nom": "noix de cajou", "rayon": "Épicerie", "saisons": [] },
+  { "id": "lentilles-vertes", "nom": "lentilles vertes", "rayon": "Épicerie", "saisons": [] },
+  { "id": "chou-blanc", "nom": "chou blanc", "rayon": "Légumes", "saisons": ["automne", "hiver"] },
+  { "id": "preparation-vegetale-nature", "nom": "préparation végétale nature (type yaourt)", "rayon": "Crèmerie", "saisons": [], "regime": "vegetal" },
+  { "id": "moutarde", "nom": "moutarde", "rayon": "Épicerie", "saisons": [] },
+  { "id": "vinaigre-de-cidre", "nom": "vinaigre de cidre", "rayon": "Épicerie", "saisons": [] }
 ]
