@@ -275,5 +275,7 @@
   { "id": "boulgour", "nom": "boulgour", "rayon": "Épicerie", "saisons": [] },
   { "id": "fusilloni", "nom": "fusilloni", "rayon": "Épicerie", "saisons": [] },
   { "id": "preparation-vegetale-amande", "nom": "préparation végétale à l'amande", "rayon": "Crèmerie", "saisons": [], "regime": "vegetal" },
-  { "id": "ail-des-ours", "nom": "ail des ours", "rayon": "Herbes", "saisons": ["printemps"] }
+  { "id": "ail-des-ours", "nom": "ail des ours", "rayon": "Herbes", "saisons": ["printemps"] },
+  { "id": "kasha", "nom": "kasha (sarrasin grillé)", "rayon": "Épicerie", "saisons": [] },
+  { "id": "pecorino", "nom": "pecorino", "rayon": "Crèmerie", "saisons": [] }
 ]

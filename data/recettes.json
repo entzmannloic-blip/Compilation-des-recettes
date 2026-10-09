@@ -4735,7 +4735,7 @@
     "ingredients": [
       { "ingredient": "courgette", "quantite": 800, "unite": "g", "precision": null },
       { "ingredient": "aneth", "quantite": 1, "unite": "bouquet", "precision": "frais" },
-      { "ingredient": "tomates-pelees", "quantite": 2, "unite": "boîte", "precision": "au naturel, jus gardé" },
+      { "ingredient": "tomates-pelees", "quantite": 800, "unite": "g", "precision": "en conserve, jus gardé" },
       { "ingredient": "semoule", "quantite": 300, "unite": "g", "precision": "de blé" },
       { "ingredient": "oignon", "quantite": 2, "unite": "pièce", "precision": "jaunes" },
       { "ingredient": "cumin", "quantite": 6, "unite": "g", "precision": null },
@@ -4753,7 +4753,7 @@
     ],
     "notes": [
       "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
-      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). « 2 pièces » de tomates pelées comprises comme 2 boîtes."
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). « 2 pièces » de tomates pelées comprises comme 2 boîtes de 400 g."
     ],
     "photo": "photos/ratabouleh-aneth-oeuf-mollet.jpg"
   },
@@ -5126,5 +5126,149 @@
       "Quantités pour 4 personnes (rendement indiqué dans les données de la page)."
     ],
     "photo": "photos/boulettes-express-bouillon-curry.jpg"
+  },
+  {
+    "id": "chou-fleur-roti-paprika-puree-carotte-coco",
+    "titre": "Chou-fleur rôti au paprika et purée carotte-coco",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/chou-fleur-rotie-avec-ses-tiges/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 25, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "chou-fleur", "quantite": 1, "unite": "pièce", "precision": "avec ses feuilles" },
+      { "ingredient": "echalote", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "curcuma", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "paprika", "quantite": 2, "unite": "c. à café", "precision": "fumé" },
+      { "ingredient": "carotte", "quantite": 1000, "unite": "g", "precision": null },
+      { "ingredient": "lait-de-coco", "quantite": 200, "unite": "ml", "precision": null },
+      { "ingredient": "kasha", "quantite": 2, "unite": "c. à café", "precision": null }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C (chaleur traditionnelle). Détailler le chou-fleur en petits bouquets, garder les feuilles en les coupant en deux, et émincer les échalotes.",
+      "Dans un saladier, mélanger le curcuma et le paprika avec un bon filet d'huile d'olive, du sel et du poivre. Y enrober le chou-fleur et les échalotes, les étaler sur une plaque couverte de papier cuisson et enfourner 35 à 40 minutes.",
+      "Éplucher les carottes, les couper en cubes, les mettre dans une casserole d'eau froide salée, porter à ébullition puis cuire 30 minutes à feu doux.",
+      "Badigeonner les tiges et les feuilles de chou-fleur d'huile d'olive, saler, poivrer, les étaler sur une seconde plaque (ou sur le chou-fleur) et enfourner 15 à 20 minutes : elles deviennent croustillantes comme des chips.",
+      "Quand les carottes sont fondantes, les égoutter et les écraser au presse-purée ou au fouet. Ajouter le lait de coco selon la texture voulue, saler et poivrer.",
+      "Vérifier la cuisson du chou-fleur avec la pointe d'un couteau, puis le servir avec ses feuilles et la purée, parsemé de kasha."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). La page indique bien 1 kg de carottes."
+    ],
+    "photo": "photos/chou-fleur-roti-paprika-puree-carotte-coco.jpg"
+  },
+  {
+    "id": "polenta-cremeuse-legumes-rotis-pesto",
+    "titre": "Polenta crémeuse et légumes rôtis au pesto",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/polenta-cremeuse-et-legumes-rotis-au-pesto/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 25, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "pecorino", "quantite": 60, "unite": "g", "precision": null },
+      { "ingredient": "preparation-vegetale-avoine", "quantite": 200, "unite": "ml", "precision": null },
+      { "ingredient": "patate-douce", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "pesto", "quantite": 80, "unite": "g", "precision": null },
+      { "ingredient": "carotte", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "polenta", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "romarin", "quantite": 1, "unite": "bouquet", "precision": "2 tiges, frais" }
+    ],
+    "etapes": [
+      "Préchauffer le four à 180 °C (chaleur tournante). Éplucher la patate douce et la couper en demi-lunes, éplucher les carottes et les couper en bâtonnets.",
+      "Étaler les légumes sur une plaque couverte de papier cuisson, arroser d'un filet d'huile d'olive, saler, poivrer et enfourner 40 minutes.",
+      "Pendant ce temps, chauffer 1 litre d'eau dans une casserole. Quand elle frémit, couper le feu, y plonger le romarin et laisser infuser jusqu'à ce que les légumes soient tendres (environ 30 minutes).",
+      "Retirer le romarin et porter l'eau à ébullition. Verser la polenta en pluie en fouettant vivement et cuire 4 à 5 minutes à feu doux. Saler, poivrer, ajouter la préparation végétale et mélanger (ajouter un peu d'eau si elle est trop épaisse).",
+      "Servir la polenta bien chaude avec les légumes, le pesto par-dessus et des copeaux de pecorino faits à l'économe."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page)."
+    ],
+    "photo": "photos/polenta-cremeuse-legumes-rotis-pesto.jpg"
+  },
+  {
+    "id": "mafe-veggie-haricots-rouges",
+    "titre": "Mafé veggie aux haricots rouges",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/mafe-aux-haricots/"
+    },
+    "saisons": ["printemps", "été", "automne", "hiver"],
+    "categorie": "plat",
+    "type": "mijoté",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "haricots-cuits", "quantite": 2, "unite": "boîte", "precision": "haricots rouges, égouttés et rincés" },
+      { "ingredient": "pulpe-de-tomate", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "semoule", "quantite": 300, "unite": "g", "precision": "de blé" },
+      { "ingredient": "sauce-soja", "quantite": 4, "unite": "c. à soupe", "precision": "salée, à doser selon le goût" },
+      { "ingredient": "beurre-de-cacahuete", "quantite": 50, "unite": "g", "precision": "purée de cacahuète" },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "pièce", "precision": "cube" },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": "jaune" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null }
+    ],
+    "etapes": [
+      "Éplucher et hacher finement l'oignon et l'ail. Faire bouillir 160 ml d'eau et y délayer le cube de bouillon. Égoutter les haricots rouges.",
+      "Dans une poêle ou une sauteuse à feu moyen, faire suer l'ail et l'oignon dans un filet d'huile d'olive jusqu'à ce qu'ils soient translucides.",
+      "Préparer la semoule : porter 300 ml d'eau à ébullition avec un filet d'huile d'olive et une pincée de sel, retirer du feu, y verser la semoule, mélanger, couvrir et laisser gonfler jusqu'au service.",
+      "Dans la poêle, ajouter la purée de cacahuète, remuer, puis verser le bouillon, la sauce soja et la pulpe de tomate. Laisser cuire 10 minutes à feu doux et à couvert, puis ajouter les haricots et remuer doucement 1 minute pour les réchauffer.",
+      "Servir le mafé avec la semoule et un trait d'huile d'olive."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). La page parle de « 2 pièces » de haricots rouges et « 1 pièce » de pulpe de tomate : comprises comme 2 boîtes et 400 g."
+    ],
+    "photo": "photos/mafe-veggie-haricots-rouges.jpg"
+  },
+  {
+    "id": "crumble-courgettes-parmesan-thym",
+    "titre": "Crumble de courgettes, parmesan et thym",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/crumble-de-courgettes-parmesan-et-thym/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 25 },
+    "ingredients": [
+      { "ingredient": "courgette", "quantite": 1500, "unite": "g", "precision": null },
+      { "ingredient": "parmesan", "quantite": 50, "unite": "g", "precision": "râpé" },
+      { "ingredient": "creme-liquide", "quantite": 200, "unite": "ml", "precision": null },
+      { "ingredient": "thym", "quantite": 1, "unite": "bouquet", "precision": "4 tiges, frais" },
+      { "ingredient": "farine", "quantite": 100, "unite": "g", "precision": null },
+      { "ingredient": "beurre", "quantite": 50, "unite": "g", "precision": "demi-sel, ramolli" }
+    ],
+    "etapes": [
+      "Sortir le beurre du frigo pour qu'il ramollisse, préchauffer le four à 180 °C (chaleur traditionnelle) et couper les courgettes en dés de 1 cm.",
+      "Dans une poêle à feu moyen avec un filet d'huile d'olive, faire sauter les courgettes 5 minutes en remuant, ajouter la crème, saler, poivrer, puis les verser dans un plat à four.",
+      "Dans un saladier, mélanger la farine, le parmesan, le beurre mou et le thym effeuillé du bout des doigts, jusqu'à une texture sableuse à gros grains.",
+      "Parsemer le crumble sur les courgettes et enfourner 20 minutes, jusqu'à ce que le dessus soit bien doré. Servir aussitôt."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page)."
+    ],
+    "photo": "photos/crumble-courgettes-parmesan-thym.jpg"
   }
 ]
