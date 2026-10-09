@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import {
   MOIS_DE_SAISON, saisonDuMoisNumero, alimentsDuMois, alimentsDeLaSaison, chercherAliments,
-  seriesDeMois, libelleMois, moisParIngredient, recettesAvecAliment,
+  seriesDeMois, libelleMois, moisParIngredient, recettesAvecAliment, moisAvantSaison,
 } from "../src/saison.js";
 import { validerDonnees } from "../scripts/validate-data.mjs";
 
@@ -91,4 +91,12 @@ test("validerDonnees : refuse un mois hors 1-12, un type inconnu et un ingrédie
     ],
   });
   assert.equal(erreurs.length, 3);
+});
+
+test("moisAvantSaison : 0 en saison, sinon le nombre de mois à attendre, en passant par la fin d'année", () => {
+  assert.equal(moisAvantSaison([6, 7, 8], 7), 0);
+  assert.equal(moisAvantSaison([6, 7, 8], 5), 1);
+  assert.equal(moisAvantSaison([1, 2], 11), 2);
+  assert.equal(moisAvantSaison([10], 11), 11);
+  assert.equal(moisAvantSaison([], 3), null);
 });

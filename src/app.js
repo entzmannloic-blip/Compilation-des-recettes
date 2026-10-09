@@ -7,6 +7,10 @@ import {
 import { chargerSemaine, sauverSemaine, basculer, definirPersonnes } from "./semaine.js";
 import { lireRoute } from "./routes.js";
 import { chargerListe, sauverListe, basculerFavori, CLES } from "./memoire.js";
+import {
+  NOMS_MOIS, MOIS_DE_SAISON, saisonDuMoisNumero, alimentsDuMois, alimentsDeLaSaison, chercherAliments, libelleMois,
+  moisParIngredient, recettesAvecAliment, moisAvantSaison,
+} from "./saison.js";
 import { compilerCourses, texteCourses, chargerCoches, sauverCoches } from "./courses.js";
 
 const vue = document.getElementById("vue");
@@ -24,7 +28,7 @@ function ouvrirStockage() {
 }
 const stockage = ouvrirStockage();
 
-let donnees = null; // { recettes, ingredients, livres }
+let donnees = null; // { recettes, ingredients, livres, saisonnalite }
 let semaine = {};
 // Favoris, gardés sur le téléphone.
 let favoris = new Set(chargerListe(stockage, CLES.favoris));
@@ -135,6 +139,7 @@ const ICONES = {
   saison: ["M5 19c0-8 5-14 14-14 0 9-6 14-14 14z", "M5 19l8-8"],
   semaine: ["M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z", "M4 10h16M9 3v4M15 3v4"],
   livres: ["M4 5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H4z", "M20 5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h6z"],
+  calendrier: ["M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18z", "M12 9.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z", "M12 3v4.5M12 16.5V21M3 12h4.5M16.5 12H21"],
   courses: ["M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H6", "M10 20.5v.01M17 20.5v.01"],
   loupe: ["M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14z", "M16 16l4.5 4.5"],
   filtres: ["M4 7h10M18 7h2M4 17h2M10 17h10", "M16 4v6M8 14v6"],
@@ -150,6 +155,7 @@ const ONGLETS = [
   { nom: "saison", libelle: "Recettes", href: "#/" },
   { nom: "courses", libelle: "Courses", href: "#/courses" },
   { nom: "livres", libelle: "Livres", href: "#/livres" },
+  { nom: "calendrier", libelle: "Saison", href: "#/saison" },
 ];
 
 function icone(nom) {
@@ -490,6 +496,14 @@ function ecranRecette(idBrut) {
     const mult = facteur(recette, personnes);
     const dansSemaine = Object.hasOwn(semaine, id);
     const nomsIngredients = new Map(donnees.ingredients.map((i) => [i.id, i.nom]));
+    // Saison de chaque ingrédient, d'après le calendrier de l'onglet « Saison » (rien pour ceux qui n'y sont pas).
+    const moisIngredients = moisParIngredient(donnees.saisonnalite);
+    const moisDeSaison = (idIngredient) => {
+      const mois = moisIngredients.get(idIngredient);
+      if (!mois) return null;
+      const ici = mois.includes(moisActuel);
+      return h("small", { class: `mois-ing${ici ? " oui" : ""}` }, `${ici ? "De saison" : "Hors saison"} · ${libelleMois(mois)}`);
+    };
     const o = recette.origine;
     const livre = o.type === "livre" ? donnees.livres.find((l) => l.id === o.livre) : null;
     const regime = regimeRecette(recette, new Map(donnees.ingredients.map((i) => [i.id, i])));
@@ -514,7 +528,8 @@ function ecranRecette(idBrut) {
         h("span", { class: "nom" },
           h("b", { class: "quantite" }, formaterQuantite(quantiteAjustee(ligne.quantite, mult), ligne.unite)), " ",
           nomsIngredients.get(ligne.ingredient) ?? ligne.ingredient,
-          ligne.precision ? h("small", {}, ` (${ligne.precision})`) : null));
+          ligne.precision ? h("small", {}, ` (${ligne.precision})`) : null,
+          moisDeSaison(ligne.ingredient)));
     };
 
     conteneur.replaceChildren(
@@ -838,6 +853,253 @@ function ecranLivres() {
     h("div", { class: "stack" }, cartes));
 }
 
+// ---------- Écran « Saison » : roue des mois, aliments de saison ----------
+const EMOJI_SAISON = { printemps: "🌱", été: "☀️", automne: "🍂", hiver: "❄️" };
+const LETTRES_MOIS = ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sep", "Oct", "Nov", "Déc"];
+const INITIALES_MOIS = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
+const MOIS_MILIEU = { printemps: 4, été: 7, automne: 10, hiver: 1 }; // mois sur lequel la roue se place quand on choisit une saison
+const moisActuel = new Date().getMonth() + 1;
+// État gardé pendant la session : mois choisi, saison entière (null = un seul mois), recherche, aliment ouvert.
+const calendrier = { mois: moisActuel, saison: null, recherche: "", ouvert: null };
+let rotationRoue = -(moisActuel - 1) * 30; // degrés cumulés : la roue tourne par le chemin le plus court
+let fermerFeuilleCourante = null;
+
+const normaliserAngle = (a) => ((((a + 180) % 360) + 360) % 360) - 180;
+function viserMois(mois) {
+  rotationRoue += normaliserAngle(-(mois - 1) * 30 - rotationRoue);
+}
+const moisSousLaFleche = (rot) => ((((Math.round(-rot / 30) % 12) + 12) % 12) + 1);
+const pluriel = (n, mot) => `${n} ${mot}${n > 1 ? "s" : ""}`;
+const variableSaison = (mois) => `var(--s-${saisonDuMoisNumero(mois) === "été" ? "ete" : saisonDuMoisNumero(mois)})`;
+
+function ecranCalendrier() {
+  const aliments = donnees.saisonnalite;
+  const conteneur = h("div", {});
+
+  // --- la roue ---
+  const centreEmoji = h("span", { class: "centre-emoji", "aria-hidden": "true" });
+  const centreNom = h("span", { class: "centre-nom" });
+  const centreDetail = h("span", { class: "centre-detail" });
+  const centre = h("div", { class: "roue-centre", "aria-live": "polite" }, centreEmoji, centreNom, centreDetail);
+  const roue = h("div", { class: "roue", role: "group", "aria-label": "Roue des mois : faites-la tourner ou touchez un mois" },
+    LETTRES_MOIS.map((lettres, i) =>
+      h("button", {
+        type: "button", class: `roue-mois${i + 1 === moisActuel ? " ici" : ""}`, style: `--a:${i * 30}`,
+        "data-cle": `roue-${i + 1}`, "aria-label": NOMS_MOIS[i], onclick: () => choisirMois(i + 1),
+      }, lettres)));
+  const zone = h("div", { class: "roue-zone" }, h("span", { class: "roue-fleche", "aria-hidden": "true" }), roue, centre);
+  roue.style.setProperty("--rot", String(rotationRoue));
+
+  function fondRoue() {
+    const couleurs = [], voile = [];
+    for (let k = 1; k <= 12; k += 1) {
+      const a = (k - 1) * 30, b = k * 30;
+      couleurs.push(`${variableSaison(k)} ${a}deg ${b}deg`);
+      const estompe = calendrier.saison && saisonDuMoisNumero(k) !== calendrier.saison;
+      voile.push(`${estompe ? "rgba(255,255,255,.7)" : "transparent"} ${a}deg ${b}deg`);
+    }
+    return `repeating-conic-gradient(from -15deg, #fff 0 1.2deg, transparent 1.2deg 30deg), conic-gradient(from -15deg, ${voile.join(", ")}), conic-gradient(from -15deg, ${couleurs.join(", ")})`;
+  }
+
+  function majCentre(mois) {
+    const saison = calendrier.saison ?? saisonDuMoisNumero(mois);
+    centreEmoji.textContent = EMOJI_SAISON[saison];
+    if (calendrier.saison) {
+      const liste = alimentsDeLaSaison(aliments, calendrier.saison);
+      centreNom.textContent = majuscule(calendrier.saison);
+      centreDetail.textContent = `${libelleMois(MOIS_DE_SAISON[calendrier.saison])} · ${liste.length} aliments`;
+    } else {
+      centreNom.textContent = majuscule(NOMS_MOIS[mois - 1]);
+      const l = alimentsDuMois(aliments, mois, "legume").length, f = alimentsDuMois(aliments, mois, "fruit").length;
+      centreDetail.textContent = `${pluriel(l, "légume")} · ${pluriel(f, "fruit")}`;
+    }
+  }
+
+  function tournerVers(mois) {
+    viserMois(mois);
+    roue.style.setProperty("--rot", String(rotationRoue));
+  }
+  function choisirMois(mois) {
+    calendrier.mois = mois;
+    calendrier.saison = null;
+    calendrier.recherche = "";
+    recherche.value = "";
+    tournerVers(mois);
+    rafraichir();
+  }
+  function choisirSaison(saison) {
+    if (calendrier.saison === saison) { calendrier.saison = null; rafraichir(); return; }
+    calendrier.saison = saison;
+    calendrier.recherche = "";
+    recherche.value = "";
+    calendrier.mois = MOIS_MILIEU[saison];
+    tournerVers(calendrier.mois);
+    rafraichir();
+  }
+
+  // Glisser la roue du doigt : elle suit, puis se cale sur le mois le plus proche.
+  let glisse = null;
+  let ignorerClic = false;
+  const angleDe = (e, c) => (Math.atan2(e.clientX - c.x, -(e.clientY - c.y)) * 180) / Math.PI;
+  roue.addEventListener("pointerdown", (e) => {
+    const r = roue.getBoundingClientRect();
+    const c = { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+    glisse = { id: e.pointerId, c, dernier: angleDe(e, c), cumul: 0, depart: rotationRoue, bouge: false };
+  });
+  roue.addEventListener("pointermove", (e) => {
+    if (!glisse || e.pointerId !== glisse.id) return;
+    const a = angleDe(e, glisse.c);
+    glisse.cumul += normaliserAngle(a - glisse.dernier);
+    glisse.dernier = a;
+    if (!glisse.bouge) {
+      if (Math.abs(glisse.cumul) < 5) return;
+      glisse.bouge = true;
+      roue.setPointerCapture(e.pointerId);
+      roue.classList.add("glisse");
+    }
+    rotationRoue = glisse.depart + glisse.cumul;
+    roue.style.setProperty("--rot", String(rotationRoue));
+    if (!calendrier.saison) majCentre(moisSousLaFleche(rotationRoue));
+  });
+  const finGlisse = (e) => {
+    if (!glisse || e.pointerId !== glisse.id) return;
+    const aBouge = glisse.bouge;
+    glisse = null;
+    if (!aBouge) return;
+    ignorerClic = true;
+    setTimeout(() => { ignorerClic = false; }, 0);
+    roue.classList.remove("glisse");
+    calendrier.mois = moisSousLaFleche(rotationRoue);
+    calendrier.saison = null;
+    calendrier.recherche = "";
+    recherche.value = "";
+    tournerVers(calendrier.mois);
+    rafraichir();
+  };
+  roue.addEventListener("pointerup", finGlisse);
+  roue.addEventListener("pointercancel", finGlisse);
+  roue.addEventListener("click", (e) => { if (ignorerClic) { e.stopPropagation(); e.preventDefault(); } }, true);
+
+  // --- saisons, mois, recherche ---
+  const boutonsSaison = h("div", { class: "saison-boutons", role: "group", "aria-label": "Saisons" });
+  const chipsMois = h("div", { class: "puces", role: "group", "aria-label": "Mois" });
+  const retour = h("button", { type: "button", class: "lien-action retour-mois", "data-cle": "ce-mois", onclick: () => choisirMois(moisActuel) }, "Revenir à ce mois-ci");
+  const recherche = h("input", {
+    type: "search", class: "recherche", placeholder: "Chercher un aliment, toute l'année", "aria-label": "Chercher un aliment",
+    autocomplete: "off", value: calendrier.recherche,
+    oninput: (e) => { calendrier.recherche = e.target.value; rafraichirListes(); },
+  });
+  const listes = h("div", { class: "aliments" });
+  const feuille = h("div", {});
+
+  function pastille(a, i, avecMois) {
+    const moisIci = a.moisDeLaSaison;
+    return h("button", {
+      type: "button", class: "aliment", style: `--i:${Math.min(i, 40)}`, "data-cle": `aliment-${a.id}`,
+      "aria-haspopup": "dialog", onclick: () => ouvrirFeuille(a.id),
+    },
+      a.emoji ? h("span", { class: "emo", "aria-hidden": "true" }, a.emoji) : null,
+      h("span", { class: "nom-al" }, a.nom),
+      moisIci
+        ? h("span", { class: "points", title: moisIci.map((m) => NOMS_MOIS[m - 1]).join(", ") },
+            MOIS_DE_SAISON[calendrier.saison].map((m) => h("i", { class: moisIci.includes(m) ? "on" : "" })))
+        : null,
+      avecMois ? h("small", { class: "mois-al" }, libelleMois(a.mois)) : null);
+  }
+  function section(titre, liste, avecMois = false) {
+    if (liste.length === 0) return null;
+    return h("section", {},
+      h("h2", { class: "section" }, titre, h("span", { class: "compte" }, String(liste.length))),
+      h("div", { class: "pastilles" }, liste.map((a, i) => pastille(a, i, avecMois))));
+  }
+  function rafraichirListes() {
+    const texte = calendrier.recherche.trim();
+    if (texte) {
+      const trouves = chercherAliments(aliments, texte);
+      listes.replaceChildren(
+        trouves.length
+          ? section(`Résultats pour « ${texte} »`, trouves, true)
+          : h("p", { class: "vide" }, `Aucun aliment ne correspond à « ${texte} ».`));
+      return;
+    }
+    const liste = (type) => (calendrier.saison ? alimentsDeLaSaison(aliments, calendrier.saison, type) : alimentsDuMois(aliments, calendrier.mois, type));
+    listes.replaceChildren(
+      section("Légumes, herbes et champignons", liste("legume")),
+      section("Fruits et fruits secs", liste("fruit")));
+  }
+  function rafraichir() {
+    gardantLeFocus(() => {
+      roue.style.background = fondRoue();
+      majCentre(calendrier.mois);
+      roue.querySelectorAll(".roue-mois").forEach((b, i) => {
+        const dansSaison = calendrier.saison ? MOIS_DE_SAISON[calendrier.saison].includes(i + 1) : i + 1 === calendrier.mois;
+        b.setAttribute("aria-pressed", String(dansSaison));
+      });
+      boutonsSaison.replaceChildren(...Object.keys(MOIS_DE_SAISON).map((s) =>
+        h("button", { type: "button", class: "saison-btn", "data-saison": s, "data-cle": `saison-${s}`, "aria-pressed": String(calendrier.saison === s), onclick: () => choisirSaison(s) },
+          h("span", { "aria-hidden": "true" }, EMOJI_SAISON[s]), majuscule(s))));
+      chipsMois.replaceChildren(...NOMS_MOIS.map((nom, i) =>
+        h("button", { type: "button", class: "puce", "data-cle": `mois-${i + 1}`, "aria-pressed": String(!calendrier.saison && calendrier.mois === i + 1), onclick: () => choisirMois(i + 1) }, majuscule(nom))));
+      retour.hidden = !calendrier.saison && calendrier.mois === moisActuel;
+      rafraichirListes();
+    });
+  }
+
+  // --- fiche d'un aliment (fenêtre en bas de l'écran) ---
+  function ouvrirFeuille(id) {
+    const a = aliments.find((x) => x.id === id);
+    if (!a) return;
+    calendrier.ouvert = id;
+    const attente = moisAvantSaison(a.mois, moisActuel);
+    const statut = attente === 0
+      ? "De saison en ce moment"
+      : `Pas de saison en ${NOMS_MOIS[moisActuel - 1]} · de retour ${attente === 1 ? "le mois prochain" : `dans ${attente} mois`}`;
+    const recettesLiees = recettesAvecAliment(donnees.recettes, a);
+    const fermer = () => {
+      calendrier.ouvert = null;
+      feuille.replaceChildren();
+      fermerFeuilleCourante = null;
+      vue.querySelector(`[data-cle="aliment-${CSS.escape(id)}"]`)?.focus();
+    };
+    fermerFeuilleCourante = fermer;
+    const bouton = h("button", { type: "button", class: "rond fermer-feuille", "aria-label": "Fermer", onclick: fermer }, icone("croix"));
+    feuille.replaceChildren(
+      h("div", { class: "feuille-fond", onclick: fermer }),
+      h("div", { class: "feuille", role: "dialog", "aria-modal": "true", "aria-label": a.nom },
+        bouton,
+        h("div", { class: "feuille-tete" },
+          a.emoji ? h("span", { class: "feuille-emoji", "aria-hidden": "true" }, a.emoji) : null,
+          h("div", {},
+            h("h2", {}, a.nom),
+            h("p", { class: "sub" }, a.type === "fruit" ? "Fruit" : "Légume, herbe ou champignon", " · ", libelleMois(a.mois)))),
+        h("div", { class: "frise", role: "img", "aria-label": `Mois de saison : ${a.mois.map((m) => NOMS_MOIS[m - 1]).join(", ")}` },
+          INITIALES_MOIS.map((lettre, i) =>
+            h("span", { class: `${a.mois.includes(i + 1) ? "on" : ""}${i + 1 === moisActuel ? " ici" : ""}`, style: `--c:${variableSaison(i + 1)}` }, lettre))),
+        h("p", { class: `statut${attente === 0 ? " oui" : ""}` }, statut),
+        h("h3", {}, "Dans vos recettes"),
+        recettesLiees.length
+          ? h("div", {},
+              recettesLiees.slice(0, 8).map((r) => h("a", { class: "livre-ligne", href: lienRecette(r.id) }, h("span", {}, r.titre), h("span", { class: "qte" }, tempsTotal(r)))),
+              recettesLiees.length > 8 ? h("p", { class: "sub" }, `et ${recettesLiees.length - 8} autres`) : null)
+          : h("p", { class: "sub" }, (a.ingredients ?? []).length ? "Aucune recette du site n'en contient pour le moment." : "Pas encore d'ingrédient du site lié à cet aliment.")));
+    bouton.focus();
+  }
+
+  conteneur.append(
+    h("h1", {}, "Saison"),
+    h("p", { class: "sub" }, "Les fruits et légumes de chaque mois. Tournez la roue ou choisissez une saison."),
+    boutonsSaison,
+    zone,
+    chipsMois,
+    retour,
+    recherche,
+    listes,
+    feuille);
+  rafraichir();
+  if (calendrier.ouvert) ouvrirFeuille(calendrier.ouvert);
+  return conteneur;
+}
+
 // ---------- Affichage ----------
 function afficher() {
   if (!donnees) return;
@@ -847,11 +1109,13 @@ function afficher() {
     semaine: ecranCourses, // ancien nom de l'écran, gardé pour les liens déjà enregistrés
     courses: ecranCourses,
     livres: ecranLivres,
+    calendrier: ecranCalendrier,
     recette: () => ecranRecette(route.id),
     cuisine: () => ecranCuisine(route.id),
   };
   noterRang();
   cacherMessage();
+  fermerFeuilleCourante = null; // la fenêtre d'un aliment ne suit pas d'un écran à l'autre
   dessinerBarre(route.nom === "recette" || route.nom === "cuisine" ? "saison" : route.nom === "semaine" ? "courses" : route.nom);
   barre.closest(".barre").hidden = route.nom === "cuisine" || route.nom === "recette"; // ces écrans ont leurs propres boutons en bas
   garderEcranAllume(route.nom === "recette" || route.nom === "cuisine" || ((route.nom === "courses" || route.nom === "semaine") && modeMagasin));
@@ -870,12 +1134,13 @@ async function lireJson(chemin) {
 async function demarrer() {
   dessinerBarre("saison");
   try {
-    const [recettes, ingredients, livres] = await Promise.all([
+    const [recettes, ingredients, livres, saisonnalite] = await Promise.all([
       lireJson("data/recettes.json"),
       lireJson("data/ingredients.json"),
       lireJson("data/livres.json"),
+      lireJson("data/saisonnalite.json").catch(() => []), // sans le calendrier, le reste du site marche
     ]);
-    donnees = { recettes, ingredients, livres };
+    donnees = { recettes, ingredients, livres, saisonnalite };
     semaine = chargerSemaine(stockage, recettes);
   } catch {
     vue.replaceChildren(messageErreur("Impossible de charger les recettes"));
@@ -888,7 +1153,9 @@ async function demarrer() {
     if ((cible === document.documentElement || cible === document.body) && lireRoute(window.location.hash).nom === "recette") fermerFiche();
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && lireRoute(window.location.hash).nom === "recette") fermerFiche();
+    if (e.key !== "Escape") return;
+    if (fermerFeuilleCourante) fermerFeuilleCourante();
+    else if (lireRoute(window.location.hash).nom === "recette") fermerFiche();
   });
   afficher();
 }

@@ -91,3 +91,9 @@ export function recettesAvecAliment(recettes, aliment) {
   if (ids.size === 0) return [];
   return recettes.filter((r) => r.ingredients.some((l) => ids.has(l.ingredient)));
 }
+
+/** Nombre de mois à attendre avant que l'aliment soit de saison, à partir de `depuis` (0 = c'est maintenant) ; null s'il n'a aucun mois. */
+export function moisAvantSaison(mois, depuis) {
+  for (let k = 0; k < 12; k += 1) if (mois.includes(((depuis - 1 + k) % 12) + 1)) return k;
+  return null;
+}

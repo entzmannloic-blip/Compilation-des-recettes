@@ -17,6 +17,10 @@ test("lireRoute : semaine et livres", () => {
   assert.deepEqual(lireRoute("#/courses"), { nom: "courses" });
 });
 
+test("lireRoute : calendrier des aliments", () => {
+  assert.deepEqual(lireRoute("#/saison"), { nom: "calendrier" });
+});
+
 test("lireRoute : vide, inconnu ou recette sans id → saison", () => {
   for (const hash of ["", "#", "#/", "#/n-importe-quoi", "#/recette/", "#/recette", "#/semaine/x"]) {
     assert.deepEqual(lireRoute(hash), { nom: "saison" }, hash);
