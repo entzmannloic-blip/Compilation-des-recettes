@@ -3246,5 +3246,233 @@
       "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Le thon est noté « 2 pièces » sans poids : compté en boîtes. La photo d'origine montre aussi des radis, absents de la liste. Temps de cuisson du quinoa : voir le paquet. Le sésame se mélange au wasabi avant de parsemer (non précisé sur la page)."
     ],
     "photo": "photos/bowl-thon-cremeux-quinoa.jpg"
+  },
+  {
+    "id": "aiguillettes-poulet-courgettes-citron-vert",
+    "titre": "Aiguillettes de poulet et courgettes au citron vert",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/aiguillettes-de-poulet-courgettes-a-la-japonaise/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "aiguillettes-de-poulet", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "courgette", "quantite": 700, "unite": "g", "precision": null },
+      { "ingredient": "riz-japonais", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "oignon-nouveau", "quantite": 1, "unite": "pièce", "precision": "cébette" },
+      { "ingredient": "sauce-soja", "quantite": 2, "unite": "c. à soupe", "precision": "salée" },
+      { "ingredient": "citron-vert", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "piment-rouge", "quantite": 1, "unite": "pièce", "precision": "à doser selon les goûts, c'est relevé" },
+      { "ingredient": "sauce-soja-sucree", "quantite": 40, "unite": "ml", "precision": null },
+      { "ingredient": "cumin", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "coriandre-en-poudre", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "cannelle", "quantite": 2, "unite": "c. à café", "precision": null }
+    ],
+    "etapes": [
+      "Mettre le riz dans une casserole, couvrir d'eau froide, mélanger et égoutter. Répéter le rinçage 3 fois. Remettre le riz dans la casserole avec 500 ml d'eau. Porter sur feu vif jusqu'à ébullition, baisser sur feu très doux, couvrir et laisser cuire 15 minutes.",
+      "Dans un saladier, mettre la cébette émincée (après avoir retiré sa première peau) et le piment coupé en deux, épépiné et émincé finement. Presser le citron vert au-dessus, puis ajouter la sauce soja salée et la sauce soja sucrée.",
+      "Mettre les aiguillettes de poulet dans un bol avec le cumin, la coriandre en poudre et la cannelle, ajouter un filet d'huile d'olive, saler, poivrer et bien mélanger. Rincer les courgettes et les couper en fines demi-lunes.",
+      "Chauffer une poêle à feu vif avec un filet d'huile neutre. Y cuire les aiguillettes et les courgettes 6 à 8 minutes, jusqu'à ce que le poulet soit bien doré et chaud à cœur et que les courgettes soient tendres mais encore un peu croquantes.",
+      "Ajouter les aiguillettes dans le saladier et bien les enrober de sauce au citron vert et au soja. Servir avec le riz japonais."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). L'adresse de la page contient « à la japonaise » mais son titre est bien « Aiguillettes de poulet & courgettes au citron vert »."
+    ],
+    "photo": "photos/aiguillettes-poulet-courgettes-citron-vert.jpg"
+  },
+  {
+    "id": "mijote-thon-tomate-citron-confit",
+    "titre": "Mijoté de thon à la tomate et citron confit",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/mijote-de-thon-au-citron-confit/"
+    },
+    "saisons": ["printemps", "été", "automne", "hiver"],
+    "categorie": "plat",
+    "type": "mijoté",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "thon", "quantite": 2, "unite": "boîte", "precision": "à confirmer : « 2 pièces » sur la page" },
+      { "ingredient": "pulpe-de-tomate", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "olives-vertes", "quantite": 60, "unite": "g", "precision": null },
+      { "ingredient": "couscous", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "persil", "quantite": 1, "unite": "bouquet", "precision": "frais" },
+      { "ingredient": "citron-confit", "quantite": 1, "unite": "pièce", "precision": "une tranche" },
+      { "ingredient": "oignon-rouge", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "cumin", "quantite": 6, "unite": "g", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null }
+    ],
+    "etapes": [
+      "Faire bouillir 300 ml d'eau dans une casserole. Ajouter le couscous, un filet d'huile d'olive, du sel et du poivre. Mélanger, couvrir et laisser gonfler hors du feu jusqu'au service.",
+      "Peler et hacher l'oignon rouge et l'ail. Couper les olives en rondelles. Rincer le citron confit à l'eau claire, retirer les pépins si besoin et le couper en tout petits dés. Égoutter le thon.",
+      "Dans une sauteuse ou une grande poêle, à feu moyen, chauffer 4 cuillères à soupe d'huile d'olive. Y faire revenir l'oignon et l'ail 2 minutes. Ajouter la pulpe de tomate, le citron confit, les olives, le cumin, du sel et du poivre. Mélanger, couvrir et laisser mijoter à feu doux 10 minutes.",
+      "Ajouter le thon en l'émiettant légèrement, ainsi que 2 cuillères à soupe d'eau par convive, et cuire 5 minutes de plus à feu doux et à découvert. Pendant ce temps, ciseler le persil.",
+      "Servir le couscous dans des assiettes creuses avec le mijoté de thon, et parsemer de persil."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Le thon est noté « 2 pièces » sans poids : compté en boîtes. Les 4 cuillères à soupe d'huile d'olive sont toutes dans l'étape 3 ; la page ne détaille pas le filet du couscous."
+    ],
+    "photo": "photos/mijote-thon-tomate-citron-confit.jpg"
+  },
+  {
+    "id": "biryani-indienne-amandes",
+    "titre": "Biryani à l'indienne aux amandes",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/biryani-a-lindienne/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "boisson-soja", "quantite": 400, "unite": "ml", "precision": null },
+      { "ingredient": "courgette", "quantite": 600, "unite": "g", "precision": null },
+      { "ingredient": "riz-semi-complet", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "carotte", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "amandes-effilees", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "raisins-secs", "quantite": 40, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": "jaune" },
+      { "ingredient": "cumin", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "curry", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "cannelle", "quantite": 2, "unite": "pincée", "precision": null }
+    ],
+    "etapes": [
+      "Porter à ébullition une casserole d'eau salée pour le riz (2,5 volumes d'eau pour 1 volume de riz). Rincer le riz dans une passoire fine et le cuire le temps indiqué sur le paquet. Dans une sauteuse ou une grande poêle, à feu moyen à vif et sans matière grasse, faire dorer les amandes 2 minutes. Les réserver pour le dressage.",
+      "Laver et râper les carottes avec une râpe à gros trous (ou les couper en fines rondelles). Laver et couper les courgettes en rondelles. Peler et émincer l'oignon. Dans un bol, laver, zester et presser le citron.",
+      "Dans la sauteuse qui a servi aux amandes, faire revenir l'oignon 2 minutes à feu moyen avec 4 cuillères à soupe d'huile neutre. Ajouter les carottes, les courgettes, les raisins secs, le cumin, le curry, la cannelle, la boisson au soja, du sel et du poivre. Mélanger et laisser mijoter 15 minutes à couvert, en remuant régulièrement.",
+      "Ajouter le zeste et le jus de citron, saler, poivrer et mélanger. Égoutter le riz une fois cuit, le saler et le poivrer à son goût, puis bien mélanger.",
+      "Servir un lit de riz, disposer les légumes dessus, napper de sauce et parsemer d'amandes effilées."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les épices (cumin, curry, cannelle) sont le mélange « biryani » de la page."
+    ],
+    "photo": "photos/biryani-indienne-amandes.jpg"
+  },
+  {
+    "id": "parmigiana-aubergine-mozzarella-parmesan",
+    "titre": "Parmigiana d'aubergine, mozzarella et parmesan",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/parmigiana/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 30, "cuisson": 30 },
+    "ingredients": [
+      { "ingredient": "aubergine", "quantite": 1200, "unite": "g", "precision": null },
+      { "ingredient": "parmesan", "quantite": 60, "unite": "g", "precision": "râpé" },
+      { "ingredient": "mozzarella", "quantite": 160, "unite": "g", "precision": "râpée" },
+      { "ingredient": "basilic", "quantite": 1, "unite": "bouquet", "precision": "6 tiges, frais" },
+      { "ingredient": "coulis-de-tomates", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "thym", "quantite": 1, "unite": "bouquet", "precision": "6 tiges, frais" }
+    ],
+    "etapes": [
+      "Préchauffer le four à 210 °C en chaleur traditionnelle. Couper les aubergines en tranches de 5 mm dans la longueur, les saupoudrer de 20 g de gros sel et les laisser dégorger 15 minutes dans une passoire ou un plat.",
+      "Effeuiller le basilic.",
+      "Retirer l'excédent de sel des aubergines. Les disposer sur une plaque couverte de papier cuisson, poivrer et arroser généreusement d'huile d'olive. Enfourner 20 minutes.",
+      "Verser un peu de coulis de tomate dans un plat à four. Poser une couche d'aubergines, parsemer de thym, de parmesan, de mozzarella et de basilic. Répéter jusqu'à épuisement des ingrédients. Enfourner 25 minutes.",
+      "Quand la parmigiana est fondante et dorée, la sortir du four et la déguster aussitôt, elle est très chaude."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les 6 tiges de basilic et de thym sont comptées en 1 bouquet chacun. Le gros sel (20 g) sert au dégorgement et n'est pas dans la liste."
+    ],
+    "photo": "photos/parmigiana-aubergine-mozzarella-parmesan.jpg"
+  },
+  {
+    "id": "nouilles-sautees-legumes-ail",
+    "titre": "Nouilles sautées et légumes à l'ail",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/ruta-pak-choi-a-lail-nouilles-sautees/"
+    },
+    "saisons": ["printemps", "automne", "hiver"],
+    "categorie": "plat",
+    "type": "au wok",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "tagliatelles-de-riz", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "pak-choi", "quantite": 600, "unite": "g", "precision": null },
+      { "ingredient": "oignon-nouveau", "quantite": 2, "unite": "pièce", "precision": "cébettes" },
+      { "ingredient": "carotte", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "sauce-soja", "quantite": 4, "unite": "c. à soupe", "precision": "salée" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "piment-de-cayenne", "quantite": 2, "unite": "pincée", "precision": "à doser selon les goûts, plutôt fort" }
+    ],
+    "etapes": [
+      "Porter à ébullition une casserole d'eau salée pour les nouilles de riz. Laver et émincer entièrement le pak choï. Laver les carottes et en faire des tagliatelles à l'économe. Laver et émincer les cébettes en réservant le vert pour le dressage. Peler et hacher l'ail.",
+      "Dans une sauteuse, chauffer 4 cuillères à soupe d'huile neutre à feu moyen et y faire revenir le blanc des cébettes avec l'ail 1 minute. Ajouter le pak choï, les carottes, la sauce soja et le piment. Saler, poivrer, mélanger et laisser revenir 10 minutes à couvert, en remuant régulièrement.",
+      "Verser les nouilles de riz dans l'eau bouillante, remuer et les laisser cuire à petits bouillons, à découvert, le temps indiqué sur le paquet. Les remuer une ou deux fois pendant la cuisson pour qu'elles ne collent pas.",
+      "En fin de cuisson, égoutter les nouilles, les ajouter aux légumes dans la sauteuse, mélanger puis couper le feu.",
+      "Servir les nouilles sautées aux légumes et parsemer du vert des cébettes."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Le titre de la page est « Nouilles sautées & tagliatelles de carottes à l'ail » ; l'ancien titre « Nouilles sautées & légumes à l'ail » apparaît encore dans les résultats de recherche."
+    ],
+    "photo": "photos/nouilles-sautees-legumes-ail.jpg"
+  },
+  {
+    "id": "couscous-legumes-rotis-amandes",
+    "titre": "Couscous de légumes rôtis aux amandes",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/ruta-couscous-de-legumes-rotis-aux-amandes/"
+    },
+    "saisons": ["automne", "hiver"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "navet", "quantite": 440, "unite": "g", "precision": null },
+      { "ingredient": "panais", "quantite": 520, "unite": "g", "precision": null },
+      { "ingredient": "olives-noires", "quantite": 80, "unite": "g", "precision": "Kalamata" },
+      { "ingredient": "couscous-complet", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "amandes-effilees", "quantite": 2, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "concentre-de-tomates", "quantite": 4, "unite": "c. à soupe", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "pièce", "precision": "cube" },
+      { "ingredient": "cumin", "quantite": 6, "unite": "g", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "piment-de-cayenne", "quantite": 2, "unite": "pincée", "precision": "à doser selon les goûts, plutôt fort" }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C en chaleur tournante. Dans une casserole, porter à ébullition 500 ml d'eau avec le bouillon de légumes, le concentré de tomates, le cumin et le piment. Faire bouillir aussi de l'eau pour le couscous (330 ml pour 4 personnes).",
+      "Laver, éplucher et couper les navets et les panais en cubes. Les répartir sur une plaque couverte de papier cuisson, arroser d'huile d'olive, saler et poivrer. Enfourner 30 à 35 minutes en mélangeant à mi-cuisson.",
+      "Dans un saladier, peler et râper l'ail. Ajouter le couscous et l'eau bouillante, couvrir et laisser gonfler 10 minutes. Quand toute l'eau est absorbée, égrener à la fourchette, ajouter un filet d'huile d'olive, du sel et du poivre, mélanger et réserver à couvert.",
+      "Dans une poêle, à feu moyen à vif et sans matière grasse, faire dorer les amandes effilées 2 minutes. Hacher grossièrement les olives noires.",
+      "Vérifier la cuisson des légumes, ils doivent être tendres. Servir un lit de couscous, déposer les légumes rôtis et parsemer d'olives et d'amandes. Selon les goûts, arroser d'un peu de bouillon de légumes, ou le servir dans un bol à part."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les 4 cuillères à soupe d'huile d'olive se répartissent entre les légumes et le couscous sans détail dans la page."
+    ],
+    "photo": "photos/couscous-legumes-rotis-amandes.jpg"
   }
 ]

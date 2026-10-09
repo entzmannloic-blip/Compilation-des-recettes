@@ -207,5 +207,19 @@
   { "id": "chapelure", "nom": "chapelure", "rayon": "Épicerie", "saisons": [] },
   { "id": "sauce-soja-sucree", "nom": "sauce soja sucrée", "rayon": "Épicerie", "saisons": [] },
   { "id": "thon", "nom": "thon en boîte", "rayon": "Épicerie", "saisons": [], "regime": "chair" },
-  { "id": "poudre-de-wasabi", "nom": "poudre de wasabi", "rayon": "Épicerie", "saisons": [] }
+  { "id": "poudre-de-wasabi", "nom": "poudre de wasabi", "rayon": "Épicerie", "saisons": [] },
+  { "id": "aiguillettes-de-poulet", "nom": "aiguillettes de poulet", "rayon": "Boucherie", "saisons": [] },
+  { "id": "riz-japonais", "nom": "riz japonais", "rayon": "Épicerie", "saisons": [] },
+  { "id": "coriandre-en-poudre", "nom": "coriandre en poudre", "rayon": "Épicerie", "saisons": [] },
+  { "id": "cannelle", "nom": "cannelle", "rayon": "Épicerie", "saisons": [] },
+  { "id": "pulpe-de-tomate", "nom": "pulpe de tomate", "rayon": "Épicerie", "saisons": [] },
+  { "id": "couscous", "nom": "couscous", "rayon": "Épicerie", "saisons": [] },
+  { "id": "couscous-complet", "nom": "couscous complet", "rayon": "Épicerie", "saisons": [] },
+  { "id": "riz-semi-complet", "nom": "riz semi-complet", "rayon": "Épicerie", "saisons": [] },
+  { "id": "boisson-soja", "nom": "boisson au soja", "rayon": "Épicerie", "saisons": [] },
+  { "id": "raisins-secs", "nom": "raisins secs", "rayon": "Épicerie", "saisons": [] },
+  { "id": "tagliatelles-de-riz", "nom": "tagliatelles de riz", "rayon": "Épicerie", "saisons": [] },
+  { "id": "pak-choi", "nom": "pak choï", "rayon": "Légumes", "saisons": [] },
+  { "id": "navet", "nom": "navet", "rayon": "Légumes", "saisons": ["automne", "hiver"] },
+  { "id": "panais", "nom": "panais", "rayon": "Légumes", "saisons": ["automne", "hiver"] }
 ]
