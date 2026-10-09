@@ -270,5 +270,7 @@
   { "id": "quinoa-rouge", "nom": "quinoa rouge", "rayon": "Épicerie", "saisons": [] },
   { "id": "feuilles-de-lime", "nom": "feuilles de lime", "rayon": "Herbes", "saisons": [] },
   { "id": "spaghetti", "nom": "spaghetti", "rayon": "Épicerie", "saisons": [] },
-  { "id": "vinaigre", "nom": "vinaigre", "rayon": "Épicerie", "saisons": [] }
+  { "id": "vinaigre", "nom": "vinaigre", "rayon": "Épicerie", "saisons": [] },
+  { "id": "feves", "nom": "fèves décortiquées", "rayon": "Surgelés", "saisons": [] },
+  { "id": "boulgour", "nom": "boulgour", "rayon": "Épicerie", "saisons": [] }
 ]

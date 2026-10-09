@@ -4717,5 +4717,191 @@
       "Quantités pour 4 personnes (rendement indiqué dans les données de la page). La liste indique du parmesan râpé mais l'étape parle de pecorino (le fromage d'une vraie cacio e pepe) : à vérifier sur votre papier. La page indique un œuf entier à l'étape 3 et 2 œufs dans la liste ; ce sont les 2 œufs qui sont comptés. Le titre de la page est « Spaghetti cacio & pepe aux légumes d'été »."
     ],
     "photo": "photos/spaghetti-cacio-e-pepe-legumes-ete.jpg"
+  },
+  {
+    "id": "ratabouleh-aneth-oeuf-mollet",
+    "titre": "« Ratabouleh » à l'aneth et œuf mollet",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/ratabouleh-a-laneth-oeuf-mollet/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "œufs",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "courgette", "quantite": 800, "unite": "g", "precision": null },
+      { "ingredient": "aneth", "quantite": 1, "unite": "bouquet", "precision": "frais" },
+      { "ingredient": "tomates-pelees", "quantite": 2, "unite": "boîte", "precision": "au naturel, jus gardé" },
+      { "ingredient": "semoule", "quantite": 300, "unite": "g", "precision": "de blé" },
+      { "ingredient": "oignon", "quantite": 2, "unite": "pièce", "precision": "jaunes" },
+      { "ingredient": "cumin", "quantite": 6, "unite": "g", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "oeufs", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "sucre-en-poudre", "quantite": 2, "unite": "c. à café", "precision": null }
+    ],
+    "etapes": [
+      "Couper les courgettes en cubes d'environ 1 cm, émincer les oignons, ciseler grossièrement l'aneth, hacher l'ail et couper les tomates pelées en petits dés en gardant leur jus.",
+      "Faire chauffer un filet d'huile d'olive dans une poêle à feu moyen à vif. Y faire revenir les oignons 2 minutes, ajouter l'ail et le cumin 1 minute, puis les courgettes à feu vif 2 minutes en remuant.",
+      "Verser les tomates avec leur jus, ajouter le sucre, 1 c. à café de sel, 200 ml d'eau et un trait d'huile d'olive. Porter à ébullition puis laisser confire à feu moyen environ 10 minutes. Les courgettes doivent rester croquantes : si le liquide réduit trop, ajouter 100 ml d'eau.",
+      "Cuire les œufs 6 minutes dans de l'eau bouillante salée, les plonger aussitôt dans l'eau froide, puis les écaler délicatement.",
+      "Faire bouillir 300 ml d'eau avec un filet d'huile d'olive et une pincée de sel. Verser sur la semoule dans un saladier, mélanger, couvrir et laisser gonfler 5 minutes. Ajouter un trait d'huile d'olive, saler et égrener à la fourchette.",
+      "Mélanger la ratatouille et l'aneth à la semoule. Couper les œufs en deux, en poser un par assiette, saler, poivrer et servir."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). « 2 pièces » de tomates pelées comprises comme 2 boîtes."
+    ],
+    "photo": "photos/ratabouleh-aneth-oeuf-mollet.jpg"
+  },
+  {
+    "id": "veloute-petits-pois-croustillant-parmesan",
+    "titre": "Velouté de petits pois et croustillant de parmesan",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/ruta-uf-mollet-pane-au-parmesan-veloute-de-petits-pois/"
+    },
+    "saisons": ["printemps", "été"],
+    "categorie": "plat",
+    "type": "soupe",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 20 },
+    "ingredients": [
+      { "ingredient": "petits-pois", "quantite": 440, "unite": "g", "precision": "égouttés" },
+      { "ingredient": "parmesan", "quantite": 50, "unite": "g", "precision": "râpé" },
+      { "ingredient": "creme-liquide", "quantite": 200, "unite": "ml", "precision": null },
+      { "ingredient": "oignon", "quantite": 2, "unite": "pièce", "precision": "jaunes" },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "pièce", "precision": "cube" },
+      { "ingredient": "chapelure", "quantite": 60, "unite": "g", "precision": null },
+      { "ingredient": "origan", "quantite": 2, "unite": "g", "precision": null },
+      { "ingredient": "oeufs", "quantite": 5, "unite": "pièce", "precision": "1 par personne, plus 1 pour la panure" },
+      { "ingredient": "farine", "quantite": 40, "unite": "g", "precision": null },
+      { "ingredient": "beurre", "quantite": 40, "unite": "g", "precision": "doux" }
+    ],
+    "etapes": [
+      "Cuire 4 œufs 6 minutes dans de l'eau bouillante salée (un par personne ; le dernier sert à la panure), les plonger dans l'eau froide, puis les écaler délicatement, de préférence sous l'eau.",
+      "Émincer les oignons. Dans une casserole, les faire revenir 2 minutes dans 4 c. à soupe d'huile d'olive à feu moyen. Ajouter les petits pois égouttés, le bouillon et 1 litre d'eau, saler, poivrer et cuire 10 minutes. Verser la crème et poursuivre 5 minutes.",
+      "Sans œufs, on peut faire des tuiles de parmesan : déposer des cuillerées de parmesan sur une plaque couverte de papier cuisson, les aplatir et enfourner 5 minutes à 200 °C. Laisser refroidir ; le fromage doit juste gratiner.",
+      "Préparer la panure dans trois bols : la farine avec sel et poivre ; la chapelure avec le parmesan et l'origan ; le dernier œuf battu. Passer les œufs écalés dans la farine, l'œuf battu puis la chapelure.",
+      "Faire mousser le beurre avec 2 c. à soupe d'huile neutre dans une poêle à feu doux. Y faire dorer les œufs panés 5 minutes en les arrosant régulièrement.",
+      "Mixer le velouté, rectifier l'assaisonnement et servir bien chaud avec un œuf pané coupé en deux (ou les tuiles de parmesan)."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les œufs panés sont facultatifs : la page propose des tuiles de parmesan à la place."
+    ],
+    "photo": "photos/veloute-petits-pois-croustillant-parmesan.jpg"
+  },
+  {
+    "id": "salade-libanaise-vinaigrette-sesame",
+    "titre": "Salade libanaise et vinaigrette crémeuse au sésame",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/salade-libanaise-and-vinaigrette-cremeuse-au-sesame/"
+    },
+    "saisons": ["été"],
+    "categorie": "plat",
+    "type": "salade",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 25, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "tomate", "quantite": 480, "unite": "g", "precision": null },
+      { "ingredient": "concombre", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "feves", "quantite": 300, "unite": "g", "precision": "décortiquées" },
+      { "ingredient": "boulgour", "quantite": 240, "unite": "g", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": "zeste et jus" },
+      { "ingredient": "tahini", "quantite": 60, "unite": "g", "precision": "purée de sésame" },
+      { "ingredient": "cumin", "quantite": 6, "unite": "g", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null }
+    ],
+    "etapes": [
+      "Mettre les fèves dans une casserole d'eau froide non salée, porter à ébullition et cuire 30 minutes en salant à mi-cuisson. Pendant ce temps, cuire le boulgour dans de l'eau bouillante salée selon le paquet, puis l'égoutter.",
+      "Râper l'ail, zester le citron et le presser. Couper les tomates en cubes et le concombre en rondelles.",
+      "Préparer la vinaigrette : mélanger 6 c. à soupe d'eau, le zeste et le jus du citron, le tahini, l'ail, le cumin, un trait d'huile d'olive, du sel et du poivre jusqu'à obtenir une sauce onctueuse. Réserver au frais environ 15 minutes.",
+      "Égoutter et rincer les fèves. Dans un saladier, mélanger le boulgour, les fèves, les tomates et le concombre, saler et poivrer.",
+      "Servir la salade arrosée de vinaigrette."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Les fèves peuvent être surgelées."
+    ],
+    "photo": "photos/salade-libanaise-vinaigrette-sesame.jpg"
+  },
+  {
+    "id": "poulet-creme-sauge-orzo-courgettes",
+    "titre": "Poulet à la crème de sauge et pâtes orzo",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/poulet-a-la-creme-de-rodez-courgettes-a-la-sauge/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 10, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "aiguillettes-de-poulet", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "creme-liquide", "quantite": 200, "unite": "ml", "precision": null },
+      { "ingredient": "orzo", "quantite": 360, "unite": "g", "precision": "semi-complet" },
+      { "ingredient": "sauge", "quantite": 1, "unite": "bouquet", "precision": "4 tiges, fraîche" },
+      { "ingredient": "parmesan", "quantite": 40, "unite": "g", "precision": "râpé" },
+      { "ingredient": "courgette", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": "jaune" }
+    ],
+    "etapes": [
+      "Mettre une casserole d'eau salée à bouillir pour les pâtes. Effeuiller et émincer la sauge, couper la courgette en deux puis en biais, émincer l'oignon.",
+      "Dans une grande poêle, faire revenir l'oignon 2 minutes dans un filet d'huile d'olive à feu moyen, puis ajouter la courgette et la sauge et cuire 3 minutes en remuant.",
+      "Cuire l'orzo selon le paquet. Ajouter les aiguillettes dans la poêle, les saler, les poivrer et les cuire 3 minutes de chaque côté : elles doivent être dorées et chaudes à cœur.",
+      "Verser la crème, porter à petite ébullition, ajouter le parmesan, mélanger et laisser frémir 1 minute.",
+      "Égoutter les pâtes, les arroser d'un filet d'huile d'olive et les servir avec le poulet et ses courgettes."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Version aux courgettes ; la page propose aussi une version aux poireaux."
+    ],
+    "photo": "photos/poulet-creme-sauge-orzo-courgettes.jpg"
+  },
+  {
+    "id": "linguine-asperges-creme-roquette",
+    "titre": "Linguine aux asperges et crème de roquette",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/linguine-aux-asperges-creme-de-roquette/"
+    },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "asperge", "quantite": 500, "unite": "g", "precision": "vertes" },
+      { "ingredient": "linguine", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "parmesan", "quantite": 40, "unite": "g", "precision": "râpé" },
+      { "ingredient": "roquette", "quantite": 1, "unite": "pièce", "precision": "sachet" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null }
+    ],
+    "etapes": [
+      "Porter une grande casserole d'eau salée à ébullition et y cuire les linguine selon le paquet. Laver les asperges, retirer 2 cm de l'extrémité dure, couper les tiges en fines rondelles et garder les pointes entières.",
+      "Préparer le pesto : mixer la moitié de la roquette hachée avec l'ail, 2 c. à soupe d'huile d'olive et la moitié du parmesan jusqu'à obtenir une pâte souple. Garder le reste de la roquette pour le service.",
+      "Ajouter les asperges dans la casserole des pâtes 4 minutes avant la fin de cuisson (elles doivent rester un peu croquantes). Juste avant d'égoutter, prélever une louche d'eau de cuisson.",
+      "Remettre pâtes et asperges dans la casserole avec le pesto et verser l'eau de cuisson peu à peu en mélangeant vivement : la sauce devient onctueuse sans crème.",
+      "Servir dans des assiettes creuses avec le reste du parmesan et de la roquette, et poivrer."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page)."
+    ],
+    "photo": "photos/linguine-asperges-creme-roquette.jpg"
   }
 ]
