@@ -4903,5 +4903,228 @@
       "Quantités pour 4 personnes (rendement indiqué dans les données de la page)."
     ],
     "photo": "photos/linguine-asperges-creme-roquette.jpg"
+  },
+  {
+    "id": "crumble-legumes-burrata-cremeuse",
+    "titre": "Crumble de légumes et burrata crémeuse",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/crumble-de-legumes-rodez-burrata/"
+    },
+    "saisons": ["été"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "burrata", "quantite": 2, "unite": "pièce", "precision": null },
+      { "ingredient": "tomate", "quantite": 1000, "unite": "g", "precision": null },
+      { "ingredient": "courgette", "quantite": 600, "unite": "g", "precision": null },
+      { "ingredient": "parmesan", "quantite": 60, "unite": "g", "precision": "râpé" },
+      { "ingredient": "farine", "quantite": 100, "unite": "g", "precision": null },
+      { "ingredient": "thym", "quantite": 1, "unite": "bouquet", "precision": "4 tiges, frais" },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null },
+      { "ingredient": "beurre", "quantite": 50, "unite": "g", "precision": "demi-sel, à température ambiante" }
+    ],
+    "etapes": [
+      "Préchauffer le four à 200 °C (chaleur traditionnelle) et sortir le beurre du frigo. Couper tomates et courgettes en dés, hacher l'ail, tout mettre dans un plat à four, saler, poivrer, arroser d'un filet d'huile d'olive et enfourner 20 minutes.",
+      "Préparer le crumble : dans un saladier, couper le beurre en morceaux, ajouter la farine, le parmesan, les feuilles de thym et un filet d'huile d'olive. Mélanger du bout des doigts jusqu'à une texture sableuse à gros grains.",
+      "Sortir le plat, répartir le crumble sur les légumes et remettre au four 12 à 15 minutes, jusqu'à ce qu'il soit bien doré. Égoutter la burrata et la laisser à température ambiante.",
+      "Servir le crumble chaud ou tiède, avec la burrata posée dessus au dernier moment."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page)."
+    ],
+    "photo": "photos/crumble-legumes-burrata-cremeuse.jpg"
+  },
+  {
+    "id": "poulet-fusilloni-creme-parmesan",
+    "titre": "Poulet et fusilloni à la crème de parmesan",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/poulet-linguineet-creme-de-parmesan/"
+    },
+    "saisons": ["printemps", "été", "automne", "hiver"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "aiguillettes-de-poulet", "quantite": 400, "unite": "g", "precision": null },
+      { "ingredient": "parmesan", "quantite": 60, "unite": "g", "precision": "râpé" },
+      { "ingredient": "creme-liquide", "quantite": 200, "unite": "ml", "precision": null },
+      { "ingredient": "fusilloni", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "pousses-d-epinard", "quantite": 120, "unite": "g", "precision": null },
+      { "ingredient": "bouillon-de-poule", "quantite": 1, "unite": "pièce", "precision": "cube" },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": "jaune" }
+    ],
+    "etapes": [
+      "Émincer l'oignon. Équeuter, laver et essorer les épinards.",
+      "Mettre une casserole d'eau salée à bouillir pour les pâtes. Dans une poêle à feu moyen, faire suer l'oignon 2 minutes dans un filet d'huile d'olive, puis ajouter les aiguillettes, les saler, les poivrer et les dorer 2 minutes de chaque côté.",
+      "Cuire les fusilloni selon le paquet. Parsemer les deux tiers du parmesan sur le poulet et le laisser fondre 1 minute, puis verser la crème.",
+      "Ajouter 200 ml d'eau et le cube de bouillon dans la poêle, bien mélanger pour le diluer et laisser réduire 5 minutes à feu doux.",
+      "Au dernier moment, plonger les épinards dans la sauce, les laisser tomber 1 à 2 minutes et rectifier l'assaisonnement.",
+      "Égoutter les pâtes, les mélanger à la sauce, servir aussitôt et parsemer du reste de parmesan."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page)."
+    ],
+    "photo": "photos/poulet-fusilloni-creme-parmesan.jpg"
+  },
+  {
+    "id": "keftas-porc-cumin-riz-raisins-secs",
+    "titre": "Keftas de porc au cumin et riz aux raisins secs",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/keftas-de-porc-and-cereales-anciennes/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "chair-a-saucisse", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "courgette", "quantite": 1000, "unite": "g", "precision": null },
+      { "ingredient": "riz", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "yaourt", "quantite": 2, "unite": "pièce", "precision": "nature" },
+      { "ingredient": "raisins-secs", "quantite": 40, "unite": "g", "precision": null },
+      { "ingredient": "oignon", "quantite": 1, "unite": "pièce", "precision": "jaune" },
+      { "ingredient": "paprika", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "cumin", "quantite": 2, "unite": "c. à café", "precision": null },
+      { "ingredient": "ail", "quantite": 1, "unite": "gousse", "precision": null },
+      { "ingredient": "menthe", "quantite": 2, "unite": "c. à café", "precision": "séchée" }
+    ],
+    "etapes": [
+      "Hacher finement l'oignon, couper les courgettes en dés. Dans un bol, râper l'ail dans le yaourt, ajouter la menthe séchée, du sel et du poivre, mélanger et garder cette sauce au frais.",
+      "Porter une casserole d'eau salée à ébullition pour le riz et les courgettes. Émietter la chair à saucisse dans un saladier, ajouter l'oignon, le cumin, le paprika, du sel et du poivre, et mélanger jusqu'à obtenir une farce homogène.",
+      "Avec les mains humides, former des keftas ovales, environ 6 par personne. Verser le riz et les courgettes dans l'eau bouillante et cuire 10 à 12 minutes en remuant de temps en temps.",
+      "Dans une poêle à feu moyen avec un filet d'huile d'olive, cuire les keftas 3 minutes de chaque côté, jusqu'à ce qu'ils soient cuits à cœur.",
+      "Égoutter le riz et les courgettes, les remettre dans la casserole, ajouter les raisins secs, un filet d'huile d'olive, du sel et du poivre, puis mélanger délicatement.",
+      "Servir le riz aux courgettes avec les keftas et la sauce au yaourt."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page)."
+    ],
+    "photo": "photos/keftas-porc-cumin-riz-raisins-secs.jpg"
+  },
+  {
+    "id": "filet-mulet-tomates-cerises-lentilles",
+    "titre": "Filet de mulet, tomates cerises et lentilles",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/mulet-tomates-cerises-et-lentilles/"
+    },
+    "saisons": ["été", "automne"],
+    "categorie": "plat",
+    "type": "au four",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 15, "cuisson": 15 },
+    "ingredients": [
+      { "ingredient": "poisson-blanc", "quantite": 500, "unite": "g", "precision": "filets de mulet" },
+      { "ingredient": "tomate-cerise", "quantite": 250, "unite": "g", "precision": null },
+      { "ingredient": "lentilles-vertes", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": "jus" },
+      { "ingredient": "oignon-rouge", "quantite": 1, "unite": "pièce", "precision": null },
+      { "ingredient": "capres", "quantite": 30, "unite": "g", "precision": null },
+      { "ingredient": "ail", "quantite": 2, "unite": "gousse", "precision": null }
+    ],
+    "etapes": [
+      "Cuire les lentilles dans une casserole d'eau non salée selon le paquet, en salant à mi-cuisson. Couper les tomates cerises en deux, émincer l'oignon rouge, écraser l'ail avec sa peau et couper le poisson en 2 ou 4 filets égaux.",
+      "Préchauffer le four à 180 °C (chaleur tournante). Disposer le poisson dans un plat, le badigeonner d'huile d'olive, saler et poivrer.",
+      "Ajouter les tomates, l'oignon et l'ail, arroser d'huile d'olive, saler, poivrer et enfourner 10 à 12 minutes, jusqu'à ce que le poisson s'effeuille.",
+      "Préparer la vinaigrette en mélangeant le jus du citron et de l'huile d'olive, du sel et du poivre (on peut ajouter une petite cuillère de miel ou de moutarde).",
+      "Égoutter les lentilles, les assaisonner avec la vinaigrette et les servir avec le poisson rôti et les tomates fondantes. Parsemer de câpres."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). Le mulet peut être remplacé par un autre poisson blanc."
+    ],
+    "photo": "photos/filet-mulet-tomates-cerises-lentilles.jpg"
+  },
+  {
+    "id": "risotto-champignons-ail-des-ours",
+    "titre": "Risotto aux champignons et ail des ours",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/risotto-aux-champignons-and-a-lail-des-ours/"
+    },
+    "saisons": ["printemps"],
+    "categorie": "plat",
+    "type": "pâtes et riz",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 10 },
+    "ingredients": [
+      { "ingredient": "champignon", "quantite": 400, "unite": "g", "precision": "de Paris" },
+      { "ingredient": "preparation-vegetale-amande", "quantite": 200, "unite": "ml", "precision": null },
+      { "ingredient": "riz-arborio", "quantite": 300, "unite": "g", "precision": "riz à risotto" },
+      { "ingredient": "citron", "quantite": 1, "unite": "pièce", "precision": "zeste, et jus pour servir" },
+      { "ingredient": "amandes-emondees", "quantite": 40, "unite": "g", "precision": null },
+      { "ingredient": "echalote", "quantite": 4, "unite": "pièce", "precision": null },
+      { "ingredient": "bouillon-de-legumes", "quantite": 1, "unite": "pièce", "precision": "cube" },
+      { "ingredient": "ail-des-ours", "quantite": 4, "unite": "c. à café", "precision": null }
+    ],
+    "etapes": [
+      "Porter 1,2 litre d'eau à ébullition et y délayer le cube de bouillon. Couper le bout terreux des champignons, les rincer et les émincer. Éplucher et émincer les échalotes, concasser grossièrement les amandes.",
+      "Dans une cocotte à feu moyen, faire revenir les échalotes 2 minutes dans un filet d'huile d'olive, ajouter les champignons et les dorer 5 minutes. Zester le citron.",
+      "Ajouter le riz et le faire nacrer 3 minutes, jusqu'à ce qu'il devienne translucide. Verser une louche de bouillon, attendre qu'elle soit absorbée, et recommencer jusqu'à épuisement du bouillon en remuant souvent.",
+      "Goûter : le riz doit rester légèrement al dente (ajouter un peu d'eau si besoin). Incorporer la préparation végétale, l'ail des ours et le zeste de citron, puis saler et poivrer avant d'arrêter la cuisson.",
+      "Servir parsemé d'amandes concassées, avec un peu de jus de citron si on le souhaite."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page). L'ail des ours est une herbe de printemps ; hors saison, le remplacer par de l'ail et de la ciboulette."
+    ],
+    "photo": "photos/risotto-champignons-ail-des-ours.jpg"
+  },
+  {
+    "id": "boulettes-express-bouillon-curry",
+    "titre": "Boulettes express et bouillon de curry",
+    "origine": {
+      "type": "web",
+      "source": "Les Commis",
+      "url": "https://lescommis.com/recettes/boulettes-express-au-curry-bio/"
+    },
+    "saisons": ["printemps", "été", "automne", "hiver"],
+    "categorie": "plat",
+    "type": "curry",
+    "personnes": 4,
+    "personnes_texte": null,
+    "temps": { "preparation": 20, "cuisson": 5 },
+    "ingredients": [
+      { "ingredient": "chair-a-saucisse", "quantite": 500, "unite": "g", "precision": null },
+      { "ingredient": "nouilles-de-riz", "quantite": 300, "unite": "g", "precision": null },
+      { "ingredient": "lait-de-coco", "quantite": 200, "unite": "ml", "precision": null },
+      { "ingredient": "oignon-nouveau", "quantite": 1, "unite": "pièce", "precision": "cébette" },
+      { "ingredient": "carotte", "quantite": 200, "unite": "g", "precision": null },
+      { "ingredient": "bouillon-de-poule", "quantite": 1, "unite": "pièce", "precision": "cube de bouillon de volaille" },
+      { "ingredient": "curry", "quantite": 2, "unite": "c. à soupe", "precision": null }
+    ],
+    "etapes": [
+      "Éplucher la carotte et la couper en fins biseaux. Émincer finement la cébette.",
+      "Former avec la chair à saucisse de petites boulettes de la taille d'une balle de ping-pong, environ 5 par personne.",
+      "Dans une poêle à feu moyen avec un filet d'huile neutre, cuire les boulettes environ 4 minutes en les retournant, puis ajouter les carottes et poursuivre 2 minutes.",
+      "Verser le lait de coco, le cube de bouillon et 800 ml d'eau, ajouter le curry, saler et poivrer. Couvrir et laisser mijoter à feu doux environ 10 minutes.",
+      "Plonger les nouilles de riz dans le curry 5 minutes, jusqu'à ce qu'elles soient tendres ; elles doivent être immergées, ajouter un peu d'eau si besoin.",
+      "Servir dans des bols, parsemer de cébette. Pour une sauce plus enrobante, délayer 1 c. à café de fécule de maïs dans un fond d'eau, l'ajouter et mélanger 2 minutes à feu doux."
+    ],
+    "notes": [
+      "Recette des Commis, étapes reformulées. Voir le lien pour le texte d'origine.",
+      "Quantités pour 4 personnes (rendement indiqué dans les données de la page)."
+    ],
+    "photo": "photos/boulettes-express-bouillon-curry.jpg"
   }
 ]

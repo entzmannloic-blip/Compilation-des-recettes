@@ -272,5 +272,8 @@
   { "id": "spaghetti", "nom": "spaghetti", "rayon": "Épicerie", "saisons": [] },
   { "id": "vinaigre", "nom": "vinaigre", "rayon": "Épicerie", "saisons": [] },
   { "id": "feves", "nom": "fèves décortiquées", "rayon": "Surgelés", "saisons": [] },
-  { "id": "boulgour", "nom": "boulgour", "rayon": "Épicerie", "saisons": [] }
+  { "id": "boulgour", "nom": "boulgour", "rayon": "Épicerie", "saisons": [] },
+  { "id": "fusilloni", "nom": "fusilloni", "rayon": "Épicerie", "saisons": [] },
+  { "id": "preparation-vegetale-amande", "nom": "préparation végétale à l'amande", "rayon": "Crèmerie", "saisons": [], "regime": "vegetal" },
+  { "id": "ail-des-ours", "nom": "ail des ours", "rayon": "Herbes", "saisons": ["printemps"] }
 ]
